@@ -12,7 +12,8 @@
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.3",
-        "mcamara/laravel-localization": "^1.6"
+        "mcamara/laravel-localization": "^1.6",
+        "santigarcor/laratrust": "^6.3"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
