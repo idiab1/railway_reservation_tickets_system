@@ -16,6 +16,11 @@ class IsAdmin
      */
     public function handle(Request $request, Closure $next)
     {
-        return $next($request);
+        if(auth()->user()->hasRole('super_admin|admin')){
+
+            return $next($request);
+        }else{
+            return redirect()->route('home');
+        }
     }
 }
