@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
+use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
@@ -37,4 +38,39 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+    public function login(Request $request)
+    {
+        $input = $request->all();
+
+        // Validate data of user
+        $this->validate($request, [
+            'email' => 'required|email',
+            'password' => 'required',
+        ]);
+
+        if(auth()->attempt(array('email' => $input['email'], 'password' => $input['password']))){
+
+            // Check if user is admin
+            if(auth()->user()->hasRole('super_administrator|administrator') == 1){
+
+                // return admin home route
+                return redirect()->route('admin.home');
+
+            }else{
+
+                // return home route
+                return redirect()->route('home');
+
+            }
+
+        }else{
+
+            // If user authantication is not admin redirect to login route
+            return redirect()->route('login')
+            ->with('error', 'Email-Address And Password Are Wrong.');
+        }
+
+    }
+
 }
