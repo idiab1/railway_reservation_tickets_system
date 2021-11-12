@@ -23,6 +23,10 @@ Route::group(
         'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
     ], function(){
 
-        // Home Route
-        Route::get('/home', [HomeController::class, 'admin_home'])->name('admin.home');
+        Route::prefix('admin')->middleware(['auth', 'is_admin'])->group( function(){
+
+            // Home Route
+            Route::get('/home', [HomeController::class, 'admin_home'])->name('admin.home');
+        });
+
     });
