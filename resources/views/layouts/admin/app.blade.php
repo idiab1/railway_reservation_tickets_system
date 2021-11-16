@@ -37,10 +37,10 @@
 <div class="wrapper">
 
     {{-- Navbar --}}
-    {{-- @include('admin.include.navbar', ['setting' => \App\Models\Setting::where('id', 1)->first(['id'])]) --}}
+    @include('admin.include.navbar', ['setting' => \App\Models\Setting::where('id', 1)->first(['id'])])
 
     {{-- Sidebar --}}
-    {{-- @include('admin.include.sidebar', ['setting' => \App\Models\Setting::where('id', 1)->first(['id'])]) --}}
+    @include('admin.include.sidebar', ['setting' => \App\Models\Setting::where('id', 1)->first(['id'])])
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
@@ -72,7 +72,7 @@
     <!-- /.content-wrapper -->
 
     {{-- Footer --}}
-    {{-- @include('admin.include.footer', ['setting' => \App\Models\Setting::where('id', 1)->first(['web_name'])]) --}}
+    @include('admin.include.footer', ['setting' => \App\Models\Setting::where('id', 1)->first(['web_name'])])
 
 
     <!-- Control Sidebar -->
