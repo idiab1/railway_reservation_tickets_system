@@ -31,7 +31,26 @@ class SettingController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //Validate on all data coming from request
+        $this->validate($request, [
+            'web_name'  => ['string'],
+            'web_email' => ['email'],
+            'address'   => ['string'],
+            'phone_number',
+        ]);
+
+        $setting = Setting::find($id);
+
+        // Update
+        $setting->update([
+            'web_name'      => $request->web_name,
+            'phone_number'  => $request->phone_number,
+            'web_email'     => $request->web_email,
+            'address'       => $request->address
+        ]);
+
+        // Redirect to admin home page
+        return redirect()->route('admin.home');
     }
 
 }
