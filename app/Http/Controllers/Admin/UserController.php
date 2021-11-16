@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -38,19 +39,27 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Validate on all data coming from request
+        $this->validate($request, [
+            'name'  => ['required', 'string'],
+            'email' => ['required', 'email'],
+            'password' => ['required', 'min:8', 'confirmed']
+        ]);
+
+        // Except password, permissions, password_confirmation
+        $request_data = $request->except(['password', 'password_confirmation', 'permissions']);
+        $request_data['password'] = Hash::make($request->password);
+
+        // Save new user
+        $user = User::create($request_data);
+        $user->attachRole('admin');
+        $user->syncPermissions($request->permissions);
+
+        // Redirect to home of users
+        return redirect()->route('users.index');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -83,6 +92,8 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::find($id);
+        $user->delete();
+        return redirect()->back();
     }
 }
