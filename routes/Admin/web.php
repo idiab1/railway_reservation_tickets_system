@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Admin\SettingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +28,14 @@ Route::group(
 
             // Home Route
             Route::get('/home', [HomeController::class, 'admin_home'])->name('admin.home');
+
+            // Setting Route
+            Route::resource('setting', SettingController::class)->only([
+                'edit', 'update'
+            ])->parameters([
+                'setting' => 'id'
+            ]);
+
         });
 
     });
