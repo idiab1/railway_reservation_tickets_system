@@ -29,6 +29,13 @@ Route::group(
             // Home Route
             Route::get('/home', [HomeController::class, 'admin_home'])->name('admin.home');
 
+            // Users Route
+            Route::resource('users', UserController::class)->except([
+                'show'
+            ])->parameters([
+                'users' => 'id',
+            ]);
+
             // Setting Route
             Route::resource('setting', SettingController::class)->only([
                 'edit', 'update'
