@@ -69,7 +69,8 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::find($id);
+        return view('admin.users.edit', compact('user'));
     }
 
     /**
@@ -81,7 +82,23 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // Validate on all data coming from request
+        $this->validate($request, [
+            'name'  => ['required', 'string'],
+            'email' => ['required', 'email'],
+        ]);
+
+        // Except password, permissions, password_confirmation
+        $request_data = $request->except(['password', 'password_confirmation', 'permissions']);
+
+        $user = User::find($id);
+
+        // Update data of user
+        $user->update($request_data);
+
+        $user->syncPermissions($request->permissions);
+
+        return redirect()->route('users.index');
     }
 
     /**
