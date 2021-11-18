@@ -32,22 +32,69 @@
                             @csrf
                             @method('PUT')
                             <div class="card-body">
+                                <!-- image -->
+                                <div class="form-group">
+                                    <div class="image-preview text-center">
+                                        <img class="preview rounded-circle border border-dark"
+                                        src="{{asset('uploads/users/' . Auth::user()->profile->image)}}"
+                                        alt="user image" width="60" height="60">
+                                    </div>
+                                    <label for="image">Image</label>
+                                    <input class="form-control image" type="file" id="image" name="image">
+                                </div>
 
+                                <!-- Name -->
                                 <div class="form-group">
                                     <label for="name">Name</label>
                                     <input class="form-control" type="text" id="name" name="name" value="{{$user->name}}" placeholder="Enter name of user">
                                 </div>
+
+                                <!-- Email -->
                                 <div class="form-group">
                                     <label for="email">Email</label>
                                     <input class="form-control" type="email" id="email" name="email" value="{{$user->email}}" placeholder="Enter email of user">
                                 </div>
+
+                                <!-- Password -->
                                 <div class="form-group">
                                     <label for="password">Password</label>
                                     <input class="form-control" type="password" id="password" name="password" placeholder="Enter password of user">
                                 </div>
+
+                                <!-- Confrim Password -->
                                 <div class="form-group">
                                     <label for="confirmPassword">Confirm Password</label>
                                     <input class="form-control" type="password" id="confirmPassword" name="password_confirmation" placeholder="Confirm password of user">
+                                </div>
+
+                                <!-- Facebook -->
+                                <div class="form-group">
+                                    <label for="facebook">Facebook URL</label>
+                                    <input class="form-control" type="text" id="facebook"
+                                    name="facebook" placeholder="ex: http://www.facebook.com/username"
+                                    value="{{$user->profile->facebook}}">
+                                </div>
+
+                                <!-- twitter -->
+                                <div class="form-group">
+                                    <label for="twitter">Twitter URL</label>
+                                    <input class="form-control" type="text" id="twitter"
+                                    name="twitter" placeholder="ex: http://www.twitter.com/username"
+                                    value="{{$user->profile->twitter}}">
+                                </div>
+                                <!-- twitter -->
+                                <div class="form-group">
+                                    <label for="twitter">Linkedin URL</label>
+                                    <input class="form-control" type="text" id="twitter"
+                                    name="twitter" placeholder="ex: http://www.linkedin.com/username"
+                                    value="{{$user->profile->linkedin}}">
+                                </div>
+
+                                <!-- about -->
+                                <div class="form-group">
+                                    <label for="about">About</label>
+                                    <textarea class="form-control" name="about" id="about" cols="30"
+                                    rows="10" placeholder="About Here">{{$user->profile->about}}</textarea>
                                 </div>
 
                                 <div class="form-group">
@@ -91,7 +138,7 @@
                             <!-- /.card-body -->
 
                             <div class="card-footer">
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-primary">Edit</button>
                             </div>
                         </form>
 
