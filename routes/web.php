@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -29,5 +30,14 @@ Route::group(
         // Home Route
         Route::redirect('/', '/home');
         Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+        // Profile user routes
+        Route::resource('profile', ProfileController::class)->only([
+            'index', 'update'
+        ])->parameters([
+            'profile' => 'id'
+        ]);
+        Route::get('profile/setting', [ProfileController::class, 'setting'])->name('profile.setting');
+
 
     });
