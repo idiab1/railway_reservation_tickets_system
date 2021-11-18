@@ -120,13 +120,16 @@
         <li class="nav-item dropdown">
             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                 <div class="image d-inline-block mr-2 ml-2">
-                    <img class="img-circle border border-dark elevation-2" width="20px" src="{{asset("uploads/users/". Auth::user()->avatar)}}" alt="User Image">
+                    <img class="img-circle border border-dark elevation-2" width="20px" src="{{asset("uploads/users/". Auth::user()->profile->image)}}" alt="User Image">
                 </div>
                 {{ Auth::user()->name }}
 
             </a>
 
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{{route('profile.setting')}}" target="_blank">
+                    {{ __('Setting') }}
+                </a>
                 <a class="dropdown-item" href="{{ route('logout') }}"
                     onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();">
