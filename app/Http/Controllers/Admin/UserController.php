@@ -197,6 +197,10 @@ class UserController extends Controller
     public function destroy($id)
     {
         $user = User::find($id);
+        // Delete image from uploads folder
+        if($user->profile->image != 'default.png'){
+            Storage::disk('public_uploads')->delete('/users/' . $user->profile->image);
+        }
         $user->delete();
         return redirect()->back();
     }
