@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Profile;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -54,6 +55,18 @@ class UserController extends Controller
         $user = User::create($request_data);
         $user->attachRole('admin');
         $user->syncPermissions($request->permissions);
+
+        // create profile user
+        if($user->profile == null){
+            Profile::create([
+                'user_id'   => $user->id,
+                'image'     => 'default.png',
+                'facebook'  => 'https://www.facebook.com',
+                'twitter'   => 'https://www.twitter.com',
+                'linkedin'   => 'https://www.linkedin.com',
+                'about'     => 'About here',
+            ]);
+        }
 
         // Redirect to home of users
         return redirect()->route('users.index');
