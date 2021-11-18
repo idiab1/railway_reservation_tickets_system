@@ -28,7 +28,7 @@
                     </div>
                     <!-- /.card-header -->
                         <!-- form start -->
-                        <form action="{{route('users.update', ['id' => $user->id])}}" method="POST">
+                        <form action="{{route('users.update', ['id' => $user->id])}}" method="POST"  enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
                             <div class="card-body">
@@ -82,11 +82,11 @@
                                     name="twitter" placeholder="ex: http://www.twitter.com/username"
                                     value="{{$user->profile->twitter}}">
                                 </div>
-                                <!-- twitter -->
+                                <!-- linkedin -->
                                 <div class="form-group">
-                                    <label for="twitter">Linkedin URL</label>
-                                    <input class="form-control" type="text" id="twitter"
-                                    name="twitter" placeholder="ex: http://www.linkedin.com/username"
+                                    <label for="linkedin">Linkedin URL</label>
+                                    <input class="form-control" type="text" id="linkedin"
+                                    name="linkedin" placeholder="ex: http://www.linkedin.com/username"
                                     value="{{$user->profile->linkedin}}">
                                 </div>
 
