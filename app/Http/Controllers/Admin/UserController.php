@@ -7,6 +7,8 @@ use App\Models\Profile;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
+use Intervention\Image\ImageManagerStatic as Image;
 
 class UserController extends Controller
 {
@@ -97,8 +99,12 @@ class UserController extends Controller
     {
         // Validate on all data coming from request
         $this->validate($request, [
-            'name'  => ['required', 'string'],
-            'email' => ['required', 'email'],
+            "name"  => ['required', 'string'],
+            "email" => ['required', 'email'],
+            "facebook" => ['nullable'],
+            "twitter" => ['nullable'],
+            "linkedin" => ['nullable'],
+            "about" => ['nullable']
         ]);
 
         // Except password, permissions, password_confirmation
@@ -106,10 +112,78 @@ class UserController extends Controller
 
         $user = User::find($id);
 
-        // Update data of user
-        $user->update($request_data);
+        // // Update data of user
+        // $user->update($request_data);
 
-        $user->syncPermissions($request->permissions);
+        // $user->syncPermissions($request->permissions);
+
+        if($request->image && $request->image != null){
+
+            // Delete image from uploads folder
+            if($user->profile->image && $user->profile->image != 'default.png'){
+                Storage::disk('public_uploads')->delete('/users/' . $user->profile->image);
+            }
+            // resize the image to a width of 300 and constrain aspect ratio (auto height)
+            Image::make($request->image)->resize(300, null, function ($constraint) {
+                $constraint->aspectRatio();
+            })->save(public_path('uploads/users/' . $request->image->hashName()));
+            $request_data['image'] = $request->image->hashName();
+
+            $user->update([
+                'name'      => $request->name,
+                'email'     => $request->email,
+            ]);
+
+            if($request->has('password') && $request->password != null ){
+                // Update password
+                $user->update([
+                    'password' => Hash::make($request->password)
+                ]);
+            }
+
+            $user->syncPermissions($request->permissions);
+
+            $user->profile->update([
+                'image' => $request->image->hashName(),
+                'facebook' => $request->facebook,
+                'twitter' => $request->twitter,
+                'linkedin' => $request->linkedin,
+                'about' => $request->about,
+            ]);
+
+
+        }else{
+            $user->update([
+                'name'      => $request->name,
+                'email'     => $request->email,
+            ]);
+
+            if($request->has('password') && $request->password != null ){
+                // Update password
+                $user->update([
+                    'password' => Hash::make($request->password)
+                ]);
+            }
+
+            $user->profile->update([
+                'facebook' => $request->facebook,
+                'twitter' => $request->twitter,
+                'linkedin' => $request->linkedin,
+                'about' => $request->about,
+            ]);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
 
         return redirect()->route('users.index');
     }
