@@ -24,7 +24,7 @@
                 <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
                 <div class="input-group-append">
                     <button class="btn btn-sidebar">
-                        <i class="fas fa-search fa-fw"></i>
+                        <i class="mdi mdi-magnify" aria-hidden="true"></i>
                     </button>
                 </div>
             </div>

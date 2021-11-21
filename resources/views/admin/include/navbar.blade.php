@@ -19,7 +19,7 @@
             <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
             <div class="input-group-append">
                 <button class="btn btn-navbar" type="submit">
-                    <i class="fas fa-search"></i>
+                    <i class="mdi mdi-magnify" aria-hidden="true"></i>
                 </button>
             </div>
         </div>
@@ -112,27 +112,27 @@
             <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
             </div>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
-            <i class="fas fa-th-large"></i>
-            </a>
-        </li>
         <li class="nav-item dropdown">
             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                 <div class="image d-inline-block mr-2 ml-2">
                     <img class="img-circle border border-dark elevation-2" width="20px" src="{{asset("uploads/users/". Auth::user()->profile->image)}}" alt="User Image">
                 </div>
                 {{ Auth::user()->name }}
-
             </a>
 
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+
+                <!-- Setting -->
                 <a class="dropdown-item" href="{{route('profile.setting')}}" target="_blank">
+                    <i class="mdi mdi-account-cog" aria-hidden="true"></i>
                     {{ __('Setting') }}
                 </a>
+
+                <!-- Logout -->
                 <a class="dropdown-item" href="{{ route('logout') }}"
                     onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();">
+                    <i class="mdi mdi-logout" aria-hidden="true"></i>
                     {{ __('Logout') }}
                 </a>
 
