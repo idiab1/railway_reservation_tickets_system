@@ -79,6 +79,14 @@
                     </a>
                 </li>
 
+
+                <li class="nav-item">
+                    <a href="{{route('contact.index')}}" class="nav-link">
+                        <i class="fas fa-inbox nav-icon"></i>
+                        <p>{{ trans('site.messages') }}</p>
+                    </a>
+                </li>
+
                 <li class="nav-item">
                     <a href="{{route('setting.edit', ['id' => $setting->id])}}" class="nav-link">
                         <i class="fas fa-cogs nav-icon"></i>
