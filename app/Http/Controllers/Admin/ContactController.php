@@ -39,6 +39,8 @@ class ContactController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $message = Contact::find($id);
+        $message->delete();
+        return redirect()->back();
     }
 }
