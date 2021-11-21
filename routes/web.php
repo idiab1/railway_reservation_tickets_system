@@ -39,5 +39,9 @@ Route::group(
         ]);
         Route::get('profile/setting', [ProfileController::class, 'setting'])->name('profile.setting');
 
+        // Contact Route
+        Route::resource('contact', ContactController::class)->only([
+            'index', 'store'
+        ]);
 
     });
