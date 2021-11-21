@@ -56,7 +56,9 @@
                     <div class="col-sm-6">
                         <ol class="breadcrumb {{app()->getLocale() == 'ar' ? "float-sm-left" : "float-sm-right"}}">
                             <li class="breadcrumb-item"><a href="{{route('admin.home')}}">
-                                Dashboard</a>
+                                <i class="mdi mdi-view-dashboard" aria-hidden="true"></i>
+                                Dashboard
+                            </a>
                             </li>
                             @yield('breadcrumb-item')
                         </ol>
