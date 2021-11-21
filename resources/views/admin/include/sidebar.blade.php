@@ -66,30 +66,30 @@
                 </li> --}}
 
                 <li class="nav-item">
-                    <a href="{{route('admin.home')}}" class="nav-link">
-                        <i class="fas fa-home nav-icon"></i>
+                    <a class="nav-link" href="{{route('admin.home')}}">
+                        <i class="mdi mdi-view-dashboard nav-icon" aria-hidden="true"></i>
                         <p>Home</p>
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="{{route('users.index')}}" class="nav-link">
-                        <i class="fas fa-users nav-icon"></i>
+                    <a class="nav-link" href="{{route('users.index')}}">
+                        <i class="mdi mdi-account-supervisor nav-icon" aria-hidden="true"></i>
                         <p>Users</p>
                     </a>
                 </li>
 
 
                 <li class="nav-item">
-                    <a href="{{route('contact.index')}}" class="nav-link">
-                        <i class="fas fa-inbox nav-icon"></i>
+                    <a class="nav-link" href="{{route('contact.index')}}">
+                        <i class="mdi mdi-inbox-multiple nav-icon" aria-hidden="true"></i>
                         <p>{{ trans('site.messages') }}</p>
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="{{route('setting.edit', ['id' => $setting->id])}}" class="nav-link">
-                        <i class="fas fa-cogs nav-icon"></i>
+                    <a class="nav-link" href="{{route('setting.edit', ['id' => $setting->id])}}">
+                        <i class="mdi mdi-cogs nav-icon" aria-hidden="true"></i>
                         <p>Setting</p>
                     </a>
                 </li>
