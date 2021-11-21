@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\ContactController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\SettingController;
@@ -42,6 +43,13 @@ Route::group(
                 'edit', 'update'
             ])->parameters([
                 'setting' => 'id'
+            ]);
+
+            // Contact Route
+            Route::resource('contact', ContactController::class)->only([
+                'index', 'show', 'destroy'
+            ])->parameters([
+                'contact' => 'id',
             ]);
 
         });
