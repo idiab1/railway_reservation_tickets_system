@@ -62,7 +62,12 @@
                                     @foreach ($users as $user)
                                         <tr>
                                             <td>{{$id++}}</td>
-                                            <td>{{$user->name}}</td>
+                                            <td>
+                                                <img class="preview rounded-circle border border-dark ml-2 mr-2"
+                                                    src="{{asset('uploads/users/' . $user->profile->image)}}"
+                                                    alt="user image" width="30" height="30">
+                                                {{$user->name}}
+                                            </td>
                                             <td>{{$user->email}}</td>
                                             <td>
                                                 <a class="btn btn-success d-inline-block btn-sm btn-edit" href="{{route('users.edit', ['id' => $user->id])}}">
