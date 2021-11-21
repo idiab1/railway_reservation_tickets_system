@@ -16,12 +16,16 @@
 
 {{-- Page name --}}
 @section('page_name')
+    <i class="mdi mdi-inbox-multiple" aria-hidden="true"></i>
     {{ trans('site.list_all_messages') }}
 @endsection
 
 {{-- Breadcrumb --}}
 @section('breadcrumb-item')
-    <li class="breadcrumb-item">{{ trans('site.messages') }}<li>
+    <li class="breadcrumb-item">
+        <i class="mdi mdi-inbox-multiple" aria-hidden="true"></i>
+        {{ trans('site.messages') }}
+    <li>
 @endsection
 
 {{-- Content --}}
@@ -33,7 +37,10 @@
                     <div class="card-header">
                         <div class="row">
                             <div class="col-12">
-                                <h3 class="card-title">{{ trans('site.list_all_messages') }}</h3>
+                                <h3 class="card-title">
+                                    <i class="mdi mdi-inbox-multiple" aria-hidden="true"></i>
+                                    {{ trans('site.list_all_messages') }}
+                                </h3>
                             </div>
                         </div>
                     </div>
