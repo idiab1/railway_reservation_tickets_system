@@ -26,6 +26,11 @@
             'setting' => \App\Models\Setting::first()
         ])
 
+        {{-- Header --}}
+        @section('header')
+            @include('include.header')
+        @show
+
         {{-- Main Content --}}
         <main class="py-4">
             <div class="container">
