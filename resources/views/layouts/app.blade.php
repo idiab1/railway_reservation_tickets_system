@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>@yield('title', 'Unkown Page') || {{\App\Models\Setting::first()->web_name}}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -22,7 +22,7 @@
 <body>
     <div id="app">
         @include('include.navbar', [
-            'setting' => \App\Models\Setting::first(['web_name'])
+            'setting' => \App\Models\Setting::first()
         ])
 
         <main class="py-4">
