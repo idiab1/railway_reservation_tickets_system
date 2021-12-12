@@ -21,13 +21,21 @@
 </head>
 <body>
     <div id="app">
+        {{-- Navbar --}}
         @include('include.navbar', [
             'setting' => \App\Models\Setting::first()
         ])
 
+        {{-- Main Content --}}
         <main class="py-4">
             @yield('content')
         </main>
+
+        {{-- Footer --}}
+        @include('include.footer', [
+            'setting' => \App\Models\Setting::first()
+        ])
+
     </div>
 </body>
 </html>
