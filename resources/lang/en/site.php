@@ -32,7 +32,7 @@ return [
 
     // Placeholder
     'search' => 'Search',
-    'enter_name' => 'Enter Name',
+    'enter_name' => 'Enter your Name',
     'enter_email' => 'Enter your email address',
     'enter_your_message' => 'Enter your message',
 
