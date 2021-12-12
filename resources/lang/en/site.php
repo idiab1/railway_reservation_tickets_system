@@ -24,6 +24,8 @@ return [
     'login' => 'Login',
     'register' => 'Register',
     'email' => 'email',
+    'english' => 'English',
+    'arabic' => 'Arabic',
 
     // Buttons
     'send' => 'Send',
