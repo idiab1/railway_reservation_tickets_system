@@ -43,6 +43,9 @@ Route::group(
         // Contact Route
         Route::resource('contact', ContactController::class)->only([
             'index', 'store'
+        ])->names([
+            'index' => 'contact.page',
+            'store' => 'contact.store'
         ]);
 
     });
