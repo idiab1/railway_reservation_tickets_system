@@ -22,6 +22,8 @@ return [
     'edit' => 'Edit',
     'action' => 'Action',
     'logout' => 'Logout',
+    'login' => 'Login',
+    'register' => 'Register',
 
     // Placeholder
     'search' => 'Search',
