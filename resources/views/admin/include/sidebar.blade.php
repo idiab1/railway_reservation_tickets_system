@@ -21,7 +21,7 @@
         <!-- SidebarSearch Form -->
         <div class="form-inline">
             <div class="input-group" data-widget="sidebar-search">
-                <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+                <input class="form-control form-control-sidebar" type="search" placeholder="{{trans('site.search')}}" aria-label="Search">
                 <div class="input-group-append">
                     <button class="btn btn-sidebar">
                         <i class="mdi mdi-magnify" aria-hidden="true"></i>
@@ -68,14 +68,14 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('admin.home')}}">
                         <i class="mdi mdi-view-dashboard nav-icon" aria-hidden="true"></i>
-                        <p>Home</p>
+                        <p>{{ trans('site.home') }}</p>
                     </a>
                 </li>
 
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('users.index')}}">
                         <i class="mdi mdi-account-supervisor nav-icon" aria-hidden="true"></i>
-                        <p>Users</p>
+                        <p>{{ trans('site.users') }}</p>
                     </a>
                 </li>
 
@@ -90,7 +90,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('setting.edit', ['id' => $setting->id])}}">
                         <i class="mdi mdi-cogs nav-icon" aria-hidden="true"></i>
-                        <p>Setting</p>
+                        <p>{{ trans('site.setting') }}</p>
                     </a>
                 </li>
 
