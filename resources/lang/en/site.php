@@ -28,4 +28,9 @@ return [
     // Placeholder
     'search' => 'Search',
 
+
+    // Footer
+    'copyright' => 'Copyright All rights reserved 2021-2022.',
+
+
 ];
