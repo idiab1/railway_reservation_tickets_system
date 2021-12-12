@@ -35,6 +35,20 @@
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
+                <li class="dropdown nav-item dropdown-globe globe-icon">
+                    <a href="#" class="dropdown-toggle dropdown-menu-right nav-link" data-toggle="dropdown">
+                        <i class="fas fa-globe"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                            <li>
+                                <a class="dropdown-item" rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                    <span>{{ $properties['native'] }}</span>
+                                </a>
+                            </li>
+                        @endforeach
+                    </ul>
+                </li>
                 <!-- Authentication Links -->
                 @guest
                     @if (Route::has('login'))
