@@ -5,11 +5,6 @@
     Edit {{$user->name . "'s"}}
 @endsection
 
-{{-- Page name --}}
-@section('page_name')
-    Edit {{$user->name . "'s"}}
-@endsection
-
 {{-- Content --}}
 @section('content')
 <div class="profile-setting-page">
