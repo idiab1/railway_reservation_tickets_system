@@ -21,6 +21,7 @@ return [
     'delete' => 'Delete',
     'edit' => 'Edit',
     'action' => 'Action',
+    'logout' => 'Logout',
 
     // Placeholder
     'search' => 'Search',

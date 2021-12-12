@@ -6,17 +6,17 @@
             <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <a class="nav-link" href="{{route('admin.home')}}">Home</a>
+            <a class="nav-link" href="{{route('home')}}" target="_blank">{{ trans('site.home') }}</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <a class="nav-link" href="{{route('setting.edit', ['id' => $setting->id])}}">Setting</a>
+            <a class="nav-link" href="{{route('setting.edit', ['id' => $setting->id])}}">{{ trans('site.setting') }}</a>
         </li>
     </ul>
 
     <!-- SEARCH FORM -->
     <form class="form-inline ml-3 mr-3">
         <div class="input-group input-group-sm">
-            <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+            <input class="form-control form-control-navbar" type="search" placeholder="{{ trans('site.search') }}" aria-label="Search">
             <div class="input-group-append">
                 <button class="btn btn-navbar" type="submit">
                     <i class="mdi mdi-magnify" aria-hidden="true"></i>
@@ -125,7 +125,7 @@
                 <!-- Setting -->
                 <a class="dropdown-item" href="{{route('profile.setting')}}" target="_blank">
                     <i class="mdi mdi-account-cog" aria-hidden="true"></i>
-                    {{ __('Setting') }}
+                    {{ trans('site.setting') }}
                 </a>
 
                 <!-- Logout -->
@@ -133,7 +133,7 @@
                     onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();">
                     <i class="mdi mdi-logout" aria-hidden="true"></i>
-                    {{ __('Logout') }}
+                    {{ trans('site.logout') }}
                 </a>
 
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
