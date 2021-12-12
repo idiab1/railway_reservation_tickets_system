@@ -10,8 +10,27 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
-            <ul class="navbar-nav mr-auto">
+            <ul class="navbar-nav m-auto">
+                <!-- Home -->
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('home')}}">
+                        {{ trans('site.home') }}
+                    </a>
+                </li>
 
+                <!-- About us -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        {{ trans('site.about_us') }}
+                    </a>
+                </li>
+
+                <!-- Contact us -->
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('contact.index')}}">
+                        {{ trans('site.contact_us') }}
+                    </a>
+                </li>
             </ul>
 
             <!-- Right Side Of Navbar -->

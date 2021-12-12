@@ -8,6 +8,7 @@ return [
     'messages' => 'Messages',
     'setting' => 'Setting',
     'contact_us' => 'Contact Us',
+    'about_us' => 'About Us',
 
     // Messages Page
     'message' => 'Message',
