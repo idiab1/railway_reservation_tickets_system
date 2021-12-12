@@ -27,7 +27,7 @@
 
                 <!-- Contact us -->
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('contact.index')}}">
+                    <a class="nav-link" href="{{route('contact.page')}}">
                         {{ trans('site.contact_us') }}
                     </a>
                 </li>
