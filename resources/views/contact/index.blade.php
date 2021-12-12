@@ -5,6 +5,11 @@
     {{ trans('site.contact_us') }}
 @endsection
 
+{{-- Header --}}
+@section('header')
+
+@endsection
+
 {{-- Content --}}
 @section('content')
 <div class="contact-page">
