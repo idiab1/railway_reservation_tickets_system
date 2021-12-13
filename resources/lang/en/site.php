@@ -23,7 +23,7 @@ return [
     'logout' => 'Logout',
     'login' => 'Login',
     'register' => 'Register',
-    'email' => 'email',
+    'email' => 'Email',
     'english' => 'English',
     'arabic' => 'Arabic',
 
