@@ -35,20 +35,35 @@
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
-                <li class="dropdown nav-item dropdown-globe globe-icon">
-                    <a href="#" class="dropdown-toggle dropdown-menu-right nav-link" data-toggle="dropdown">
-                        <i class="fas fa-globe"></i>
+                <!-- Languages -->
+                <li class="nav-item nav-language dropdown d-none d-md-block dropdown-globe globe-icon">
+                    <a class="nav-link dropdown-toggle" id="languageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                        <div class="nav-language-icon d-inline-block">
+                            @if (app()->getLocale() == 'en')
+                                <i class="flag-icon flag-icon-us" title="us" id="us"></i>
+                            @else
+                                <i class="flag-icon flag-icon-eg" title="eg" id="eg"></i>
+                            @endif
+                        </div>
+                        <div class="nav-language-text d-inline-block">
+                            <p class="mb-1 text-black">
+                                {{app()->getLocale() == 'en' ? trans('site.english') : trans('site.arabic')}}
+                            </p>
+                        </div>
                     </a>
-                    <ul class="dropdown-menu">
+                    <div class="dropdown-menu navbar-dropdown" aria-labelledby="languageDropdown">
                         @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                            <li>
-                                <a class="dropdown-item" rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-                                    <span>{{ $properties['native'] }}</span>
-                                </a>
-                            </li>
+                            <a class="dropdown-item" rel="alternate" hreflang="{{ $localeCode }}"
+                                href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                <div class="nav-language-text">
+                                    <p class="mb-1 text-black">{{ $properties['native'] }}</p>
+                                </div>
+                            </a>
+                            <div class="dropdown-divider"></div>
                         @endforeach
-                    </ul>
+                    </div>
                 </li>
+
                 <!-- Authentication Links -->
                 @guest
                     @if (Route::has('login'))
