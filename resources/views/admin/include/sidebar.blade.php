@@ -8,28 +8,6 @@
 
     <!-- Sidebar -->
     <div class="sidebar">
-        <!-- Sidebar user (optional) -->
-        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-            <div class="image">
-                <img src="{{asset('uploads/users/' . Auth::user()->profile->image)}}" class="img-circle border border-dark elevation-2" alt="User Image">
-            </div>
-            <div class="info">
-                <a href="#" class="d-block">{{auth()->user()->name}}</a>
-            </div>
-        </div>
-
-        <!-- SidebarSearch Form -->
-        <div class="form-inline">
-            <div class="input-group" data-widget="sidebar-search">
-                <input class="form-control form-control-sidebar" type="search" placeholder="{{trans('site.search')}}" aria-label="Search">
-                <div class="input-group-append">
-                    <button class="btn btn-sidebar">
-                        <i class="mdi mdi-magnify" aria-hidden="true"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-
         <!-- Sidebar Menu -->
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
@@ -87,17 +65,46 @@
                     </a>
                 </li>
 
+            </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+        <!-- Sidebar user -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="image">
+                <img src="{{asset('uploads/users/' . Auth::user()->profile->image)}}" class="img-circle border border-dark elevation-2" alt="User Image">
+            </div>
+            <div class="info">
+                <a href="#" class="d-block">{{auth()->user()->name}}</a>
+            </div>
+        </div>
+
+        <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                <!-- Setting -->
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('setting.edit', ['id' => $setting->id])}}">
                         <i class="mdi mdi-cogs nav-icon" aria-hidden="true"></i>
                         <p>{{ trans('site.setting') }}</p>
                     </a>
                 </li>
+                <!-- Logout -->
 
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
+                        <i class="mdi mdi-logout nav-icon" aria-hidden="true"></i>
+                        <p>{{ trans('site.logout') }}</p>
+                    </a>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
+                </li>
 
             </ul>
         </nav>
-        <!-- /.sidebar-menu -->
+
     </div>
     <!-- /.sidebar -->
 </aside>
