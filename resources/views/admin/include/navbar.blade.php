@@ -112,6 +112,36 @@
             <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
             </div>
         </li>
+
+        <!-- Languages -->
+        <li class="nav-item nav-language dropdown d-none d-md-block">
+            <a class="nav-link dropdown-toggle" id="languageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                <div class="nav-language-icon d-inline-block">
+                    @if (app()->getLocale() == 'en')
+                        <i class="flag-icon flag-icon-us" title="us" id="us"></i>
+                    @else
+                        <i class="flag-icon flag-icon-eg" title="eg" id="eg"></i>
+                    @endif
+                </div>
+                <div class="nav-language-text d-inline-block">
+                    <p class="mb-1 text-black">
+                        {{app()->getLocale() == 'en' ? trans('site.english') : trans('site.arabic')}}
+                    </p>
+                </div>
+            </a>
+            <div class="dropdown-menu navbar-dropdown" aria-labelledby="languageDropdown">
+                @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                    <a class="dropdown-item" rel="alternate" hreflang="{{ $localeCode }}"
+                        href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                        <div class="nav-language-text">
+                            <p class="mb-1 text-black">{{ $properties['native'] }}</p>
+                        </div>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                @endforeach
+            </div>
+        </li>
+
         <li class="nav-item dropdown">
             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                 <div class="image d-inline-block mr-2 ml-2">
@@ -141,34 +171,7 @@
                 </form>
             </div>
         </li>
-        <!-- Languages -->
-        <li class="nav-item nav-language dropdown d-none d-md-block">
-            <a class="nav-link dropdown-toggle" id="languageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
-                <div class="nav-language-icon d-inline-block">
-                    @if (app()->getLocale() == 'en')
-                        <i class="flag-icon flag-icon-us" title="us" id="us"></i>
-                    @else
-                        <i class="flag-icon flag-icon-eg" title="eg" id="eg"></i>
-                    @endif
-                </div>
-                <div class="nav-language-text d-inline-block">
-                    <p class="mb-1 text-black">
-                        {{app()->getLocale() == 'en' ? trans('site.english') : trans('site.arabic')}}
-                    </p>
-                </div>
-            </a>
-            <div class="dropdown-menu navbar-dropdown" aria-labelledby="languageDropdown">
-                @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                    <a class="dropdown-item" rel="alternate" hreflang="{{ $localeCode }}"
-                        href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-                        <div class="nav-language-text">
-                            <p class="mb-1 text-black">{{ $properties['native'] }}</p>
-                        </div>
-                    </a>
-                    <div class="dropdown-divider"></div>
-                @endforeach
-            </div>
-        </li>
+
 
     </ul>
 </nav>
