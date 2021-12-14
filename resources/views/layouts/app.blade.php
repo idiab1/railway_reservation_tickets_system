@@ -37,6 +37,9 @@
         </style>
     @endif
 
+    <!-- Other Styles -->
+    @yield('other-styles')
+
 </head>
 <body>
     <div id="app">
@@ -63,7 +66,13 @@
         ])
 
     </div>
+    <!-- jQuery -->
+    <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+
+    <!-- Other Scripts -->
+    @yield('other-scripts')
+
 </body>
 </html>
