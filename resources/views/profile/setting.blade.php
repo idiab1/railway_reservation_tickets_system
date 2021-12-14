@@ -5,6 +5,130 @@
     Edit {{$user->name . "'s"}}
 @endsection
 
+{{-- Styles --}}
+@section('other-styles')
+    <style>
+        .avatar-upload{
+            position: relative;
+            max-width: 205px;
+            margin: 50px auto;
+        }
+        .avatar-upload .avatar-edit{
+            position: absolute;
+            right: 12px;
+            z-index: 1;
+            top: 10px;
+        }
+        .avatar-upload .avatar-edit input{
+            display: none;
+        }
+        .avatar-upload .avatar-edit label{
+            display: inline-block;
+            width: 34px;
+            height: 34px;
+            margin-bottom: 0;
+            border-radius: 100%;
+            background: #FFFFFF;
+            border: 1px solid transparent;
+            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+            cursor: pointer;
+            font-weight: normal;
+            transition: all .2s ease-in-out;
+        }
+        .avatar-upload .avatar-edit label:hover{
+            background: #f1f1f1;
+            border-color: #d6d6d6;
+        }
+        .avatar-upload .avatar-edit label::after{
+            content: "\f040";
+            font-family: 'FontAwesome';
+            color: #757575;
+            position: absolute;
+            top: 10px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            margin: auto;
+        }
+        .avatar-preview {
+            width: 192px;
+            height: 192px;
+            position: relative;
+            border-radius: 100%;
+            border: 6px solid #F8F8F8;
+            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+
+        }
+        .avatar-preview > div {
+                width: 100%;
+                height: 100%;
+                border-radius: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+        /* .avatar-upload {
+            position: relative;
+            max-width: 205px;
+            margin: 50px auto;
+        .avatar-edit {
+            position: absolute;
+            right: 12px;
+            z-index: 1;
+            top: 10px;
+            input {
+                display: none;
+                + label {
+                    display: inline-block;
+                    width: 34px;
+                    height: 34px;
+                    margin-bottom: 0;
+                    border-radius: 100%;
+                    background: #FFFFFF;
+                    border: 1px solid transparent;
+                    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+                    cursor: pointer;
+                    font-weight: normal;
+                    transition: all .2s ease-in-out;
+                    &:hover {
+                        background: #f1f1f1;
+                        border-color: #d6d6d6;
+                    }
+                    &:after {
+                        content: "\f040";
+                        font-family: 'FontAwesome';
+                        color: #757575;
+                        position: absolute;
+                        top: 10px;
+                        left: 0;
+                        right: 0;
+                        text-align: center;
+                        margin: auto;
+                    }
+                }
+            }
+        }
+        .avatar-preview {
+            width: 192px;
+            height: 192px;
+            position: relative;
+            border-radius: 100%;
+            border: 6px solid #F8F8F8;
+            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+            > div {
+                width: 100%;
+                height: 100%;
+                border-radius: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        } */
+    }
+    </style>
+@endsection
+
 {{-- Header --}}
 @section('header')
 
@@ -14,7 +138,7 @@
 @section('content')
 <div class="profile-setting-page">
     <div class="row">
-        <div class="col-sm-8 m-auto">
+        <div class="col-sm-7 m-auto">
             <div class="setting-form">
                 <div class="card card-primary">
                     <div class="card-header">
@@ -28,26 +152,17 @@
                             <div class="card-body">
                                 <!-- image -->
                                 <div class="form-group">
-                                    {{-- <div class="image-preview text-center">
-                                        <img class="preview rounded-circle border border-dark"
-                                        src="{{asset('uploads/users/' . Auth::user()->profile->image)}}"
-                                        alt="user image" width="60" height="60">
-                                    </div>
-                                    <label for="image">Image</label>
-                                    <input class="form-control image" type="file" id="image" name="image">
-                                    --}}
 
-                                    {{-- <div class="avatar-item text-center">
-                                        <img class="img-fluid preview rounded-circle border border-dark"
-                                        src="{{asset('uploads/users/' . Auth::user()->profile->image)}}" alt="image"
-                                        data-toggle="tooltip" title="" data-original-title="{{$user->name}}" width="60" height="60">
-                                        <div class="avatar-badge" title="" data-toggle="tooltip" data-original-title="Admin">
-                                            <i class="fas fa-cog"></i>
-                                            <input class="form-control image" type="file" id="image" name="image">
-
+                                    <div class="avatar-upload">
+                                        <div class="avatar-edit">
+                                            <input type='file' id="imageUpload" name="image" accept=".png, .jpg, .jpeg" />
+                                            <label for="imageUpload"></label>
                                         </div>
-                                    </div> --}}
-
+                                        <div class="avatar-preview">
+                                            <div id="imagePreview" style="background-image: url({{asset('uploads/users/' . Auth::user()->profile->image)}});">
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <!-- Name -->
@@ -187,24 +302,25 @@
 
 @section('scripts')
 <script>
+
+
+
     $(document).ready(function(){
 
-        // Image Preview
-        $('.image').change(function(){
-            if(this.files && this.files[0]){
-
-                let reader = new FileReader();
-
-                reader.onload = function(e){
-
-                    $('.preview').attr('src', e.target.result);
-
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $('#imagePreview').css('background-image', 'url('+e.target.result +')');
+                    $('#imagePreview').hide();
+                    $('#imagePreview').fadeIn(650);
                 }
-                reader.readAsDataURL(this.files[0]);
-
+                reader.readAsDataURL(input.files[0]);
             }
-        })
-
+        }
+        $("#imageUpload").change(function() {
+            readURL(this);
+        });
     });
 </script>
 @endsection
