@@ -25,10 +25,11 @@ return [
     'register' => 'Register',
     'email' => 'Email',
     'password' => 'Password',
+    'confirm_password' => 'Confirm Password',
     'english' => 'English',
     'arabic' => 'Arabic',
     'remember_me' => 'Remember Me',
-
+    'forgot_password' => 'Forgot Your Password?',
 
     // Buttons
     'send' => 'Send',
