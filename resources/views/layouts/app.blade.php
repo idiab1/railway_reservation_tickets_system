@@ -54,7 +54,7 @@
         @show
 
         {{-- Main Content --}}
-        <main class="py-4">
+        <main class="main-content">
             <div class="container">
                 @yield('content')
             </div>
