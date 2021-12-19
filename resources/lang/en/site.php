@@ -30,6 +30,8 @@ return [
     'arabic' => 'Arabic',
     'remember_me' => 'Remember Me',
     'forgot_password' => 'Forgot Your Password?',
+    'reset_password' => 'Reset Password',
+    'send_password_link' => 'Send Password Reset Link',
 
     // Buttons
     'send' => 'Send',
