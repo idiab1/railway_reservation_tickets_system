@@ -1,5 +1,11 @@
 @extends('layouts.app')
 
+{{-- Title --}}
+@section('title')
+    {{ trans('site.reset_password') }}
+@endsection
+
+
 {{-- Header --}}
 @section('header')
 
