@@ -24,8 +24,11 @@ return [
     'login' => 'Login',
     'register' => 'Register',
     'email' => 'Email',
+    'password' => 'Password',
     'english' => 'English',
     'arabic' => 'Arabic',
+    'remember_me' => 'Remember Me',
+
 
     // Buttons
     'send' => 'Send',
@@ -38,6 +41,7 @@ return [
     'enter_name' => 'Enter your Name',
     'enter_email' => 'Enter your email address',
     'enter_your_message' => 'Enter your message',
+    'enter_password' => 'Enter Password',
 
     // Footer
     'copyright' => 'Copyright All rights reserved 2021-2022.',
