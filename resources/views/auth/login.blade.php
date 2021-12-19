@@ -95,13 +95,13 @@
                         <!-- Button  -->
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary crayons-btn">
-                                {{ __('Login') }}
+                                {{ trans('site.login') }}
                             </button>
 
                             @if (Route::has('password.request'))
                                 <!-- Forgot your password -->
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    {{ __('Forgot Your Password?') }}
+                                    {{ trans('site.forgot_password') }}
                                 </a>
                             @endif
                         </div>
