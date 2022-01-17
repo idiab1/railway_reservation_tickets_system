@@ -7,13 +7,16 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title', 'Unkown Page') || {{\App\Models\Setting::first()->web_name}}</title>
+    <title>@yield('title', 'Unkown Page') | {{\App\Models\Setting::first()->web_name}}</title>
 
 
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="{{asset('plugins/fontawesome-free/css/all.css')}}">
 
     <!-- Flag Icon -->
     <link rel="stylesheet" href="{{asset('plugins/flag-icon-css/css/flag-icon.min.css')}}">
