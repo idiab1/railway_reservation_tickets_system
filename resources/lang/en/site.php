@@ -7,8 +7,9 @@ return [
     'users' => 'Users',
     'messages' => 'Messages',
     'setting' => 'Setting',
-    'contact_us' => 'Contact Us',
+    'contact_us' => 'Contact',
     'about_us' => 'About Us',
+    'news' => 'News',
 
     // Messages Page
     'message' => 'Message',
