@@ -25,6 +25,14 @@
                     </a>
                 </li>
 
+                <!-- News -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        {{ trans('site.news') }}
+                    </a>
+                </li>
+
+
                 <!-- Contact us -->
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('contact.page')}}">
