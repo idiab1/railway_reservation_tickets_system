@@ -17,9 +17,6 @@ use App\Http\Controllers\Admin\UserController;
 |
 */
 
-
-
-
 Route::group(
     [
         'prefix' => LaravelLocalization::setLocale(),
