@@ -47,7 +47,7 @@ return [
     'enter_password' => 'Enter Password',
 
     // Footer
-    'copyright' => 'Copyright All rights reserved 2021-2022.',
+    'copyright' => 'Copyright all rights reserved.',
 
 
 ];
