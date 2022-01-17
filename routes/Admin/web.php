@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\Admin\ContactController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\UserController;
 
@@ -29,7 +29,7 @@ Route::group(
         Route::prefix('admin')->middleware(['auth', 'is_admin'])->group( function(){
 
             // Home Route
-            Route::get('/home', [HomeController::class, 'admin_home'])->name('admin.home');
+            Route::get('/home', [AdminHomeController::class, 'admin_home'])->name('admin.home');
 
             // Users Route
             Route::resource('users', UserController::class)->except([
