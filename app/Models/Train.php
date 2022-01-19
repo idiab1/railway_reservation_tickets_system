@@ -9,16 +9,16 @@ class Train extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'class_type'];
+    protected $fillable = ['name', 'class_type', 'depature_time', 'arrival_time', 'station_id'];
 
     /**
-     * The stations that belong to the Train
+     * Get the station that owns the Train
      *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function stations()
+    public function station()
     {
-        return $this->belongsToMany(Station::class, 'station_train');
+        return $this->belongsTo(Station::class);
     }
 
 }
