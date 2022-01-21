@@ -33,6 +33,7 @@ return [
     'forgot_password' => 'Forgot Your Password?',
     'reset_password' => 'Reset Password',
     'send_password_link' => 'Send Password Reset Link',
+    'system_settings'=> 'System Settings',
 
     // Buttons
     'send' => 'Send',
