@@ -9,7 +9,7 @@
             <a class="nav-link" href="{{route('home')}}" target="_blank">{{ trans('site.home') }}</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <a class="nav-link" href="{{route('setting.edit', ['id' => $setting->id])}}">{{ trans('site.setting') }}</a>
+            <a class="nav-link" href="{{route('setting.edit', ['id' => $setting->id])}}">{{ trans('site.system_settings') }}</a>
         </li>
     </ul>
 

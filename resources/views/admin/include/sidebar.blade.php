@@ -84,7 +84,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('setting.edit', ['id' => $setting->id])}}">
                         <i class="mdi mdi-cogs nav-icon" aria-hidden="true"></i>
-                        <p>{{ trans('site.setting') }}</p>
+                        <p>{{ trans('site.system_settings') }}</p>
                     </a>
                 </li>
                 <!-- Logout -->
