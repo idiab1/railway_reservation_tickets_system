@@ -10,6 +10,7 @@ return [
     'contact_us' => 'Contact',
     'about_us' => 'About Us',
     'news' => 'News',
+    'dashboard' => 'Dashboard',
 
     // Messages Page
     'message' => 'Message',
