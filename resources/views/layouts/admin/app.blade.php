@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dashboard | @yield('title', 'Unknown page')</title>
+    <title>@yield('title', 'Unknown page') | {{ trans('site.dashboard') }}</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -15,6 +15,10 @@
     <link rel="stylesheet" href="{{asset('plugins/mdi/css/materialdesignicons.min.css')}}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{asset('admin/css/adminlte.min.css')}}">
+
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="{{asset('admin/css/custom.css')}}">
+
     {{-- other styles --}}
     @yield('styles')
 
