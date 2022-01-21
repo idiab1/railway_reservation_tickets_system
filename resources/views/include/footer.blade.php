@@ -15,7 +15,7 @@
                                 </div>
                                 <!-- ./end of logo Brand -->
                             </div>
-                            <div class="col-md-2 col-sm-12 d-sm-none d-md-block">
+                            <div class="col-md-2 col-sm-12 d-none d-md-block">
                                 <i class="fas fa-arrow-circle-up"></i>
                             </div>
                             <div class="col-md-5 col-sm-12">
