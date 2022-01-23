@@ -68,6 +68,38 @@
                     </a>
                 </li>
 
+                <!-- Stations -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="mdi mdi-office-building-marker nav-icon" aria-hidden="true"></i>
+                        <p>{{ trans('site.stations') }}</p>
+                    </a>
+                </li>
+
+                <!-- Trains -->
+                <li class="nav-item">
+                    <a class="nav-link" href="">
+                        <i class="mdi mdi-train" aria-hidden="true"></i>
+                        <p>{{ trans('site.trains') }}</p>
+                    </a>
+                </li>
+
+                <!-- Classes / Types -->
+                <li class="nav-item">
+                    <a class="nav-link" href="">
+                        <i class="mdi mdi-book-variant nav-icon" aria-hidden="true"></i>
+                        <p>{{ trans('site.classes') }}</p>
+                    </a>
+                </li>
+
+                <!-- Seats -->
+                <li class="nav-item">
+                    <a class="nav-link" href="">
+                        <i class="mdi mdi-seat nav-icon" aria-hidden="true"></i>
+                        <p>{{ trans('site.seats') }}</p>
+                    </a>
+                </li>
+
                 <!-- Messages -->
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('contact.index')}}">
