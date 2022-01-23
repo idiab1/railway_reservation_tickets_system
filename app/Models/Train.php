@@ -21,4 +21,14 @@ class Train extends Model
         return $this->belongsTo(Station::class);
     }
 
+    /**
+     * Get all of the types for the Train
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function types()
+    {
+        return $this->hasMany(Type::class);
+    }
+
 }
