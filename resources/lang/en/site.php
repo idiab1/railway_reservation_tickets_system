@@ -11,7 +11,7 @@ return [
     'about_us' => 'About Us',
     'news' => 'News',
     'dashboard' => 'Dashboard',
-    'station' => 'Station',
+    'stations' => 'Stations',
     'trains' => 'Trains',
     'classes' => 'Classes / Types',
     'seats' => 'Seats',
