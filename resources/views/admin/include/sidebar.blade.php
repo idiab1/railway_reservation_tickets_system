@@ -1,10 +1,19 @@
 <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="{{route('admin.home')}}" class="brand-link">
+    {{-- <a href="{{route('admin.home')}}" class="brands-link"> --}}
         {{-- <img src="../../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8"> --}}
-        <span class="brand-text font-weight-light">Control Panel</span>
-    </a>
+        {{-- <span class="brand-text font-weight-light">Control Panel</span> --}}
+
+    {{-- </a> --}}
+    <div class="user-panel mt-3 pb-3 mb-3 d-flex brand-link">
+        <div class="image">
+            <img src="{{asset('uploads/users/' . Auth::user()->profile->image)}}" class="img-circle border border-dark elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+            <a href="#" class="d-block brand-link">{{auth()->user()->name}}</a>
+        </div>
+    </div>
 
     <!-- Sidebar -->
     <div class="sidebar">
@@ -43,6 +52,7 @@
                     </ul>
                 </li> --}}
 
+                <!-- Home -->
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('admin.home')}}">
                         <i class="mdi mdi-view-dashboard nav-icon" aria-hidden="true"></i>
@@ -50,6 +60,7 @@
                     </a>
                 </li>
 
+                <!-- Users -->
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('users.index')}}">
                         <i class="mdi mdi-account-supervisor nav-icon" aria-hidden="true"></i>
@@ -57,7 +68,7 @@
                     </a>
                 </li>
 
-
+                <!-- Messages -->
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('contact.index')}}">
                         <i class="mdi mdi-inbox-multiple nav-icon" aria-hidden="true"></i>
@@ -65,21 +76,6 @@
                     </a>
                 </li>
 
-            </ul>
-        </nav>
-        <!-- /.sidebar-menu -->
-        <!-- Sidebar user -->
-        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-            <div class="image">
-                <img src="{{asset('uploads/users/' . Auth::user()->profile->image)}}" class="img-circle border border-dark elevation-2" alt="User Image">
-            </div>
-            <div class="info">
-                <a href="#" class="d-block">{{auth()->user()->name}}</a>
-            </div>
-        </div>
-
-        <nav class="mt-2">
-            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <!-- Setting -->
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('setting.edit', ['id' => $setting->id])}}">
@@ -87,8 +83,14 @@
                         <p>{{ trans('site.system_settings') }}</p>
                     </a>
                 </li>
-                <!-- Logout -->
 
+            </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+
+        <nav class="nav-logout">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                <!-- Logout -->
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
