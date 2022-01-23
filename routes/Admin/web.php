@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\ContactController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\SettingController;
+use App\Http\Controllers\Admin\StationController;
 use App\Http\Controllers\Admin\UserController;
 
 /*
@@ -33,6 +34,11 @@ Route::group(
                 'show'
             ])->parameters([
                 'users' => 'id',
+            ]);
+
+            // Stations Route
+            Route::resource('stations', StationController::class)->parameters([
+                'stations' => 'id',
             ]);
 
             // Setting Route
