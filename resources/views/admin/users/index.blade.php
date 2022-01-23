@@ -2,7 +2,7 @@
 
 {{-- Title --}}
 @section('title')
-    List of all users
+    {{ trans('site.list_users') }}
 @endsection
 
 {{-- Styles --}}
@@ -16,12 +16,12 @@
 
 {{-- Page name --}}
 @section('page_name')
-    List of all users
+    {{ trans('site.list_users') }}
 @endsection
 
 {{-- Breadcrumb --}}
 @section('breadcrumb-item')
-    <li class="breadcrumb-item">Users<li>
+    <li class="breadcrumb-item">{{ trans('site.users') }}<li>
 @endsection
 
 {{-- Content --}}
@@ -30,28 +30,35 @@
         <div class="row">
             <div class="col-12">
                 <div class="card">
+                    <!-- Card Header -->
                     <div class="card-header">
                         <div class="row">
                             <div class="col-md-6">
-                                <h3 class="card-title">List of all users</h3>
+                                <!-- Card Title -->
+                                <h3 class="card-title">
+                                    {{ trans('site.list_users') }}
+                                </h3>
+                                <!-- /End of card title -->
                             </div>
                             <div class="col-md-6">
                                 <a class="btn btn-create btn-primary float-sm-right" href="{{route('users.create')}}">
-                                    <i class="fasfa-plus"></i>
-                                    Add New User
+                                    <i class="fas fa-plus"></i>
+                                    {{ trans('site.add_user') }}
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <!-- /.card-header -->
+                    <!-- /End of card-header -->
+
+                    <!-- Card body -->
                     <div class="card-body">
                         <table id="example1" class="table table-bordered table-striped">
                             <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>Name</th>
-                                    <th>Email</th>
-                                    <th>Action</th>
+                                    <th>{{ trans('site.name') }}</th>
+                                    <th>{{ trans('site.email') }}</th>
+                                    <th>{{ trans('site.action') }}</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -72,14 +79,14 @@
                                             <td>
                                                 <a class="btn btn-success d-inline-block btn-sm btn-edit" href="{{route('users.edit', ['id' => $user->id])}}">
                                                     <i class="fas fa-edit"></i>
-                                                    Edit
+                                                    {{ trans('site.edit') }}
                                                 </a>
                                                 <form class="d-inline-block" action="{{route('users.destroy', ['id' => $user->id])}}" method="POST">
                                                     @csrf
                                                     @method('DELETE')
                                                     <button class="btn btn-danger btn-sm btn-delete" type="submit">
                                                         <i class="fas fa-trash"></i>
-                                                        Delete
+                                                        {{ trans('site.delete') }}
                                                     </button>
                                                 </form>
                                             </td>
@@ -90,14 +97,14 @@
                             <tfoot>
                                 <tr>
                                     <th>#</th>
-                                    <th>Name</th>
-                                    <th>Email</th>
-                                    <th>Action</th>
+                                    <th>{{ trans('site.name') }}</th>
+                                    <th>{{ trans('site.email') }}</th>
+                                    <th>{{ trans('site.action') }}</th>
                                 </tr>
                             </tfoot>
                         </table>
                     </div>
-                <!-- /.card-body -->
+                    <!-- /end of card-body -->
                 </div>
             <!-- /.card -->
             </div>
@@ -128,7 +135,7 @@
             "responsive": true,
             "lengthChange": false,
             "autoWidth": false,
-            "buttons": ["copy", "csv", "excel", "pdf", "print"]
+            "buttons": ["csv", "excel", "pdf", "print"]
         }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
 
     });

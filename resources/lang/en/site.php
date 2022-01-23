@@ -16,6 +16,10 @@ return [
     'classes' => 'Classes / Types',
     'seats' => 'Seats',
 
+    // Users Page
+    'list_users' => 'List of all users',
+    'add_user' => 'Add a new user',
+
     // Messages Page
     'message' => 'Message',
     'list_all_messages' => 'list all messages',
