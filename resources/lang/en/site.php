@@ -11,6 +11,10 @@ return [
     'about_us' => 'About Us',
     'news' => 'News',
     'dashboard' => 'Dashboard',
+    'station' => 'Station',
+    'trains' => 'Trains',
+    'classes' => 'Classes / Types',
+    'seats' => 'Seats',
 
     // Messages Page
     'message' => 'Message',
