@@ -1,0 +1,22 @@
+/* Colors */
+:root{
+    --main-color: #0c2545;
+}
+
+/* Sidebar */
+.main-sidebar{
+    background-color: var(--main-color);
+}
+
+.main-sidebar .nav-logout{
+    position: absolute;
+    bottom: 20px;
+}
+/* End of sidebar */
+
+/* Navbar */
+/* End of navbar */
+
+/* Header */
+/* End of header */
+
