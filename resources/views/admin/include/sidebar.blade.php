@@ -52,6 +52,8 @@
                     </ul>
                 </li> --}}
 
+                <li class="nav-header">{{ trans('site.menu') }}</li>
+
                 <!-- Home -->
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('admin.home')}}">
