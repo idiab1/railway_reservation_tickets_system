@@ -43,6 +43,7 @@ return [
     'reset_password' => 'Reset Password',
     'send_password_link' => 'Send Password Reset Link',
     'system_settings'=> 'System Settings',
+    'menu' => 'Menu',
 
     // Buttons
     'send' => 'Send',
