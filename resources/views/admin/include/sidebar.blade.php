@@ -72,7 +72,7 @@
 
                 <!-- Stations -->
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="{{route('stations.index')}}">
                         <i class="mdi mdi-office-building-marker nav-icon" aria-hidden="true"></i>
                         <p>{{ trans('site.stations') }}</p>
                     </a>
