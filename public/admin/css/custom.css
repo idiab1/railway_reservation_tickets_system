@@ -26,10 +26,16 @@
 /* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
 /*/*//*/ Components /*//*/*/
 
-
 /* Tables */
 
 /* End of Tables */
+
+/* Buttons */
+section table .btn{
+    color: #000;
+}
+
+/* End of Buttons */
 
 /* Forms */
 
