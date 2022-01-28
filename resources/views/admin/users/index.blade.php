@@ -41,7 +41,7 @@
                                 <!-- /End of card title -->
                             </div>
                             <div class="col-6">
-                                <a class="btn btn-create btn-sm btn-primary float-right" href="{{route('users.create')}}">
+                                <a class="btn btn-create btn-sm btn-primary btn-crayons float-right" href="{{route('users.create')}}">
                                     <i class="fas fa-plus"></i>
                                     {{ trans('site.add_user') }}
                                 </a>
