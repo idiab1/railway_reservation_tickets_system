@@ -56,14 +56,14 @@
         <section class="content-header">
             <div class="container-fluid">
                 <div class="row mb-2">
-                    <div class="col-sm-6">
+                    <div class="col-6">
                         <h1>@yield('page_name')</h1>
                     </div>
-                    <div class="col-sm-6">
-                        <ol class="breadcrumb {{app()->getLocale() == 'ar' ? "float-sm-left" : "float-sm-right"}}">
+                    <div class="col-6">
+                        <ol class="breadcrumb {{app()->getLocale() == 'ar' ? "float-left" : "float-right"}}">
                             <li class="breadcrumb-item"><a href="{{route('admin.home')}}">
                                 <i class="mdi mdi-view-dashboard" aria-hidden="true"></i>
-                                Dashboard
+                                {{ trans('site.dashboard') }}
                             </a>
                             </li>
                             @yield('breadcrumb-item')
