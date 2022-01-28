@@ -33,15 +33,15 @@
                     <!-- Card Header -->
                     <div class="card-header">
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-6">
                                 <!-- Card Title -->
                                 <h3 class="card-title">
                                     {{ trans('site.list_users') }}
                                 </h3>
                                 <!-- /End of card title -->
                             </div>
-                            <div class="col-md-6">
-                                <a class="btn btn-create btn-primary float-sm-right" href="{{route('users.create')}}">
+                            <div class="col-6">
+                                <a class="btn btn-create btn-sm btn-primary float-right" href="{{route('users.create')}}">
                                     <i class="fas fa-plus"></i>
                                     {{ trans('site.add_user') }}
                                 </a>
