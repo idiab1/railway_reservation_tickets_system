@@ -22,7 +22,7 @@
     <div class="row">
         <div class="col-md-8 m-auto">
             <div class="users-form">
-                <div class="card card-primary">
+                <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">{{ trans('site.add_user') }}</h3>
                     </div>
