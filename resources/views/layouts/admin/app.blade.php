@@ -56,10 +56,10 @@
         <section class="content-header">
             <div class="container-fluid">
                 <div class="row mb-2">
-                    <div class="col-6">
+                    <div class="col-5">
                         <h1>@yield('page_name')</h1>
                     </div>
-                    <div class="col-6">
+                    <div class="col-7">
                         <ol class="breadcrumb {{app()->getLocale() == 'ar' ? "float-left" : "float-right"}}">
                             <li class="breadcrumb-item"><a href="{{route('admin.home')}}">
                                 <i class="mdi mdi-view-dashboard" aria-hidden="true"></i>
