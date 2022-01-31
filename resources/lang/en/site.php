@@ -53,6 +53,8 @@ return [
     'create' => 'Create',
     'read' => 'Read',
     'update' => 'Update',
+    'add' => 'Add',
+
 
     // Placeholder
     'search' => 'Search',
