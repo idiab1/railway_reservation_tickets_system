@@ -2,18 +2,18 @@
 
 {{-- Title --}}
 @section('title')
-    Add new user
+    {{ trans('site.add_user') }}
 @endsection
 
 {{-- Page name --}}
 @section('page_name')
-    Add new user
+    {{ trans('site.add_user') }}
 @endsection
 
 {{-- Breadcrumb --}}
 @section('breadcrumb-item')
-    <li class="breadcrumb-item"><a href="{{route('users.index')}}">Users</a></li>
-    <li class="breadcrumb-item">Add new user<li>
+    <li class="breadcrumb-item"><a href="{{route('users.index')}}">{{ trans('site.users') }}</a></li>
+    <li class="breadcrumb-item">{{ trans('site.add_user') }}<li>
 @endsection
 
 {{-- Content --}}
@@ -24,7 +24,7 @@
             <div class="users-form">
                 <div class="card card-primary">
                     <div class="card-header">
-                        <h3 class="card-title">Add new user</h3>
+                        <h3 class="card-title">{{ trans('site.add_user') }}</h3>
                     </div>
                     <!-- /.card-header -->
                         <!-- form start -->
@@ -33,31 +33,35 @@
                             <div class="card-body">
                                 <!-- Name -->
                                 <div class="form-group">
-                                    <label for="name">Name</label>
-                                    <input class="form-control" type="text" id="name" name="name" placeholder="Enter name of user">
+                                    <label for="name">{{ trans('site.name') }}</label>
+                                    <input class="form-control" type="text" id="name"
+                                            name="name" placeholder="{{trans('site.admin_enter_name')}}">
                                 </div>
 
                                 <!-- Email -->
                                 <div class="form-group">
-                                    <label for="email">Email</label>
-                                    <input class="form-control" type="email" id="email" name="email" placeholder="Enter email of user">
+                                    <label for="email">{{ trans('site.email') }}</label>
+                                    <input class="form-control" type="email" id="email"
+                                            name="email" placeholder="{{trans('site.admin_enter_email')}}">
                                 </div>
 
                                 <!-- Password -->
                                 <div class="form-group">
-                                    <label for="password">Password</label>
-                                    <input class="form-control" type="password" id="password" name="password" placeholder="Enter password of user">
+                                    <label for="password">{{ trans('site.password') }}</label>
+                                    <input class="form-control" type="password" id="password"
+                                            name="password" placeholder="{{trans('site.admin_enter_password')}}">
                                 </div>
 
                                 <!-- Confirm password -->
                                 <div class="form-group">
-                                    <label for="confirmPassword">Confirm Password</label>
-                                    <input class="form-control" type="password" id="confirmPassword" name="password_confirmation" placeholder="Confirm password of user">
+                                    <label for="confirmPassword">{{ trans('site.confirm_password') }}</label>
+                                    <input class="form-control" type="password" id="confirmPassword"
+                                            name="password_confirmation" placeholder="{{trans('site.admin_confirm_password')}}">
                                 </div>
 
                                 <!-- Privileges -->
                                 <div class="form-group">
-                                    <label for="supervisors">Privileges</label>
+                                    <label for="supervisors">{{ trans('site.privileges') }}</label>
 
                                     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                                         @php

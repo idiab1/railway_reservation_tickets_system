@@ -36,8 +36,7 @@ return [
     'email' => 'Email',
     'password' => 'Password',
     'confirm_password' => 'Confirm Password',
-    'english' => 'English',
-    'arabic' => 'Arabic',
+    'privileges' => 'Privileges',
     'remember_me' => 'Remember Me',
     'forgot_password' => 'Forgot Your Password?',
     'reset_password' => 'Reset Password',
@@ -55,6 +54,9 @@ return [
     'update' => 'Update',
     'add' => 'Add',
 
+    // Languages
+    'english' => 'English',
+    'arabic' => 'Arabic',
 
     // Placeholder
     'search' => 'Search',
@@ -62,6 +64,11 @@ return [
     'enter_email' => 'Enter your email address',
     'enter_your_message' => 'Enter your message',
     'enter_password' => 'Enter Password',
+    'admin_enter_name' => 'Enter name of user',
+    'admin_enter_email' => 'Enter email of user',
+    'admin_enter_password' => 'Enter password of user',
+    'admin_confirm_password' => 'Enter password of user',
+
 
     // Footer
     'copyright' => 'Copyright all rights reserved.',
