@@ -1,6 +1,10 @@
 /* Colors */
 :root{
-    --main-color: #0c2545;
+    --main-color: #313552;
+    --red-color: #B8405E;
+    --green-color: #2EB086;
+    --offwhite-color: #EEE6CE;
+    --main2-color: #0c2545;
 }
 
 /* Sidebar */
@@ -31,6 +35,11 @@
 /* End of Tables */
 
 /* Buttons */
+.btn-crayons{
+
+}
+
+
 section table .btn{
     color: #000;
 }
