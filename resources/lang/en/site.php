@@ -50,6 +50,9 @@ return [
     'show' => 'Show',
     'delete' => 'Delete',
     'edit' => 'Edit',
+    'create' => 'Create',
+    'read' => 'Read',
+    'update' => 'Update',
 
     // Placeholder
     'search' => 'Search',
