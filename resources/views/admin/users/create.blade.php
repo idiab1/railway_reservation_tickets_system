@@ -65,14 +65,15 @@
 
                                     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                                         @php
-                                            $models = ['users'];
+                                            $models = ['users', 'stations'];
                                             $maps = ['create', 'read', 'update', 'delete']
                                         @endphp
 
                                         @foreach ($models as $index => $model)
                                             <li class="nav-item">
-                                                <a class="nav-link {{$index == 0 ? "active" : ""}}"
-                                                id="pills-{{$model}}-tab" data-toggle="pill" href="#pills-{{$model}}" role="tab" aria-controls="pills-{{$model}}">{{ trans('site.' . $model) }}</a>
+                                                <a class="nav-link btn btn-sm {{$index == 0 ? "active" : ""}}"
+                                                id="pills-{{$model}}-tab" data-toggle="pill" href="#pills-{{$model}}"
+                                                role="tab" aria-controls="pills-{{$model}}">{{ trans('site.' . $model) }}</a>
                                             </li>
 
                                         @endforeach
