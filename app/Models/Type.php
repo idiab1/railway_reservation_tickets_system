@@ -10,7 +10,7 @@ class Type extends Model
     use HasFactory;
 
     protected $fillable = [
-        'train_id', 'class_name', 'class_price'
+        'train_id', 'class_name', 'class_price', 'seats_count'
     ];
 
     /**
