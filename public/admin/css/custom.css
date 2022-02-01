@@ -32,21 +32,75 @@
 
 /* Tables */
 
+.page-item.active .page-link {
+    color: #eee;
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+
 /* End of Tables */
 
 /* Buttons */
 .btn-crayons{
-
+    text-transform: capitalize;
+    background-color: var(--main-color);
+    border-color: var(--main-color);
 }
-
+.btn-crayons:hover{
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+.card .btn-secondary{
+    background-color: rgb(49 53 82 / 70%);
+    border-color: var(--main-color);
+}
 
 section table .btn{
     color: #000;
 }
 
+.btn-delete{
+    background-color: var(--red-color);
+    border-color: var(--red-color);
+    color: #fff !important;
+    margin-left: 5px;
+}
+.btn-delete:hover{
+    background-color: var(--red-color);
+    border-color: var(--red-color);
+}
+.btn-edit{
+    background-color: var(--green-color);
+    border-color: var(--green-color);
+    margin-right: 5px;
+}
+.btn-edit:hover{
+    background-color: var(--green-color);
+    border-color: var(--green-color);
+    color: #000;
+}
 /* End of Buttons */
 
+/* Card */
+.card .card-header{
+    background-color: var(--red-color);
+}
+.card .card-header h3{
+    font-size: 1.15rem;
+    color: #eee;
+    text-transform: capitalize;
+}
+/* End of Card */
+
 /* Forms */
+
+form label{
+    color: var(--main-color);
+}
+form ul.nav-pills li a{
+
+}
+
 
 /* End of Forms */
 
