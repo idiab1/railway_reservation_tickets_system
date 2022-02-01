@@ -30,8 +30,24 @@
 /* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
 /*/*//*/ Components /*//*/*/
 
-/* Tables */
+/* Breadcrumb */
+.content-header .page-name{
+    text-transform: capitalize;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--red-color);
+}
+.content-header .breadcrumb .breadcrumb-item:last-of-type{
+    color: #535353;
+    font-weight: 400;
+}
+.content-header .breadcrumb .breadcrumb-item a{
+    color: var(--red-color);
+    font-weight: 500;
+}
+/* End of Breadcrumb */
 
+/* Tables */
 .page-item.active .page-link {
     color: #eee;
     background-color: var(--main-color);
