@@ -8,9 +8,7 @@
 }
 
 /* Sidebar */
-.main-sidebar{
-    background-color: var(--main-color);
-}
+
 
 .main-sidebar .nav-logout{
     position: absolute;
@@ -24,25 +22,25 @@
 /* Header */
 /* End of header */
 
+/* Footer */
+.main-footer{
 
-
+}
+/* End of Footer */
 
 /* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
 /*/*//*/ Components /*//*/*/
 
 /* Breadcrumb */
 .content-header .page-name{
-    text-transform: capitalize;
     font-size: 1.6rem;
     font-weight: 600;
-    color: var(--red-color);
 }
 .content-header .breadcrumb .breadcrumb-item:last-of-type{
     color: #535353;
     font-weight: 400;
 }
 .content-header .breadcrumb .breadcrumb-item a{
-    color: var(--red-color);
     font-weight: 500;
 }
 /* End of Breadcrumb */
@@ -50,71 +48,42 @@
 /* Tables */
 .page-item.active .page-link {
     color: #eee;
-    background-color: var(--main-color);
-    border-color: var(--main-color);
 }
 
 /* End of Tables */
 
 /* Buttons */
-.btn-crayons{
-    text-transform: capitalize;
-    background-color: var(--main-color);
-    border-color: var(--main-color);
-}
-.btn-crayons:hover{
-    background-color: var(--main-color);
-    border-color: var(--main-color);
-}
+
 .card .btn-secondary{
     background-color: rgb(49 53 82 / 70%);
-    border-color: var(--main-color);
 }
-
 section table .btn{
     color: #000;
 }
-
-.btn-delete{
-    background-color: var(--red-color);
-    border-color: var(--red-color);
+.btn-delete,
+.btn-delete:focus{
     color: #fff !important;
     margin-left: 5px;
 }
-.btn-delete:hover{
-    background-color: var(--red-color);
-    border-color: var(--red-color);
-}
+
 .btn-edit{
-    background-color: var(--green-color);
-    border-color: var(--green-color);
     margin-right: 5px;
 }
 .btn-edit:hover{
-    background-color: var(--green-color);
-    border-color: var(--green-color);
     color: #000;
 }
 /* End of Buttons */
 
 /* Card */
-.card .card-header{
-    background-color: var(--red-color);
-}
+
 .card .card-header h3{
     font-size: 1.15rem;
     color: #eee;
-    text-transform: capitalize;
 }
 /* End of Card */
 
 /* Forms */
-
-.card form label{
-    color: var(--main-color);
-}
 .card form input{
-    text-transform: capitalize;
     font-size: 0.9rem;
 }
 .card form nav-pills {
@@ -126,13 +95,9 @@ section table .btn{
 }
 .card form .nav-pills .nav-link,
 .card form .nav-pills .nav-link:hover {
-    background-color: var(--main-color);
     color: #eee;
 }
-.card form .nav-pills .nav-link:hover {
-    background-color: var(--main-color);
-    color: #eee;
-}
+
 
 .card form .nav-pills li a{
     font-size: 16px;
@@ -157,4 +122,62 @@ section table .btn{
 /*/*//*/ End of components /*//*/*/
 /* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
 
+/* Grouping */
+.main-sidebar,
+.page-item.active .page-link,
+.btn-crayons,
+.btn-crayons:focus,
+.btn-crayons:hover,
+.card form .nav-pills .nav-link,
+.card form .nav-pills .nav-link:hover{
+    background-color: var(--main-color);
+}
+.card form label{
+    color: var(--main-color);
+}
+.page-item.active .page-link,
+.btn-crayons,
+.btn-crayons:focus,
+.btn-crayons:hover,
+.card .btn-secondary {
+    border-color: var(--main-color);
+}
+
+.content-header .page-name,
+.content-header .breadcrumb .breadcrumb-item a{
+    color: var(--red-color);
+}
+
+.btn-delete,
+.btn-delete:focus,
+.btn-delete:hover,
+.card .card-header{
+    background-color: var(--red-color);
+}
+.btn-delete,
+.btn-delete:focus,
+.btn-delete:hover{
+    border-color: var(--red-color);
+}
+
+.btn-edit,
+.btn-edit:hover{
+    background-color: var(--green-color);
+}
+.btn-edit,
+.btn-edit:hover{
+    border-color: var(--green-color);
+}
+
+.content-header .page-name,
+.btn-crayons,
+.btn-crayons:focus,
+.card .card-header h3,
+.card form input{
+    text-transform: capitalize;
+}
+
+
+
+/* End of Grouping */
 
