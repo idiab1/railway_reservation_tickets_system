@@ -57,7 +57,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-5">
-                        <h1>@yield('page_name')</h1>
+                        <h1 class="page-name">@yield('page_name')</h1>
                     </div>
                     <div class="col-7">
                         <ol class="breadcrumb {{app()->getLocale() == 'ar' ? "float-left" : "float-right"}}">
