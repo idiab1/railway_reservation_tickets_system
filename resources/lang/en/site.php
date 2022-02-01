@@ -43,6 +43,7 @@ return [
     'send_password_link' => 'Send Password Reset Link',
     'system_settings'=> 'System Settings',
     'menu' => 'Menu',
+    'about' => 'About',
 
     // Buttons
     'send' => 'Send',
@@ -67,7 +68,8 @@ return [
     'admin_enter_name' => 'Enter name of user',
     'admin_enter_email' => 'Enter email of user',
     'admin_enter_password' => 'Enter password of user',
-    'admin_confirm_password' => 'Enter password of user',
+    'admin_confirm_password' => 'Confirm password',
+    'admin_about_here' => 'About Here',
 
 
     // Footer

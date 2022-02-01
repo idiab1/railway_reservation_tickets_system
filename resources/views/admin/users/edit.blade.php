@@ -2,18 +2,18 @@
 
 {{-- Title --}}
 @section('title')
-    Edit {{$user->name . "'s"}}
+    {{ trans('site.edit') }} {{$user->name . "'s"}}
 @endsection
 
 {{-- Page name --}}
 @section('page_name')
-    Edit {{$user->name . "'s"}}
+    {{ trans('site.edit') }} {{$user->name . "'s"}}
 @endsection
 
 {{-- Breadcrumb --}}
 @section('breadcrumb-item')
-    <li class="breadcrumb-item"><a href="{{route('users.index')}}">Users</a></li>
-    <li class="breadcrumb-item">Edit {{$user->name . "'s"}}<li>
+    <li class="breadcrumb-item"><a href="{{route('users.index')}}">{{ trans('site.users') }}</a></li>
+    <li class="breadcrumb-item">{{ trans('site.edit') }} {{$user->name . "'s"}}<li>
 @endsection
 
 {{-- Content --}}
@@ -24,7 +24,7 @@
             <div class="users-form">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Edit {{$user->name . "'s"}}</h3>
+                        <h3 class="card-title">{{ trans('site.edit') }} {{$user->name . "'s"}}</h3>
                     </div>
                     <!-- /.card-header -->
                         <!-- form start -->
@@ -39,32 +39,36 @@
                                         src="{{asset('uploads/users/' . Auth::user()->profile->image)}}"
                                         alt="user image" width="60" height="60">
                                     </div>
-                                    <label for="image">Image</label>
+                                    <label for="image">{{ trans('site.Image') }}</label>
                                     <input class="form-control image" type="file" id="image" name="image">
                                 </div>
 
                                 <!-- Name -->
                                 <div class="form-group">
-                                    <label for="name">Name</label>
-                                    <input class="form-control" type="text" id="name" name="name" value="{{$user->name}}" placeholder="Enter name of user">
+                                    <label for="name">{{ trans('site.name') }}</label>
+                                    <input class="form-control" type="text" id="name" name="name"
+                                    value="{{$user->name}}" placeholder="{{trans('site.admin_enter_name')}}">
                                 </div>
 
                                 <!-- Email -->
                                 <div class="form-group">
-                                    <label for="email">Email</label>
-                                    <input class="form-control" type="email" id="email" name="email" value="{{$user->email}}" placeholder="Enter email of user">
+                                    <label for="email">{{ trans('site.email') }}</label>
+                                    <input class="form-control" type="email" id="email" name="email"
+                                    value="{{$user->email}}" placeholder="{{trans('site.admin_enter_email')}}">
                                 </div>
 
                                 <!-- Password -->
                                 <div class="form-group">
-                                    <label for="password">Password</label>
-                                    <input class="form-control" type="password" id="password" name="password" placeholder="Enter password of user">
+                                    <label for="password">{{ trans('site.password') }}</label>
+                                    <input class="form-control" type="password" id="password"
+                                    name="password" placeholder="{{trans('site.admin_enter_password')}}">
                                 </div>
 
                                 <!-- Confrim Password -->
                                 <div class="form-group">
-                                    <label for="confirmPassword">Confirm Password</label>
-                                    <input class="form-control" type="password" id="confirmPassword" name="password_confirmation" placeholder="Confirm password of user">
+                                    <label for="confirmPassword">{{ trans('site.confirm_password') }}</label>
+                                    <input class="form-control" type="password" id="confirmPassword"
+                                    name="password_confirmation" placeholder="{{trans('site.admin_confirm_password')}}">
                                 </div>
 
                                 <!-- Facebook -->
@@ -92,13 +96,14 @@
 
                                 <!-- about -->
                                 <div class="form-group">
-                                    <label for="about">About</label>
+                                    <label for="about">{{ trans('site.about') }}</label>
                                     <textarea class="form-control" name="about" id="about" cols="30"
-                                    rows="10" placeholder="About Here">{{$user->profile->about}}</textarea>
+                                    rows="10" placeholder="{{trans('site.admin_about_here')}}">{{$user->profile->about}}</textarea>
                                 </div>
 
+                                <!-- Privileges -->
                                 <div class="form-group">
-                                    <label for="supervisors">Privileges</label>
+                                    <label for="supervisors">{{ trans('site.privileges') }}</label>
 
                                     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                                         @php
