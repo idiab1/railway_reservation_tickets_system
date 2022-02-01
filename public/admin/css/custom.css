@@ -97,15 +97,12 @@ section table .btn{
 .card form .nav-pills .nav-link:hover {
     color: #eee;
 }
-
-
 .card form .nav-pills li a{
     font-size: 16px;
     padding: 5px 7px;
     font-weight: 600;
     letter-spacing: .03rem;
 }
-
 .card form .tab-content .tab-pane label{
     margin: 0;
 }
