@@ -22,7 +22,7 @@
     <div class="row">
         <div class="col-md-8 m-auto">
             <div class="users-form">
-                <div class="card card-primary">
+                <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">Edit {{$user->name . "'s"}}</h3>
                     </div>
@@ -138,7 +138,7 @@
                             <!-- /.card-body -->
 
                             <div class="card-footer">
-                                <button type="submit" class="btn btn-primary">Edit</button>
+                                <button type="submit" class="btn btn-primary btn-crayons btn-update">{{ trans('site.update') }}</button>
                             </div>
                         </form>
 
