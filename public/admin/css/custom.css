@@ -86,6 +86,9 @@ section table .btn{
 .card form input{
     font-size: 0.9rem;
 }
+.card form textarea{
+    max-height: 120px;
+}
 .card form nav-pills {
     margin: 0;
 }
