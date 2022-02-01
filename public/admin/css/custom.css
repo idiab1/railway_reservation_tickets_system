@@ -94,14 +94,46 @@ section table .btn{
 
 /* Forms */
 
-form label{
+.card form label{
     color: var(--main-color);
 }
-form ul.nav-pills li a{
-
+.card form input{
+    text-transform: capitalize;
+    font-size: 0.9rem;
+}
+.card form nav-pills {
+    margin: 0;
+}
+.card form .nav-pills .nav-link.active,
+.nav-pills .show>.nav-link{
+    background-color: rgb(49 53 82 / 60%);
+}
+.card form .nav-pills .nav-link,
+.card form .nav-pills .nav-link:hover {
+    background-color: var(--main-color);
+    color: #eee;
+}
+.card form .nav-pills .nav-link:hover {
+    background-color: var(--main-color);
+    color: #eee;
 }
 
+.card form .nav-pills li a{
+    font-size: 16px;
+    padding: 5px 7px;
+    font-weight: 600;
+    letter-spacing: .03rem;
+}
 
+.card form .tab-content .tab-pane label{
+    margin: 0;
+}
+.card form .tab-content .tab-pane:not(first-of-type) label{
+    margin: 0 5px;
+}
+.card form .tab-content .tab-pane label input{
+    margin-right: 5px;
+}
 /* End of Forms */
 
 
