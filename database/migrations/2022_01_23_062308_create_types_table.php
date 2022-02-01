@@ -18,6 +18,7 @@ class CreateTypesTable extends Migration
             $table->integer('train_id')->unsigned();
             $table->string('class_name', 60);
             $table->double('class_price', 15, 8);
+            $table->integer('seats_count')->default(1);
             $table->timestamps();
 
             $table->foreign('train_id')->references('id')->on('trains')->onDelete('cascade');
