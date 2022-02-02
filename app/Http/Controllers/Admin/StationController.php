@@ -77,7 +77,17 @@ class StationController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // Get data of station by id
+        $station = Station::find($id);
+
+        // Update all data
+        $station->update([
+            'name' => $request->name
+        ]);
+
+        // Redirect to home of stations
+        return redirect()->route('stations.index');
+
     }
 
     /**
