@@ -74,7 +74,7 @@ return [
     'admin_enter_password' => 'Enter password of user',
     'admin_confirm_password' => 'Confirm password',
     'admin_about_here' => 'About Here',
-
+    'enter_name_station' => 'Enter name of station',
 
     // Footer
     'copyright' => 'Copyright all rights reserved.',
