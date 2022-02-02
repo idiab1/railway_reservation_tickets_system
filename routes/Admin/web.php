@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\StationController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\TrainController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,6 +42,13 @@ Route::group(
                 'show'
             ])->parameters([
                 'stations' => 'id',
+            ]);
+
+            // Trains Route
+            Route::resource('trians', TrainController::class)->except([
+                'show'
+            ])->parameters([
+                'trians' => 'id',
             ]);
 
             // Setting Route
