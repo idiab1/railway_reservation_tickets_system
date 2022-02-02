@@ -56,17 +56,6 @@ class StationController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
@@ -74,7 +63,9 @@ class StationController extends Controller
      */
     public function edit($id)
     {
-        //
+        // Get data of station by id
+        $station = Station::find($id);
+        return view('admin.stations.edit', compact('station'));
     }
 
     /**
