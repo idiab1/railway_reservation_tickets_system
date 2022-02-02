@@ -40,7 +40,19 @@ class StationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Validate any data coming from users
+        $this->validate($request, [
+            'name' => 'required',
+        ]);
+
+        // Save data to database
+        Station::create([
+            'name' => $request->name
+        ]);
+
+        // redirect to stations homepage
+        return redirect()->route('stations.index');
+
     }
 
     /**
