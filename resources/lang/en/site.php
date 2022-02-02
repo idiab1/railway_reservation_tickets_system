@@ -24,6 +24,10 @@ return [
     'list_stations' => 'List of all stations',
     'add_station' => 'Add a new station',
 
+    // Trains Page
+    'list_trains' => 'List of all trains',
+    'add_train' => 'Add a new train',
+
     // Messages Page
     'message' => 'Message',
     'list_all_messages' => 'list all messages',
@@ -48,6 +52,8 @@ return [
     'system_settings'=> 'System Settings',
     'menu' => 'Menu',
     'about' => 'About',
+    'depature_time' => 'Depature Time',
+    'arrival_time' => 'Arrival Time',
 
     // Buttons
     'send' => 'Send',
