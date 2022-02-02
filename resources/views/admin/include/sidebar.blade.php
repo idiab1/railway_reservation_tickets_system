@@ -80,7 +80,7 @@
 
                 <!-- Trains -->
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('trians.index')}}">
+                    <a class="nav-link" href="{{route('trains.index')}}">
                         <i class="mdi mdi-train" aria-hidden="true"></i>
                         <p>{{ trans('site.trains') }}</p>
                     </a>
