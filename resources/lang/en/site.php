@@ -20,6 +20,10 @@ return [
     'list_users' => 'List of all users',
     'add_user' => 'Add a new user',
 
+    // Stations Page
+    'list_stations' => 'List of all stations',
+    'add_station' => 'Add a new station',
+
     // Messages Page
     'message' => 'Message',
     'list_all_messages' => 'list all messages',
