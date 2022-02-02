@@ -45,10 +45,10 @@ Route::group(
             ]);
 
             // Trains Route
-            Route::resource('trians', TrainController::class)->except([
+            Route::resource('trains', TrainController::class)->except([
                 'show'
             ])->parameters([
-                'trians' => 'id',
+                'trains' => 'id',
             ]);
 
             // Setting Route
