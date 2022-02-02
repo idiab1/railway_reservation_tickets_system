@@ -16,7 +16,6 @@ class CreateTrainsTable extends Migration
         Schema::create('trains', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name', 60);
-            $table->text('class_type');
             $table->text('depature_time');
             $table->text('arrival_time');
             $table->integer('station_id')->unsigned();
