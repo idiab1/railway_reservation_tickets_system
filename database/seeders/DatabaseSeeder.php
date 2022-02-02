@@ -17,7 +17,8 @@ class DatabaseSeeder extends Seeder
             LaratrustSeeder::class,
             UsersTableSeeder::class,
             SettingSeeder::class,
-            StationSeader::class
+            StationSeader::class,
+            TrainSeeder::class,
         ]);
 
     }
