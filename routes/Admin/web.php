@@ -37,7 +37,9 @@ Route::group(
             ]);
 
             // Stations Route
-            Route::resource('stations', StationController::class)->parameters([
+            Route::resource('stations', StationController::class)->except([
+                'show'
+            ])->parameters([
                 'stations' => 'id',
             ]);
 
