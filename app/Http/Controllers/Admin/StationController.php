@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Station;
 use Illuminate\Http\Request;
 
 class StationController extends Controller
@@ -14,7 +15,9 @@ class StationController extends Controller
      */
     public function index()
     {
-        //
+        // Get all data from database
+        $stations = Station::all();
+        return view('admin.stations.index', compact('stations'));
     }
 
     /**
