@@ -83,6 +83,9 @@ return [
     'admin_confirm_password' => 'Confirm password',
     'admin_about_here' => 'About Here',
     'enter_name_station' => 'Enter name of station',
+    'enter_name_train' => 'Enter name of train',
+    'enter_depature_station' => 'Enter depature station',
+    'enter_arrival_station' => 'Enter arrival station',
 
     // Footer
     'copyright' => 'Copyright all rights reserved.',
