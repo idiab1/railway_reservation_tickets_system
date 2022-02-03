@@ -18,6 +18,8 @@ class TrainSeeder extends Seeder
             'name' => 'train 25634',
             'depature_time' => '2/2/2022',
             'arrival_time' => '2/2/2022',
+            'depature_station' => 'Mansoura Station',
+            'arrival_station' => 'Cairo Station',
             'station_id' => 1,
         ]);
 
