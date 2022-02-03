@@ -18,6 +18,8 @@ class CreateTrainsTable extends Migration
             $table->string('name', 60);
             $table->text('depature_time');
             $table->text('arrival_time');
+            $table->string('depature_station');
+            $table->string('arrival_station');
             $table->integer('station_id')->unsigned();
 
             $table->foreign('station_id')->references('id')->on('stations')->onDelete('cascade');
