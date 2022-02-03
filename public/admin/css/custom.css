@@ -139,7 +139,8 @@ section table .btn{
 .btn-crayons,
 .btn-crayons:focus,
 .btn-crayons:hover,
-.card .btn-secondary {
+.card .btn-secondary,
+.card form input:focus {
     border-color: var(--main-color);
 }
 
@@ -161,11 +162,13 @@ section table .btn{
 }
 
 .btn-edit,
-.btn-edit:hover{
+.btn-edit:hover,
+.btn-edit:focus{
     background-color: var(--green-color);
 }
 .btn-edit,
-.btn-edit:hover{
+.btn-edit:hover,
+.btn-edit:focus{
     border-color: var(--green-color);
 }
 
