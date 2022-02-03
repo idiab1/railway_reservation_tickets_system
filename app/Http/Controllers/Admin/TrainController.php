@@ -28,6 +28,7 @@ class TrainController extends Controller
     public function create()
     {
         //
+        return view('admin.trains.create');
     }
 
     /**
