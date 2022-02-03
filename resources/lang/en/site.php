@@ -23,6 +23,7 @@ return [
     // Stations Page
     'list_stations' => 'List of all stations',
     'add_station' => 'Add a new station',
+    'all_stations' => 'All Stations',
 
     // Trains Page
     'list_trains' => 'List of all trains',
