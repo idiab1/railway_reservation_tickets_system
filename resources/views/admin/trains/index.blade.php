@@ -59,6 +59,8 @@
                                     <th>{{ trans('site.name') }}</th>
                                     <th>{{ trans('site.depature_time') }}</th>
                                     <th>{{ trans('site.arrival_time') }}</th>
+                                    <th>{{ trans('site.depature_station') }}</th>
+                                    <th>{{ trans('site.arrival_station') }}</th>
                                     <th>{{ trans('site.action') }}</th>
                                 </tr>
                             </thead>
@@ -71,6 +73,8 @@
                                         <tr>
                                             <td>{{$id++}}</td>
                                             <td>{{$train->name}}</td>
+                                            <td>{{$train->depature_time}}</td>
+                                            <td>{{$train->arrival_time}}</td>
                                             <td>{{$train->depature_time}}</td>
                                             <td>{{$train->arrival_time}}</td>
                                             <td>
@@ -97,6 +101,8 @@
                                     <th>{{ trans('site.name') }}</th>
                                     <th>{{ trans('site.depature_time') }}</th>
                                     <th>{{ trans('site.arrival_time') }}</th>
+                                    <th>{{ trans('site.depature_station') }}</th>
+                                    <th>{{ trans('site.arrival_station') }}</th>
                                     <th>{{ trans('site.action') }}</th>
                                 </tr>
                             </tfoot>
