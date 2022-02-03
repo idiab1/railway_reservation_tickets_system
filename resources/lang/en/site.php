@@ -54,6 +54,8 @@ return [
     'about' => 'About',
     'depature_time' => 'Depature Time',
     'arrival_time' => 'Arrival Time',
+    'depature_station' => 'Depature Station',
+    'arrival_station' => 'Arrival Station',
 
     // Buttons
     'send' => 'Send',
