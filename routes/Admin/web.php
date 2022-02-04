@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\StationController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\TrainController;
 use App\Http\Controllers\Admin\ClassesController;
+use App\Http\Controllers\Admin\Train\ClassesController as TrainClassesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,7 +53,7 @@ Route::group(
                 'trains' => 'id',
             ]);
 
-            Route::resource('trains/{id}/classes', ClassesController::class)->only([
+            Route::resource('trains/{id}/classes', TrainClassesController::class)->only([
                 'create', 'store'
             ])->names([
                 'create' => 'trains.classes.create',
