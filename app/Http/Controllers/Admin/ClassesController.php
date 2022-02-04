@@ -26,11 +26,11 @@ class ClassesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
         // Get all trains then save to trains variable
-        $trains = Train::all();
-        return view('admin.classes.create', compact('trains'));
+        $train = Train::find($id);
+        return view('admin.classes.create', compact('train'));
     }
 
     /**
