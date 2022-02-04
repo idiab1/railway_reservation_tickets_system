@@ -57,8 +57,6 @@
                                 <tr>
                                     <th>#</th>
                                     <th>{{ trans('site.name') }}</th>
-                                    <th>{{ trans('site.depature_time') }}</th>
-                                    <th>{{ trans('site.arrival_time') }}</th>
                                     <th>{{ trans('site.depature_station') }}</th>
                                     <th>{{ trans('site.arrival_station') }}</th>
                                     <th>{{ trans('site.action') }}</th>
@@ -73,10 +71,18 @@
                                         <tr>
                                             <td>{{$id++}}</td>
                                             <td>{{$train->name}}</td>
-                                            <td>{{$train->depature_time}}</td>
-                                            <td>{{$train->arrival_time}}</td>
-                                            <td>{{$train->depature_time}}</td>
-                                            <td>{{$train->arrival_time}}</td>
+                                            <td>
+                                                <ul class="list-unstyled">
+                                                    <li>{{$train->name}}</li>
+                                                    <li>{{$train->depature_time}}</li>
+                                                </ul>
+                                            </td>
+                                            <td>
+                                                <ul class="list-unstyled">
+                                                    <li>{{$train->name}}</li>
+                                                    <li>{{$train->arrival_time}}</li>
+                                                </ul>
+                                            </td>
                                             <td>
                                                 <a class="btn btn-success d-inline-block btn-sm btn-edit" href="{{route('trains.edit', ['id' => $train->id])}}">
                                                     <i class="fas fa-edit"></i>
@@ -99,8 +105,6 @@
                                 <tr>
                                     <th>#</th>
                                     <th>{{ trans('site.name') }}</th>
-                                    <th>{{ trans('site.depature_time') }}</th>
-                                    <th>{{ trans('site.arrival_time') }}</th>
                                     <th>{{ trans('site.depature_station') }}</th>
                                     <th>{{ trans('site.arrival_station') }}</th>
                                     <th>{{ trans('site.action') }}</th>
