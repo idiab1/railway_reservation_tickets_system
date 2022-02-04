@@ -41,10 +41,10 @@
                                 <!-- /End of card title -->
                             </div>
                             <div class="col-6">
-                                <a class="btn btn-create btn-sm btn-primary btn-crayons float-right" href="{{route('classes.create')}}">
+                                {{-- <a class="btn btn-create btn-sm btn-primary btn-crayons float-right" href="{{route('classes.create')}}">
                                     <i class="fas fa-plus"></i>
                                     {{ trans('site.add_class') }}
-                                </a>
+                                </a> --}}
                             </div>
                         </div>
                     </div>
@@ -74,10 +74,10 @@
                                             <td>{{$class->class_price}}</td>
                                             <td>{{$class->seats_count}}</td>
                                             <td>
-                                                <a class="btn btn-success d-inline-block btn-sm btn-edit" href="{{route('classes.edit', ['id' => $class->id])}}">
+                                                {{-- <a class="btn btn-success d-inline-block btn-sm btn-edit" href="{{route('classes.edit', ['id' => $class->id])}}">
                                                     <i class="fas fa-edit"></i>
                                                     {{ trans('site.edit') }}
-                                                </a>
+                                                </a> --}}
                                                 <form class="d-inline-block" action="{{route('classes.destroy', ['id' => $class->id])}}" method="POST">
                                                     @csrf
                                                     @method('DELETE')
