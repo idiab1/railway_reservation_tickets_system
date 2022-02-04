@@ -13,7 +13,7 @@ return [
     'dashboard' => 'Dashboard',
     'stations' => 'Stations',
     'trains' => 'Trains',
-    'classes' => 'Classes / Types',
+    'classes' => 'Classes - Types',
     'seats' => 'Seats',
 
     // Users Page
@@ -28,6 +28,10 @@ return [
     // Trains Page
     'list_trains' => 'List of all trains',
     'add_train' => 'Add a new train',
+
+    // Classes - types Page
+    'list_classes' => 'List of all classes',
+    'add_class' => 'Add a new class',
 
     // Messages Page
     'message' => 'Message',
@@ -57,6 +61,9 @@ return [
     'arrival_time' => 'Arrival Time',
     'depature_station' => 'Depature Station',
     'arrival_station' => 'Arrival Station',
+    'class_name' => 'Class Name',
+    'class_price' => 'Class Price',
+    'seats_count' => 'Seats Count',
 
     // Buttons
     'send' => 'Send',
