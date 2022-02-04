@@ -23,8 +23,12 @@
 /* End of header */
 
 /* Footer */
-.main-footer{
-
+.main-footer p{
+    font-weight: 600;
+    color: #717172;
+}
+.main-footer p a{
+    color: var(--red-color);
 }
 /* End of Footer */
 
