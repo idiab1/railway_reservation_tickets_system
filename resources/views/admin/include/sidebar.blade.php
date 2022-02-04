@@ -88,7 +88,7 @@
 
                 <!-- Classes / Types -->
                 <li class="nav-item">
-                    <a class="nav-link" href="">
+                    <a class="nav-link" href="{{route('classes.index')}}">
                         <i class="mdi mdi-book-variant nav-icon" aria-hidden="true"></i>
                         <p>{{ trans('site.classes') }}</p>
                     </a>
