@@ -28,9 +28,7 @@ class ClassesController extends Controller
      */
     public function create($id)
     {
-        // Get all trains then save to trains variable
-        $train = Train::find($id);
-        return view('admin.classes.create', compact('train'));
+
     }
 
     /**
