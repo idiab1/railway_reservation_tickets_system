@@ -59,6 +59,7 @@
                                     <th>{{ trans('site.name') }}</th>
                                     <th>{{ trans('site.depature_station') }}</th>
                                     <th>{{ trans('site.arrival_station') }}</th>
+                                    <th>{{ trans('site.train_classes') }}</th>
                                     <th>{{ trans('site.action') }}</th>
                                 </tr>
                             </thead>
@@ -84,7 +85,15 @@
                                                 </ul>
                                             </td>
                                             <td>
-                                                <a class="btn btn-success d-inline-block btn-sm btn-edit" href="{{route('trains.edit', ['id' => $train->id])}}">
+                                                <a class="btn btn-create btn-sm btn-primary text-white btn-crayons float-right"
+                                                    href="{{route('trains.classes.create', ['id' => $train->id])}}">
+                                                    <i class="fas fa-plus"></i>
+                                                    {{ trans('site.add_class') }}
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-success d-inline-block btn-sm btn-edit"
+                                                    href="{{route('trains.edit', ['id' => $train->id])}}">
                                                     <i class="fas fa-edit"></i>
                                                     {{ trans('site.edit') }}
                                                 </a>
@@ -107,6 +116,7 @@
                                     <th>{{ trans('site.name') }}</th>
                                     <th>{{ trans('site.depature_station') }}</th>
                                     <th>{{ trans('site.arrival_station') }}</th>
+                                    <th>{{ trans('site.train_classes') }}</th>
                                     <th>{{ trans('site.action') }}</th>
                                 </tr>
                             </tfoot>
