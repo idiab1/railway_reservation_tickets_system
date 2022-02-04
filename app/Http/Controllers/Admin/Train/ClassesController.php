@@ -39,7 +39,23 @@ class ClassesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // dd($request);
+        // Validate all data coming in request
+        $this->validate($request, [
+            "class_name" => ['required'],
+            "class_price" => ['required'],
+            "seats_count" =>['required'],
+        ]);
+
+        // Save all data in database
+        Type::create([
+            "class_name" => $request->class_name,
+            "class_price" => $request->class_price,
+            "seats_count" =>$request->seats_count,
+            'train_id' => $request->train_id
+        ]);
+
+        return redirect()->back();
     }
 
     /**
