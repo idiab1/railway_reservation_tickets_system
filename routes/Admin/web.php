@@ -52,9 +52,16 @@ Route::group(
                 'trains' => 'id',
             ]);
 
+            Route::resource('trains/{id}/classes', ClassesController::class)->only([
+                'create', 'store'
+            ])->names([
+                'create' => 'trains.classes.create',
+                'store' => 'trains.classes.store',
+            ]);
+
             // Classes / Types  Route
-            Route::resource('classes', ClassesController::class)->except([
-                'show'
+            Route::resource('classes', ClassesController::class)->only([
+                'index', 'destroy'
             ])->parameters([
                 'classes' => 'id',
             ]);
