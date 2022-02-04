@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\StationController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\TrainController;
+use App\Http\Controllers\Admin\ClassesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,7 +53,7 @@ Route::group(
             ]);
 
             // Classes / Types  Route
-            Route::resource('classes', TrainController::class)->except([
+            Route::resource('classes', ClassesController::class)->except([
                 'show'
             ])->parameters([
                 'classes' => 'id',
