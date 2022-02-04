@@ -51,6 +51,13 @@ Route::group(
                 'trains' => 'id',
             ]);
 
+            // Classes / Types  Route
+            Route::resource('classes', TrainController::class)->except([
+                'show'
+            ])->parameters([
+                'classes' => 'id',
+            ]);
+
             // Setting Route
             Route::resource('setting', SettingController::class)->only([
                 'edit', 'update'
