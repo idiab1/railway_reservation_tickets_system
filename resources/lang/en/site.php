@@ -94,6 +94,9 @@ return [
     'enter_name_train' => 'Enter name of train',
     'enter_depature_station' => 'Enter depature station',
     'enter_arrival_station' => 'Enter arrival station',
+    'enter_name_class' => 'Enter name of class',
+    'enter_price_class' => 'Enter price of class',
+    'enter_seats_count' => 'Enter seats count of class',
 
     // Footer
     'copyright' => 'Copyright all rights reserved.',
