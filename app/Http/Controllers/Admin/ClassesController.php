@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Train;
 use App\Models\Type;
 use Illuminate\Http\Request;
 
@@ -27,7 +28,9 @@ class ClassesController extends Controller
      */
     public function create()
     {
-        //
+        // Get all trains then save to trains variable
+        $trains = Train::all();
+        return view('admin.classes.create', compact('trains'));
     }
 
     /**
