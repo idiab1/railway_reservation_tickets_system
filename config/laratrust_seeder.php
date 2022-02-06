@@ -14,7 +14,10 @@ return [
     'roles_structure' => [
         'super_admin' => [
             'users' => 'c,r,u,d',
-
+            'stations' => 'c,r,u,d',
+            'trains' => 'c,r,u,d',
+            'types' => 'c,r,u,d',
+            'tickets' => 'c,r,u,d',
         ],
         'admin' => [],
     ],
