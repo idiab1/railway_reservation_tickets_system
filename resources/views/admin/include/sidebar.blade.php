@@ -94,14 +94,6 @@
                     </a>
                 </li>
 
-                <!-- Seats -->
-                <li class="nav-item">
-                    <a class="nav-link" href="">
-                        <i class="mdi mdi-seat nav-icon" aria-hidden="true"></i>
-                        <p>{{ trans('site.seats') }}</p>
-                    </a>
-                </li>
-
                 <!-- Messages -->
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('contact.index')}}">
