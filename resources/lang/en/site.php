@@ -64,6 +64,8 @@ return [
     'class_name' => 'Class Name',
     'class_price' => 'Class Price',
     'seats_count' => 'Seats Count',
+    'currency' => 'EGP',
+
 
     // Buttons
     'send' => 'Send',
