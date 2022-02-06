@@ -71,7 +71,7 @@
                                         <tr>
                                             <td>{{$id++}}</td>
                                             <td>{{$class->class_name}}</td>
-                                            <td>{{$class->class_price}}</td>
+                                            <td>{{ trans('site.currency') }} {{$class->class_price}}</td>
                                             <td>{{$class->seats_count}}</td>
                                             <td>
                                                 {{-- <a class="btn btn-success d-inline-block btn-sm btn-edit" href="{{route('classes.edit', ['id' => $class->id])}}">
