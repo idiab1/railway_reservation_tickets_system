@@ -10,8 +10,10 @@ class Train extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name', 'depature_time', 'arrival_time', 'depature_station', 'arrival_station', 'station_id'
+        'name', 'depature_at', 'arrival_at', 'depature_station', 'arrival_station', 'status', 'station_id'
     ];
+
+    protected $casts = ['depature_at', 'arrival_at'];
 
     /**
      * Get the station that owns the Train
