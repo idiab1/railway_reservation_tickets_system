@@ -94,6 +94,14 @@
                     </a>
                 </li>
 
+                <!-- Tickets -->
+                <li class="nav-item">
+                    <a class="nav-link" href="">
+                        <i class="mdi mdi-ticket nav-icon" aria-hidden="true"></i>
+                        <p>{{ trans('site.tickets') }}</p>
+                    </a>
+                </li>
+
                 <!-- Messages -->
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('contact.index')}}">
