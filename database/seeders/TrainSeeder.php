@@ -16,8 +16,8 @@ class TrainSeeder extends Seeder
     {
         Train::create([
             'name' => 'train 25634',
-            'depature_at' => '2/2/2022',
-            'arrival_at' => '2/2/2022',
+            'depature_at' => '2022-02-07 01:24:46',
+            'arrival_at' => '2022-02-07 04:30:00',
             'depature_station' => 'Mansoura Station',
             'arrival_station' => 'Cairo Station',
             'status' => 0,
