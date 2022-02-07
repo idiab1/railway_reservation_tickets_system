@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\TrainController;
 use App\Http\Controllers\Admin\ClassesController;
 use App\Http\Controllers\Admin\Train\ClassesController as TrainClassesController;
+use App\Http\Controllers\Admin\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -65,6 +66,13 @@ Route::group(
                 'index', 'destroy'
             ])->parameters([
                 'classes' => 'id',
+            ]);
+
+            // Posts Route
+            Route::resource('posts', PostController::class)->except([
+                'show'
+            ])->parameters([
+                'posts' => 'id',
             ]);
 
             // Setting Route
