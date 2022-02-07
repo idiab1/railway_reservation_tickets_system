@@ -81,7 +81,9 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        //
+        // Get data of post by id
+        $post = Post::find($id);
+        return view('admin.posts.edit', compact('post'));
     }
 
     /**
