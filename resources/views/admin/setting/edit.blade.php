@@ -21,7 +21,7 @@
     <div class="row">
         <div class="col-md-8 m-auto">
             <div class="setting-form">
-                <div class="card card-primary">
+                <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">Setting</h3>
                     </div>
@@ -52,7 +52,7 @@
                             <!-- /.card-body -->
 
                             <div class="card-footer">
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-primary btn-submit btn-crayons">Submit</button>
                             </div>
                         </form>
 
