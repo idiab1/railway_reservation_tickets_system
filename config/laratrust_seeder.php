@@ -18,6 +18,7 @@ return [
             'trains' => 'c,r,u,d',
             'types' => 'c,r,u,d',
             'tickets' => 'c,r,u,d',
+            'posts' => 'c,r,u,d',
         ],
         'admin' => [],
     ],
