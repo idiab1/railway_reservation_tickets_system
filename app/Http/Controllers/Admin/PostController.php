@@ -4,8 +4,10 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Post;
+use Illuminate\Auth\Events\Validated;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
 class PostController extends Controller
 {
     /**
@@ -38,7 +40,26 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // dd(Auth::user()->id);
+        // dd($request);
+
+        // Validate on all data coming from request
+        $this->validate($request, [
+            'name' => ['required'],
+            'content' => ['required'],
+        ]);
+
+        // Save data to database
+        Post::create([
+            'name' => $request->name,
+            'content' => $request->content,
+            'slug' => Str::slug($request->name),
+            'user_id' => Auth::user()->id,
+        ]);
+
+        // Redirect to homepage of posts
+        return redirect()->route('posts.index');
+
     }
 
     /**
