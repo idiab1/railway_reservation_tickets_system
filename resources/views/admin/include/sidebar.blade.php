@@ -102,6 +102,14 @@
                     </a>
                 </li>
 
+                <!-- Posts -->
+                <li class="nav-item">
+                    <a class="nav-link" href="">
+                        <i class="mdi mdi-post nav-icon" aria-hidden="true"></i>
+                        <p>{{ trans('site.posts') }}</p>
+                    </a>
+                </li>
+
                 <!-- Messages -->
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('contact.index')}}">
