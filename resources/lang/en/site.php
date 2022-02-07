@@ -16,6 +16,7 @@ return [
     'classes' => 'Classes - Types',
     'seats' => 'Seats',
     'tickets' => 'Tickets',
+    'posts' => 'Posts',
 
     // Users Page
     'list_users' => 'List of all users',
