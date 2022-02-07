@@ -75,6 +75,7 @@ return [
     'address' => 'Address',
     'phone_number' => 'Phone Number',
     'created_at' => 'Created At',
+    'content' => 'Content',
 
     // Buttons
     'send' => 'Send',
@@ -112,6 +113,8 @@ return [
     'enter_phone_number' => 'Enter phone number of website',
     'enter_website_email' => 'Enter Email of website',
     'enter_address' => 'Enter address',
+    'enter_name_post' => 'Enter name of post',
+    'enter_content_post' => 'Enter Content of post',
 
     // Footer
     'copyright' => 'Copyright all rights reserved.',
