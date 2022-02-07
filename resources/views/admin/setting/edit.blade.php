@@ -2,17 +2,17 @@
 
 {{-- Title --}}
 @section('title')
-    Setting
+    {{ trans('site.setting') }}
 @endsection
 
 {{-- Page name --}}
 @section('page_name')
-    Setting
+    {{ trans('site.setting') }}
 @endsection
 
 {{-- Breadcrumb --}}
 @section('breadcrumb-item')
-    <li class="breadcrumb-item">Setting<li>
+    <li class="breadcrumb-item">{{ trans('site.setting') }}<li>
 @endsection
 
 {{-- Content --}}
@@ -23,7 +23,7 @@
             <div class="setting-form">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Setting</h3>
+                        <h3 class="card-title">{{ trans('site.setting') }}</h3>
                     </div>
                     <!-- /.card-header -->
                         <!-- form start -->
@@ -31,28 +31,39 @@
                             @csrf
                             @method('PUT')
                             <div class="card-body">
+                                <!-- Website name -->
                                 <div class="form-group">
-                                    <label for="webName">Website Name</label>
-                                    <input class="form-control" type="text" id="webName" name="web_name" value="{{$setting->web_name}}" placeholder="Enter website name">
+                                    <label for="webName">{{ trans('site.website_name') }}</label>
+                                    <input class="form-control" type="text" id="webName" name="web_name"
+                                            value="{{$setting->web_name}}" placeholder="{{trans('site.enter_website_name')}}">
                                 </div>
+
+                                <!-- Phone Number -->
                                 <div class="form-group">
-                                    <label for="phoneNumber">Phone Number</label>
-                                    <input class="form-control" type="number" id="phoneNumber" name="phone_number" value="{{$setting->phone_number}}" placeholder="Enter phone number">
+                                    <label for="phoneNumber">{{ trans('site.phone_number') }}</label>
+                                    <input class="form-control" type="number" id="phoneNumber" name="phone_number"
+                                            value="{{$setting->phone_number}}" placeholder="{{trans('site.enter_phone_number')}}">
                                 </div>
+
+                                <!-- Email -->
                                 <div class="form-group">
-                                    <label for="webEmail">Email</label>
-                                    <input class="form-control" type="text" id="webEmail" name="web_email" value="{{$setting->web_email}}" placeholder="Enter website email">
+                                    <label for="webEmail">{{ trans('site.email') }}</label>
+                                    <input class="form-control" type="text" id="webEmail" name="web_email"
+                                            value="{{$setting->web_email}}" placeholder="{{trans('site.enter_website_email')}}">
                                 </div>
+
+                                <!-- Address -->
                                 <div class="form-group">
-                                    <label for="address">Address</label>
-                                    <input class="form-control" type="text" id="address" name="address" value="{{$setting->address}}" placeholder="Enter address">
+                                    <label for="address">{{ trans('site.address') }}</label>
+                                    <input class="form-control" type="text" id="address" name="address"
+                                            value="{{$setting->address}}" placeholder="{{trans('site.enter_address')}}">
                                 </div>
 
                             </div>
                             <!-- /.card-body -->
 
                             <div class="card-footer">
-                                <button type="submit" class="btn btn-primary btn-submit btn-crayons">Submit</button>
+                                <button type="submit" class="btn btn-primary btn-submit btn-crayons">{{ trans('site.update') }}</button>
                             </div>
                         </form>
 

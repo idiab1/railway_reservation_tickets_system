@@ -15,6 +15,7 @@ return [
     'trains' => 'Trains',
     'classes' => 'Classes - Types',
     'seats' => 'Seats',
+    'tickets' => 'Tickets',
 
     // Users Page
     'list_users' => 'List of all users',
@@ -65,6 +66,9 @@ return [
     'class_price' => 'Class Price',
     'seats_count' => 'Seats Count',
     'currency' => 'EGP',
+    'website_name' => 'Website Name',
+    'address' => 'Address',
+    'phone_number' => 'Phone Number',
 
 
     // Buttons
@@ -99,6 +103,10 @@ return [
     'enter_name_class' => 'Enter name of class',
     'enter_price_class' => 'Enter price of class',
     'enter_seats_count' => 'Enter seats count of class',
+    'enter_website_name' => 'Enter Name of website',
+    'enter_phone_number' => 'Enter phone number of website',
+    'enter_website_email' => 'Enter Email of website',
+    'enter_address' => 'Enter address',
 
     // Footer
     'copyright' => 'Copyright all rights reserved.',
