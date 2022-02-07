@@ -104,7 +104,7 @@
 
                 <!-- Posts -->
                 <li class="nav-item">
-                    <a class="nav-link" href="">
+                    <a class="nav-link" href="{{route('posts.index')}}">
                         <i class="mdi mdi-post nav-icon" aria-hidden="true"></i>
                         <p>{{ trans('site.posts') }}</p>
                     </a>
