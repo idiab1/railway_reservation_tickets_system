@@ -35,6 +35,10 @@ return [
     'list_classes' => 'List of all classes',
     'add_class' => 'Add a new class',
 
+    // Posts Page
+    'list_posts' => 'List of all posts',
+    'add_post' => 'Add a new post',
+
     // Messages Page
     'message' => 'Message',
     'list_all_messages' => 'list all messages',
@@ -70,7 +74,7 @@ return [
     'website_name' => 'Website Name',
     'address' => 'Address',
     'phone_number' => 'Phone Number',
-
+    'created_at' => 'Created At',
 
     // Buttons
     'send' => 'Send',
