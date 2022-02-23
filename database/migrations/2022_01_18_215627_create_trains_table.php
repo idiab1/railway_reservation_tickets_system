@@ -16,7 +16,6 @@ class CreateTrainsTable extends Migration
         Schema::create('trains', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name', 60);
-            $table->string('train_type');
             $table->dateTime('depature_at')->nullable();
             $table->dateTime('arrival_at')->nullable();
             $table->string('depature_station');
@@ -24,8 +23,10 @@ class CreateTrainsTable extends Migration
             $table->tinyInteger('status')->default(0);
             $table->integer('seats_count')->default(1);
 
+            $table->integer('train_type')->unsigned();
             $table->integer('station_id')->unsigned();
             $table->foreign('station_id')->references('id')->on('stations')->onDelete('cascade');
+            $table->foreign('train_type')->references('id')->on('stations')->onDelete('cascade');
             $table->timestamps();
         });
     }
