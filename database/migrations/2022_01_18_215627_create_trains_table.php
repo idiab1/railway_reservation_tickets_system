@@ -16,13 +16,15 @@ class CreateTrainsTable extends Migration
         Schema::create('trains', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name', 60);
+            $table->string('train_type');
             $table->dateTime('depature_at')->nullable();
             $table->dateTime('arrival_at')->nullable();
             $table->string('depature_station');
             $table->string('arrival_station');
             $table->tinyInteger('status')->default(0);
-            $table->integer('station_id')->unsigned();
+            $table->integer('seats_count')->default(1);
 
+            $table->integer('station_id')->unsigned();
             $table->foreign('station_id')->references('id')->on('stations')->onDelete('cascade');
             $table->timestamps();
         });
