@@ -13,7 +13,7 @@ return [
     'dashboard' => 'Dashboard',
     'stations' => 'Stations',
     'trains' => 'Trains',
-    'classes' => 'Classes - Types',
+    'types' => 'Types',
     'seats' => 'Seats',
     'tickets' => 'Tickets',
     'posts' => 'Posts',
@@ -31,9 +31,9 @@ return [
     'list_trains' => 'List of all trains',
     'add_train' => 'Add a new train',
 
-    // Classes - types Page
-    'list_classes' => 'List of all classes',
-    'add_class' => 'Add a new class',
+    // Types Page
+    'list_types' => 'List of all types',
+    'add_type' => 'Add a type train',
 
     // Posts Page
     'list_posts' => 'List of all posts',
@@ -76,6 +76,7 @@ return [
     'phone_number' => 'Phone Number',
     'created_at' => 'Created At',
     'content' => 'Content',
+    'train_type' => "Train Type",
 
     // Buttons
     'send' => 'Send',
@@ -106,9 +107,7 @@ return [
     'enter_name_train' => 'Enter name of train',
     'enter_depature_station' => 'Enter depature station',
     'enter_arrival_station' => 'Enter arrival station',
-    'enter_name_class' => 'Enter name of class',
-    'enter_price_class' => 'Enter price of class',
-    'enter_seats_count' => 'Enter seats count of class',
+    'enter_name_type' => 'Enter name of type',
     'enter_website_name' => 'Enter Name of website',
     'enter_phone_number' => 'Enter phone number of website',
     'enter_website_email' => 'Enter Email of website',
