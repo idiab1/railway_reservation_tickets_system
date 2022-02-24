@@ -60,13 +60,13 @@
                                             <select class="form-control select2 searchable" name="depature_station_id" id="depature_station">
                                                 <option value="" >{{trans('site.all_stations')}}</option>
                                                 @foreach ($stations as $station)
-                                                    <option value="{{$station->id}}" >{{$station->name}}</option>
+                                                    <option value="{{$station->id}}">{{$station->name}}</option>
                                                 @endforeach
                                             </select>
                                         </div>
                                         <div class="col">
-                                            <label for="name">{{ trans('site.depature_time') }}</label>
-                                            <input type="datetime-local" class="form-control">
+                                            <label for="depature_at">{{ trans('site.depature_at') }}</label>
+                                            <input class="form-control" type="datetime-local" id="depature_at" name="depature_at">
                                         </div>
                                     </div>
                                 </div>
@@ -85,8 +85,8 @@
                                             </select>
                                         </div>
                                         <div class="col">
-                                            <label for="name">{{ trans('site.arrival_time') }}</label>
-                                            <input type="datetime-local" class="form-control">
+                                            <label for="arrival_at">{{ trans('site.arrival_at') }}</label>
+                                            <input class="form-control" type="datetime-local" id="arrival_at" name="arrival_at">
                                         </div>
                                     </div>
                                 </div>
@@ -95,11 +95,13 @@
                             </div>
                             <!-- /.card-body -->
 
+                            <!-- Card Footer -->
                             <div class="card-footer">
                                 <button type="submit" class="btn btn-primary btn-add btn-crayons">
                                     {{ trans('site.add') }}
                                 </button>
                             </div>
+                            <!-- End of Card Footer -->
                         </form>
 
                     </div>
