@@ -54,11 +54,11 @@ Route::group(
                 'trains' => 'id',
             ]);
 
-            Route::resource('trains/{id}/classes', TrainClassesController::class)->only([
+            Route::resource('trains/{id}/types', TrainClassesController::class)->only([
                 'create', 'store'
             ])->names([
-                'create' => 'trains.classes.create',
-                'store' => 'trains.classes.store',
+                'create' => 'trains.types.create',
+                'store' => 'trains.types.store',
             ]);
 
             // Classes / Types  Route
