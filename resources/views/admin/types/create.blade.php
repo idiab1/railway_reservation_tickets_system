@@ -25,16 +25,16 @@
 
 {{-- Breadcrumb --}}
 @section('breadcrumb-item')
-    <li class="breadcrumb-item"><a href="{{route('classes.index')}}">{{ trans('site.types') }}</a></li>
+    <li class="breadcrumb-item"><a href="{{route('types.index')}}">{{ trans('site.types') }}</a></li>
     <li class="breadcrumb-item">{{ trans('site.add_type') }}<li>
 @endsection
 
 {{-- Content --}}
 @section('content')
-<div class="classes-page">
+<div class="types-page">
     <div class="row">
         <div class="col-md-8 m-auto">
-            <div class="classes-form">
+            <div class="types-form">
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">{{ trans('site.add_type') }}</h3>
@@ -58,7 +58,9 @@
                             <!-- /.card-body -->
 
                             <div class="card-footer">
-                                <button type="submit" class="btn btn-primary btn-add btn-crayons">{{ trans('site.add') }}</button>
+                                <button type="submit" class="btn btn-primary btn-add btn-crayons">
+                                    {{ trans('site.add') }}
+                                </button>
                             </div>
                         </form>
 
