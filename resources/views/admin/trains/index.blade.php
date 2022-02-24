@@ -59,7 +59,8 @@
                                     <th>{{ trans('site.name') }}</th>
                                     <th>{{ trans('site.depature_station') }}</th>
                                     <th>{{ trans('site.arrival_station') }}</th>
-                                    <th>{{ trans('site.train_classes') }}</th>
+                                    <th>{{ trans('site.train_type') }}</th>
+                                    <th>{{ trans('site.seats_count') }}</th>
                                     <th>{{ trans('site.action') }}</th>
                                 </tr>
                             </thead>
@@ -71,25 +72,39 @@
                                     @foreach ($trains as $train)
                                         <tr>
                                             <td>{{$id++}}</td>
+                                            <!-- Name of train -->
                                             <td>{{$train->name}}</td>
                                             <td>
+                                                <!-- Depature -->
                                                 <ul class="list-unstyled">
-                                                    <li>{{$train->name}}</li>
-                                                    <li>{{$train->depature_time}}</li>
+                                                    <li>{{$train->depature_station}}</li>
+                                                    <li>{{$train->depature_at}}</li>
                                                 </ul>
                                             </td>
                                             <td>
+                                                <!-- Arrival -->
                                                 <ul class="list-unstyled">
-                                                    <li>{{$train->name}}</li>
-                                                    <li>{{$train->arrival_time}}</li>
+                                                    <li>{{$train->arrival_station}}</li>
+                                                    <li>{{$train->arrival_at}}</li>
                                                 </ul>
                                             </td>
                                             <td>
-                                                <a class="btn btn-create btn-sm btn-primary text-white btn-crayons float-right"
-                                                    href="{{route('trains.classes.create', ['id' => $train->id])}}">
-                                                    <i class="fas fa-plus"></i>
-                                                    {{ trans('site.add_class') }}
-                                                </a>
+
+                                                @isset($train->type->name)
+                                                    {{$train->type->name}}
+                                                @else
+
+                                                    <a class="btn btn-primary d-inline-block btn-sm crayons-btn btn-add"
+                                                        href="{{route('trains.types.create', ['id' => $train->id])}}">
+                                                        <i class="fas fa-plus"></i>
+                                                        {{ trans('site.add_type') }}
+                                                    </a>
+
+                                                @endisset
+
+                                            </td>
+                                            <td>
+                                                {{$train->seats_count}}
                                             </td>
                                             <td>
                                                 <a class="btn btn-success d-inline-block btn-sm btn-edit"
@@ -116,7 +131,8 @@
                                     <th>{{ trans('site.name') }}</th>
                                     <th>{{ trans('site.depature_station') }}</th>
                                     <th>{{ trans('site.arrival_station') }}</th>
-                                    <th>{{ trans('site.train_classes') }}</th>
+                                    <th>{{ trans('site.train_type') }}</th>
+                                    <th>{{ trans('site.seats_count') }}</th>
                                     <th>{{ trans('site.action') }}</th>
                                 </tr>
                             </tfoot>
