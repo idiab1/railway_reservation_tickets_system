@@ -26,7 +26,7 @@
 
 {{-- Content --}}
 @section('content')
-    <section class="class-section">
+    <section class="type-section">
         <div class="row">
             <div class="col-12">
                 <div class="card">
@@ -64,11 +64,11 @@
                                             <td>{{$id++}}</td>
                                             <td>{{$type->name}}</td>
                                             <td>
-                                                {{-- <a class="btn btn-success d-inline-block btn-sm btn-edit" href="{{route('types.edit', ['id' => $type->id])}}">
+                                                {{-- <a class="btn btn-success d-inline-block btn-sm btn-edit" href="{{route('trains.types.edit', ['id' => $type->id])}}">
                                                     <i type="fas fa-edit"></i>
                                                     {{ trans('site.edit') }}
                                                 </a> --}}
-                                                <form class="d-inline-block" action="{{route('types.destroy', ['id' => $class->id])}}" method="POST">
+                                                <form class="d-inline-block" action="{{route('types.destroy', ['id' => $type->id])}}" method="POST">
                                                     @csrf
                                                     @method('DELETE')
                                                     <button class="btn btn-danger btn-sm btn-delete" type="submit">
