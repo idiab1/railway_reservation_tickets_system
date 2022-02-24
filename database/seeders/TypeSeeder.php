@@ -17,15 +17,7 @@ class TypeSeeder extends Seeder
         $types = [
             [
                 "name" => 'First class',
-            ],
-            [
-                "name" => 'Second class',
-            ],
-            [
-                "name" => 'General class',
-            ],
-            [
-                "name" => 'Sleeping class',
+                "train_id" => 1,
             ]
         ];
 
