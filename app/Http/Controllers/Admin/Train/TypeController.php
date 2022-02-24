@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin\Train;
 
 use App\Http\Controllers\Controller;
+use App\Models\Train;
+use App\Models\Type;
 use Illuminate\Http\Request;
 
 class TypeController extends Controller
@@ -22,9 +24,11 @@ class TypeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        //
+        // Get all trains then save to trains variable
+        $train = Train::find($id);
+        return view('admin.types.create', compact('train'));
     }
 
     /**
