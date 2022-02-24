@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\TrainController;
 use App\Http\Controllers\Admin\ClassesController;
 use App\Http\Controllers\Admin\Train\ClassesController as TrainClassesController;
 use App\Http\Controllers\Admin\PostController;
+use App\Http\Controllers\Admin\TypeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -61,11 +62,11 @@ Route::group(
                 'store' => 'trains.types.store',
             ]);
 
-            // Classes / Types  Route
-            Route::resource('classes', ClassesController::class)->only([
+            // Types  Routes
+            Route::resource('types', TypeController::class)->only([
                 'index', 'destroy'
             ])->parameters([
-                'classes' => 'id',
+                'types' => 'id',
             ]);
 
             // Posts Route
