@@ -9,16 +9,17 @@ class Type extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name'];
+    protected $fillable = ['name', 'train_id'];
 
-    // /**
-    //  * Get the train that owns the Type
-    //  *
-    //  * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-    //  */
-    // public function train()
-    // {
-    //     return $this->belongsTo(Train::class);
-    // }
+
+    /**
+     * Get the trian that owns the Type
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function trian()
+    {
+        return $this->belongsTo(Train::class);
+    }
 
 }
