@@ -86,11 +86,11 @@
                     </a>
                 </li>
 
-                <!-- Classes / Types -->
+                <!-- Types -->
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('classes.index')}}">
+                    <a class="nav-link" href="{{route('types.index')}}">
                         <i class="mdi mdi-book-variant nav-icon" aria-hidden="true"></i>
-                        <p>{{ trans('site.classes') }}</p>
+                        <p>{{ trans('site.types') }}</p>
                     </a>
                 </li>
 
