@@ -39,7 +39,19 @@ class TypeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // dd($request->all());
+        // Validate all data coming in request
+        $this->validate($request, [
+            "name" => ['required', "string"],
+        ]);
+
+        // Save all data in database
+        Type::create([
+            "name" => $request->name,
+            'train_id' => $request->train_id
+        ]);
+
+        return redirect()->back();
     }
 
     /**
