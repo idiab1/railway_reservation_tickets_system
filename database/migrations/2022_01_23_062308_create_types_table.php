@@ -16,7 +16,10 @@ class CreateTypesTable extends Migration
         Schema::create('types', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name', 60);
+            $table->integer('train_id')->unsigned();
             $table->timestamps();
+
+            $table->foreign('train_id')->references('id')->on('trains')->onDelete('cascade');
         });
     }
 
