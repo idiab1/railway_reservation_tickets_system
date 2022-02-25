@@ -12,13 +12,13 @@ class Station extends Model
     protected $fillable = ["name"];
 
     /**
-     * Get all of the trains for the Station
+     * The trains that belong to the Station
      *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function trains()
     {
-        return $this->hasMany(Train::class);
+        return $this->belongsToMany(Train::class, 'train_station');
     }
 
 }
