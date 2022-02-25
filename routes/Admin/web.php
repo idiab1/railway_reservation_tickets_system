@@ -54,21 +54,21 @@ Route::group(
                 'trains' => 'id',
             ]);
 
-            Route::resource('trains/{id}/types', TrainTypesController::class)->only([
-                'create', 'store', 'edit', 'update'
-            ])->names([
-                'create' => 'trains.types.create',
-                'store' => 'trains.types.store',
-                'edit' => 'trains.types.edit',
-                'update' => 'trains.types.update',
-            ]);
+            // Route::resource('trains/{id}/types', TrainTypesController::class)->only([
+            //     'create', 'store', 'edit', 'update'
+            // ])->names([
+            //     'create' => 'trains.types.create',
+            //     'store' => 'trains.types.store',
+            //     'edit' => 'trains.types.edit',
+            //     'update' => 'trains.types.update',
+            // ]);
 
-            // Types  Routes
-            Route::resource('types', TypeController::class)->only([
-                'index', 'destroy'
-            ])->parameters([
-                'types' => 'id',
-            ]);
+            // // Types  Routes
+            // Route::resource('types', TypeController::class)->only([
+            //     'index', 'destroy'
+            // ])->parameters([
+            //     'types' => 'id',
+            // ]);
 
             // Posts Route
             Route::resource('posts', PostController::class)->except([
