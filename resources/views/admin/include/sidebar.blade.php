@@ -86,14 +86,6 @@
                     </a>
                 </li>
 
-                <!-- Types -->
-                <li class="nav-item">
-                    <a class="nav-link" href="{{route('types.index')}}">
-                        <i class="mdi mdi-book-variant nav-icon" aria-hidden="true"></i>
-                        <p>{{ trans('site.types') }}</p>
-                    </a>
-                </li>
-
                 <!-- Tickets -->
                 <li class="nav-item">
                     <a class="nav-link" href="">
