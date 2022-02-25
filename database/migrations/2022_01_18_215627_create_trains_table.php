@@ -23,8 +23,6 @@ class CreateTrainsTable extends Migration
             $table->tinyInteger('status')->default(0);
             $table->integer('seats_count')->default(1);
             $table->string('train_type');
-            $table->integer('station_id')->unsigned();
-            $table->foreign('station_id')->references('id')->on('stations')->onDelete('cascade');
             $table->timestamps();
         });
     }
