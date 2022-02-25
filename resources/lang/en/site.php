@@ -67,7 +67,7 @@ return [
     'arrival_at' => 'Arrival At',
     'depature_station' => 'Depature Station',
     'arrival_station' => 'Arrival Station',
-    'class_name' => 'Class Name',
+    'seats_available' => 'Seats Available',
     'class_price' => 'Class Price',
     'seats_count' => 'Seats Count',
     'currency' => 'EGP',
@@ -114,6 +114,7 @@ return [
     'enter_address' => 'Enter address',
     'enter_name_post' => 'Enter name of post',
     'enter_content_post' => 'Enter Content of post',
+    'enter_seats_available_train' => "Enter count of seats available",
 
     // Footer
     'copyright' => 'Copyright all rights reserved.',
