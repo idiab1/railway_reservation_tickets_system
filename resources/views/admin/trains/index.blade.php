@@ -89,19 +89,7 @@
                                                 </ul>
                                             </td>
                                             <td>
-
-                                                @isset($train->type->name)
-                                                    {{$train->type->name}}
-                                                @else
-
-                                                    <a class="btn btn-primary d-inline-block btn-sm crayons-btn btn-add"
-                                                        href="{{route('trains.types.create', ['id' => $train->id])}}">
-                                                        <i class="fas fa-plus"></i>
-                                                        {{ trans('site.add_type') }}
-                                                    </a>
-
-                                                @endisset
-
+                                                {{$train->train_type}}
                                             </td>
                                             <td>
                                                 {{$train->seats_count}}
