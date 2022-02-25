@@ -22,7 +22,8 @@ class TrainSeeder extends Seeder
             'arrival_station' => 'Cairo Station',
             'status' => 0,
             'station_id' => 1,
-            'seats_count' => 100
+            'seats_count' => 100,
+            'train_type' => "General class",
         ]);
 
     }
