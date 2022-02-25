@@ -11,19 +11,19 @@ class Train extends Model
 
     protected $fillable = [
         'name', 'depature_at', 'arrival_at', 'status', 'train_type',
-        'depature_station', 'arrival_station', 'seats_count', 'station_id'
+        'depature_station', 'arrival_station', 'seats_count'
     ];
 
     protected $casts = ['depature_at', 'arrival_at'];
 
     /**
-     * Get the station that owns the Train
+     * The station that belong to the Train
      *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
-    public function station()
+    public function stations()
     {
-        return $this->belongsTo(Station::class);
+        return $this->belongsToMany(Station::class, 'train_station');
     }
 
     /**
