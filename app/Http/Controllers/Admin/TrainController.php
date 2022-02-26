@@ -41,8 +41,35 @@ class TrainController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        dd($request->all());
+        // Validate on all data coming from request
+        $this->validate($request, [
+            'name'                  => ['required', 'string'],
+            'train_type'            => ['required', 'string'],
+            'seats_count'           => ['required', 'integer'],
+            'depature_station_id'   => ['required'],
+            'depature_at'           => ['required', 'date'],
+            'arrival_station_id'    => ['required'],
+            'arrival_at'            => ['required', 'date'],
+        ]);
+
+        $depature_station = Station::find($request->depature_station_id);
+        $arrival_station = Station::find($request->arrival_station_id);
+
+        // Save data to train table
+        $train = Train::create([
+            "name" => $request->name,
+            "train_type" => $request->train_type,
+            "seats_count" => $request->seats_count,
+            "depature_station" => $depature_station->name,
+            "arrival_station" => $arrival_station->name,
+            "depature_at" => $request->depature_at,
+            "arrival_at" => $request->arrival_at,
+        ]);
+
+        $train->stations()->attach([$request->depature_station_id, $request->arrival_station_id]);
+
+        // Redirect to homepage of trains
+        return redirect()->route('trains.index');
 
     }
 
