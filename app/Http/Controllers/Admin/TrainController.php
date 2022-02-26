@@ -115,6 +115,9 @@ class TrainController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // Get data of train by id
+        $train = Train::find($id);
+        $train->delete();
+        return redirect()->back();
     }
 }
