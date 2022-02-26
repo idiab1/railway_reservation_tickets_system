@@ -48,7 +48,32 @@
                                 <div class="form-group">
                                     <label for="name">{{ trans('site.name') }}</label>
                                     <input type="text" class="form-control" id="name"
-                                            name="name" placeholder="{{trans('site.enter_name_train')}}">
+                                        name="name" placeholder="{{trans('site.enter_name_train')}}"
+                                        required>
+                                </div>
+
+                                <!-- Train Type / Seats Count -->
+                                <div class="form-group">
+                                    <div class="row">
+
+                                        <!-- Train Type -->
+                                        <div class="col">
+                                            <label for="train_type">{{ trans('site.train_type') }}</label>
+                                            <input type="text" class="form-control" id="train_type"
+                                                name="train_type" placeholder="{{trans('site.enter_name_type')}}"
+                                                required>
+                                        </div>
+                                        <!-- End of Train Type -->
+
+                                        <!-- Seats available -->
+                                        <div class="col">
+                                            <label for="seats_available">{{ trans('site.seats_available') }}</label>
+                                            <input type="number" class="form-control" id="seats_available"
+                                                name="seats_count" placeholder="{{trans('site.enter_seats_available_train')}}"
+                                                required>
+                                        </div>
+                                        <!-- End of Seats available -->
+                                    </div>
                                 </div>
 
                                 <!-- Depature Station / Time -->
@@ -57,7 +82,8 @@
                                         <div class="col">
                                             <label for="depature_station">{{ trans('site.depature_station') }}</label>
                                             <!-- All stations -->
-                                            <select class="form-control select2 searchable" name="depature_station_id" id="depature_station">
+                                            <select class="form-control select2 searchable" name="depature_station_id"
+                                                id="depature_station" required>
                                                 <option value="" >{{trans('site.all_stations')}}</option>
                                                 @foreach ($stations as $station)
                                                     <option value="{{$station->id}}">{{$station->name}}</option>
@@ -66,7 +92,8 @@
                                         </div>
                                         <div class="col">
                                             <label for="depature_at">{{ trans('site.depature_at') }}</label>
-                                            <input class="form-control" type="datetime-local" id="depature_at" name="depature_at">
+                                            <input class="form-control" type="datetime-local" id="depature_at"
+                                                name="depature_at" required>
                                         </div>
                                     </div>
                                 </div>
@@ -77,7 +104,8 @@
                                         <div class="col">
                                             <label for="arrival_station">{{ trans('site.arrival_station') }}</label>
                                             <!-- All stations -->
-                                            <select class="form-control select2 searchable" name="arrival_station_id" id="arrival_station">
+                                            <select class="form-control select2 searchable" name="arrival_station_id"
+                                                id="arrival_station" required>
                                                 <option value="" >{{trans('site.all_stations')}}</option>
                                                 @foreach ($stations as $station)
                                                     <option value="{{$station->id}}" >{{$station->name}}</option>
@@ -86,11 +114,11 @@
                                         </div>
                                         <div class="col">
                                             <label for="arrival_at">{{ trans('site.arrival_at') }}</label>
-                                            <input class="form-control" type="datetime-local" id="arrival_at" name="arrival_at">
+                                            <input class="form-control" type="datetime-local" id="arrival_at"
+                                                name="arrival_at" required>
                                         </div>
                                     </div>
                                 </div>
-
 
                             </div>
                             <!-- /.card-body -->
