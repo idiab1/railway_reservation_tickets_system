@@ -20,7 +20,7 @@
 @section('content')
 <div class="posts-page">
     <div class="row">
-        <div class="col-md-8 m-auto">
+        <div class="col-md-9 m-auto">
             <div class="posts-form">
                 <div class="card">
                     <div class="card-header">
@@ -49,7 +49,9 @@
                             <!-- /.card-body -->
 
                             <div class="card-footer">
-                                <button type="submit" class="btn btn-primary btn-add btn-crayons">{{ trans('site.add') }}</button>
+                                <button type="submit" class="btn btn-primary btn-add btn-crayons">
+                                    {{ trans('site.add') }}
+                                </button>
                             </div>
                         </form>
 
@@ -69,6 +71,8 @@
 <script>
     $(document).ready(function(){
         CKEDITOR.config.language = "{{app()->getLocale()}}";
+
+        // CKEDITOR.replace('content')
     });
 </script>
 @endsection
