@@ -11,7 +11,7 @@ class Train extends Model
 
     protected $fillable = [
         'name', 'depature_at', 'arrival_at', 'status', 'train_type',
-        'depature_station', 'arrival_station', 'seats_count'
+        'seats_count', 'depature_station', 'arrival_station',
     ];
 
     protected $casts = ['depature_at', 'arrival_at'];
@@ -25,6 +25,9 @@ class Train extends Model
     {
         return $this->belongsToMany(Station::class, 'train_station');
     }
+
+
+
 
     /**
      * Get the type associated with the Train
