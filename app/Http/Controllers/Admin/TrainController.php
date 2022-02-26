@@ -74,17 +74,6 @@ class TrainController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
@@ -107,7 +96,29 @@ class TrainController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // dd($request->all());
+        // Select on data of train by id
+        $train = Train::find($id);
+
+        $depature_station = Station::find($request->depature_station_id);
+        $arrival_station = Station::find($request->arrival_station_id);
+
+        // Save data to train table
+        $train->update([
+            "name" => $request->name,
+            "train_type" => $request->train_type,
+            "seats_count" => $request->seats_count,
+            "depature_station" => $depature_station->name,
+            "arrival_station" => $arrival_station->name,
+            "depature_at" => $request->depature_at,
+            "arrival_at" => $request->arrival_at,
+        ]);
+
+        $train->stations()->sync([$request->depature_station_id, $request->arrival_station_id]);
+
+        // Redirect to homepage of trains
+        return redirect()->route('trains.index');
+
     }
 
     /**
