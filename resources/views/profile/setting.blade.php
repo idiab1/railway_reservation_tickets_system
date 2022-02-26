@@ -7,6 +7,9 @@
 
 {{-- Styles --}}
 @section('other-styles')
+
+    <link rel="stylesheet" href="{{asset('plugins/cropper/css/cropper.min.css')}}">
+
     <style>
         .avatar-upload{
             position: relative;
@@ -137,173 +140,233 @@
 {{-- Content --}}
 @section('content')
 <div class="profile-setting-page">
-    <div class="row">
-        <div class="col-sm-7 m-auto">
-            <div class="setting-form">
-                <div class="card card-primary">
-                    <div class="card-header">
-                        <h3 class="h1 card-title">Edit {{$user->name . "'s"}}</h3>
-                    </div>
-                    <!-- /.card-header -->
-                        <!-- form start -->
-                        <form action="{{route('profile.update', ['id' => $user->id])}}" method="POST" enctype="multipart/form-data">
-                            @csrf
-                            @method('PUT')
-                            <div class="card-body">
-                                <!-- image -->
-                                <div class="form-group">
-
-                                    <div class="avatar-upload">
-                                        <div class="avatar-edit">
-                                            <input type='file' id="imageUpload" name="image" accept=".png, .jpg, .jpeg" />
-                                            <label for="imageUpload"></label>
-                                        </div>
-                                        <div class="avatar-preview">
-                                            <div id="imagePreview" style="background-image: url({{asset('uploads/users/' . Auth::user()->profile->image)}});">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-7 m-auto">
+                <div class="setting-form">
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="h1 card-title">Edit {{$user->name . "'s"}}</h3>
+                        </div>
+                        <!-- /.card-header -->
+                            <!-- form start -->
+                            <form action="{{route('profile.update', ['id' => $user->id])}}" method="POST" enctype="multipart/form-data">
+                                @csrf
+                                @method('PUT')
+                                <div class="card-body">
+                                    <!-- image -->
+                                    <div class="form-group">
+                                        <div class="avatar-upload">
+                                            <div class="avatar-edit">
+                                                <input type='file' id="imageUpload" name="image" accept=".png, .jpg, .jpeg" />
+                                                <label for="imageUpload"></label>
+                                            </div>
+                                            <div class="avatar-preview">
+                                                <div id="imagePreview" style="background-image: url({{asset('uploads/users/' . Auth::user()->profile->image)}});">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <!-- Name -->
-                                <div class="form-group">
-                                    <label for="name">Name</label>
-                                    <!-- Input group -->
-                                    <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <!-- Input Icon -->
-                                            <span class="input-group-text" id="name">
-                                                <i class="mdi mdi-account-outline"></i>
-                                            </span>
-                                        </div>
-                                        <!-- Input -->
-                                        <input class="form-control" type="text" id="name"
-                                            name="name" placeholder="{{trans('site.name')}}"
-                                            value="{{$user->name}}" aria-describedby="name" aria-label="name" >
-                                    </div>
-                                </div>
-
-                                <!-- Email -->
-                                <div class="form-group">
-                                    <label for="email">Email</label>
-                                    <!-- Input group -->
-                                    <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <!-- Input Icon -->
-                                            <span class="input-group-text" id="email">
-                                                <i class="mdi mdi-email"></i>
-                                            </span>
-                                        </div>
-                                        <!-- Input -->
-                                        <input class="form-control" type="email" id="email"
-                                        name="email" placeholder="{{trans('site.type_email')}}"
-                                        value="{{$user->email}}" aria-describedby="email" aria-label="email" >
-                                    </div>
-
-                                </div>
-
-                                <div class="row">
-                                    <div class="col">
-                                        <!-- Password -->
-                                        <div class="form-group">
-                                            <label for="password">Password</label>
-                                            <input class="form-control" type="password" id="password"
-                                            name="password" placeholder="Enter Your Password">
+                                    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="modalLabel">Laravel Cropper Js - Crop Image Before Upload - Tutsmake.com</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">×</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="img-container">
+                                                        <div class="row">
+                                                            <div class="col-md-8">
+                                                                <img id="image" src="https://avatars0.githubusercontent.com/u/3456749">
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="preview"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                                    <button type="button" class="btn btn-primary" id="crop">Crop</button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col">
-                                        <!-- Confirm Password -->
-                                        <div class="form-group">
-                                            <label for="confirmPassword">Confirm Password</label>
-                                            <input class="form-control" type="password" id="confirmPassword"
-                                            name="password_confirmation" placeholder="Confirm password ">
+
+                                    {{-- <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                        <h5 class="modal-title">Modal title</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="img-container">
+                                                        <div class="row">
+                                                            <div class="col-md-8">
+                                                                <img id="image" src="https://avatars0.githubusercontent.com/u/3456749">
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="preview"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> --}}
+
+                                    <!-- Name -->
+                                    <div class="form-group">
+                                        <label for="name">Name</label>
+                                        <!-- Input group -->
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <!-- Input Icon -->
+                                                <span class="input-group-text" id="name">
+                                                    <i class="mdi mdi-account-outline"></i>
+                                                </span>
+                                            </div>
+                                            <!-- Input -->
+                                            <input class="form-control" type="text" id="name"
+                                                name="name" placeholder="{{trans('site.name')}}"
+                                                value="{{$user->name}}" aria-describedby="name" aria-label="name" >
                                         </div>
                                     </div>
-                                </div>
 
-                                <!-- Facebook -->
-                                <div class="form-group">
-                                    <label for="facebook">Facebook URL</label>
-                                    <!-- Input Group -->
-                                    <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <!-- Input icon -->
-                                            <span class="input-group-text" id="facebook">
-                                                <i class="mdi mdi-facebook"></i>
-                                            </span>
+                                    <!-- Email -->
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <!-- Input group -->
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <!-- Input Icon -->
+                                                <span class="input-group-text" id="email">
+                                                    <i class="mdi mdi-email"></i>
+                                                </span>
+                                            </div>
+                                            <!-- Input -->
+                                            <input class="form-control" type="email" id="email"
+                                            name="email" placeholder="{{trans('site.type_email')}}"
+                                            value="{{$user->email}}" aria-describedby="email" aria-label="email" >
                                         </div>
-                                        <!-- Input -->
-                                        <input class="form-control" type="text" id="facebook"
-                                        name="facebook" placeholder="ex: http://www.facebook.com/username"
-                                        value="{{$user->profile->facebook}}" aria-describedby="facebook" aria-label="facebook" >
-                                    </div>
-                                </div>
 
-                                <!-- twitter -->
-                                <div class="form-group">
-                                    <label for="twitter">Twitter URL</label>
-                                    <!-- Input Group -->
-                                    <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <!-- Input icon -->
-                                            <span class="input-group-text" id="twitter">
-                                                <i class="mdi mdi-twitter"></i>
-                                            </span>
-                                        </div>
-                                        <!-- Input -->
-                                        <input class="form-control" type="text" id="twitter"
-                                        name="twitter" placeholder="ex: http://www.twitter.com/username"
-                                        value="{{$user->profile->twitter}}" aria-describedby="twitter" aria-label="twitter" >
                                     </div>
 
-                                </div>
-                                <!-- linkedin -->
-                                <div class="form-group">
-                                    <label for="linkedin">Linkedin URL</label>
-                                    <!-- Input Group -->
-                                    <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <!-- Input icon -->
-                                            <span class="input-group-text" id="linkedin">
-                                                <i class="mdi mdi-linkedin"></i>
-                                            </span>
+                                    <div class="row">
+                                        <div class="col">
+                                            <!-- Password -->
+                                            <div class="form-group">
+                                                <label for="password">Password</label>
+                                                <input class="form-control" type="password" id="password"
+                                                name="password" placeholder="Enter Your Password">
+                                            </div>
                                         </div>
-                                        <!-- Input -->
-                                        <input class="form-control" type="text" id="linkedin"
-                                        name="linkedin" placeholder="ex: http://www.linkedin.com/username"
-                                        value="{{$user->profile->linkedin}}" aria-describedby="linkedin" aria-label="linkedin" >
+                                        <div class="col">
+                                            <!-- Confirm Password -->
+                                            <div class="form-group">
+                                                <label for="confirmPassword">Confirm Password</label>
+                                                <input class="form-control" type="password" id="confirmPassword"
+                                                name="password_confirmation" placeholder="Confirm password ">
+                                            </div>
+                                        </div>
                                     </div>
 
+                                    <!-- Facebook -->
+                                    <div class="form-group">
+                                        <label for="facebook">Facebook URL</label>
+                                        <!-- Input Group -->
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <!-- Input icon -->
+                                                <span class="input-group-text" id="facebook">
+                                                    <i class="mdi mdi-facebook"></i>
+                                                </span>
+                                            </div>
+                                            <!-- Input -->
+                                            <input class="form-control" type="text" id="facebook"
+                                            name="facebook" placeholder="ex: http://www.facebook.com/username"
+                                            value="{{$user->profile->facebook}}" aria-describedby="facebook" aria-label="facebook" >
+                                        </div>
+                                    </div>
+
+                                    <!-- twitter -->
+                                    <div class="form-group">
+                                        <label for="twitter">Twitter URL</label>
+                                        <!-- Input Group -->
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <!-- Input icon -->
+                                                <span class="input-group-text" id="twitter">
+                                                    <i class="mdi mdi-twitter"></i>
+                                                </span>
+                                            </div>
+                                            <!-- Input -->
+                                            <input class="form-control" type="text" id="twitter"
+                                            name="twitter" placeholder="ex: http://www.twitter.com/username"
+                                            value="{{$user->profile->twitter}}" aria-describedby="twitter" aria-label="twitter" >
+                                        </div>
+
+                                    </div>
+                                    <!-- linkedin -->
+                                    <div class="form-group">
+                                        <label for="linkedin">Linkedin URL</label>
+                                        <!-- Input Group -->
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <!-- Input icon -->
+                                                <span class="input-group-text" id="linkedin">
+                                                    <i class="mdi mdi-linkedin"></i>
+                                                </span>
+                                            </div>
+                                            <!-- Input -->
+                                            <input class="form-control" type="text" id="linkedin"
+                                            name="linkedin" placeholder="ex: http://www.linkedin.com/username"
+                                            value="{{$user->profile->linkedin}}" aria-describedby="linkedin" aria-label="linkedin" >
+                                        </div>
+
+                                    </div>
+
+                                    <!-- about -->
+                                    <div class="form-group">
+                                        <label for="about">About</label>
+                                        <textarea class="form-control" name="about" id="about" cols="30"
+                                        rows="10" placeholder="About Here">{{$user->profile->about}}</textarea>
+                                    </div>
                                 </div>
+                                <!-- /.card-body -->
 
-                                <!-- about -->
-                                <div class="form-group">
-                                    <label for="about">About</label>
-                                    <textarea class="form-control" name="about" id="about" cols="30"
-                                    rows="10" placeholder="About Here">{{$user->profile->about}}</textarea>
+                                <div class="card-footer {{app()->getLocale() == "ar" ? "text-left" : "text-right" }}">
+                                    <button type="submit" class="btn btn-primary crayons-btn">
+                                        Edit
+                                    </button>
                                 </div>
-                            </div>
-                            <!-- /.card-body -->
+                            </form>
 
-                            <div class="card-footer {{app()->getLocale() == "ar" ? "text-left" : "text-right" }}">
-                                <button type="submit" class="btn btn-primary crayons-btn">
-                                    Edit
-                                </button>
-                            </div>
-                        </form>
-
-                    </div>
-            <!-- /.card -->
+                        </div>
+                <!-- /.card -->
+                </div>
             </div>
         </div>
     </div>
 </div>
 @endsection
 
-@section('scripts')
+@section('other-scripts')
+
+<script src="{{asset('plugins/cropper/js/cropper.min.js')}}"></script>
+
 <script>
-
-
 
     $(document).ready(function(){
 
