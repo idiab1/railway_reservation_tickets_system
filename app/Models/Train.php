@@ -14,7 +14,7 @@ class Train extends Model
         'seats_count', 'depature_station', 'arrival_station',
     ];
 
-    protected $casts = ['depature_at', 'arrival_at'];
+    protected $dates = ['depature_at', 'arrival_at'];
 
     /**
      * The station that belong to the Train
