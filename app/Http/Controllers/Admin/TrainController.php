@@ -92,7 +92,10 @@ class TrainController extends Controller
      */
     public function edit($id)
     {
-        //
+        // Get the data of train by id
+        $train = Train::find($id);
+        $stations = Station::all();
+        return view("admin.trains.edit", compact('train', 'stations'));
     }
 
     /**
