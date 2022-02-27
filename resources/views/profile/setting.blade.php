@@ -18,31 +18,34 @@
         }
         .avatar-upload .avatar-edit{
             position: absolute;
-            right: 12px;
+            right: 0px;
             z-index: 1;
-            top: 10px;
+            top: calc((100%/2) - 17px);
         }
         .avatar-upload .avatar-edit input{
             display: none;
         }
         .avatar-upload .avatar-edit label{
             display: inline-block;
-            width: 34px;
-            height: 34px;
+            width: 35px;
+            height: 35px;
+            text-align: center;
+            line-height: 35px;
             margin-bottom: 0;
             border-radius: 100%;
-            background: #FFFFFF;
+            background-color: #343a40;
+            color: #eee;
             border: 1px solid transparent;
             box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
             cursor: pointer;
             font-weight: normal;
             transition: all .2s ease-in-out;
         }
-        .avatar-upload .avatar-edit label:hover{
+        /* .avatar-upload .avatar-edit label:hover{
             background: #f1f1f1;
             border-color: #d6d6d6;
-        }
-        .avatar-upload .avatar-edit label::after{
+        } */
+        /* .avatar-upload .avatar-edit label::after{
             content: "\f040";
             font-family: 'FontAwesome';
             color: #757575;
@@ -52,7 +55,7 @@
             right: 0;
             text-align: center;
             margin: auto;
-        }
+        } */
         .avatar-preview {
             width: 192px;
             height: 192px;
@@ -139,11 +142,11 @@
 
 {{-- Content --}}
 @section('content')
-<div class="profile-setting-page">
+<section class="profile-setting-page section">
     <div class="container">
         <div class="row">
             <div class="col-sm-7 m-auto">
-                <div class="setting-form">
+                <div class="setting-form section-form">
                     <div class="card card-primary">
                         <div class="card-header">
                             <h3 class="h1 card-title">Edit {{$user->name . "'s"}}</h3>
@@ -159,7 +162,9 @@
                                         <div class="avatar-upload">
                                             <div class="avatar-edit">
                                                 <input type='file' id="imageUpload" name="image" accept=".png, .jpg, .jpeg" />
-                                                <label for="imageUpload"></label>
+                                                <label for="imageUpload">
+                                                    <i class="mdi mdi-pencil"></i>
+                                                </label>
                                             </div>
                                             <div class="avatar-preview">
                                                 <div id="imagePreview" style="background-image: url({{asset('uploads/users/' . Auth::user()->profile->image)}});">
@@ -167,64 +172,6 @@
                                             </div>
                                         </div>
                                     </div>
-
-                                    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-lg" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="modalLabel">Laravel Cropper Js - Crop Image Before Upload - Tutsmake.com</h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">×</span>
-                                                    </button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <div class="img-container">
-                                                        <div class="row">
-                                                            <div class="col-md-8">
-                                                                <img id="image" src="https://avatars0.githubusercontent.com/u/3456749">
-                                                            </div>
-                                                            <div class="col-md-4">
-                                                                <div class="preview"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                                    <button type="button" class="btn btn-primary" id="crop">Crop</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    {{-- <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                        <h5 class="modal-title">Modal title</h5>
-                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <div class="img-container">
-                                                        <div class="row">
-                                                            <div class="col-md-8">
-                                                                <img id="image" src="https://avatars0.githubusercontent.com/u/3456749">
-                                                            </div>
-                                                            <div class="col-md-4">
-                                                                <div class="preview"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> --}}
 
                                     <!-- Name -->
                                     <div class="form-group">
@@ -359,7 +306,7 @@
             </div>
         </div>
     </div>
-</div>
+</section>
 @endsection
 
 @section('other-scripts')
