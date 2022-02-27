@@ -1,6 +1,6 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
-    <div class="container">
+    <div class="container-fluid">
         <a class="navbar-brand" href="{{route('home')}}">
             {{$setting->web_name}}
         </a>
@@ -106,13 +106,19 @@
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
 
                             <!-- Setting link -->
-                            <a class="dropdown-item" href="{{route('profile.setting')}}">
+                            <a class="dropdown-item d-inline-block" href="{{route('profile.setting')}}">
+                                <div class="icon mr-1 d-inline-block">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
                                 {{ trans('site.setting') }}
                             </a>
 
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">
+                                <div class="icon mr-1 d-inline-block">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                </div>
                                 {{ trans('site.logout') }}
                             </a>
 
