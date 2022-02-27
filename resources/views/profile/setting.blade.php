@@ -142,9 +142,303 @@
 
 {{-- Content --}}
 @section('content')
-<section class="profile-setting-page section">
-    <div class="container">
-        <div class="row">
+<section class="profile-setting-page section py-5">
+    <div class="container-fluid">
+
+        <!-- Setting page header -->
+        <div class="page-header setting-page-header">
+            <div class="row">
+                <div class="col-12">
+                    <div class="header-info">
+                        <h2 class="heading m-0">Account Settings</h2>
+                        <p class="m-0">Change your profile and account settings</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of setting page header -->
+
+        <!-- Setting info -->
+        <div class="setting-info">
+            <div class="row">
+                <div class="col-4">
+                    <!-- Tab links -->
+                    <div class="nav flex-column nav-pills bg-dark" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <!-- avatar link -->
+                        <a class="nav-link active" id="v-pills-avatar-tab" data-toggle="pill"
+                            href="#v-pills-avatar" role="tab" aria-controls="v-pills-avatar"
+                            aria-selected="true">
+                            <div class="icon mr-1 d-inline-block">
+                                <i class="mdi mdi-image-edit-outline"></i>
+                            </div>
+                            Change your Avatar
+                        </a>
+                        <!-- End of avatar link -->
+
+                        <!-- account link -->
+                        <a class="nav-link" id="v-pills-account-tab" data-toggle="pill"
+                            href="#v-pills-account" role="tab" aria-controls="v-pills-account"
+                            aria-selected="false">
+                            <div class="icon mr-1 d-inline-block">
+                                <i class="mdi mdi-account-settings"></i>
+                            </div>
+                            Account Info
+                        </a>
+                        <!-- End of account link -->
+
+                        <!-- passowrd link -->
+                        <a class="nav-link" id="v-pills-password-tab" data-toggle="pill"
+                            href="#v-pills-password" role="tab" aria-controls="v-pills-password"
+                            aria-selected="false">
+                            <div class="icon mr-1 d-inline-block">
+                                <i class="mdi mdi-lock"></i>
+                            </div>
+                            Change your Password
+                        </a>
+                        <!-- End of passowrd link -->
+
+                        <!-- bio Link -->
+                        <a class="nav-link" id="v-pills-bio-tab" data-toggle="pill"
+                            href="#v-pills-bio" role="tab" aria-controls="v-pills-bio"
+                            aria-selected="false">
+                            <div class="icon mr-1 d-inline-block">
+                                <i class="mdi mdi-text-account"></i>
+                            </div>
+                            Change your bio
+                        </a>
+                        <!-- End of bio Link -->
+                    </div>
+                    <!-- End of tab links -->
+                </div>
+                <div class="col-8">
+                    <!-- Tab Content -->
+                    <div class="tab-content" id="v-pills-tabContent">
+
+                        <!-- Change your avatar -->
+                        <div class="tab-pane fade show active" id="v-pills-avatar" role="tabpanel"
+                            aria-labelledby="v-pills-avatar-tab">
+                            <div class="setting-form section-form">
+                                <div class="card card-primary">
+                                    <div class="card-header">
+                                        <h3 class="h1 card-title">Edit {{$user->name . "'s"}}</h3>
+                                    </div>
+                                    <!-- /.card-header -->
+                                        <!-- form start -->
+                                        <form action="{{route('profile.update', ['id' => $user->id])}}" method="POST" enctype="multipart/form-data">
+                                            @csrf
+                                            @method('PUT')
+                                            <div class="card-body">
+                                                <!-- image -->
+                                                <div class="form-group">
+                                                    <div class="avatar-upload">
+                                                        <div class="avatar-edit">
+                                                            <input type='file' id="imageUpload" name="image" accept=".png, .jpg, .jpeg" />
+                                                            <label for="imageUpload">
+                                                                <i class="mdi mdi-pencil"></i>
+                                                            </label>
+                                                        </div>
+                                                        <div class="avatar-preview">
+                                                            <div id="imagePreview" style="background-image: url({{asset('uploads/users/' . Auth::user()->profile->image)}});">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /.card-body -->
+
+                                            <div class="card-footer {{app()->getLocale() == "ar" ? "text-left" : "text-right" }}">
+                                                <button type="submit" class="btn btn-primary crayons-btn">
+                                                    Edit
+                                                </button>
+                                            </div>
+                                        </form>
+
+                                    </div>
+                            <!-- /.card -->
+                            </div>
+                        </div>
+                        <!-- End of change your avatar -->
+
+                        <!-- Account Info -->
+                        <div class="tab-pane fade" id="v-pills-account" role="tabpanel"
+                            aria-labelledby="v-pills-account-tab">
+                            <div class="setting-form section-form">
+                                <div class="card card-primary">
+                                    <div class="card-header">
+                                        <h3 class="h1 card-title">Edit {{$user->name . "'s"}}</h3>
+                                    </div>
+                                    <!-- /.card-header -->
+                                        <!-- form start -->
+                                        <form action="{{route('profile.update', ['id' => $user->id])}}" method="POST" enctype="multipart/form-data">
+                                            @csrf
+                                            @method('PUT')
+                                            <div class="card-body">
+
+                                                <!-- Name -->
+                                                <div class="form-group">
+                                                    <label for="name">Name</label>
+                                                    <!-- Input group -->
+                                                    <div class="input-group mb-3">
+                                                        <div class="input-group-prepend">
+                                                            <!-- Input Icon -->
+                                                            <span class="input-group-text" id="name">
+                                                                <i class="mdi mdi-account-outline"></i>
+                                                            </span>
+                                                        </div>
+                                                        <!-- Input -->
+                                                        <input class="form-control" type="text" id="name"
+                                                            name="name" placeholder="{{trans('site.name')}}"
+                                                            value="{{$user->name}}" aria-describedby="name" aria-label="name" >
+                                                    </div>
+                                                </div>
+
+                                                <!-- Email -->
+                                                <div class="form-group">
+                                                    <label for="email">Email</label>
+                                                    <!-- Input group -->
+                                                    <div class="input-group mb-3">
+                                                        <div class="input-group-prepend">
+                                                            <!-- Input Icon -->
+                                                            <span class="input-group-text" id="email">
+                                                                <i class="mdi mdi-email"></i>
+                                                            </span>
+                                                        </div>
+                                                        <!-- Input -->
+                                                        <input class="form-control" type="email" id="email"
+                                                        name="email" placeholder="{{trans('site.type_email')}}"
+                                                        value="{{$user->email}}" aria-describedby="email" aria-label="email" >
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <!-- Password -->
+                                                        <div class="form-group">
+                                                            <label for="password">Password</label>
+                                                            <input class="form-control" type="password" id="password"
+                                                            name="password" placeholder="Enter Your Password">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <!-- Confirm Password -->
+                                                        <div class="form-group">
+                                                            <label for="confirmPassword">Confirm Password</label>
+                                                            <input class="form-control" type="password" id="confirmPassword"
+                                                            name="password_confirmation" placeholder="Confirm password ">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /.card-body -->
+
+                                            <div class="card-footer {{app()->getLocale() == "ar" ? "text-left" : "text-right" }}">
+                                                <button type="submit" class="btn btn-primary crayons-btn">
+                                                    Edit
+                                                </button>
+                                            </div>
+                                        </form>
+
+                                    </div>
+                            <!-- /.card -->
+                            </div>
+                        </div>
+                        <!-- End of Account Info -->
+
+                        <!-- Change password -->
+                        <div class="tab-pane fade" id="v-pills-password" role="tabpanel"
+                            aria-labelledby="v-pills-password-tab">
+                            <div class="setting-form section-form">
+                                <div class="card card-primary">
+                                    <div class="card-header">
+                                        <h3 class="h1 card-title">Edit {{$user->name . "'s"}}</h3>
+                                    </div>
+                                    <!-- /.card-header -->
+                                        <!-- form start -->
+                                        <form action="{{route('profile.update', ['id' => $user->id])}}" method="POST" enctype="multipart/form-data">
+                                            @csrf
+                                            @method('PUT')
+                                            <div class="card-body">
+
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <!-- Password -->
+                                                        <div class="form-group">
+                                                            <label for="password">Password</label>
+                                                            <input class="form-control" type="password" id="password"
+                                                            name="password" placeholder="Enter Your Password">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <!-- Confirm Password -->
+                                                        <div class="form-group">
+                                                            <label for="confirmPassword">Confirm Password</label>
+                                                            <input class="form-control" type="password" id="confirmPassword"
+                                                            name="password_confirmation" placeholder="Confirm password ">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /.card-body -->
+
+                                            <div class="card-footer {{app()->getLocale() == "ar" ? "text-left" : "text-right" }}">
+                                                <button type="submit" class="btn btn-primary crayons-btn">
+                                                    Edit
+                                                </button>
+                                            </div>
+                                        </form>
+
+                                    </div>
+                            <!-- /.card -->
+                            </div>
+                        </div>
+                        <!-- End of Change password -->
+
+                        <!-- Change bio -->
+                        <div class="tab-pane fade" id="v-pills-bio" role="tabpanel"
+                            aria-labelledby="v-pills-bio-tab">
+
+                            <div class="setting-form section-form">
+                                <div class="card card-primary">
+                                    <div class="card-header">
+                                        <h3 class="h1 card-title">Edit {{$user->name . "'s"}}</h3>
+                                    </div>
+                                    <!-- /.card-header -->
+                                        <!-- form start -->
+                                        <form action="{{route('profile.update', ['id' => $user->id])}}" method="POST" enctype="multipart/form-data">
+                                            @csrf
+                                            @method('PUT')
+                                            <div class="card-body">
+                                                <!-- about -->
+                                                <div class="form-group">
+                                                    <label for="about">About</label>
+                                                    <textarea class="form-control" name="about" id="about" cols="30"
+                                                    rows="10" placeholder="About Here">{{$user->profile->about}}</textarea>
+                                                </div>
+                                            </div>
+                                            <!-- /.card-body -->
+
+                                            <div class="card-footer {{app()->getLocale() == "ar" ? "text-left" : "text-right" }}">
+                                                <button type="submit" class="btn btn-primary crayons-btn">
+                                                    Edit
+                                                </button>
+                                            </div>
+                                        </form>
+
+                                    </div>
+                            <!-- /.card -->
+                            </div>
+
+                        </div>
+                        <!-- End of change bio -->
+                    </div>
+                    <!-- End of Tab Content -->
+                </div>
+            </div>
+        </div>
+        <!-- End of setting info -->
+
+        {{-- <div class="row">
             <div class="col-sm-7 m-auto">
                 <div class="setting-form section-form">
                     <div class="card card-primary">
@@ -304,7 +598,7 @@
                 <!-- /.card -->
                 </div>
             </div>
-        </div>
+        </div> --}}
     </div>
 </section>
 @endsection
@@ -332,5 +626,8 @@
             readURL(this);
         });
     });
+
+    document.querySelector(".main-content").style.minHeight = ((window.innerHeight) - (document.querySelector(".main-footer").clientHeight) - document.querySelector(".navbar").clientHeight ) + "px"
+
 </script>
 @endsection
