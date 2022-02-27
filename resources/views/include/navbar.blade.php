@@ -90,8 +90,16 @@
                         </li>
                     @endif
                 @else
-                    <li class="nav-item dropdown">
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    <li class="nav-item dropdown dropdown-profile">
+
+                        <!-- User image -->
+                        <div class="user-image d-inline-block mx-2">
+                            <img class="rounded-circle border border-dark elevation-2"
+                                src="{{asset('uploads/users/' . Auth::user()->profile->image)}}"
+                                alt="{{ Auth::user()->name }}" width="30px">
+                        </div>
+                        <!-- End of user image -->
+                        <a  class="nav-link dropdown-toggle d-inline-block" id="navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->name }}
                         </a>
 
