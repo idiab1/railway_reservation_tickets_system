@@ -537,6 +537,10 @@
 
 <script src="{{asset('plugins/cropper/js/cropper.min.js')}}"></script>
 
+<!-- Custom script -->
+<script src="{{asset('js/custom.js')}}"></script>
+
+
 <script>
 
     $(document).ready(function(){
