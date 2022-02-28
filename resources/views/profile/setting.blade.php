@@ -230,6 +230,13 @@
                             aria-labelledby="v-pills-avatar-tab">
                             <div class="setting-form section-form">
                                 <div class="card card-primary">
+                                    <!-- Card header -->
+                                    <div class="card-header">
+                                        <h5 class="title">
+                                            Change your Avatar
+                                        </h5>
+                                    </div>
+                                    <!-- End of card header -->
                                     <!-- form -->
                                     <form action="{{route('profile.update', ['id' => $user->id])}}" method="POST" enctype="multipart/form-data">
                                         @csrf
@@ -271,6 +278,13 @@
                             aria-labelledby="v-pills-account-tab">
                             <div class="setting-form section-form">
                                 <div class="card card-primary">
+                                    <!-- Card header -->
+                                    <div class="card-header">
+                                        <h5 class="title">
+                                            Account info
+                                        </h5>
+                                    </div>
+                                    <!-- End of card header -->
                                     <!-- form -->
                                     <form action="{{route('profile.update', ['id' => $user->id])}}" method="POST" enctype="multipart/form-data">
                                         @csrf
@@ -333,6 +347,13 @@
                             aria-labelledby="v-pills-password-tab">
                             <div class="setting-form section-form">
                                 <div class="card card-primary">
+                                    <!-- Card header -->
+                                    <div class="card-header">
+                                        <h5 class="title">
+                                            Change your password
+                                        </h5>
+                                    </div>
+                                    <!-- End of card header -->
                                     <!-- form -->
                                     <form action="{{route('profile.update', ['id' => $user->id])}}" method="POST" enctype="multipart/form-data">
                                         @csrf
@@ -378,6 +399,13 @@
                             aria-labelledby="v-pills-social-media-tab">
                             <div class="setting-form section-form">
                                 <div class="card card-primary">
+                                    <!-- Card header -->
+                                    <div class="card-header">
+                                        <h5 class="title">
+                                            Social Media links
+                                        </h5>
+                                    </div>
+                                    <!-- End of card header -->
                                     <!-- form start -->
                                     <form action="{{route('profile.update', ['id' => $user->id])}}" method="POST" enctype="multipart/form-data">
                                         @csrf
@@ -460,6 +488,13 @@
 
                             <div class="setting-form section-form">
                                 <div class="card card-primary">
+                                    <!-- Card header -->
+                                    <div class="card-header">
+                                        <h5 class="title">
+                                            Bio
+                                        </h5>
+                                    </div>
+                                    <!-- End of card header -->
                                     <!-- form -->
                                     <form action="{{route('profile.update', ['id' => $user->id])}}" method="POST" enctype="multipart/form-data">
                                         @csrf
