@@ -50,7 +50,9 @@
                                             <div class="header-icon text-right">
                                                 <!-- Icon -->
                                                 <div class="icon">
-                                                    <i class="fas fa-envelope"></i>
+                                                    <span>
+                                                        <i class="fas fa-envelope"></i>
+                                                    </span>
                                                 </div>
                                                 <!-- End of icon -->
                                             </div>
