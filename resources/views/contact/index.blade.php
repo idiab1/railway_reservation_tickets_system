@@ -129,7 +129,7 @@
                         </div>
                         <div class="col-md-4 p-0">
                             <!-- Contact Info -->
-                            <div class="card contact-info bg-primary">
+                            <div class="card contact-info">
                                 <!-- Card Header -->
                                 <div class="card-header">
                                     <div class="row">
@@ -145,6 +145,7 @@
                                 <!-- End of card header -->
                                 <!-- Card Body -->
                                 <div class="card-body">
+                                    <!-- Contact information list -->
                                     <ul class="list-unstyled">
                                         <!-- Item -->
                                         <li class="item">
@@ -177,6 +178,13 @@
                                         </li>
                                         <!-- End of Item -->
                                     </ul>
+                                    <!-- End fo contact information list -->
+
+                                    <!-- contact image -->
+                                    {{-- <div class="contact-image">
+                                        <img src="{{asset('images/contact_us/contact_us.svg')}}" alt="contact image">
+                                    </div> --}}
+                                    <!-- End of contact image -->
                                 </div>
                                 <!-- End of card body -->
                             </div>
@@ -191,4 +199,7 @@
 </section>
 @endsection
 
-
+@section('other-scripts')
+<!-- Custom script -->
+<script src="{{asset('js/custom.js')}}"></script>
+@endsection
