@@ -2,7 +2,7 @@
 <footer class="main-footer">
     <!-- Copyright -->
     <div class="copyright">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
                     <!-- Copyright -->
@@ -19,7 +19,7 @@
                                 <i class="fas fa-arrow-circle-up"></i>
                             </div>
                             <div class="col-md-5 col-sm-12">
-                                <div class="copyright-info">
+                                <div class="copyright-info text-right">
                                     <p>&copy; 2022 {{ trans('site.copyright') }}</p>
                                 </div>
                             </div>
