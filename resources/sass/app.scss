@@ -8,7 +8,17 @@
 @import '~bootstrap/scss/bootstrap';
 
 
+// ==> Components
 
+// Heading
+@import "./components/heading";
+
+
+// ==> Layouts
+
+
+// Style
+@import "./layouts/style";
 
 
 // ==> Pages
