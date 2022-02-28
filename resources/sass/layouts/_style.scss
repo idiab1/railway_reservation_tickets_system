@@ -1,0 +1,24 @@
+/* Page header */
+.page-header{
+    padding-bottom: 35px;
+    /* Header info */
+    .header-info{
+        h2{
+            color: #eee;
+            font-weight: 700;
+            padding-bottom: 5px;
+            text-transform: capitalize;
+        }
+        p{
+            color: #dfdfdf;
+            font-size: 14px;
+            line-height: 1.79;
+            letter-spacing: .04rem;
+            text-transform: capitalize;
+
+        }
+    }
+    /* End of header info */
+}
+
+/* End of page header */
