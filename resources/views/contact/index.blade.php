@@ -30,11 +30,11 @@
 
         <div class="row">
             <div class="col-9 m-auto">
-                <div class="contact-card">
+                <div class="contact-box">
                     <div class="row">
                         <div class="col-md-8 p-0">
                             <!-- Contact form -->
-                            <div class="card contact-form section-form bg-dark">
+                            <div class="card contact-form section-form">
                                 <!-- Card Header -->
                                 <div class="card-header">
                                     <div class="row">
@@ -85,7 +85,7 @@
                                             <div class="col">
                                                 <!-- Email address -->
                                                 <div class="form-group">
-                                                    <label for="email">{{ trans('site.email_address') }}</label>
+                                                    <label for="email">{{ trans('site.email') }}</label>
                                                     <div class="input-group mb-3">
                                                         <div class="input-group-prepend">
                                                             <span class="input-group-text" id="email">
