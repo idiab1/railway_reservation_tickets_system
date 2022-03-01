@@ -151,10 +151,10 @@
                                                 <div class="col-12">
                                                     <!-- Create account -->
                                                     <div class="create-account">
-                                                        <p class="d-inline-block">Dont't have an account?</p>
+                                                        <p class="d-inline-block">already have an account?</p>
                                                         @if (Route::has('login'))
                                                             <a class="btn-link" href="{{ route('login') }}">
-                                                                Create account
+                                                                Login
                                                             </a>
                                                         @endif
                                                     </div>
