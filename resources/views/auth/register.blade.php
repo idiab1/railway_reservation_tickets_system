@@ -5,6 +5,11 @@
     {{ trans('site.register') }}
 @endsection
 
+{{-- navbar --}}
+@section('navbar')
+
+@endsection
+
 {{-- Header --}}
 @section('header')
 
@@ -322,7 +327,13 @@
 
 @endsection
 
+{{-- footer --}}
+@section('footer')
+
+@endsection
+
 @section('other-scripts')
-    <!-- Custom script -->
-    <script src="{{asset('js/custom.js')}}"></script>
+    <script>
+        document.querySelector(".section").style.minHeight = (window.innerHeight) + "px";
+    </script>
 @endsection
