@@ -22,24 +22,34 @@
 <section class="register-page section sign-page">
     <div class="container-fluid">
         <!-- Sign Box -->
-        <div class="sign-box">
+        <div class="sign-container">
             <div class="row">
                 <div class="col-8 m-auto">
                     <div class="row">
                         <div class="col-md-6 d-none p-0 d-md-block">
-                            <!-- Sign Info -->
-                            <div class="sigh-info bg-dark">
-                                text
+                            <!-- sign info -->
+                            <div class="sign-info sign-box">
+                                <!-- Card -->
+                                <div class="card card-sign-info">
+                                    <!-- Card Body -->
+                                    <div class="card-body">
+
+                                    </div>
+                                    <!-- End of Card Body -->
+                                </div>
+                                <!-- End of card -->
                             </div>
-                            <!-- End of Sign Info -->
+                            <!-- End of sign info -->
                         </div>
                         <div class="col-md-6 p-0">
                             <!-- Sing Form -->
-                            <div class="sing-form">
+                            <div class="sign-form sign-box">
                                 <!-- Sign Card -->
-                                <div class="card sign-card">
+                                <div class="card sign-card-form">
                                     <!-- Card Header -->
-                                    <div class="card-header">{{ trans('site.register') }}</div>
+                                    <div class="card-header">
+                                        <h3 class="">Create a new account</h3>
+                                    </div>
 
                                     <!-- card body -->
                                     <div class="card-body">
@@ -156,7 +166,7 @@
                                                 <div class="col-12">
                                                     <!-- Create account -->
                                                     <div class="create-account">
-                                                        <p class="d-inline-block">already have an account?</p>
+                                                        <p class="d-inline-block">Already have an account?</p>
                                                         @if (Route::has('login'))
                                                             <a class="btn-link" href="{{ route('login') }}">
                                                                 Login
