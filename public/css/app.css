@@ -10034,6 +10034,13 @@ h3 {
   background-color: #98354e;
   border-color: #98354e;
 }
+.crayons-btn:focus {
+  background-color: #98354e;
+  border-color: #98354e;
+  -ms-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+}
 
 /* End of Crayons Button */
 /* Global Rule */
@@ -10047,6 +10054,26 @@ body {
 }
 
 /* End of Global Rule */
+/* Navbar */
+.navbar {
+  background-color: #1c1f33;
+  padding-left: 0;
+  padding-right: 0;
+  /* Navbar Brand */
+  /* End of Navbar Brand */
+}
+.navbar .navbar-brand {
+  /* Navbar Content */
+  /* End of Navbar Content */
+}
+.navbar .navbar-brand .navbar-nav {
+  /* navbar item */
+}
+.navbar .navbar-brand .navbar-nav .nav-item {
+  /* Navbar link */
+  /* End of Navbar link */
+}
+/* End of Navbar */
 /* Page header */
 .page-header {
   padding-bottom: 35px;
