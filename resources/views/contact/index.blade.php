@@ -79,8 +79,7 @@
                                                             </span>
                                                         </div>
                                                         <input class="form-control" type="text" id="name" name="name"
-                                                            placeholder="{{trans('site.name')}}" aria-describedby="name"
-                                                            aria-label="name" required>
+                                                            aria-describedby="name" aria-label="name" required>
                                                     </div>
                                                 </div>
                                                 <!-- End of Name -->
@@ -96,8 +95,7 @@
                                                             </span>
                                                         </div>
                                                         <input class="form-control" type="email" id="email" name="email"
-                                                            placeholder="{{trans('site.email')}}" aria-describedby="email"
-                                                            aria-label="email" required>
+                                                            aria-describedby="email" aria-label="email" required>
                                                     </div>
                                                 </div>
                                                 <!-- End of Email address -->
