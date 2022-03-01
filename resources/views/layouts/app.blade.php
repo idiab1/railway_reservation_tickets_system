@@ -45,9 +45,11 @@
 <body>
     <div id="app">
         {{-- Navbar --}}
-        @include('include.navbar', [
-            'setting' => \App\Models\Setting::first()
-        ])
+        @section('navbar')
+            @include('include.navbar', [
+                'setting' => \App\Models\Setting::first()
+            ])
+        @show
 
         {{-- Header --}}
         @section('header')
@@ -60,9 +62,11 @@
         </main>
 
         {{-- Footer --}}
-        @include('include.footer', [
-            'setting' => \App\Models\Setting::first()
-        ])
+        @section('footer')
+            @include('include.footer', [
+                'setting' => \App\Models\Setting::first()
+            ])
+        @show
 
     </div>
     <!-- jQuery -->
