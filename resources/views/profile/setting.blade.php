@@ -561,7 +561,5 @@
         });
     });
 
-    document.querySelector(".main-content").style.minHeight = ((window.innerHeight) - (document.querySelector(".main-footer").clientHeight) - document.querySelector(".navbar").clientHeight ) + "px"
-
 </script>
 @endsection
