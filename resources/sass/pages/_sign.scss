@@ -1,0 +1,147 @@
+/* sign page */
+.sign-page{
+    padding: 0;
+    background-image: linear-gradient(45deg, rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)),
+    url('../../../public/images/login-bg.jpg');
+    display: flex;
+    align-items: center;
+    /* sign container */
+    .sign-container{
+
+        /* Sign box */
+        .sign-box{
+            /* Card */
+            .card{
+                /* Card Header */
+                .card-header{
+                    background-color: transparent;
+                    h3{
+                        color: $dark-color;
+                        margin-bottom: 0;
+                        font-weight: 600;
+                        font-size: 1.45rem;
+                    }
+                    p{
+                        margin-bottom: 0;
+                        color: #585858;
+                        text-transform: capitalize;
+                        line-height: 1.8;
+                    }
+                }
+                /* End of Card Header */
+            }
+            /* End of card */
+        }
+        /* End of Sign box */
+
+        /* Sign Info */
+        .sign-info{
+            height: 100%;
+            color: #fff;
+            background-position: bottom center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-color: $maroon-color;
+            position: relative;
+            border-right: 4px solid $dark-color;
+            background-image: url('../../../public/images/travelers.svg');
+            &:after {
+                position: absolute;
+                content: "";
+                top: -25px;
+                right: -15px;
+                width: 25px;
+                height: 25px;
+                background-color: $maroon-color;
+                border: 5px double $dark-color;
+                z-index: 1;
+                @include prefixer(border-radius, 50%, webkit moz ms o);
+            }
+            :before {
+                position: absolute;
+                content: "";
+                bottom: -25px;
+                right: -15px;
+                width: 25px;
+                height: 25px;
+                background-color: $maroon-color;
+                border: 5px double $dark-color;
+                z-index: 1;
+                @include prefixer(border-radius, 50%, webkit moz ms o);
+            }
+            /* Card */
+            .card{
+                height: 100%;
+                background-color: transparent;
+            }
+            /* End of card */
+        }
+        /* End of Sign Info */
+
+        /* Sign Form */
+        .sign-form{
+            /* Sign form card */
+            .sign-card-form{
+                /* form */
+                form{
+                    label{
+                        font-weight: 600;
+                    }
+                    .input-group{
+                        border: 1px solid #ced4da;
+                        &:focus{
+                            border: 1px solid $maroon-color;
+                        }
+                    }
+                    .input-group-prepend{
+                        span{
+                            line-height: 1.5;
+                            background-color: transparent;
+                            border: none;
+                            i{
+
+                            }
+                        }
+                    }
+                    input{
+                        border: none;
+                        border: none;
+                        font-size: 13px;
+                        // &.form-check-input{
+                        // }
+                        &:focus{
+                            border: none;
+                            @include prefixer(box-shadow, none, webkit moz ms o);
+                            @include prefixer(border-radius, 0, webkit moz ms o);
+                        }
+
+                    }
+                    .forgot-password{
+                        .forgot-password-link{
+                            padding: 0;
+                            color: $dark-color;
+                            font-weight: 400;
+                            font-size: 13px;
+                        }
+                    }
+                    .create-account{
+                        p{
+                            margin: 0;
+                            font-size: 13px;
+                        }
+                        a{
+                            font-weight: 600;
+                            color: $maroon-color;
+                        }
+                    }
+                }
+                /* End of form */
+            }
+            /* End of sign form card */
+        }
+        /* End of sign form */
+
+    }
+    /* End of sign container */
+}
+/* End of sign page */
