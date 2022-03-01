@@ -8,6 +8,11 @@
         background-color: $maroon-color;
         border-color: $maroon-color;
     }
+    &:focus{
+        background-color: $maroon-color;
+        border-color: $maroon-color;
+        @include prefixer(box-shadow, none, webkit moz ms o);
+    }
 }
 
 /* End of Crayons Button */
