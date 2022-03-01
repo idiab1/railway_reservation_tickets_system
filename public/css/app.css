@@ -10023,6 +10023,19 @@ h3 {
 /* End of prefixer */
 /* Heading page */
 /* End of heading page */
+/* Crayons Button */
+.crayons-btn {
+  letter-spacing: 0.05rem;
+  border-color: #98354e;
+  background-color: #98354e;
+  border-radius: 0;
+}
+.crayons-btn:hover {
+  background-color: #98354e;
+  border-color: #98354e;
+}
+
+/* End of Crayons Button */
 /* Global Rule */
 body {
   font-family: "Open Sans", sans-serif;
@@ -10055,9 +10068,141 @@ body {
 }
 
 /* End of page header */
+/* sign page */
+.sign-page {
+  padding: 0;
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/login-bg.jpg?2e3e77daab86b5530bdbd1a25b84e645);
+  display: flex;
+  align-items: center;
+  /* sign container */
+  /* End of sign container */
+}
+.sign-page .sign-container {
+  /* Sign box */
+  /* End of Sign box */
+  /* Sign Info */
+  /* End of Sign Info */
+  /* Sign Form */
+  /* End of sign form */
+}
+.sign-page .sign-container .sign-box {
+  /* Card */
+  /* End of card */
+}
+.sign-page .sign-container .sign-box .card {
+  /* Card Header */
+  /* End of Card Header */
+}
+.sign-page .sign-container .sign-box .card .card-header {
+  background-color: transparent;
+}
+.sign-page .sign-container .sign-box .card .card-header h3 {
+  color: #1c1f33;
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 1.45rem;
+}
+.sign-page .sign-container .sign-box .card .card-header p {
+  margin-bottom: 0;
+  color: #585858;
+  text-transform: capitalize;
+  line-height: 1.8;
+}
+.sign-page .sign-container .sign-info {
+  height: 100%;
+  color: #fff;
+  background-position: bottom center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #98354e;
+  position: relative;
+  border-right: 4px solid #1c1f33;
+  background-image: url(/images/travelers.svg?0d268ce4f97f24d2e1f7704375b08d92);
+  /* Card */
+  /* End of card */
+}
+.sign-page .sign-container .sign-info:after {
+  position: absolute;
+  content: "";
+  top: -25px;
+  right: -15px;
+  width: 25px;
+  height: 25px;
+  background-color: #98354e;
+  border: 5px double #1c1f33;
+  z-index: 1;
+  border-radius: 50%;
+}
+.sign-page .sign-container .sign-info :before {
+  position: absolute;
+  content: "";
+  bottom: -25px;
+  right: -15px;
+  width: 25px;
+  height: 25px;
+  background-color: #98354e;
+  border: 5px double #1c1f33;
+  z-index: 1;
+  border-radius: 50%;
+}
+.sign-page .sign-container .sign-info .card {
+  height: 100%;
+  background-color: transparent;
+}
+.sign-page .sign-container .sign-form {
+  /* Sign form card */
+  /* End of sign form card */
+}
+.sign-page .sign-container .sign-form .sign-card-form {
+  /* form */
+  /* End of form */
+}
+.sign-page .sign-container .sign-form .sign-card-form form label {
+  font-weight: 600;
+}
+.sign-page .sign-container .sign-form .sign-card-form form .input-group {
+  border: 1px solid #ced4da;
+}
+.sign-page .sign-container .sign-form .sign-card-form form .input-group:focus {
+  border: 1px solid #98354e;
+}
+.sign-page .sign-container .sign-form .sign-card-form form .input-group-prepend span {
+  line-height: 1.5;
+  background-color: transparent;
+  border: none;
+}
+.sign-page .sign-container .sign-form .sign-card-form form input {
+  border: none;
+  border: none;
+  font-size: 13px;
+}
+.sign-page .sign-container .sign-form .sign-card-form form input:focus {
+  border: none;
+  -ms-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+.sign-page .sign-container .sign-form .sign-card-form form .forgot-password .forgot-password-link {
+  padding: 0;
+  color: #1c1f33;
+  font-weight: 400;
+  font-size: 13px;
+}
+.sign-page .sign-container .sign-form .sign-card-form form .create-account p {
+  margin: 0;
+  font-size: 13px;
+}
+.sign-page .sign-container .sign-form .sign-card-form form .create-account a {
+  font-weight: 600;
+  color: #98354e;
+}
+
+/* End of sign page */
 /* Contact us page */
 .contact-page {
-  background-image: url(/images/map-bg.jpg?6dfddcd48667757608786a07c71c40f2);
+  background-image: linear-gradient(220deg, rgba(184, 64, 94, 0.54), rgba(184, 64, 94, 0.54)), url(/images/map-bg.jpg?6dfddcd48667757608786a07c71c40f2);
+  background-size: cover;
   /* Contact box */
   /* End of contact box */
 }
@@ -10073,6 +10218,12 @@ body {
   /* Form */
   /* End of Form */
 }
+.contact-page .contact-box .contact-form .header-title h5 {
+  color: #98354e;
+}
+.contact-page .contact-box .contact-form .header-icon i {
+  color: #98354e;
+}
 .contact-page .contact-box .contact-form form {
   /* Label */
   /* Input */
@@ -10082,8 +10233,10 @@ body {
   font-weight: 600;
 }
 .contact-page .contact-box .contact-form form .input-group .input-group-prepend span {
-  padding: 0.255rem 0.75rem i;
-  padding-font-size: 17px;
+  padding: 0.255rem 0.75rem;
+}
+.contact-page .contact-box .contact-form form .input-group .input-group-prepend span i {
+  font-size: 17px;
 }
 .contact-page .contact-box .contact-form form textarea {
   max-height: 100px;
@@ -10095,7 +10248,7 @@ body {
   background-position: bottom center;
   background-size: contain;
   background-repeat: no-repeat;
-  background-color: #343a40;
+  background-color: #98354e;
 }
 .contact-page .contact-box .contact-info ul {
   margin-bottom: 0;
