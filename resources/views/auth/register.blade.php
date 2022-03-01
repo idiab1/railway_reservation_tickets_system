@@ -321,3 +321,8 @@
 
 
 @endsection
+
+@section('other-scripts')
+    <!-- Custom script -->
+    <script src="{{asset('js/custom.js')}}"></script>
+@endsection
