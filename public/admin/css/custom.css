@@ -42,12 +42,14 @@
     color: var(--offwhite-color);
 }
 
-.sidebar-mini >.user-panel .info{
-    white-space: nowrap;
-    overflow: hidden;
+.mini-sidebar .user-panel .info{
+    display: none;
+    transition: .35s;
+    -webkit-transition: .35s;
+    -moz-transition: .35s;
+    -ms-transition: .35s;
+    -o-transition: .35s;
 }
-
-
 
 /* End of sidebar */
 
