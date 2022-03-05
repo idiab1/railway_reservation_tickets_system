@@ -104,6 +104,13 @@
     <!-- AdminLTE for demo purposes -->
     <script src="{{asset('admin/js/demo.js')}}"></script>
 
+    <script>
+        document.querySelector(".icon-bars").addEventListener("click", e => {
+            e.preventDefault();
+            document.querySelector(".main-sidebar").classList.toggle("mini-sidebar")
+        })
+    </script>
+
     {{-- other scripts --}}
     @yield('scripts')
 </body>
