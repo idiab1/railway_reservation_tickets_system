@@ -76,6 +76,17 @@ section table .btn{
 .btn-edit:hover{
     color: #000;
 }
+
+.btn-add-new{
+    font-weight: 600;
+    text-transform: capitalize;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+
 /* End of Buttons */
 
 /* Card */
@@ -156,12 +167,18 @@ section table .btn{
 .btn-delete,
 .btn-delete:focus,
 .btn-delete:hover,
-.card .card-header{
+.card .card-header,
+.btn-add-new,
+.btn-add-new:focus,
+.btn-add-new:hover{
     background-color: var(--red-color);
 }
 .btn-delete,
 .btn-delete:focus,
-.btn-delete:hover{
+.btn-delete:hover,
+.btn-add-new,
+.btn-add-new:focus,
+.btn-add-new:hover{
     border-color: var(--red-color);
 }
 
