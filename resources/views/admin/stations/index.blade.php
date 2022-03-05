@@ -17,6 +17,10 @@
 {{-- Page name --}}
 @section('page_name')
     {{ trans('site.list_stations') }}
+    <button type="button" class="btn btn-create btn-sm btn-primary btn-crayons"
+        data-toggle="modal" data-target="#createNewItem">
+        <i class="fas fa-plus"></i>
+    </button>
 @endsection
 
 {{-- Breadcrumb --}}
@@ -30,26 +34,6 @@
         <div class="row">
             <div class="col-12">
                 <div class="card">
-                    <!-- Card Header -->
-                    <div class="card-header">
-                        <div class="row">
-                            <div class="col-6">
-                                <!-- Card Title -->
-                                <h3 class="card-title">
-                                    {{ trans('site.list_stations') }}
-                                </h3>
-                                <!-- /End of card title -->
-                            </div>
-                            <div class="col-6">
-                                <a class="btn btn-create btn-sm btn-primary btn-crayons float-right" href="{{route('stations.create')}}">
-                                    <i class="fas fa-plus"></i>
-                                    {{ trans('site.add_station') }}
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /End of card-header -->
-
                     <!-- Card body -->
                     <div class="card-body">
                         <table id="example1" class="table table-bordered table-striped">
@@ -103,6 +87,56 @@
             <!--/.col-12 -->
         </div>
         <!--/.row -->
+
+        <!-- create modal -->
+        <div class="modal fade" id="createNewItem" data-backdrop="static" data-keyboard="false"
+            tabindex="-1" aria-labelledby="createNewItem" aria-hidden="true">
+            <div class="modal-dialog">
+                <!-- Modal Content -->
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <!-- Modal Title -->
+                        <h5 class="modal-title" id="createNewItem">
+
+                        </h5>
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <!-- End of Modal Header -->
+
+                    <!-- Form -->
+                    <form action="{{route('stations.store')}}" method="POST">
+                        @csrf
+                        <!-- Modal Body -->
+                        <div class="modal-body">
+                            <!-- Name -->
+                            <div class="form-group">
+                                <label for="name">{{ trans('site.name') }}</label>
+                                <input class="form-control" type="text" id="name"
+                                    name="name" placeholder="{{trans('site.enter_name_station')}}">
+                            </div>
+                        </div>
+                        <!-- End of modal body -->
+
+                        <!-- Modal Footer -->
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary btn-add btn-crayons">
+                                {{ trans('site.add') }}
+                            </button>
+                        </div>
+                        <!-- End of Modal Footer -->
+                    </form>
+
+                    <!-- End of  Form -->
+                </div>
+                <!-- End of Modal Content -->
+            </div>
+        </div>
+        <!-- end of create modal -->
+
     </section>
 @endsection
 
