@@ -9,13 +9,16 @@
     <div class="user-panel mt-3 pb-3 mb-3 d-flex brand-link">
         <!-- Image user -->
         <div class="image">
-            <img src="{{asset('uploads/users/' . Auth::user()->profile->image)}}" class="img-circle border border-dark elevation-2" alt="User Image">
+            <img class="img-circle border border-dark elevation-2" src="{{asset('uploads/users/' . Auth::user()->profile->image)}}"
+            alt="User Image">
         </div>
         <!-- End of image user -->
 
         <!-- Info user -->
-        <div class="info">
-            <a href="#" class="d-block brand-link">{{auth()->user()->name}}</a>
+        <div class="info text-center">
+            <a href="#" class="d-block brand-link">
+                {{auth()->user()->name}}
+            </a>
             <span>
                 @foreach (auth()->user()->roles as $role)
                     {{ $role->display_name }}
@@ -91,7 +94,7 @@
                 <!-- Trains -->
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('trains.index')}}">
-                        <i class="mdi mdi-train" aria-hidden="true"></i>
+                        <i class="mdi mdi-train nav-icon" aria-hidden="true"></i>
                         <p>{{ trans('site.trains') }}</p>
                     </a>
                 </li>
