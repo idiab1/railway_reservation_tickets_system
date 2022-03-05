@@ -84,6 +84,7 @@ return [
     'created_at' => 'Created At',
     'content' => 'Content',
     'train_type' => "Train Type",
+    "overview" => "Overview",
 
     // Buttons
     'send' => 'Send',
