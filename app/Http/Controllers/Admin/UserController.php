@@ -55,8 +55,7 @@ class UserController extends Controller
 
         // Save new user
         $user = User::create($request_data);
-        $user->attachRole('admin');
-        $user->syncPermissions($request->permissions);
+
 
         // create profile user
         if($user->profile == null){
@@ -65,10 +64,13 @@ class UserController extends Controller
                 'image'     => 'default.png',
                 'facebook'  => 'https://www.facebook.com',
                 'twitter'   => 'https://www.twitter.com',
-                'linkedin'   => 'https://www.linkedin.com',
+                'linkedin'  => 'https://www.linkedin.com',
                 'about'     => 'About here',
             ]);
         }
+
+        $user->attachRole('admin');
+        $user->syncPermissions($request->permissions);
 
         // Redirect to home of users
         return redirect()->route('users.index');
