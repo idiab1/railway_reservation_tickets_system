@@ -31,8 +31,22 @@
 /* .navbar .navbar-nav .dropdown.add-new {
 
 } */
-.navbar .navbar-nav .dropdown.add-new .dropdown-toggle::after{
+.navbar .navbar-nav .dropdown.user-dropdown .nav-link{
+    padding-top: 0.35rem;
+}
+
+.navbar .navbar-nav .dropdown .dropdown-toggle::after{
     display: none;
+}
+.navbar .navbar-nav .dropdown .dropdown-item{
+    transition: .2s ease-in-out;
+    -webkit-transition: .2s ease-in-out;
+    -moz-transition: .2s ease-in-out;
+    -ms-transition: .2s ease-in-out;
+    -o-transition: .2s ease-in-out;
+}
+.navbar .navbar-nav .dropdown .dropdown-item:hover{
+    background-color: var(--red-color);
 }
 
 /* End of navbar */
