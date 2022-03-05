@@ -7,12 +7,22 @@
 
     {{-- </a> --}}
     <div class="user-panel mt-3 pb-3 mb-3 d-flex brand-link">
+        <!-- Image user -->
         <div class="image">
             <img src="{{asset('uploads/users/' . Auth::user()->profile->image)}}" class="img-circle border border-dark elevation-2" alt="User Image">
         </div>
+        <!-- End of image user -->
+
+        <!-- Info user -->
         <div class="info">
             <a href="#" class="d-block brand-link">{{auth()->user()->name}}</a>
+            <span>
+                @foreach (auth()->user()->roles as $role)
+                    {{ $role->display_name }}
+                @endforeach
+            </span>
         </div>
+        <!-- End of info user -->
     </div>
 
     <!-- Sidebar -->
@@ -110,7 +120,48 @@
                     </a>
                 </li>
 
-                <!-- Setting -->
+
+
+            </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+
+        <div class="nav-system mt-auto">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+
+
+                {{-- <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>
+                            {{ trans('site.add_new') }}
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>{{ trans('site.post') }}</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Dashboard v2</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Dashboard v3</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li> --}}
+
+                <!-- Setting system -->
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('setting.edit', ['id' => $setting->id])}}">
                         <i class="mdi mdi-cogs nav-icon" aria-hidden="true"></i>
@@ -118,12 +169,6 @@
                     </a>
                 </li>
 
-            </ul>
-        </nav>
-        <!-- /.sidebar-menu -->
-
-        <nav class="nav-logout">
-            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <!-- Logout -->
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('logout') }}"
@@ -139,7 +184,13 @@
                 </li>
 
             </ul>
-        </nav>
+        </div>
+
+        {{-- <div class="nav-system mt-auto">
+
+        </div> --}}
+
+
 
     </div>
     <!-- /.sidebar -->
