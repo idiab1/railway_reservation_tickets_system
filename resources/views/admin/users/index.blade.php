@@ -36,8 +36,7 @@
                                     <img class="img-fluid" src="{{asset('uploads/users/' . $user->profile->image)}}"
                                         alt="user image">
                                 </div>
-                            @else
-                                remove
+
                             @endif
 
                             <!-- End of Card Header -->
