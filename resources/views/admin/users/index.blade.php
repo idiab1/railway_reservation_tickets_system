@@ -141,8 +141,10 @@
                                     @foreach ($models as $index => $model)
                                         <li class="nav-item">
                                             <a class="nav-link btn btn-sm {{$index == 0 ? "active" : ""}}"
-                                            id="pills-{{$model}}-tab" data-toggle="pill" href="#pills-{{$model}}"
-                                            role="tab" aria-controls="pills-{{$model}}">{{ trans('site.' . $model) }}</a>
+                                                id="pills-{{$model}}-tab" data-toggle="pill" href="#pills-{{$model}}"
+                                                role="tab" aria-controls="pills-{{$model}}">
+                                                {{ trans('site.' . $model) }}
+                                            </a>
                                         </li>
 
                                     @endforeach
@@ -152,10 +154,15 @@
 
                                     @foreach ($models as $index => $model)
 
-                                        <div class="tab-pane fade show {{$index == 0 ? "active" : ""}}" id="pills-{{$model}}" role="tabpanel" aria-labelledby="pills-{{$model}}-tab">
+                                        <div class="tab-pane fade show {{$index == 0 ? "active" : ""}}" 
+                                            id="pills-{{$model}}" role="tabpanel" 
+                                            aria-labelledby="pills-{{$model}}-tab">
 
                                             @foreach ($maps as $map)
-                                                <label><input type="checkbox" name="permissions[]" value="{{$model . '-' . $map}}">{{ trans('site.' . $map) }} </label>
+                                                <label>
+                                                    <input type="checkbox" name="permissions[]" value="{{$model . '-' . $map}}">
+                                                    {{ trans('site.' . $map) }} 
+                                                </label>
                                             @endforeach
 
                                         </div>
