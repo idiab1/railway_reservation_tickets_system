@@ -5,18 +5,14 @@
     {{ trans('site.list_users') }}
 @endsection
 
-{{-- Styles --}}
-@section('styles')
-<!-- DataTables -->
-<link rel="stylesheet" href="{{asset('plugins/datatables-bs4/css/dataTables.bootstrap4.min.css')}}">
-<link rel="stylesheet" href="{{asset('plugins/datatables-responsive/css/responsive.bootstrap4.min.css')}}">
-<link rel="stylesheet" href="{{asset('plugins/datatables-buttons/css/buttons.bootstrap4.min.css')}}">
-@endsection
-
 
 {{-- Page name --}}
 @section('page_name')
     {{ trans('site.list_users') }}
+    <button type="button" class="btn btn-create btn-sm btn-primary btn-crayons"
+        data-toggle="modal" data-target="#createNewItem">
+        <i class="fas fa-plus"></i>
+    </button>
 @endsection
 
 {{-- Breadcrumb --}}
@@ -26,119 +22,163 @@
 
 {{-- Content --}}
 @section('content')
-    <section class="user-section">
+    <section class="user-section section">
         <div class="row">
-            <div class="col-12">
-                <div class="card">
-                    <!-- Card Header -->
-                    <div class="card-header">
-                        <div class="row">
-                            <div class="col-6">
-                                <!-- Card Title -->
-                                <h3 class="card-title">
-                                    {{ trans('site.list_users') }}
-                                </h3>
-                                <!-- /End of card title -->
-                            </div>
-                            <div class="col-6">
-                                <a class="btn btn-create btn-sm btn-primary btn-crayons float-right" href="{{route('users.create')}}">
-                                    <i class="fas fa-plus"></i>
-                                    {{ trans('site.add_user') }}
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /End of card-header -->
+            @if ($users->count() > 0)
+                @foreach ($users as $user)
+                    <div class="col-md-3">
+                        <!-- card -->
+                        <div class="card user-card text-center">
+                            <!-- Card Header -->
 
-                    <!-- Card body -->
-                    <div class="card-body">
-                        <table id="example1" class="table table-bordered table-striped">
-                            <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>{{ trans('site.name') }}</th>
-                                    <th>{{ trans('site.email') }}</th>
-                                    <th>{{ trans('site.action') }}</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @php
-                                    $id = 1;
-                                @endphp
-                                @if ($users->count() > 0)
-                                    @foreach ($users as $user)
-                                        <tr>
-                                            <td>{{$id++}}</td>
-                                            <td>
-                                                <img class="preview rounded-circle border border-dark ml-2 mr-2"
-                                                    src="{{asset('uploads/users/' . $user->profile->image)}}"
-                                                    alt="user image" width="30" height="30">
-                                                {{$user->name}}
-                                            </td>
-                                            <td>{{$user->email}}</td>
-                                            <td>
-                                                <a class="btn btn-success d-inline-block btn-sm btn-edit" href="{{route('users.edit', ['id' => $user->id])}}">
-                                                    <i class="fas fa-edit"></i>
-                                                    {{ trans('site.edit') }}
-                                                </a>
-                                                <form class="d-inline-block" action="{{route('users.destroy', ['id' => $user->id])}}" method="POST">
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <button class="btn btn-danger btn-sm btn-delete" type="submit">
-                                                        <i class="fas fa-trash"></i>
-                                                        {{ trans('site.delete') }}
-                                                    </button>
-                                                </form>
-                                            </td>
-                                        </tr>
+                            @if ($user->profile->image)
+                                <div class="card-header p-0">
+                                    <img class="img-fluid" src="{{asset('uploads/users/' . $user->profile->image)}}"
+                                        alt="user image">
+                                </div>
+                            @else
+                                remove
+                            @endif
+
+                            <!-- End of Card Header -->
+
+                            <!-- Card Body -->
+                            <div class="card-body">
+                                <h4 class="username">{{$user->name}}</h4>
+                                <p class="m-0">
+                                    @foreach (auth()->user()->roles as $role)
+                                        {{ $role->display_name }}
                                     @endforeach
-                                @endif
-                            </tbody>
-                            <tfoot>
-                                <tr>
-                                    <th>#</th>
-                                    <th>{{ trans('site.name') }}</th>
-                                    <th>{{ trans('site.email') }}</th>
-                                    <th>{{ trans('site.action') }}</th>
-                                </tr>
-                            </tfoot>
-                        </table>
+                                </p>
+                            </div>
+                            <!-- End of Card Body -->
+
+                            <!-- Card footer -->
+                            <div class="card-footer">
+                                <a class="btn btn-success d-inline-block btn-sm btn-edit" href="{{route('users.edit', ['id' => $user->id])}}">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                                <form class="d-inline-block" action="{{route('users.destroy', ['id' => $user->id])}}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="btn btn-danger btn-sm btn-delete" type="submit">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </form>
+                            </div>
+                            <!-- End of Card footer -->
+                        </div>
+                        <!-- End of card -->
                     </div>
-                    <!-- /end of card-body -->
-                </div>
-            <!-- /.card -->
-            </div>
-            <!--/.col-12 -->
+                @endforeach
+            @endif
         </div>
-        <!--/.row -->
+
+        <!-- create modal -->
+        <div class="modal fade" id="createNewItem" data-backdrop="static" data-keyboard="false"
+            tabindex="-1" aria-labelledby="createNewItem" aria-hidden="true">
+            <div class="modal-dialog">
+                <!-- Modal Content -->
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <!-- Modal Title -->
+                        <h5 class="modal-title" id="createNewItem">
+                            {{ trans('site.add_user') }}
+                        </h5>
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <!-- End of Modal Header -->
+
+                    <!-- Form -->
+                    <form action="{{route('users.store')}}" method="POST">
+                        @csrf
+                        <div class="card-body">
+                            <!-- Name -->
+                            <div class="form-group">
+                                <label for="name">{{ trans('site.name') }}</label>
+                                <input class="form-control" type="text" id="name"
+                                    name="name" placeholder="{{trans('site.admin_enter_name')}}"
+                                    required>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="form-group">
+                                <label for="email">{{ trans('site.email') }}</label>
+                                <input class="form-control" type="email" id="email"
+                                    name="email" placeholder="{{trans('site.admin_enter_email')}}"
+                                    required>
+                            </div>
+
+                            <!-- Password -->
+                            <div class="form-group">
+                                <label for="password">{{ trans('site.password') }}</label>
+                                <input class="form-control" type="password" id="password"
+                                    name="password" placeholder="{{trans('site.admin_enter_password')}}"
+                                    required>
+                            </div>
+
+                            <!-- Confirm password -->
+                            <div class="form-group">
+                                <label for="confirmPassword">{{ trans('site.confirm_password') }}</label>
+                                <input class="form-control" type="password" id="confirmPassword"
+                                    name="password_confirmation" placeholder="{{trans('site.admin_confirm_password')}}"
+                                    required>
+                            </div>
+
+                            <!-- Privileges -->
+                            <div class="form-group">
+                                <label for="supervisors">{{ trans('site.privileges') }}</label>
+
+                                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                    @php
+                                        $models = ['users', 'stations', 'trains', 'posts'];
+                                        $maps = ['create', 'read', 'update', 'delete']
+                                    @endphp
+
+                                    @foreach ($models as $index => $model)
+                                        <li class="nav-item">
+                                            <a class="nav-link btn btn-sm {{$index == 0 ? "active" : ""}}"
+                                            id="pills-{{$model}}-tab" data-toggle="pill" href="#pills-{{$model}}"
+                                            role="tab" aria-controls="pills-{{$model}}">{{ trans('site.' . $model) }}</a>
+                                        </li>
+
+                                    @endforeach
+
+                                </ul>
+                                <div class="tab-content" id="pills-tabContent">
+
+                                    @foreach ($models as $index => $model)
+
+                                        <div class="tab-pane fade show {{$index == 0 ? "active" : ""}}" id="pills-{{$model}}" role="tabpanel" aria-labelledby="pills-{{$model}}-tab">
+
+                                            @foreach ($maps as $map)
+                                                <label><input type="checkbox" name="permissions[]" value="{{$model . '-' . $map}}">{{ trans('site.' . $map) }} </label>
+                                            @endforeach
+
+                                        </div>
+                                    @endforeach
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- /.card-body -->
+
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-primary btn-add btn-crayons">{{ trans('site.add') }}</button>
+                        </div>
+                    </form>
+
+                    <!-- End of  Form -->
+                </div>
+                <!-- End of Modal Content -->
+            </div>
+        </div>
+        <!-- end of create modal -->
+
     </section>
 @endsection
 
-{{-- Scripts --}}
-@section('scripts')
-<!-- DataTables  & Plugins -->
-<script src="{{asset('plugins/datatables/jquery.dataTables.min.js')}}"></script>
-<script src="{{asset('plugins/datatables-bs4/js/dataTables.bootstrap4.min.js')}}"></script>
-<script src="{{asset('plugins/datatables-responsive/js/dataTables.responsive.min.js')}}"></script>
-<script src="{{asset('plugins/datatables-responsive/js/responsive.bootstrap4.min.js')}}"></script>
-<script src="{{asset('plugins/datatables-buttons/js/dataTables.buttons.min.js')}}"></script>
-<script src="{{asset('plugins/datatables-buttons/js/buttons.bootstrap4.min.js')}}"></script>
-<script src="{{asset('plugins/jszip/jszip.min.js')}}"></script>
-<script src="{{asset('plugins/pdfmake/pdfmake.min.js')}}"></script>
-<script src="{{asset('plugins/pdfmake/vfs_fonts.js')}}"></script>
-<script src="{{asset('plugins/datatables-buttons/js/buttons.html5.min.js')}}"></script>
-<script src="{{asset('plugins/datatables-buttons/js/buttons.print.min.js')}}"></script>
-
-<script>
-    $(function () {
-        $("#example1").DataTable({
-            "responsive": true,
-            "lengthChange": false,
-            "autoWidth": false,
-            "buttons": ["csv", "excel", "pdf", "print"]
-        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-
-    });
-</script>
-
-@endsection
