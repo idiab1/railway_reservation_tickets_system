@@ -98,7 +98,7 @@
                     <div class="modal-header">
                         <!-- Modal Title -->
                         <h5 class="modal-title" id="createNewItem">
-
+                            <h5>{{ trans('site.add_station') }}</h5>
                         </h5>
 
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
