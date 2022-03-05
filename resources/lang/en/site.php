@@ -26,10 +26,12 @@ return [
     'list_stations' => 'List of all stations',
     'add_station' => 'Add a new station',
     'all_stations' => 'All Stations',
+    'station' => "Station",
 
     // Trains Page
     'list_trains' => 'List of all trains',
     'add_train' => 'Add a new train',
+    'train' => "Train",
 
     // Types Page
     'list_types' => 'List of all types',
@@ -38,6 +40,11 @@ return [
     // Posts Page
     'list_posts' => 'List of all posts',
     'add_post' => 'Add a new post',
+    'post' => "Post",
+
+
+    // Ticket Page
+    "ticket" => 'Ticket',
 
     // Messages Page
     'message' => 'Message',
@@ -87,6 +94,7 @@ return [
     'read' => 'Read',
     'update' => 'Update',
     'add' => 'Add',
+    'add_new' => "Add new",
 
     // Languages
     'english' => 'English',
