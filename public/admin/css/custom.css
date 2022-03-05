@@ -17,6 +17,24 @@
 /* End of sidebar */
 
 /* Navbar */
+.navbar{
+    background-color: var(--main-color);
+}
+
+.navbar .nav-item .nav-link{
+    color: var(--offwhite-color);
+}
+
+.navbar .navbar-nav .dropdown-menu {
+    padding: 0;
+}
+/* .navbar .navbar-nav .dropdown.add-new {
+
+} */
+.navbar .navbar-nav .dropdown.add-new .dropdown-toggle::after{
+    display: none;
+}
+
 /* End of navbar */
 
 /* Header */
@@ -78,6 +96,10 @@ section table .btn{
 }
 
 .btn-add-new{
+    height: 2rem !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-weight: 600;
     text-transform: capitalize;
     border-radius: 0;
