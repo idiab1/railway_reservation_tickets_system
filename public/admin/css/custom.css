@@ -108,6 +108,12 @@
 /*/*//*/ Components /*//*/*/
 
 /* Breadcrumb */
+.content-header{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .content-header .page-name{
     font-size: 1.6rem;
     font-weight: 600;
