@@ -148,7 +148,11 @@ section table .btn{
 .btn-edit:hover{
     color: #000;
 }
-
+.btn-create{
+    padding: 0.2rem 0.5rem;
+    font-size: .75rem;
+    font-weight: bold;
+}
 .btn-add-new{
     height: 2rem !important;
     display: flex;
