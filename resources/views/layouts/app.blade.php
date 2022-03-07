@@ -11,7 +11,6 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
 
     <!-- Font awesome -->
     <link rel="stylesheet" href="{{asset('plugins/fontawesome-free/css/all.css')}}">
