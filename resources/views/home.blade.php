@@ -222,3 +222,8 @@
     <!-- End of recent posts -->
 
 @endsection
+
+@section('other-scripts')
+<!-- main script -->
+<script src="{{asset('js/main.js')}}"></script>
+@endsection
