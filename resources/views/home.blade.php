@@ -6,6 +6,63 @@
 @endsection
 
 @section('content')
+
+    <!-- reservation search section -->
+    <section class="search-reservation section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Reservation Box -->
+                    <div class="reservation-box">
+                        <!-- Reservation form -->
+                        <div class="reservation-form">
+                            <!-- Form -->
+                            <form action="" method="POST">
+                                <div class="row">
+                                    <div class="col">
+                                        <!-- Travelling Routing -->
+                                        <div class="form-group mb-3">
+                                            <label for="travelling_routing" class="form-label">
+                                                Travelling Routing
+                                            </label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="travelling_routing" placeholder="From" aria-label="From">
+                                                <input type="text" class="form-control" id="travelling_routing" placeholder="To" aria-label="To">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <!-- Travelling date -->
+                                        <div class="form-group mb-3">
+                                            <label for="travelling_routing" class="form-label">
+                                                Travelling Date
+                                            </label>
+                                            <div class="input-group">
+                                                <input type="date" class="form-control" id="travelling_routing" aria-label="From">
+                                                <input type="date" class="form-control" id="travelling_routing" aria-label="To">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+        
+                                <div class="text-right">
+                                    <button type="submit" class="btn btn-primary crayons-btn">
+                                        Search Tickets
+                                    </button>
+                                </div>
+                            </form>
+                            <!-- ./end of form -->
+                        </div>
+                        <!-- End fo reservation form -->
+                    </div>
+                    <!-- End of Reservation Box -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of reservation search section -->
+
     <!-- Ticket Advantages -->
     <section class="e-ticket-advantages section">
         <div class="container-fluid">
