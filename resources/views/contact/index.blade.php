@@ -200,6 +200,6 @@
 @endsection
 
 @section('other-scripts')
-<!-- Custom script -->
-<script src="{{asset('js/custom.js')}}"></script>
+<!-- main script -->
+<script src="{{asset('js/main.js')}}"></script>
 @endsection

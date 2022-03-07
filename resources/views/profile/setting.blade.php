@@ -535,10 +535,8 @@
 
 @section('other-scripts')
 
-<script src="{{asset('plugins/cropper/js/cropper.min.js')}}"></script>
-
-<!-- Custom script -->
-<script src="{{asset('js/custom.js')}}"></script>
+<!-- main script -->
+<script src="{{asset('js/main.js')}}"></script>
 
 
 <script>
