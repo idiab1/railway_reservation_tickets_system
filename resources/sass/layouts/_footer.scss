@@ -1,0 +1,47 @@
+/* Main footer */
+.main-footer{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: $offwhite-color;
+    /* Copyright */
+    .copyright{
+        /* Brand logo */
+        .logo-brand{
+            /* Brand name */
+            .brand-name{
+                margin-bottom: 0;
+                font-weight: bold;
+                color: $dark-color;
+                font-size: 1rem;
+            }
+        }
+        /* End of brand logo */
+        /* Footer icon */
+        .footer-icon{
+            width: 28px;
+            height: 28px;
+            line-height: 1.6rem;            
+            text-align: center;
+            border-radius: 50%;
+            cursor: pointer;
+            color: $dark-color;
+            background-color: transparent;
+            border: 3px solid $dark-color;
+            i{
+                font-size: 18px;
+            }
+        }
+        /* End of footer icon */
+        /* Copyright info */
+        .copyright-info{
+            p{
+                margin-bottom: 0;
+                letter-spacing: .04rem;
+                color: #444;            
+            }
+        }
+        /* End of copyright info */
+    }
+    /* End of Copyright */
+}
+/* End of main footer */
