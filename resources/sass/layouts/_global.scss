@@ -2,11 +2,28 @@
 body{
     font-family: 'Open Sans', sans-serif;
 }
+/* End of Global Rule */
 
+/* section */
 .section{
     padding-top: 50px;
     padding-bottom: 50px;
 }
+/* end of section */
 
-/* End of Global Rule */
+/* Scrolling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background-color: #e4e4e4;
+}
+::-webkit-scrollbar-thumb {
+    background-color: $maroon-color;
+    @include prefixer(transition-delay, .25s, webkit moz ms o);
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: $maroon-color;
+}
 
+/* End of scrolling */
