@@ -538,6 +538,8 @@
 <!-- main script -->
 <script src="{{asset('js/main.js')}}"></script>
 
+<!-- custom script -->
+<script src="{{asset('js/custom.js')}}"></script>
 
 <script>
 
