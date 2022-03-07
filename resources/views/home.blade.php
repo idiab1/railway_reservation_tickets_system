@@ -7,8 +7,8 @@
 
 @section('content')
     <!-- Ticket Advantages -->
-    <section class="e-ticket-advantages">
-        <div class="container">
+    <section class="e-ticket-advantages section">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
                     <!-- Header of section -->
@@ -97,8 +97,8 @@
     <!-- End of Ticket Advantages -->
 
     <!-- Recent Posts -->
-    <section class="recent-posts">
-        <div class="container">
+    <section class="recent-posts section">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
                     <!-- Section Header -->
