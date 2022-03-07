@@ -105,7 +105,7 @@ return [
     'search' => 'Search',
     'enter_name' => 'Enter your Name',
     'enter_email' => 'Enter your email address',
-    'enter_your_message' => 'Enter your message',
+    'enter_your_message' => 'Type your message here',
     'enter_password' => 'Enter Password',
     'admin_enter_name' => 'Enter name of user',
     'admin_enter_email' => 'Enter email of user',
