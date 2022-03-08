@@ -36,7 +36,7 @@
         right: 0;
         left: 0;
         margin: auto;
-        z-index: 2;    
+        z-index: 2;
         padding: 15px 20px;
         background-color: $dark-color;
         /* Reservation Form */
@@ -66,3 +66,53 @@
 }
 /* End of Search Reservation */
 
+/* E-tickets advantages */
+.e-ticket-advantages{
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 6px solid $dark-color;
+    background-image: linear-gradient(45deg, rgb(152 53 78), rgb(152 53 78 / 56%)),
+        url("../../images/bg-tickets.jpg");
+    .heading{
+        color: $offwhite-color;
+    }
+    /* Advantage card */
+    .advantage-card{
+            /* border-color: #eee6ce; */
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        background: transparent;
+        color: $offwhite-color;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        box-shadow: 0px 0px 1px 1px $offwhite-color;
+        /* Advantage Header */
+        .advantage-header{
+            padding: 0;
+            border: none;
+            background-color: transparent;
+            /* Advantage icon */
+            .advantage-icon{
+                i{
+
+                }
+            }
+        }
+        /* End of Advantage Header */
+        /* Advantage information */
+        .advantage-info{
+            padding: 0;
+            p{
+                margin-bottom: 0;
+                line-height: 1.5;
+                color: $offwhite-color;
+            }
+        }
+        /* End of Advantage information */
+    }
+    /* End of Advantage card */
+
+}
+
+/* End of E-tickets advantages */
