@@ -6,7 +6,6 @@
 @endsection
 
 @section('content')
-
     <!-- reservation search section -->
     <section class="search-reservation section">
         <div class="container-fluid">
@@ -44,8 +43,6 @@
                                         </div>
                                     </div>
                                 </div>
-        
-        
                                 <div class="text-right">
                                     <button type="submit" class="btn btn-primary crayons-btn">
                                         Search Tickets
@@ -62,6 +59,141 @@
         </div>
     </section>
     <!-- End of reservation search section -->
+
+    <!-- Recent Posts -->
+    <section class="recent-posts section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Section Header -->
+                    <h2 class="heading">Recent Posts</h2>
+                </div>
+            </div>
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <!-- Card post -->
+                                <div class="card card-post">
+                                    <!-- Post header for add images -->
+                                    <div class="card-header post-header">
+
+                                        <span class="date">21 August, 2019</span>
+                                    </div>
+                                    <!-- Post Content/body -->
+                                    <div class="card-body post-body">
+                                        <h3 class="post-title">Why Lead Generation is Key for Business Growth</h3>
+                                        <p class="post-description">
+                                            A small river named Duden flows by their place and supplies it with the necessary regelialia.
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- ./end of post -->
+                            </div>
+                            <div class="col-md-4">
+                                <!-- Card post -->
+                                <div class="card card-post">
+                                    <!-- Post header for add images -->
+                                    <div class="card-header post-header">
+
+                                        <span class="date">21 August, 2019</span>
+                                    </div>
+                                    <!-- Post Content/body -->
+                                    <div class="card-body post-body">
+                                        <h3 class="post-title">Why Lead Generation is Key for Business Growth</h3>
+                                        <p class="post-description">
+                                            A small river named Duden flows by their place and supplies it with the necessary regelialia.
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- ./end of post -->
+                            </div>
+                            <div class="col-md-4">
+                                <!-- Card post -->
+                                <div class="card card-post">
+                                    <!-- Post header for add images -->
+                                    <div class="card-header post-header">
+
+                                        <span class="date">21 August, 2019</span>
+                                    </div>
+                                    <!-- Post Content/body -->
+                                    <div class="card-body post-body">
+                                        <h3 class="post-title">Why Lead Generation is Key for Business Growth</h3>
+                                        <p class="post-description">
+                                            A small river named Duden flows by their place and supplies it with the necessary regelialia.
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- ./end of post -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <!-- Card post -->
+                                <div class="card card-post">
+                                    <!-- Post header for add images -->
+                                    <div class="card-header post-header">
+
+                                        <span class="date">21 August, 2019</span>
+                                    </div>
+                                    <!-- Post Content/body -->
+                                    <div class="card-body post-body">
+                                        <h3 class="post-title">Why Lead Generation is Key for Business Growth</h3>
+                                        <p class="post-description">
+                                            A small river named Duden flows by their place and supplies it with the necessary regelialia.
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- ./end of post -->
+                            </div>
+                            <div class="col-md-4">
+                                <!-- Card post -->
+                                <div class="card card-post">
+                                    <!-- Post header for add images -->
+                                    <div class="card-header post-header">
+
+                                        <span class="date">21 August, 2019</span>
+                                    </div>
+                                    <!-- Post Content/body -->
+                                    <div class="card-body post-body">
+                                        <h3 class="post-title">Why Lead Generation is Key for Business Growth</h3>
+                                        <p class="post-description">
+                                            A small river named Duden flows by their place and supplies it with the necessary regelialia.
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- ./end of post -->
+                            </div>
+                            <div class="col-md-4">
+                                <!-- Card post -->
+                                <div class="card card-post" style="height:100%">
+                                    <div class="card-body post-body">
+                                        <a href="" class="btn-btn-primary crayons-btn">
+                                            show More
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- ./end of post -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+    <!-- End of recent posts -->
 
     <!-- Ticket Advantages -->
     <section class="e-ticket-advantages section">
@@ -80,7 +212,7 @@
                         <div class="card-header advantage-header">
                             <!-- Advantage icon -->
                             <div class="advantage-icon">
-                                <i class="fas fa-ticket-alt fa-2x"></i>
+                                <i class="fas fa-ticket-alt fa-3x"></i>
                             </div>
                             <!-- Name of advantage -->
                             <h2></h2>
@@ -99,7 +231,7 @@
                         <div class="card-header advantage-header">
                             <!-- Advantage icon -->
                             <div class="advantage-icon">
-                                <i class="fas fa-building fa-2x"></i>
+                                <i class="fas fa-building fa-3x"></i>
                             </div>
                             <!-- Name of advantage -->
                             <h2></h2>
@@ -118,7 +250,7 @@
                         <div class="card-header advantage-header">
                             <!-- Advantage icon -->
                             <div class="advantage-icon">
-                                <i class="fas fa-globe fa-2x"></i>
+                                <i class="fas fa-globe fa-3x"></i>
                             </div>
                             <!-- Name of advantage -->
                             <h2></h2>
@@ -126,7 +258,7 @@
                         <!-- Advantage inforamtion -->
                         <div class="card-body advantage-info">
                             <p>To order ticekts all you need is internet, a couple minutes and
-                                a payment card. Grab bonuses and discounts.</p>
+                                a payment card. </p>
                         </div>
                     </div>
                 </div>
@@ -137,7 +269,7 @@
                         <div class="card-header advantage-header">
                             <!-- Advantage icon -->
                             <div class="advantage-icon">
-                                <i class="fas fa-credit-card fa-2x"></i>
+                                <i class="fas fa-credit-card fa-3x"></i>
                             </div>
                             <!-- Name of advantage -->
                             <h2></h2>
@@ -153,134 +285,19 @@
     </section>
     <!-- End of Ticket Advantages -->
 
-    <!-- Recent Posts -->
-    <section class="recent-posts section">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
-                    <!-- Section Header -->
-                    <h2 class="heading">Recent Posts</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <!-- Card post -->
-                    <div class="card card-post">
-                        <!-- Post header for add images -->
-                        <div class="card-header post-header">
-
-                            <span class="date">21 August, 2019</span>
-                        </div>
-                        <!-- Post Content/body -->
-                        <div class="card-body post-body">
-                            <h3 class="post-title">Why Lead Generation is Key for Business Growth</h3>
-                            <p class="post-description">
-                                A small river named Duden flows by their place and supplies it with the necessary regelialia.
-                            </p>
-                        </div>
-                    </div>
-                    <!-- ./end of post -->
-                </div>
-                <div class="col-md-4">
-                    <!-- Card post -->
-                    <div class="card card-post">
-                        <!-- Post header for add images -->
-                        <div class="card-header post-header">
-
-                            <span class="date">21 August, 2019</span>
-                        </div>
-                        <!-- Post Content/body -->
-                        <div class="card-body post-body">
-                            <h3 class="post-title">Why Lead Generation is Key for Business Growth</h3>
-                            <p class="post-description">
-                                A small river named Duden flows by their place and supplies it with the necessary regelialia.
-                            </p>
-                        </div>
-                    </div>
-                    <!-- ./end of post -->
-                </div>
-                <div class="col-md-4">
-                    <!-- Card post -->
-                    <div class="card card-post">
-                        <!-- Post header for add images -->
-                        <div class="card-header post-header">
-
-                            <span class="date">21 August, 2019</span>
-                        </div>
-                        <!-- Post Content/body -->
-                        <div class="card-body post-body">
-                            <h3 class="post-title">Why Lead Generation is Key for Business Growth</h3>
-                            <p class="post-description">
-                                A small river named Duden flows by their place and supplies it with the necessary regelialia.
-                            </p>
-                        </div>
-                    </div>
-                    <!-- ./end of post -->
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <!-- Card post -->
-                    <div class="card card-post">
-                        <!-- Post header for add images -->
-                        <div class="card-header post-header">
-
-                            <span class="date">21 August, 2019</span>
-                        </div>
-                        <!-- Post Content/body -->
-                        <div class="card-body post-body">
-                            <h3 class="post-title">Why Lead Generation is Key for Business Growth</h3>
-                            <p class="post-description">
-                                A small river named Duden flows by their place and supplies it with the necessary regelialia.
-                            </p>
-                        </div>
-                    </div>
-                    <!-- ./end of post -->
-                </div>
-                <div class="col-md-4">
-                    <!-- Card post -->
-                    <div class="card card-post">
-                        <!-- Post header for add images -->
-                        <div class="card-header post-header">
-
-                            <span class="date">21 August, 2019</span>
-                        </div>
-                        <!-- Post Content/body -->
-                        <div class="card-body post-body">
-                            <h3 class="post-title">Why Lead Generation is Key for Business Growth</h3>
-                            <p class="post-description">
-                                A small river named Duden flows by their place and supplies it with the necessary regelialia.
-                            </p>
-                        </div>
-                    </div>
-                    <!-- ./end of post -->
-                </div>
-                <div class="col-md-4">
-                    <!-- Card post -->
-                    <div class="card card-post">
-                        <!-- Post header for add images -->
-                        <div class="card-header post-header">
-
-                            <span class="date">21 August, 2019</span>
-                        </div>
-                        <!-- Post Content/body -->
-                        <div class="card-body post-body">
-                            <h3 class="post-title">Why Lead Generation is Key for Business Growth</h3>
-                            <p class="post-description">
-                                A small river named Duden flows by their place and supplies it with the necessary regelialia.
-                            </p>
-                        </div>
-                    </div>
-                    <!-- ./end of post -->
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End of recent posts -->
-
 @endsection
 
 @section('other-scripts')
 <!-- main script -->
 <script src="{{asset('js/main.js')}}"></script>
+
+<script>
+    $(function () {
+        $('.carousel').carousel({
+            wrap: false,
+            ride: true
+        })
+    })
+</script>
+
 @endsection
