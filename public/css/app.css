@@ -10036,6 +10036,7 @@ h3 {
   letter-spacing: 0.05rem;
   border-color: #98354e;
   background-color: #98354e;
+  color: #EEE6CE;
   border-radius: 0;
 }
 .crayons-btn:hover {
@@ -10569,3 +10570,158 @@ body {
 }
 
 /* End of contact us page */
+/* Profile setting page */
+.profile-setting-page {
+  background-image: linear-gradient(358.4deg, rgba(152, 53, 78, 0.8) -2.1%, #1c1f33 90%);
+  /* Setting info */
+  /* End of Setting info */
+}
+.profile-setting-page .setting-info {
+  /* nav */
+  /* Tab Content */
+}
+.profile-setting-page .setting-info nav {
+  /* nav tabs */
+}
+.profile-setting-page .setting-info nav .nav-tabs {
+  border-bottom: none;
+  background-color: #EEE6CE;
+  padding: 0.7rem 1rem;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  /* Nav item */
+}
+.profile-setting-page .setting-info nav .nav-tabs .nav-item {
+  color: #1c1f33;
+  padding: 0.5rem 0.7rem;
+  transition: 0.3s ease-in-out;
+  border-radius: 5px;
+  /* Icon */
+}
+.profile-setting-page .setting-info nav .nav-tabs .nav-item .icon i {
+  font-size: 17px;
+}
+.profile-setting-page .setting-info nav .nav-tabs .nav-item span {
+  font-weight: 600;
+}
+.profile-setting-page .setting-info nav .nav-tabs .nav-item.active, .profile-setting-page .setting-info nav .nav-tabs .nav-item.show, .profile-setting-page .setting-info nav .nav-tabs .nav-item:hover {
+  color: #EEE6CE;
+  background-color: #1c1f33;
+  border-color: #1c1f33;
+}
+.profile-setting-page .setting-info .tab-content {
+  /* tab pane */
+}
+.profile-setting-page .setting-info .tab-content .tab-pane {
+  /* Setting form */
+}
+.profile-setting-page .setting-info .tab-content .tab-pane .setting-form .card {
+  background-color: #EEE6CE;
+  border-color: #EEE6CE;
+}
+.profile-setting-page .setting-info .tab-content .tab-pane .setting-form .card form {
+  /* Card Body */
+  /* End of card body */
+  /* Card Footer */
+  /* End of Card Footer */
+}
+.profile-setting-page .setting-info .tab-content .tab-pane .setting-form .card form .card-body {
+  border: 0;
+  background-color: #EEE6CE;
+}
+.profile-setting-page .setting-info .tab-content .tab-pane .setting-form .card form .card-body label {
+  font-weight: 600;
+}
+.profile-setting-page .setting-info .tab-content .tab-pane .setting-form .card form .card-body .input-group {
+  border: 1px solid #1c1f33;
+}
+.profile-setting-page .setting-info .tab-content .tab-pane .setting-form .card form .card-body .input-group .input-group-prepend span {
+  border: none;
+  padding: 0.37rem 0.75rem;
+  background-color: transparent;
+}
+.profile-setting-page .setting-info .tab-content .tab-pane .setting-form .card form .card-body .input-group .input-group-prepend span i {
+  font-size: 18px;
+}
+.profile-setting-page .setting-info .tab-content .tab-pane .setting-form .card form .card-body input {
+  border: none;
+  color: #1c1f33;
+}
+.profile-setting-page .setting-info .tab-content .tab-pane .setting-form .card form .card-body input:focus {
+  border: none;
+  -ms-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+}
+.profile-setting-page .setting-info .tab-content .tab-pane .setting-form .card form .card-body textarea {
+  height: 100px;
+  max-height: 150px;
+  border-color: #1c1f33;
+}
+.profile-setting-page .setting-info .tab-content .tab-pane .setting-form .card form .card-body textarea:focus {
+  border-color: #1c1f33;
+}
+.profile-setting-page .setting-info .tab-content .tab-pane .setting-form .card form .card-body input,
+.profile-setting-page .setting-info .tab-content .tab-pane .setting-form .card form .card-body textarea {
+  background-color: #EEE6CE;
+}
+.profile-setting-page .setting-info .tab-content .tab-pane .setting-form .card form .card-body input:focus,
+.profile-setting-page .setting-info .tab-content .tab-pane .setting-form .card form .card-body textarea:focus {
+  -ms-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+}
+.profile-setting-page .setting-info .tab-content .tab-pane .setting-form .card form .avatar-upload {
+  position: relative;
+  max-width: 200px;
+  margin: 20px auto;
+}
+.profile-setting-page .setting-info .tab-content .tab-pane .setting-form .card form .avatar-upload .avatar-edit {
+  position: absolute;
+  right: 0px;
+  z-index: 1;
+  top: calc(50% - 17px);
+}
+.profile-setting-page .setting-info .tab-content .tab-pane .setting-form .card form .avatar-upload .avatar-edit input {
+  display: none;
+}
+.profile-setting-page .setting-info .tab-content .tab-pane .setting-form .card form .avatar-upload .avatar-edit label {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  margin-bottom: 0;
+  border-radius: 100%;
+  background-color: #1c1f33;
+  color: #EEE6CE;
+  border: 1px solid transparent;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  font-weight: normal;
+  transition: all 0.2s ease-in-out;
+}
+.profile-setting-page .setting-info .tab-content .tab-pane .setting-form .card form .avatar-preview {
+  width: 192px;
+  height: 192px;
+  position: relative;
+  border-radius: 100%;
+  border: 6px solid #1c1f33;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+}
+.profile-setting-page .setting-info .tab-content .tab-pane .setting-form .card form .avatar-preview div {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.profile-setting-page .setting-info .tab-content .tab-pane .setting-form .card form .card-footer {
+  border: none;
+  background-color: transparent;
+}
+
+/* End of Profile setting page */
