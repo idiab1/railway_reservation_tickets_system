@@ -22,3 +22,47 @@
 }
 
 /* End of page header */
+
+/* Search Reservation */
+.search-reservation{
+    padding-top: 0;
+    padding-bottom: 70px;
+    position: relative;
+    /* Reservation Box */
+    .reservation-box{
+        position: absolute;
+        top: -85px;
+        width: 96%;
+        right: 0;
+        left: 0;
+        margin: auto;
+        z-index: 2;    
+        padding: 15px 20px;
+        background-color: $dark-color;
+        /* Reservation Form */
+        .reservation-form{
+            /* Form */
+            form{
+                label{
+                    font-weight: 600;
+                    font-size: 15px;
+                    letter-spacing: .04rem;
+                    color: $offwhite-color;
+                }
+                input{
+                    border-color: $dark-color;
+                    background-color: $offwhite-color;
+                    &:focus{
+                        background-color: $offwhite-color;
+                        @include prefixer(box-shadow, none, webkit moz ms o);
+                    }
+
+                }
+            }
+        }
+        /* End of Reservation Form */
+    }
+    /* End of Reservation Box */
+}
+/* End of Search Reservation */
+
