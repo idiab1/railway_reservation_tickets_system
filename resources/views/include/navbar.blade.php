@@ -67,7 +67,6 @@
                                     <p class="mb-1 text-black">{{ $properties['native'] }}</p>
                                 </div>
                             </a>
-                            <div class="dropdown-divider"></div>
                         @endforeach
                     </div>
                 </li>

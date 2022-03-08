@@ -5,20 +5,49 @@
     padding-right: 0;
     /* Navbar Brand */
     .navbar-brand{
-        /* Navbar Content */
-        .navbar-nav{
-            /* navbar item */
-            .nav-item{
-                /* Navbar link */
-                .nav-link{
-
-                }
-                /* End of Navbar link */
-            }
-        }
-        /* End of Navbar Content */
+        color: $offwhite-color;
+        font-weight: bold;
     }
     /* End of Navbar Brand */
+    /* Navbar Content */
+    .navbar-nav{
+        /* navbar item */
+        .nav-item{
+            /* Navbar link */
+            .nav-link{
+                font-weight: 600;
+                color: $offwhite-color;
+            }
+            /* End of Navbar link */
+
+            /* Dropdown */
+            &.dropdown{
+                /* Dropdown toggle */
+                .dropdown-toggle{
+
+                }
+                /* Dropdown Menu */
+                .dropdown-menu{
+                    padding: 0;
+                    /* Dropdown item */
+                    .dropdown-item{
+
+                        &:hover{
+                            color: $offwhite-color;
+                            background-color: $maroon-color;
+                        }
+                    }
+                }
+                /* End of Dropdown Menu */
+            }
+            /* End of ropdown */
+        }
+
+        p{
+            margin-bottom: 0;
+        }
+    }
+    /* End of Navbar Content */
 }
 
 /* End of Navbar */
