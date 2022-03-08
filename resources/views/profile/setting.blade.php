@@ -5,62 +5,6 @@
     Edit {{$user->name . "'s"}}
 @endsection
 
-{{-- Styles --}}
-@section('other-styles')
-
-    <style>
-        .avatar-upload{
-            position: relative;
-            max-width: 205px;
-            margin: 50px auto;
-        }
-        .avatar-upload .avatar-edit{
-            position: absolute;
-            right: 0px;
-            z-index: 1;
-            top: calc((100%/2) - 17px);
-        }
-        .avatar-upload .avatar-edit input{
-            display: none;
-        }
-        .avatar-upload .avatar-edit label{
-            display: inline-block;
-            width: 35px;
-            height: 35px;
-            text-align: center;
-            line-height: 35px;
-            margin-bottom: 0;
-            border-radius: 100%;
-            background-color: #343a40;
-            color: #eee;
-            border: 1px solid transparent;
-            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
-            cursor: pointer;
-            font-weight: normal;
-            transition: all .2s ease-in-out;
-        }
-
-        .avatar-preview {
-            width: 192px;
-            height: 192px;
-            position: relative;
-            border-radius: 100%;
-            border: 6px solid #F8F8F8;
-            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
-
-        }
-        .avatar-preview > div {
-            width: 100%;
-            height: 100%;
-            border-radius: 100%;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-
-    }
-    </style>
-@endsection
 
 {{-- Header --}}
 @section('header')
@@ -180,7 +124,7 @@
                                     <form action="{{route('profile.update', ['id' => $user->id])}}" method="POST" enctype="multipart/form-data">
                                         @csrf
                                         @method('PUT')
-                                        <div class="card-body">
+                                        <div class="card-body p-0">
                                             <!-- image -->
                                             <div class="form-group">
                                                 <div class="avatar-upload">
@@ -200,7 +144,7 @@
                                         <!-- /.card-body -->
 
                                         <div class="card-footer {{app()->getLocale() == "ar" ? "text-left" : "text-right" }}">
-                                            <button type="submit" class="btn btn-primary crayons-btn">
+                                            <button type="submit" class="btn btn-primary update-btn crayons-btn">
                                                 Update
                                             </button>
                                         </div>
@@ -270,7 +214,7 @@
                                         <!-- /.card-body -->
 
                                         <div class="card-footer {{app()->getLocale() == "ar" ? "text-left" : "text-right" }}">
-                                            <button type="submit" class="btn btn-primary crayons-btn">
+                                            <button type="submit" class="btn btn-primary update-btn crayons-btn">
                                                 Update
                                             </button>
                                         </div>
@@ -304,22 +248,46 @@
                                             <!-- Password -->
                                             <div class="form-group">
                                                 <label for="password">Password</label>
-                                                <input class="form-control" type="password" id="password"
-                                                name="password" placeholder="Enter Your Password">
+
+                                                <!-- Input Group -->
+                                                <div class="input-group mb-3">
+                                                    <div class="input-group-prepend">
+                                                        <!-- Input icon -->
+                                                        <span class="input-group-text" id="facebook">
+                                                            <i class="mdi mdi-lock"></i>
+                                                        </span>
+                                                    </div>
+                                                    <!-- Input -->
+                                                    <input class="form-control" type="password" id="password"
+                                                    name="password" placeholder="Enter Your Password">
+                                                </div>
+
+
                                             </div>
 
                                             <!-- Confirm Password -->
                                             <div class="form-group">
                                                 <label for="confirmPassword">Confirm Password</label>
-                                                <input class="form-control" type="password" id="confirmPassword"
-                                                name="password_confirmation" placeholder="Confirm password ">
+
+                                                <!-- Input Group -->
+                                                <div class="input-group mb-3">
+                                                    <div class="input-group-prepend">
+                                                        <!-- Input icon -->
+                                                        <span class="input-group-text" id="facebook">
+                                                            <i class="mdi mdi-lock"></i>
+                                                        </span>
+                                                    </div>
+                                                    <!-- Input -->
+                                                    <input class="form-control" type="password" id="confirmPassword"
+                                                    name="password_confirmation" placeholder="Confirm password ">
+                                                </div>
                                             </div>
 
                                         </div>
                                         <!-- /.card-body -->
 
                                         <div class="card-footer {{app()->getLocale() == "ar" ? "text-left" : "text-right" }}">
-                                            <button type="submit" class="btn btn-primary crayons-btn">
+                                            <button type="submit" class="btn btn-primary update-btn crayons-btn">
                                                 Update
                                             </button>
                                         </div>
@@ -389,7 +357,7 @@
                                             <div class="form-group">
                                                 <label for="linkedin">Linkedin URL</label>
                                                 <!-- Input Group -->
-                                                <div class="input-group mb-3">
+                                                <div class="input-group">
                                                     <div class="input-group-prepend">
                                                         <!-- Input icon -->
                                                         <span class="input-group-text" id="linkedin">
@@ -407,7 +375,7 @@
                                         <!-- /.card-body -->
 
                                         <div class="card-footer {{app()->getLocale() == "ar" ? "text-left" : "text-right" }}">
-                                            <button type="submit" class="btn btn-primary crayons-btn">
+                                            <button type="submit" class="btn btn-primary update-btn crayons-btn">
                                                 Update
                                             </button>
                                         </div>
@@ -446,7 +414,7 @@
                                         <!-- /.card-body -->
 
                                         <div class="card-footer {{app()->getLocale() == "ar" ? "text-left" : "text-right" }}">
-                                            <button type="submit" class="btn btn-primary crayons-btn">
+                                            <button type="submit" class="btn btn-primary update-btn crayons-btn">
                                                 Update
                                             </button>
                                         </div>
