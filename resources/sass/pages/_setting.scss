@@ -1,0 +1,166 @@
+/* Profile setting page */
+.profile-setting-page{
+    background-image: linear-gradient( 358.4deg, rgb(152 53 78 / 80%) -2.1%, rgb(28 31 51) 90% );
+    /* Setting info */
+    .setting-info{
+        /* nav */
+        nav{
+            /* nav tabs */
+            .nav-tabs{
+                border-bottom: none;
+                background-color: $offwhite-color;
+                padding: 0.7rem 1rem;
+                margin-bottom: 20px;
+                justify-content: center;
+                align-items: center;
+                @include prefixer(border-radius, 5px, webkit moz ms o);
+                /* Nav item */
+                .nav-item{
+                    color: $dark-color;
+                    padding: 0.5rem 0.7rem;
+                    @include prefixer(transition, .3s ease-in-out, webkit moz ms o);
+                    @include prefixer(border-radius, 5px, webkit moz ms o);
+                    /* Icon */
+                    .icon{
+                        i{
+                            font-size: 17px;
+                        }
+                    }
+                    span{
+                        font-weight: 600;
+                    }
+
+                    &.active,
+                    &.show,
+                    &:hover{
+                        color: $offwhite-color;
+                        background-color: $dark-color;
+                        border-color: $dark-color;
+                    }
+                }
+            }
+        }
+
+        /* Tab Content */
+        .tab-content{
+            /* tab pane */
+            .tab-pane{
+                /* Setting form */
+                .setting-form{
+                    .card{
+                        background-color: $offwhite-color;
+                        border-color: $offwhite-color;
+                        form{
+                            /* Card Body */
+                            .card-body{
+                                border: 0;
+                                background-color: $offwhite-color;
+                                label{
+                                    font-weight: 600;
+                                }
+                                .input-group{
+                                    border: 1px solid $dark-color;
+                                    .input-group-prepend{
+                                        span{
+                                            border: none;
+                                            padding: 0.37rem 0.75rem;
+                                            background-color: transparent;
+                                            i{
+                                                font-size: 18px;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                input{
+                                    border: none;
+                                    color: $dark-color;
+                                    &:focus{
+                                        border: none;
+                                        @include prefixer(box-shadow, none, webkit moz ms o);
+                                    }
+                                }
+
+                                textarea{
+                                    height: 100px;
+                                    max-height: 150px;
+                                    border-color: $dark-color;
+                                    &:focus{
+                                        border-color: $dark-color;
+                                    }
+                                }
+                                input,
+                                textarea{
+                                    background-color: $offwhite-color;
+                                    &:focus{
+                                        @include prefixer(box-shadow, none, webkit moz ms o);
+                                    }
+                                }
+                            }
+                            /* End of card body */
+
+                            .avatar-upload{
+                                position: relative;
+                                max-width: 200px;
+                                margin: 20px auto;
+                                .avatar-edit{
+                                    position: absolute;
+                                    right: 0px;
+                                    z-index: 1;
+                                    top: calc((100%/2) - 17px);
+                                    input{
+                                        display: none;
+                                    }
+                                    label{
+                                        display: inline-block;
+                                        width: 35px;
+                                        height: 35px;
+                                        text-align: center;
+                                        line-height: 35px;
+                                        margin-bottom: 0;
+                                        border-radius: 100%;
+                                        background-color: $dark-color;
+                                        color: $offwhite-color;
+                                        border: 1px solid transparent;
+                                        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+                                        cursor: pointer;
+                                        font-weight: normal;
+                                        transition: all .2s ease-in-out;
+                                    }
+                                }
+                            }
+
+                            .avatar-preview {
+                                width: 192px;
+                                height: 192px;
+                                position: relative;
+                                border-radius: 100%;
+                                border: 6px solid $dark-color;
+                                box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+                                div {
+                                    width: 100%;
+                                    height: 100%;
+                                    border-radius: 100%;
+                                    background-size: cover;
+                                    background-repeat: no-repeat;
+                                    background-position: center;
+                                }
+                            }
+
+                            /* Card Footer */
+                            .card-footer{
+                                border: none;
+                                background-color: transparent;
+                            }
+                            /* End of Card Footer */
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* End of Setting info */
+}
+
+/* End of Profile setting page */
