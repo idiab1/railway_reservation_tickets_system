@@ -8,8 +8,6 @@
 {{-- Styles --}}
 @section('other-styles')
 
-    <link rel="stylesheet" href="{{asset('plugins/cropper/css/cropper.min.css')}}">
-
     <style>
         .avatar-upload{
             position: relative;
@@ -41,21 +39,7 @@
             font-weight: normal;
             transition: all .2s ease-in-out;
         }
-        /* .avatar-upload .avatar-edit label:hover{
-            background: #f1f1f1;
-            border-color: #d6d6d6;
-        } */
-        /* .avatar-upload .avatar-edit label::after{
-            content: "\f040";
-            font-family: 'FontAwesome';
-            color: #757575;
-            position: absolute;
-            top: 10px;
-            left: 0;
-            right: 0;
-            text-align: center;
-            margin: auto;
-        } */
+
         .avatar-preview {
             width: 192px;
             height: 192px;
@@ -66,71 +50,14 @@
 
         }
         .avatar-preview > div {
-                width: 100%;
-                height: 100%;
-                border-radius: 100%;
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: center;
-            }
-
-        /* .avatar-upload {
-            position: relative;
-            max-width: 205px;
-            margin: 50px auto;
-        .avatar-edit {
-            position: absolute;
-            right: 12px;
-            z-index: 1;
-            top: 10px;
-            input {
-                display: none;
-                + label {
-                    display: inline-block;
-                    width: 34px;
-                    height: 34px;
-                    margin-bottom: 0;
-                    border-radius: 100%;
-                    background: #FFFFFF;
-                    border: 1px solid transparent;
-                    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
-                    cursor: pointer;
-                    font-weight: normal;
-                    transition: all .2s ease-in-out;
-                    &:hover {
-                        background: #f1f1f1;
-                        border-color: #d6d6d6;
-                    }
-                    &:after {
-                        content: "\f040";
-                        font-family: 'FontAwesome';
-                        color: #757575;
-                        position: absolute;
-                        top: 10px;
-                        left: 0;
-                        right: 0;
-                        text-align: center;
-                        margin: auto;
-                    }
-                }
-            }
-        }
-        .avatar-preview {
-            width: 192px;
-            height: 192px;
-            position: relative;
+            width: 100%;
+            height: 100%;
             border-radius: 100%;
-            border: 6px solid #F8F8F8;
-            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
-            > div {
-                width: 100%;
-                height: 100%;
-                border-radius: 100%;
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: center;
-            }
-        } */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
     }
     </style>
 @endsection
@@ -160,82 +87,94 @@
 
         <!-- Setting info -->
         <div class="setting-info">
+
             <div class="row">
-                <div class="col-4">
-                    <!-- Tab links -->
-                    <div class="nav flex-column nav-pills bg-dark" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                        <!-- avatar link -->
-                        <a class="nav-link active" id="v-pills-avatar-tab" data-toggle="pill"
-                            href="#v-pills-avatar" role="tab" aria-controls="v-pills-avatar"
-                            aria-selected="true">
-                            <div class="icon mr-1 d-inline-block">
-                                <i class="mdi mdi-image-edit-outline"></i>
-                            </div>
-                            Change your Avatar
-                        </a>
-                        <!-- End of avatar link -->
+                <div class="col-11 m-auto">
+                    <!-- Navbar tabs -->
+                    <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                            <!-- Change your avatar -->
+                            <a class="nav-item nav-link active" id="nav-avatar-tab"
+                                data-toggle="tab" href="#nav-avatar" role="tab"
+                                aria-controls="nav-avatar" aria-selected="true">
+                                <!-- Icon -->
+                                <div class="icon mr-1 d-inline-block">
+                                    <i class="mdi mdi-image-edit-outline"></i>
+                                </div>
+                                <span>Change your Avatar</span>
+                            </a>
+                            <!-- Change your avatar -->
 
-                        <!-- account link -->
-                        <a class="nav-link" id="v-pills-account-tab" data-toggle="pill"
-                            href="#v-pills-account" role="tab" aria-controls="v-pills-account"
-                            aria-selected="false">
-                            <div class="icon mr-1 d-inline-block">
-                                <i class="mdi mdi-account-settings"></i>
-                            </div>
-                            Account Info
-                        </a>
-                        <!-- End of account link -->
+                            <!-- Change Account info  -->
+                            <a class="nav-item nav-link" id="nav-account-tab"
+                                data-toggle="tab" href="#nav-account" role="tab"
+                                aria-controls="nav-account" aria-selected="false">
+                                <!-- Icon -->
+                                <div class="icon mr-1 d-inline-block">
+                                    <i class="mdi mdi-account-settings"></i>
+                                </div>
+                                <span> Change Account Info</span>
+                            </a>
+                            <!-- End of Change Account info  -->
 
-                        <!-- passowrd link -->
-                        <a class="nav-link" id="v-pills-password-tab" data-toggle="pill"
-                            href="#v-pills-password" role="tab" aria-controls="v-pills-password"
-                            aria-selected="false">
-                            <div class="icon mr-1 d-inline-block">
-                                <i class="mdi mdi-lock"></i>
-                            </div>
-                            Change your Password
-                        </a>
-                        <!-- End of passowrd link -->
+                            <!-- Change your password  -->
+                            <a class="nav-item nav-link" id="nav-password-tab"
+                                data-toggle="tab" href="#nav-password" role="tab"
+                                aria-controls="nav-password" aria-selected="false">
+                                <!-- Icon -->
+                                <div class="icon mr-1 d-inline-block">
+                                    <i class="mdi mdi-lock"></i>
+                                </div>
+                                <span>Change your Password</span>
+                            </a>
+                            <!-- End of Change your password  -->
 
-                        <!-- Social Media links -->
-                        <a class="nav-link" id="v-pills-social-media-tab" data-toggle="pill"
-                            href="#v-pills-social-media" role="tab" aria-controls="v-pills-social-media"
-                            aria-selected="false">
-                            <div class="icon mr-1 d-inline-block">
-                                <i class="mdi mdi-cellphone-cog"></i>
-                            </div>
-                            Social Media links
-                        </a>
-                        <!-- End of Social Media links -->
+                            <!-- Social Media Links -->
+                            <a class="nav-item nav-link" id="nav-social-media-tab"
+                                data-toggle="tab" href="#nav-social-media" role="tab"
+                                aria-controls="nav-social-media" aria-selected="false">
+                                <!-- Icon -->
+                                <div class="icon mr-1 d-inline-block">
+                                    <i class="mdi mdi-cellphone-cog"></i>
+                                </div>
+                                <span>Social Media links</span>
+                            </a>
+                            <!-- End of Social Media Links -->
 
-                        <!-- bio Link -->
-                        <a class="nav-link" id="v-pills-bio-tab" data-toggle="pill"
-                            href="#v-pills-bio" role="tab" aria-controls="v-pills-bio"
-                            aria-selected="false">
-                            <div class="icon mr-1 d-inline-block">
-                                <i class="mdi mdi-text-account"></i>
-                            </div>
-                            Change your bio
-                        </a>
-                        <!-- End of bio Link -->
-                    </div>
-                    <!-- End of tab links -->
+                            <!-- Change your bio -->
+                            <a class="nav-item nav-link" id="nav-bio-tab"
+                                data-toggle="tab" href="#nav-bio" role="tab"
+                                aria-controls="nav-bio" aria-selected="false">
+                                <!-- Icon -->
+                                <div class="icon mr-1 d-inline-block">
+                                    <i class="mdi mdi-text-account"></i>
+                                </div>
+                                <span>Change your bio</span>
+                            </a>
+                            <!-- End of Change your bio -->
+                        </div>
+                    </nav>
+                    <!-- End of Navbar tabs -->
+
                 </div>
-                <div class="col-8">
-                    <!-- Tab Content -->
-                    <div class="tab-content" id="v-pills-tabContent">
+            </div>
 
-                        <!-- Change your avatar -->
-                        <div class="tab-pane fade show active" id="v-pills-avatar" role="tabpanel"
-                            aria-labelledby="v-pills-avatar-tab">
+            <div class="row">
+                <div class="col-6 m-auto">
+                    <!-- Tab content -->
+                    <div class="tab-content" id="nav-tabContent">
+
+                        <!-- Avatar content -->
+                        <div class="tab-pane fade show active" id="nav-avatar" role="tabpanel"
+                            aria-labelledby="nav-avatar-tab">
                             <div class="setting-form section-form">
                                 <div class="card card-primary">
                                     <!-- Card header -->
-                                    <div class="card-header">
+                                    {{-- <div class="card-header">
                                         <h5 class="title">
                                             Change your Avatar
                                         </h5>
-                                    </div>
+                                    </div> --}}
                                     <!-- End of card header -->
                                     <!-- form -->
                                     <form action="{{route('profile.update', ['id' => $user->id])}}" method="POST" enctype="multipart/form-data">
@@ -262,7 +201,7 @@
 
                                         <div class="card-footer {{app()->getLocale() == "ar" ? "text-left" : "text-right" }}">
                                             <button type="submit" class="btn btn-primary crayons-btn">
-                                                Edit
+                                                Update
                                             </button>
                                         </div>
                                     </form>
@@ -271,19 +210,20 @@
                             <!-- /.card -->
                             </div>
                         </div>
-                        <!-- End of change your avatar -->
+                        <!-- End of Avatar content -->
 
-                        <!-- Account Info -->
-                        <div class="tab-pane fade" id="v-pills-account" role="tabpanel"
-                            aria-labelledby="v-pills-account-tab">
+                        <!-- Change Account information -->
+                        <div class="tab-pane fade" id="nav-account" role="tabpanel"
+                            aria-labelledby="nav-account-tab">
+
                             <div class="setting-form section-form">
                                 <div class="card card-primary">
                                     <!-- Card header -->
-                                    <div class="card-header">
+                                    {{-- <div class="card-header">
                                         <h5 class="title">
                                             Account info
                                         </h5>
-                                    </div>
+                                    </div> --}}
                                     <!-- End of card header -->
                                     <!-- form -->
                                     <form action="{{route('profile.update', ['id' => $user->id])}}" method="POST" enctype="multipart/form-data">
@@ -331,7 +271,7 @@
 
                                         <div class="card-footer {{app()->getLocale() == "ar" ? "text-left" : "text-right" }}">
                                             <button type="submit" class="btn btn-primary crayons-btn">
-                                                Edit
+                                                Update
                                             </button>
                                         </div>
                                     </form>
@@ -339,20 +279,21 @@
                                 </div>
                             <!-- /.card -->
                             </div>
-                        </div>
-                        <!-- End of Account Info -->
 
-                        <!-- Change password -->
-                        <div class="tab-pane fade" id="v-pills-password" role="tabpanel"
-                            aria-labelledby="v-pills-password-tab">
+                        </div>
+                        <!-- End of Change Account information -->
+
+                        <!-- Change your password -->
+                        <div class="tab-pane fade" id="nav-password" role="tabpanel"
+                            aria-labelledby="nav-password-tab">
                             <div class="setting-form section-form">
                                 <div class="card card-primary">
                                     <!-- Card header -->
-                                    <div class="card-header">
+                                    {{-- <div class="card-header">
                                         <h5 class="title">
                                             Change your password
                                         </h5>
-                                    </div>
+                                    </div> --}}
                                     <!-- End of card header -->
                                     <!-- form -->
                                     <form action="{{route('profile.update', ['id' => $user->id])}}" method="POST" enctype="multipart/form-data">
@@ -360,30 +301,26 @@
                                         @method('PUT')
                                         <div class="card-body">
 
-                                            <div class="row">
-                                                <div class="col">
-                                                    <!-- Password -->
-                                                    <div class="form-group">
-                                                        <label for="password">Password</label>
-                                                        <input class="form-control" type="password" id="password"
-                                                        name="password" placeholder="Enter Your Password">
-                                                    </div>
-                                                </div>
-                                                <div class="col">
-                                                    <!-- Confirm Password -->
-                                                    <div class="form-group">
-                                                        <label for="confirmPassword">Confirm Password</label>
-                                                        <input class="form-control" type="password" id="confirmPassword"
-                                                        name="password_confirmation" placeholder="Confirm password ">
-                                                    </div>
-                                                </div>
+                                            <!-- Password -->
+                                            <div class="form-group">
+                                                <label for="password">Password</label>
+                                                <input class="form-control" type="password" id="password"
+                                                name="password" placeholder="Enter Your Password">
                                             </div>
+
+                                            <!-- Confirm Password -->
+                                            <div class="form-group">
+                                                <label for="confirmPassword">Confirm Password</label>
+                                                <input class="form-control" type="password" id="confirmPassword"
+                                                name="password_confirmation" placeholder="Confirm password ">
+                                            </div>
+
                                         </div>
                                         <!-- /.card-body -->
 
                                         <div class="card-footer {{app()->getLocale() == "ar" ? "text-left" : "text-right" }}">
                                             <button type="submit" class="btn btn-primary crayons-btn">
-                                                Edit
+                                                Update
                                             </button>
                                         </div>
                                     </form>
@@ -392,19 +329,19 @@
                             <!-- /.card -->
                             </div>
                         </div>
-                        <!-- End of Change password -->
+                        <!-- End of Change your password -->
 
-                        <!-- Social Media links --->
-                        <div class="tab-pane fade" id="v-pills-social-media" role="tabpanel"
-                            aria-labelledby="v-pills-social-media-tab">
+                        <!-- Social Media Links -->
+                        <div class="tab-pane fade" id="nav-social-media" role="tabpanel"
+                            aria-labelledby="nav-social-media-tab">
                             <div class="setting-form section-form">
                                 <div class="card card-primary">
                                     <!-- Card header -->
-                                    <div class="card-header">
+                                    {{-- <div class="card-header">
                                         <h5 class="title">
                                             Social Media links
                                         </h5>
-                                    </div>
+                                    </div> --}}
                                     <!-- End of card header -->
                                     <!-- form start -->
                                     <form action="{{route('profile.update', ['id' => $user->id])}}" method="POST" enctype="multipart/form-data">
@@ -471,7 +408,7 @@
 
                                         <div class="card-footer {{app()->getLocale() == "ar" ? "text-left" : "text-right" }}">
                                             <button type="submit" class="btn btn-primary crayons-btn">
-                                                Edit
+                                                Update
                                             </button>
                                         </div>
                                     </form>
@@ -480,20 +417,19 @@
                             <!-- /.card -->
                             </div>
                         </div>
-                        <!-- End of Social Media links --->
+                        <!-- End of Social Media Links -->
 
-                        <!-- Change bio -->
-                        <div class="tab-pane fade" id="v-pills-bio" role="tabpanel"
-                            aria-labelledby="v-pills-bio-tab">
-
+                        <!-- Bio -->
+                        <div class="tab-pane fade" id="nav-bio" role="tabpanel"
+                            aria-labelledby="nav-bio-tab">
                             <div class="setting-form section-form">
                                 <div class="card card-primary">
                                     <!-- Card header -->
-                                    <div class="card-header">
+                                    {{-- <div class="card-header">
                                         <h5 class="title">
                                             Bio
                                         </h5>
-                                    </div>
+                                    </div> --}}
                                     <!-- End of card header -->
                                     <!-- form -->
                                     <form action="{{route('profile.update', ['id' => $user->id])}}" method="POST" enctype="multipart/form-data">
@@ -511,7 +447,7 @@
 
                                         <div class="card-footer {{app()->getLocale() == "ar" ? "text-left" : "text-right" }}">
                                             <button type="submit" class="btn btn-primary crayons-btn">
-                                                Edit
+                                                Update
                                             </button>
                                         </div>
                                     </form>
@@ -519,18 +455,52 @@
                                 </div>
                             <!-- /.card -->
                             </div>
-
                         </div>
-                        <!-- End of change bio -->
+                        <!-- End of Bio -->
+
                     </div>
-                    <!-- End of Tab Content -->
+                    <!-- End of tab content -->
+
                 </div>
             </div>
+
         </div>
         <!-- End of setting info -->
 
     </div>
 </section>
+@endsection
+
+{{-- Footer --}}
+@section('footer')
+<!-- Footer -->
+<footer class="main-footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <!-- Copyright -->
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12">
+                            <!-- Logo Brand -->
+                            <div class="logo-brand">
+                                <h6 class="brand-name">{{\App\Models\Setting::first()->web_name}}</h6>
+                            </div>
+                            <!-- ./end of logo Brand -->
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="copyright-info text-right">
+                                <p>&copy; 2022 {{ trans('site.copyright') }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ./end of copyright -->
+            </div>
+        </div> <!-- ./End of row -->
+    </div>
+</footer>
+<!-- End Of Footer -->
 @endsection
 
 @section('other-scripts')
