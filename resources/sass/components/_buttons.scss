@@ -3,6 +3,7 @@
     letter-spacing: .05rem;
     border-color: $maroon-color;
     background-color: $maroon-color;
+    color: $offwhite-color;
     @include prefixer(border-radius, 0, webkit moz ms o);
     &:hover{
         background-color: $maroon-color;
@@ -16,3 +17,4 @@
 }
 
 /* End of Crayons Button */
+
