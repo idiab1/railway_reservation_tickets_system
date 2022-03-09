@@ -10322,9 +10322,12 @@ body {
 /* sign page */
 .sign-page {
   padding: 0;
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/login-bg.jpg?2e3e77daab86b5530bdbd1a25b84e645);
   display: flex;
   align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/login-bg.jpg?2e3e77daab86b5530bdbd1a25b84e645);
   /* sign container */
   /* End of sign container */
 }
