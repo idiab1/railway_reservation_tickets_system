@@ -11,6 +11,14 @@
 <link rel="stylesheet" href="{{asset('plugins/datatables-bs4/css/dataTables.bootstrap4.min.css')}}">
 <link rel="stylesheet" href="{{asset('plugins/datatables-responsive/css/responsive.bootstrap4.min.css')}}">
 <link rel="stylesheet" href="{{asset('plugins/datatables-buttons/css/buttons.bootstrap4.min.css')}}">
+<!-- Select2 -->
+<link rel="stylesheet" href="{{asset('plugins/select2/css/select2.min.css')}}">
+<style>
+    .select2-container .select2-selection--single {
+        height: auto;
+    }
+
+</style>
 @endsection
 
 
@@ -276,6 +284,14 @@
             "buttons": ["csv", "excel", "pdf", "print"]
         }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
 
+    });
+</script>
+
+<!-- Select 2 -->
+<script src="{{asset('plugins/select2/js/select2.min.js')}}"></script>
+<script>
+    $(document).ready(function(){
+        $('.select2').select2();
     });
 </script>
 
