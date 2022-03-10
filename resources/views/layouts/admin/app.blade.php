@@ -39,7 +39,7 @@
 
 
 </head>
-<body class="hold-transition sidebar-mini">
+<body class="hold-transition sidebar-mini sidebar-collapse">
 
 <!-- Site wrapper -->
 <div class="wrapper">
@@ -84,7 +84,9 @@
     <!-- /.content-wrapper -->
 
     {{-- Footer --}}
-    @include('admin.include.footer', ['setting' => \App\Models\Setting::where('id', 1)->first(['web_name'])])
+    @include('admin.include.footer', [
+        'setting' => \App\Models\Setting::where('id', 1)->first(['web_name'])
+        ])
 
 
     <!-- Control Sidebar -->
@@ -107,8 +109,11 @@
     <script>
         document.querySelector(".icon-bars").addEventListener("click", e => {
             e.preventDefault();
-            document.querySelector(".main-sidebar").classList.toggle("mini-sidebar")
+
+            document.querySelector(".main-sidebar").classList.toggle("mini-sidebar");
+
         })
+
     </script>
 
     {{-- other scripts --}}
