@@ -131,6 +131,9 @@
 
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                 <!-- Dropdown menu links -->
+                <a class="dropdown-item" href="{{route('users.create')}}">
+                    {{ trans('site.user') }}
+                </a>
                 <a class="dropdown-item" href="{{route('stations.create')}}">
                     {{ trans('site.station') }}
                 </a>
