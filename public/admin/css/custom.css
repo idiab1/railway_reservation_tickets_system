@@ -3,6 +3,7 @@
     --main-color: #313552;
     --red-color: #B8405E;
     --green-color: #2EB086;
+    --yellow-color: #FFC900;
     --offwhite-color: #EEE6CE;
     --main2-color: #0c2545;
 }
@@ -310,12 +311,12 @@ section table .btn{
 .btn-edit,
 .btn-edit:hover,
 .btn-edit:focus{
-    background-color: var(--green-color);
+    background-color: var(--yellow-color);
 }
 .btn-edit,
 .btn-edit:hover,
 .btn-edit:focus{
-    border-color: var(--green-color);
+    border-color: var(--yellow-color);
 }
 
 .content-header .page-name,
