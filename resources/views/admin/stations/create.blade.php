@@ -43,8 +43,9 @@
                                         <!-- Name -->
                                         <div class="form-group m-0">
                                             <label for="name">{{ trans('site.name') }}</label>
-                                            <input class="form-control" type="text" id="name"
-                                                name="name" placeholder="{{trans('site.enter_name_station')}}">
+                                            <input class="form-control" type="text" id="name" name="name"
+                                                placeholder="{{trans('site.enter_name_station')}}"
+                                                required>
                                         </div>
 
                                     </div>
