@@ -21,6 +21,7 @@ return [
     // Users Page
     'list_users' => 'All users',
     'add_user' => 'Add a new user',
+    "user" => "User",
 
     // Stations Page
     'list_stations' => 'All stations',
