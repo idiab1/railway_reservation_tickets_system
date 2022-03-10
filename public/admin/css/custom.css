@@ -245,6 +245,7 @@
 }
 .section .section-form .card .card-header h3{
     font-size: 1.15rem;
+    font-weight: 600;
     color: var(--red-color);
 }
 .section .section-form .card .card-footer{
