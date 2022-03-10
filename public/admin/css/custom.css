@@ -108,27 +108,6 @@
 /* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
 /*/*//*/ Components /*//*/*/
 
-/* Breadcrumb */
-.content-header{
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.content-header .page-name{
-    font-size: 1.6rem;
-    font-weight: bold;
-    text-transform: uppercase !important;
-}
-.content-header .breadcrumb .breadcrumb-item:last-of-type{
-    color: #535353;
-    font-weight: 400;
-}
-.content-header .breadcrumb .breadcrumb-item a{
-    font-weight: 500;
-}
-/* End of Breadcrumb */
-
 /* Tables */
 .page-item.active .page-link {
     color: #eee;
@@ -136,13 +115,6 @@
 
 /* End of Tables */
 
-
-/* Card */
-.card .card-header h3{
-    font-size: 1.15rem;
-    color: #eee;
-}
-/* End of Card */
 
 /* Forms */
 .card form input{
@@ -178,6 +150,44 @@
     margin-right: 5px;
 }
 /* End of Forms */
+
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* *-*-*-*-*-*-*- Content Header *-*-*-*-*-*-*-*-*-*-* */
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+
+.content-header{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content-header .content-header-info{
+    text-align: center;
+}
+.content-header .page-name h1{
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-transform: uppercase !important;
+}
+.content-header .breadcrumb{
+    justify-content: center;
+}
+.content-header .breadcrumb .breadcrumb-item:last-of-type{
+    color: #535353;
+    font-weight: 400;
+}
+.content-header .breadcrumb .breadcrumb-item a{
+    font-weight: 500;
+}
+
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* *-*-*-*-*-*-*- End of Content Header *-*-*-*-*-*-*- */
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+
 
 
 
@@ -225,14 +235,21 @@
 }
 .section .card{
     margin-bottom: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 /* Section form */
 .section .section-form .card .card-header{
     border-top-right-radius: 0;
 }
+.section .section-form .card .card-header h3{
+    font-size: 1.15rem;
+    color: var(--red-color);
+}
 .section .section-form .card .card-footer{
     border-bottom-right-radius: 0;
+    background-color: transparent;
 }
 
 /* End of section form */
@@ -240,12 +257,19 @@
 /* Section info */
 .section .section-info{
     height: 100%;
-
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.section .station-info.section-info{
+    background-image: url("../../images/stations.svg");
 }
 .section .section-info .card{
     height: 100%;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+    background-color: transparent;
+    border-left: 5px solid var(--main-color);
 }
 /* End of Section info */
 
@@ -262,6 +286,11 @@
 /* *-*-*-*-*-*-*-*-* Buttons -*-*-*-*-*-*-*-*-*-*-*-* */
 /* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
 /* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+.btn-create{
+    padding: 0.2rem 0.5rem;
+    font-size: .75rem;
+    font-weight: bold;
+}
 
 .card .btn-secondary{
     background-color: rgb(49 53 82 / 70%);
@@ -281,11 +310,7 @@ section table .btn{
 .btn-edit:hover{
     color: #000;
 }
-.btn-create{
-    padding: 0.2rem 0.5rem;
-    font-size: .75rem;
-    font-weight: bold;
-}
+
 .btn-add-new{
     height: 2rem !important;
     display: flex;
@@ -334,7 +359,7 @@ section table .btn{
     border-color: var(--main-color);
 }
 
-.content-header .page-name,
+.content-header .page-name h1,
 .content-header .breadcrumb .breadcrumb-item a{
     color: var(--red-color);
 }
@@ -342,15 +367,21 @@ section table .btn{
 .btn-delete,
 .btn-delete:focus,
 .btn-delete:hover,
-.card .card-header,
+.btn-add,
+.btn-add:focus,
+.btn-add:hover,
 .btn-add-new,
 .btn-add-new:focus,
-.btn-add-new:hover{
+.btn-add-new:hover,
+.section .section-info{
     background-color: var(--red-color);
 }
 .btn-delete,
 .btn-delete:focus,
 .btn-delete:hover,
+.btn-add,
+.btn-add:focus,
+.btn-add:hover,
 .btn-add-new,
 .btn-add-new:focus,
 .btn-add-new:hover{
@@ -368,7 +399,6 @@ section table .btn{
     border-color: var(--yellow-color);
 }
 
-.content-header .page-name,
 .btn-crayons,
 .btn-crayons:focus,
 .card .card-header h3,
