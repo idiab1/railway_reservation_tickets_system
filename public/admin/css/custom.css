@@ -98,7 +98,7 @@
 /* Footer */
 .main-footer p{
     font-weight: 600;
-    color: #717172;
+    color: var(--main-color);
 }
 .main-footer p a{
     color: var(--red-color);
