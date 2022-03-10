@@ -55,23 +55,31 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <div class="container-fluid">
-                <div class="row mb-2">
-                    <div class="col-5">
+
+                <!-- Content Header Info -->
+                <div class="content-header-info">
+                    <div class="page-name">
                         <h1 class="page-name">@yield('page_name')</h1>
                     </div>
-                    <div class="col-7">
-                        <ol class="breadcrumb {{app()->getLocale() == 'ar' ? "float-left" : "float-right"}}">
-                            <li class="breadcrumb-item"><a href="{{route('admin.home')}}">
+                    <!-- Breadcrumb -->
+                    <ol class="breadcrumb">
+                        <!-- Breadcrumb item -->
+                        <li class="breadcrumb-item">
+                            <!-- Breadcrumb link -->
+                            <a href="{{route('admin.home')}}">
                                 <i class="mdi mdi-view-dashboard" aria-hidden="true"></i>
                                 {{ trans('site.dashboard') }}
                             </a>
-                            </li>
-                            @yield('breadcrumb-item')
-                        </ol>
-                    </div>
+                        </li>
+                        @yield('breadcrumb-item')
+                    </ol>
+                    <!-- End of Breadcrumb -->
                 </div>
-            </div><!-- /.container-fluid -->
+                <!-- End of Content Header Info -->
+            </div>
+            <!-- /.container-fluid -->
         </section>
+        <!-- End of Content Header -->
 
         <!-- Main content -->
         <section class="content">
