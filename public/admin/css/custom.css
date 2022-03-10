@@ -117,7 +117,8 @@
 }
 .content-header .page-name{
     font-size: 1.6rem;
-    font-weight: 600;
+    font-weight: bold;
+    text-transform: uppercase !important;
 }
 .content-header .breadcrumb .breadcrumb-item:last-of-type{
     color: #535353;
@@ -135,54 +136,12 @@
 
 /* End of Tables */
 
-/* Buttons */
-
-.card .btn-secondary{
-    background-color: rgb(49 53 82 / 70%);
-}
-section table .btn{
-    color: #000;
-}
-.btn-delete,
-.btn-delete:focus{
-    color: #fff !important;
-    margin-left: 5px;
-}
-
-.btn-edit{
-    margin-right: 5px;
-}
-.btn-edit:hover{
-    color: #000;
-}
-.btn-create{
-    padding: 0.2rem 0.5rem;
-    font-size: .75rem;
-    font-weight: bold;
-}
-.btn-add-new{
-    height: 2rem !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 600;
-    text-transform: capitalize;
-    border-radius: 0;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    -ms-border-radius: 0;
-    -o-border-radius: 0;
-}
-
-/* End of Buttons */
 
 /* Card */
 .card .card-header h3{
     font-size: 1.15rem;
     color: #eee;
 }
-
-
 /* End of Card */
 
 /* Forms */
@@ -221,7 +180,13 @@ section table .btn{
 /* End of Forms */
 
 
-/* Sections */
+
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* *-*-*-*-*-*-*-*-* Sections -*-*-*-*-*-*-*-*-*-*-*-* */
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+
 .user-section .user-card .card-header {
     width: 100%;
     height: 200px;
@@ -254,16 +219,100 @@ section table .btn{
 
 
 
+.section {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+.section .card{
+    margin-bottom: 0;
+}
+
+/* Section form */
+.section .section-form .card .card-header{
+    border-top-right-radius: 0;
+}
+.section .section-form .card .card-footer{
+    border-bottom-right-radius: 0;
+}
+
+/* End of section form */
+
+/* Section info */
+.section .section-info{
+    height: 100%;
+
+}
+.section .section-info .card{
+    height: 100%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+/* End of Section info */
 
 
-
-
-
-
-/*/*//*/ End of components /*//*/*/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* *-*-*-*-*-*- End of  Sections *-*-*-*-*-*-*-*-*-*-* */
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
 /* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
 
-/* Grouping */
+
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* *-*-*-*-*-*-*-*-* Buttons -*-*-*-*-*-*-*-*-*-*-*-* */
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+
+.card .btn-secondary{
+    background-color: rgb(49 53 82 / 70%);
+}
+section table .btn{
+    color: #000;
+}
+.btn-delete,
+.btn-delete:focus{
+    color: #fff !important;
+    margin-left: 5px;
+}
+
+.btn-edit{
+    margin-right: 5px;
+}
+.btn-edit:hover{
+    color: #000;
+}
+.btn-create{
+    padding: 0.2rem 0.5rem;
+    font-size: .75rem;
+    font-weight: bold;
+}
+.btn-add-new{
+    height: 2rem !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    text-transform: capitalize;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* *-*-*-*-*-*-*-* End of Buttons -*-*-*-*-*-*-*-*-*-* */
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+
+
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* *-*-*-*-*-*-*-*-* Grouping -*-*-*-*-*-*-*-*-*-*-*-* */
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+
 .main-sidebar,
 .page-item.active .page-link,
 .btn-crayons,
@@ -327,7 +376,8 @@ section table .btn{
     text-transform: capitalize;
 }
 
-
-
-/* End of Grouping */
-
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* *-*-*-*-*-*-* End of Grouping *-*-*-*-*-*-*-*-*-*-* */
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
