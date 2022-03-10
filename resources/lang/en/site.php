@@ -19,26 +19,26 @@ return [
     'posts' => 'Posts',
 
     // Users Page
-    'list_users' => 'List of all users',
+    'list_users' => 'All users',
     'add_user' => 'Add a new user',
 
     // Stations Page
-    'list_stations' => 'List of all stations',
+    'list_stations' => 'All stations',
     'add_station' => 'Add a new station',
     'all_stations' => 'All Stations',
     'station' => "Station",
 
     // Trains Page
-    'list_trains' => 'List of all trains',
+    'list_trains' => 'All trains',
     'add_train' => 'Add a new train',
     'train' => "Train",
 
     // Types Page
-    'list_types' => 'List of all types',
+    'list_types' => 'All types',
     'add_type' => 'Add a type train',
 
     // Posts Page
-    'list_posts' => 'List of all posts',
+    'list_posts' => 'All posts',
     'add_post' => 'Add a new post',
     'post' => "Post",
 
@@ -48,7 +48,7 @@ return [
 
     // Messages Page
     'message' => 'Message',
-    'list_all_messages' => 'list all messages',
+    'list_all_messages' => 'All messages',
 
 
 
