@@ -30,7 +30,7 @@
 
 {{-- Content --}}
 @section('content')
-    <section class="station-section">
+    <section class="station-section section">
         <div class="row">
             <div class="col-12">
                 <div class="card">

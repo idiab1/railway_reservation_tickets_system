@@ -38,30 +38,10 @@
 
 {{-- Content --}}
 @section('content')
-    <section class="train-section">
+    <section class="train-section section">
         <div class="row">
             <div class="col-12">
                 <div class="card">
-                    {{-- <!-- Card Header -->
-                    <div class="card-header">
-                        <div class="row">
-                            <div class="col-6">
-                                <!-- Card Title -->
-                                <h3 class="card-title">
-                                    {{ trans('site.list_trains') }}
-                                </h3>
-                                <!-- /End of card title -->
-                            </div>
-                            <div class="col-6">
-                                <a class="btn btn-create btn-sm btn-primary btn-crayons float-right" href="{{route('trains.create')}}">
-                                    <i class="fas fa-plus"></i>
-                                    {{ trans('site.add_train') }}
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /End of card-header --> --}}
-
                     <!-- Card body -->
                     <div class="card-body">
                         <table id="example1" class="table table-bordered table-striped">
