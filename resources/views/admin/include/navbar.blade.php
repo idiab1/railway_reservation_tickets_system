@@ -131,14 +131,17 @@
 
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                 <!-- Dropdown menu links -->
-                <a class="dropdown-item" href="{{route('posts.create')}}">
-                    {{ trans('site.post') }}
-                </a>
                 <a class="dropdown-item" href="{{route('stations.create')}}">
                     {{ trans('site.station') }}
                 </a>
                 <a class="dropdown-item" href="{{route('trains.create')}}">
+                    {{ trans('site.train') }}
+                </a>
+                <a class="dropdown-item" href="">
                     {{ trans('site.ticket') }}
+                </a>
+                <a class="dropdown-item" href="{{route('posts.create')}}">
+                    {{ trans('site.post') }}
                 </a>
 
             </div>
