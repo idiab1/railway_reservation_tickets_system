@@ -8,7 +8,12 @@
     --main2-color: #0c2545;
 }
 
-/* Sidebar */
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* *-*-*-*-*-*-*-*-*-*-* Sidebar *-*-*-*-*-*-*-*-*-*-* */
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+
 .main-sidebar .user-panel {
     flex-direction: column;
     justify-content: center;
@@ -26,14 +31,12 @@
     line-height: 1.2;
     color: var(--offwhite-color);
 }
-
 .main-sidebar .user-panel .info span{
     font-size: 15px;
     color: #c8c8c6;
     line-height: 1;
     letter-spacing: .04rem;
 }
-
 .main-sidebar .nav-sidebar>.nav-item .nav-icon {
     margin-left: 0.05rem;
     font-size: 1.28rem;
@@ -42,7 +45,6 @@
     width: 1.7rem;
     color: var(--offwhite-color);
 }
-
 .mini-sidebar .user-panel .info{
     display: none;
     transition: .35s;
@@ -52,8 +54,11 @@
     -o-transition: .35s;
 }
 
-/* End of sidebar */
-
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* *-*-*-*-*-*-*-*-* End of sidebar -*-*-*-*-*-*-*-*-* */
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
 
 /* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
 /* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
