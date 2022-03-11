@@ -54,7 +54,13 @@
 
 /* End of sidebar */
 
-/* Navbar */
+
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* *-*-*-*-*-*-*-*-*-*-*- Navbar *-*-*-*-*-*-*-*-*-*-* */
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+
 .navbar{
     background-color: var(--main-color);
 }
@@ -77,6 +83,8 @@
     display: none;
 }
 .navbar .navbar-nav .dropdown .dropdown-item{
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
     transition: .2s ease-in-out;
     -webkit-transition: .2s ease-in-out;
     -moz-transition: .2s ease-in-out;
@@ -85,9 +93,14 @@
 }
 .navbar .navbar-nav .dropdown .dropdown-item:hover{
     background-color: var(--red-color);
+    color: var(--offwhite-color);
 }
 
-/* End of navbar */
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* *-*-*-*-*-*-*-*-*- End of Navbar *-*-*-*-*-*-*-*-* */
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
 
 
 
