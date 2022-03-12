@@ -36,54 +36,36 @@
                                 </div>
                                 <!-- End of card header -->
                                 <!-- form -->
-                                {{-- <form action="{{route('stations.store')}}" method="POST">
-                                    @csrf
-                                    <div class="card-body">
-                                        <!-- Name -->
-                                        <div class="form-group m-0">
-                                            <label for="name">{{ trans('site.name') }}</label>
-                                            <input class="form-control" type="text" id="name" name="name"
-                                                placeholder="{{trans('site.enter_name_station')}}"
-                                                required>
-                                        </div>
-
-                                    </div>
-                                    <!-- /.card-body -->
-
-                                    <div class="card-footer">
-                                        <button type="submit" class="btn btn-primary btn-add btn-crayons">{{ trans('site.add') }}</button>
-                                    </div>
-                                </form> --}}
-
                                 <form action="{{route('users.store')}}" method="POST">
                                     @csrf
                                     <div class="card-body">
                                         <!-- Name -->
                                         <div class="form-group">
                                             <label for="name">{{ trans('site.name') }}</label>
-                                            <input class="form-control" type="text" id="name"
-                                                    name="name" placeholder="{{trans('site.admin_enter_name')}}">
+                                            <input class="form-control" type="text" id="name" name="name"
+                                                placeholder="{{trans('site.admin_enter_name')}}" required>
                                         </div>
 
                                         <!-- Email -->
                                         <div class="form-group">
                                             <label for="email">{{ trans('site.email') }}</label>
-                                            <input class="form-control" type="email" id="email"
-                                                    name="email" placeholder="{{trans('site.admin_enter_email')}}">
+                                            <input class="form-control" type="email" id="email" name="email"
+                                                placeholder="{{trans('site.admin_enter_email')}}" required>
                                         </div>
 
                                         <!-- Password -->
                                         <div class="form-group">
                                             <label for="password">{{ trans('site.password') }}</label>
-                                            <input class="form-control" type="password" id="password"
-                                                    name="password" placeholder="{{trans('site.admin_enter_password')}}">
+                                            <input class="form-control" type="password" id="password" name="password"
+                                                placeholder="{{trans('site.admin_enter_password')}}" required>
                                         </div>
 
                                         <!-- Confirm password -->
                                         <div class="form-group">
                                             <label for="confirmPassword">{{ trans('site.confirm_password') }}</label>
                                             <input class="form-control" type="password" id="confirmPassword"
-                                                    name="password_confirmation" placeholder="{{trans('site.admin_confirm_password')}}">
+                                                name="password_confirmation"
+                                                placeholder="{{trans('site.admin_confirm_password')}}" required>
                                         </div>
 
                                         <!-- Privileges -->
@@ -92,7 +74,7 @@
 
                                             <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                                                 @php
-                                                    $models = ['users', 'stations'];
+                                                    $models = ['users', 'stations', 'trains'];
                                                     $maps = ['create', 'read', 'update', 'delete']
                                                 @endphp
 
@@ -127,7 +109,9 @@
                                     <!-- /.card-body -->
 
                                     <div class="card-footer">
-                                        <button type="submit" class="btn btn-primary btn-add btn-crayons">{{ trans('site.add') }}</button>
+                                        <button type="submit" class="btn btn-primary btn-add btn-crayons">
+                                            {{ trans('site.add') }}
+                                        </button>
                                     </div>
                                 </form>
                                 <!-- End of form -->
