@@ -11,6 +11,16 @@
 <link rel="stylesheet" href="{{asset('plugins/datatables-bs4/css/dataTables.bootstrap4.min.css')}}">
 <link rel="stylesheet" href="{{asset('plugins/datatables-responsive/css/responsive.bootstrap4.min.css')}}">
 <link rel="stylesheet" href="{{asset('plugins/datatables-buttons/css/buttons.bootstrap4.min.css')}}">
+<style>
+    .content-header{
+        height: 100px;
+    }
+    .content-header .content-header-info {
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+    }
+</style>
 @endsection
 
 
