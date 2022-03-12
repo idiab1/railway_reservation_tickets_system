@@ -107,7 +107,7 @@
                 <!-- Logout -->
                 <a class="dropdown-item" href="{{ route('logout') }}"
                     onclick="event.preventDefault();
-                                    document.getElementById('logout-form').submit();">
+                        document.getElementById('logout-form').submit();">
                     <i class="mdi mdi-logout" aria-hidden="true"></i>
                     {{ trans('site.logout') }}
                 </a>
