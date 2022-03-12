@@ -5,6 +5,21 @@
     {{ trans('site.list_users') }}
 @endsection
 
+{{-- Styles --}}
+@section('styles')
+
+<style>
+    .content-header{
+        height: 100px;
+    }
+    .content-header .content-header-info {
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+    }
+</style>
+
+@endsection
 
 {{-- Page name --}}
 @section('page_name')
@@ -154,14 +169,14 @@
 
                                     @foreach ($models as $index => $model)
 
-                                        <div class="tab-pane fade show {{$index == 0 ? "active" : ""}}" 
-                                            id="pills-{{$model}}" role="tabpanel" 
+                                        <div class="tab-pane fade show {{$index == 0 ? "active" : ""}}"
+                                            id="pills-{{$model}}" role="tabpanel"
                                             aria-labelledby="pills-{{$model}}-tab">
 
                                             @foreach ($maps as $map)
                                                 <label>
                                                     <input type="checkbox" name="permissions[]" value="{{$model . '-' . $map}}">
-                                                    {{ trans('site.' . $map) }} 
+                                                    {{ trans('site.' . $map) }}
                                                 </label>
                                             @endforeach
 
