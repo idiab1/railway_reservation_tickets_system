@@ -107,7 +107,7 @@
                                             </div>
 
                                             <!-- Privileges -->
-                                            <div class="form-group">
+                                            <div class="form-group m-0">
                                                 <label for="supervisors">{{ trans('site.privileges') }}</label>
 
                                                 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
