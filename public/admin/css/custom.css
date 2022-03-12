@@ -279,8 +279,6 @@
     background-position: bottom;
     background-size: contain;
     background-repeat: no-repeat;
-}
-.section .station-info.section-info{
     background-image: url("../../images/stations.svg");
 }
 .section .section-info .card{
