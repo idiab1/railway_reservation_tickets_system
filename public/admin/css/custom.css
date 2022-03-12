@@ -257,6 +257,10 @@
     border-bottom-right-radius: 0;
 }
 
+.section .form-container {
+    padding-bottom: 1.5rem;
+}
+
 /* Section form */
 .section .section-form .card .card-header{
     border-top-right-radius: 0;
