@@ -301,6 +301,37 @@
 /* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
 /* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
 
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* -*-*-*-*-*-*-*-*-*-* Tab -*-*-*-*-*-*-*-*-*-*-*-*-* */
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+
+.section .nav-pills{
+    justify-content: center;
+    border-radius: 10px;
+    padding: 0.5rem;
+    background-color: var(--main-color);
+}
+.section .nav-pills .nav-link{
+    padding: 0.5rem 2.5rem;
+    color: var(--offwhite-color);
+}
+.section .nav-pills .nav-link:hover{
+    color: var(--offwhite-color);
+}
+.section .nav-pills .nav-link.active,
+.section .nav-pills .show>.nav-link {
+    color: var(--offwhite-color);
+    background-color: var(--red-color);
+}
+
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* -*-*-*-*-*-*-*-*- End of Tab *-*-*-*-*-*-*-*-*-*-*- */
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+
 
 /* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
 /* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
