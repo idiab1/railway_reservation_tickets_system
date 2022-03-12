@@ -422,8 +422,7 @@ section table .btn{
 
 .btn-crayons,
 .btn-crayons:focus,
-.card .card-header h3,
-.card form input{
+.card .card-header h3{
     text-transform: capitalize;
 }
 
