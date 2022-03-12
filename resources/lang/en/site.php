@@ -86,6 +86,7 @@ return [
     'content' => 'Content',
     'train_type' => "Train Type",
     "overview" => "Overview",
+    "image" => "Image",
 
     // Buttons
     'send' => 'Send',
