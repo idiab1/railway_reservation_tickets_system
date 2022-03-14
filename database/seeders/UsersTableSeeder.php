@@ -33,5 +33,7 @@ class UsersTableSeeder extends Seeder
         }
 
         $user->attachRole('super_admin');
+
+
     }
 }
