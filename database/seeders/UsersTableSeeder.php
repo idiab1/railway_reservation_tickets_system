@@ -32,7 +32,7 @@ class UsersTableSeeder extends Seeder
             ]);
         }
 
-        $user->attachRole('super_admin');
+        $user->attachRole("super_admin");
 
 
     }
