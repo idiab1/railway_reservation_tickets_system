@@ -74,12 +74,14 @@ class RegisterController extends Controller
         // create profile user
         if($user->profile == null){
             Profile::create([
-                'user_id'   => $user->id,
-                'image'     => 'default.png',
-                'facebook'  => 'https://www.facebook.com',
-                'twitter'   => 'https://www.twitter.com',
-                'linkedin'   => 'https://www.linkedin.com',
-                'about'     => 'About here',
+                'user_id'       => $user->id,
+                'image'         => 'default.png',
+                'facebook'      => 'https://www.facebook.com',
+                'twitter'       => 'https://www.twitter.com',
+                'linkedin'      => 'https://www.linkedin.com',
+                'about'         => 'About here',
+                "age"           => 23,
+                "gender"        => "male"
             ]);
         }
 
