@@ -33,6 +33,8 @@ class ProfileController extends Controller
                 'twitter'   => 'https://www.twitter.com',
                 'linkedin'   => 'https://www.linkedin.com',
                 'about'     => 'About here',
+                "age"       => 23,
+                "gender"    => "male"
             ]);
         }
 
@@ -95,6 +97,8 @@ class ProfileController extends Controller
                 'twitter' => $request->twitter,
                 'linkedin' => $request->linkedin,
                 'about' => $request->about,
+                "age"       => $request->age,
+                "gender"    => $request->gender
             ]);
 
 
@@ -116,6 +120,8 @@ class ProfileController extends Controller
                 'twitter' => $request->twitter,
                 'linkedin' => $request->linkedin,
                 'about' => $request->about,
+                "age"       => $request->age,
+                "gender"    => $request->gender
             ]);
         }
 
