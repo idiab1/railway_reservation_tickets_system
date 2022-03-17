@@ -60,7 +60,7 @@
                             <div class="card-body">
                                 <h4 class="username">{{$user->name}}</h4>
                                 <p class="m-0">
-                                    @foreach (auth()->user()->roles as $role)
+                                    @foreach ($user->roles as $role)
                                         {{ $role->display_name }}
                                     @endforeach
                                 </p>
