@@ -20,10 +20,10 @@ return [
             'posts' => 'c,r,u,d',
         ],
         'moderator' => [
-            'users' => 'c,r,u,d',
+            'users' => 'r',
             'stations' => 'c,r,u,d',
             'trains' => 'c,r,u,d',
-            'tickets' => 'c,r,d',
+            'tickets' => 'c,r,u,d',
             'posts' => 'c,r,u,d',
         ],
     ],
