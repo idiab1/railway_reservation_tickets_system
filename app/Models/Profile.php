@@ -10,7 +10,7 @@ class Profile extends Model
     use HasFactory;
 
     protected $fillable = [
-        'image', 'facebook', 'twitter', 'linkedin', 'about', 'user_id'
+        'image', 'facebook', 'twitter', 'linkedin', 'about', 'user_id', "age", "gender"
     ];
 
     /***
