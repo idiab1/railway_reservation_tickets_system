@@ -87,6 +87,8 @@ return [
     'train_type' => "Train Type",
     "overview" => "Overview",
     "image" => "Image",
+    "change_logo" => "Change Logo",
+    "setting_info" => "Setting Info",
 
     // Buttons
     'send' => 'Send',
