@@ -29,6 +29,8 @@ class UsersTableSeeder extends Seeder
                 'twitter'   => 'https://www.twitter.com',
                 'linkedin'   => 'https://www.linkedin.com',
                 'about'     => 'About here',
+                "age"       => 23,
+                "gender"    => "male"
             ]);
         }
 
