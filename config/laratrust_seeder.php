@@ -19,7 +19,13 @@ return [
             'tickets' => 'c,r,u,d',
             'posts' => 'c,r,u,d',
         ],
-        'admin' => [],
+        'moderator' => [
+            'users' => 'c,r,u,d',
+            'stations' => 'c,r,u,d',
+            'trains' => 'c,r,u,d',
+            'tickets' => 'c,r,d',
+            'posts' => 'c,r,u,d',
+        ],
     ],
 
     'permissions_map' => [
