@@ -49,8 +49,8 @@ class SettingController extends Controller
             'address'       => $request->address
         ]);
 
-        // Redirect to admin home page
-        return redirect()->route('admin.home');
+        // Redirect to back
+        return redirect()->back();
     }
 
 }
