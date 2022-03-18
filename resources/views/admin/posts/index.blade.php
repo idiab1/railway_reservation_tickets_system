@@ -202,14 +202,14 @@
                             <div class="form-group">
                                 <label for="name">{{ trans('site.name') }}</label>
                                 <input class="form-control" type="text" id="name"
-                                        name="name" placeholder="{{trans('site.enter_name_post')}}">
+                                    name="name" placeholder="{{trans('site.enter_name_post')}}">
                             </div>
 
                             <!-- Content -->
-                            <div class="form-group">
+                            <div class="form-group m-0">
                                 <label for="content">{{ trans('site.content') }}</label>
                                 <textarea class="form-control ckeditor" name="content" id="content"
-                                        placeholder="{{trans('site.enter_content_post')}}"></textarea>
+                                    placeholder="{{trans('site.enter_content_post')}}"></textarea>
                             </div>
 
                         </div>
