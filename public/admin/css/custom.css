@@ -178,7 +178,7 @@
 /* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
 
 .content-header{
-    height: 150px;
+    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -234,6 +234,7 @@
     font-weight: 600;
     font-size: 1.15rem;
     color: #313552;
+    text-transform: capitalize;
 }
 .user-section .user-card .card-body p{
     font-size: .9rem;
@@ -271,7 +272,6 @@
     border-bottom-left-radius: 6px;
 }
 
-
 /* Section form */
 .section .section-form .card .card-header{
     border-top-right-radius: 0;
@@ -294,12 +294,16 @@
     background-position: bottom;
     background-size: contain;
     background-repeat: no-repeat;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
     background-image: url("../../images/stations.svg");
 }
 .section .section-info.setting-info{
-    border-top-right-radius: 6px;
-    border-bottom-right-radius: 6px;
     background-image: url("../../images/setting-system.svg");
+}
+
+.section .section-info.user-info{
+    background-image: url("../../images/add-user.svg");
 }
 
 .section .section-info .card{
@@ -347,6 +351,89 @@
 /* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
 /* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
 /* -*-*-*-*-*-*-*-*- End of Tab *-*-*-*-*-*-*-*-*-*-*- */
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* -*-*-*-*-*-*-*-*-*-* Modal *-*-*-*-*-*-*-*-*-*-*-*- */
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+
+.modal {
+    top: 45px;
+}
+.modal .modal-header{
+    color: var(--offwhite-color);
+    background-color: var(--red-color);
+}
+.train-section .modal .modal-dialog {
+    max-width: 560px;
+}
+
+.modal .modal-header .close{
+    opacity: 1;
+    text-shadow: none;
+    color: var(--offwhite-color);
+}
+.modal .modal-header .close:focus{
+    border: none;
+    box-shadow: none;
+}
+
+.modal .modal-dialog form input:focus{
+    box-shadow: none;
+    border-color: var(--main-color);
+}
+
+.train-section .modal .modal-dialog form .select2-container{
+    width: 100% !important;
+}
+
+.train-section .modal form .select2-container .select2-selection--single {
+    height: 39px;
+}
+.modal .select2-container--default.select2-container--open .select2-selection--single{
+    border-color: var(--main-color);
+}
+
+.modal .select2-container--default.select2-container--focus .select2-selection--multiple,
+.modal .select2-container--default.select2-container--focus .select2-selection--single{
+    border-color: var(--main-color);
+}
+.select2-container--default .select2-search--dropdown .select2-search__field:focus{
+    border-color: var(--main-color) !important;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    color: var(--offwhite-color);
+    background-color: var(--main-color);
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected],
+.select2-container--default .select2-results__option--highlighted[aria-selected]:hover{
+    color: var(--offwhite-color) !important;
+    background-color: var(--main-color) !important;
+}
+
+.modal .form-check label{
+    font-weight: 700;
+}
+
+.modal .card-footer{
+    background-color: transparent;
+}
+.modal .modal-footer{
+    border-color: transparent;
+}
+
+/* .modal .modal-header  */
+
+
+
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* -*-*-*-*-*-*-*-*- End of Modal *-*-*-*-*-*-*-*-*-* */
 /* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
 /* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
 
