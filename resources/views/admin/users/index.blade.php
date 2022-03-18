@@ -110,7 +110,7 @@
                     <!-- Form -->
                     <form action="{{route('users.store')}}" method="POST">
                         @csrf
-                        <div class="card-body">
+                        <div class="modal-body">
                             <!-- Name -->
                             <div class="form-group">
                                 <label for="name">{{ trans('site.name') }}</label>
@@ -144,7 +144,7 @@
                             </div>
 
                             <!-- Privileges -->
-                            <div class="form-group">
+                            {{-- <div class="form-group">
                                 <label for="supervisors">{{ trans('site.privileges') }}</label>
 
                                 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
@@ -183,13 +183,33 @@
                                         </div>
                                     @endforeach
                                 </div>
+                            </div> --}}
+
+                            <!-- User Type -->
+                            <div class="form-group m-0">
+                                <div class="form-check my-0 form-check-inline">
+                                    <input class="form-check-input" type="checkbox"
+                                        id="inlineCheckbox1" name="admin">
+                                    <label class="form-check-label" for="inlineCheckbox1">
+                                        Admin
+                                    </label>
+                                </div>
+                                <div class="form-check my-0 form-check-inline">
+                                    <input class="form-check-input" type="checkbox"
+                                        id="inlineCheckbox2" name="moderator">
+                                    <label class="form-check-label" for="inlineCheckbox2">
+                                        Moderator
+                                    </label>
+                                </div>
                             </div>
 
                         </div>
                         <!-- /.card-body -->
 
-                        <div class="card-footer">
-                            <button type="submit" class="btn btn-primary btn-add btn-crayons">{{ trans('site.add') }}</button>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary btn-add btn-crayons">
+                                {{ trans('site.add') }}
+                            </button>
                         </div>
                     </form>
 
