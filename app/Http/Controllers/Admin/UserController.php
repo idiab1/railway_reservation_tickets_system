@@ -42,6 +42,8 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
+        // dd($request);
+        // dd($request->has("admin"));
         // Validate on all data coming from request
         $this->validate($request, [
             'name'  => ['required', 'string'],
@@ -50,12 +52,11 @@ class UserController extends Controller
         ]);
 
         // Except password, permissions, password_confirmation
-        $request_data = $request->except(['password', 'password_confirmation', 'permissions']);
+        $request_data = $request->except(['password', 'password_confirmation']);
         $request_data['password'] = Hash::make($request->password);
 
         // Save new user
         $user = User::create($request_data);
-
 
         // create profile user
         if($user->profile == null){
@@ -66,11 +67,17 @@ class UserController extends Controller
                 'twitter'   => 'https://www.twitter.com',
                 'linkedin'  => 'https://www.linkedin.com',
                 'about'     => 'About here',
+                "age"       => 23,
+                "gender"    => "male"
             ]);
         }
 
-        $user->attachRole('admin');
-        $user->syncPermissions($request->permissions);
+        if($request->has("admin")){
+            // Attach role
+            $user->attachRole('super_admin');
+        }else{
+            $user->attachRole('moderator');
+        }
 
         // Redirect to home of users
         return redirect()->route('users.index');
