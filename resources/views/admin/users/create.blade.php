@@ -69,7 +69,7 @@
                                         </div>
 
                                         <!-- Privileges -->
-                                        <div class="form-group m-0">
+                                        {{-- <div class="form-group m-0">
                                             <label for="supervisors">{{ trans('site.privileges') }}</label>
 
                                             <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
@@ -81,8 +81,8 @@
                                                 @foreach ($models as $index => $model)
                                                     <li class="nav-item">
                                                         <a class="nav-link btn btn-sm {{$index == 0 ? "active" : ""}}"
-                                                        id="pills-{{$model}}-tab" data-toggle="pill" href="#pills-{{$model}}"
-                                                        role="tab" aria-controls="pills-{{$model}}">{{ trans('site.' . $model) }}</a>
+                                                            id="pills-{{$model}}-tab" data-toggle="pill" href="#pills-{{$model}}"
+                                                            role="tab" aria-controls="pills-{{$model}}">{{ trans('site.' . $model) }}</a>
                                                     </li>
 
                                                 @endforeach
@@ -102,8 +102,25 @@
                                                 @endforeach
                                             </div>
 
-                                        </div>
+                                        </div> --}}
 
+                                        <!-- User Type -->
+                                        <div class="form-group m-0">
+                                            <div class="form-check my-0 form-check-inline">
+                                                <input class="form-check-input" type="checkbox"
+                                                    id="inlineCheckbox1" name="admin">
+                                                <label class="form-check-label" for="inlineCheckbox1">
+                                                    Admin
+                                                </label>
+                                            </div>
+                                            <div class="form-check my-0 form-check-inline">
+                                                <input class="form-check-input" type="checkbox"
+                                                    id="inlineCheckbox2" name="moderator">
+                                                <label class="form-check-label" for="inlineCheckbox2">
+                                                    Moderator
+                                                </label>
+                                            </div>
+                                        </div>
 
                                     </div>
                                     <!-- /.card-body -->
