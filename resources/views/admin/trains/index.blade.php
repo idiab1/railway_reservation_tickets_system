@@ -155,7 +155,7 @@
                     <form action="{{route('trains.store')}}" method="POST">
                         @csrf
                         <!-- Modal Body -->
-                        <div class="card-body">
+                        <div class="modal-body">
                             <!-- Name -->
                             <div class="form-group">
                                 <label for="name">{{ trans('site.name') }}</label>
@@ -206,7 +206,7 @@
                                 </div>
                             </div>
                             <!-- Arrival Station / Time -->
-                            <div class="form-group">
+                            <div class="form-group m-0">
                                 <div class="row">
                                     <div class="col">
                                         <label for="arrival_station">{{ trans('site.arrival_station') }}</label>
@@ -229,7 +229,7 @@
                         </div>
                         <!-- End of Modal Body -->
                         <!-- Modal Footer -->
-                        <div class="card-footer">
+                        <div class="modal-footer">
                             <button type="submit" class="btn btn-primary btn-add btn-crayons">
                                 {{ trans('site.add') }}
                             </button>
