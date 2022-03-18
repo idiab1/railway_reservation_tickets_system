@@ -376,9 +376,7 @@ section table .btn{
 
 .btn-edit{
     margin-right: 5px;
-}
-.btn-edit:hover{
-    color: #000;
+    color: #000 !important;
 }
 
 .btn-add-new{
