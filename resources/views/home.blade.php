@@ -5,6 +5,35 @@
     {{ trans('site.home') }}
 @endsection
 
+{{-- Styles --}}
+@section('other-styles')
+    <!-- Select2 -->
+    <link rel="stylesheet" href="{{asset('plugins/select2/css/select2.min.css')}}">
+    <link rel="stylesheet" href="{{asset('plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css')}}">
+
+
+
+    <style>
+        .select2-container .select2-selection--single {
+            height: auto;
+        }
+
+    </style>
+
+    <style>
+
+        .search-reservation .reservation-box {
+            top: -65px;
+        }
+        .btn-search-tickets{
+            display: FLEX;
+            align-items: center;
+            justify-content: right;
+            margin-top: 30px;
+        }
+    </style>
+@endsection
+
 @section('content')
     <!-- reservation search section -->
     <section class="search-reservation section">
@@ -18,35 +47,56 @@
                             <!-- Form -->
                             <form action="" method="POST">
                                 <div class="row">
-                                    <div class="col">
+                                    <div class="col-5">
                                         <!-- Travelling Routing -->
-                                        <div class="form-group mb-3">
+                                        <div class="form-group">
                                             <label for="travelling_routing" class="form-label">
                                                 Travelling Routing
                                             </label>
-                                            <div class="input-group">
-                                                <input type="text" class="form-control" id="travelling_routing" placeholder="From" aria-label="From">
-                                                <input type="text" class="form-control" id="travelling_routing" placeholder="To" aria-label="To">
+                                            <div class="input-group row m-0">
+                                                <div class="col pl-0">
+                                                    <select class="form-control select2bs4 depature-stations">
+                                                        <option selected="selected" >{{trans('site.form')}}</option>
+                                                        @foreach ($stations as $station)
+                                                            <option value="{{$station->id}}" >{{$station->name}}</option>
+                                                        @endforeach
+                                                    </select>
+                                                </div>
+                                                <div class="col pr-0">
+                                                    <select class="form-control select2bs4 arrival-stations">
+                                                        <option selected="selected" >{{trans('site.to')}}</option>
+                                                        @foreach ($stations as $station)
+                                                            <option value="{{$station->id}}" >{{$station->name}}</option>
+                                                        @endforeach
+                                                    </select>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col">
+                                    <div class="col-5">
                                         <!-- Travelling date -->
-                                        <div class="form-group mb-3">
+                                        <div class="form-group">
                                             <label for="travelling_routing" class="form-label">
                                                 Travelling Date
                                             </label>
-                                            <div class="input-group">
-                                                <input type="date" class="form-control" id="travelling_routing" aria-label="From">
-                                                <input type="date" class="form-control" id="travelling_routing" aria-label="To">
+                                            <div class="input-group row m-0">
+                                                <div class="col pl-0">
+                                                    <input type="date" class="form-control" id="travelling_routing" aria-label="From">
+                                                </div>
+                                                <div class="col pr-0">
+                                                    <input type="date" class="form-control" id="travelling_routing" aria-label="To">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="text-right">
-                                    <button type="submit" class="btn btn-primary crayons-btn">
-                                        Search Tickets
-                                    </button>
+                                    <div class="col-2 btn-search-tickets">
+                                        <!-- Button search tickets -->
+                                        <div class="form-group text-right">
+                                            <button type="submit" class="btn btn-primary crayons-btn">
+                                                Search Tickets
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
                             </form>
                             <!-- ./end of form -->
@@ -288,6 +338,11 @@
 @endsection
 
 @section('other-scripts')
+<!-- Bootstrap 4 -->
+<script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+<!-- Select 2 -->
+<script src="{{asset('plugins/select2/js/select2.min.js')}}"></script>
+
 <!-- main script -->
 <script src="{{asset('js/main.js')}}"></script>
 
@@ -296,8 +351,12 @@
         $('.carousel').carousel({
             wrap: false,
             ride: true
+        });
+        $('.select2bs4').select2({
+            theme: 'bootstrap4'
         })
     })
 </script>
 
 @endsection
+
