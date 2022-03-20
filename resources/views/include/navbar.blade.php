@@ -18,10 +18,10 @@
                     </a>
                 </li>
 
-                <!-- About us -->
+                <!-- Tickets -->
                 <li class="nav-item">
                     <a class="nav-link" href="#">
-                        {{ trans('site.about_us') }}
+                        {{ trans('site.tickets') }}
                     </a>
                 </li>
 
