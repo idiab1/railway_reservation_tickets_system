@@ -56,7 +56,7 @@
                                             <div class="input-group row m-0">
                                                 <div class="col pl-0">
                                                     <select class="form-control select2bs4 depature-stations">
-                                                        <option selected="selected" >{{trans('site.form')}}</option>
+                                                        <option selected="selected" >{{trans('site.from')}}</option>
                                                         @foreach ($stations as $station)
                                                             <option value="{{$station->id}}" >{{$station->name}}</option>
                                                         @endforeach
