@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TicketController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -31,6 +32,13 @@ Route::group(
         // Home Route
         Route::redirect('/', '/home');
         Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+        // Tickets Route
+        Route::resource('tickets', TicketController::class)->except([
+            'show'
+        ])->parameters([
+            'tickets' => "id"
+        ]);
 
         // Profile user routes
         Route::resource('profile', ProfileController::class)->only([
