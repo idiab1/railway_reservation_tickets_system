@@ -38,6 +38,13 @@ Route::group(
             'show'
         ])->parameters([
             'tickets' => "id"
+        ])->names([
+            "index" => "user.tickets.index",
+            "create" => "user.tickets.create",
+            "store" => "user.tickets.store",
+            "edit" => "user.tickets.edit",
+            "update" => "user.tickets.update",
+            "destroy" => "user.tickets.destroy",
         ]);
 
         // Profile user routes
