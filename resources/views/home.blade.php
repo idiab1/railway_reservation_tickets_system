@@ -34,6 +34,17 @@
     </style>
 @endsection
 
+{{-- Header --}}
+@section('header-info')
+    <!-- Header info -->
+    <div class="header-info">
+        <p>Train Service</p>
+        <h1>Welcome to Egyption Railway</h1>
+        <p>We saves your time both while burchasing, the check-in and during the travel </p>
+    </div>
+    <!-- End of Header info -->
+@endsection
+
 @section('content')
     <!-- reservation search section -->
     <section class="search-reservation section">
