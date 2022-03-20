@@ -45,6 +45,7 @@ return [
 
 
     // Ticket Page
+    "tickets" => "Tickets",
     "ticket" => 'Ticket',
 
     // Messages Page
@@ -89,6 +90,8 @@ return [
     "image" => "Image",
     "change_logo" => "Change Logo",
     "setting_info" => "Setting Info",
+    "to" => "To",
+    "from" => "From",
 
     // Buttons
     'send' => 'Send',
