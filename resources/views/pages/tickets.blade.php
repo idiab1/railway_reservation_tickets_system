@@ -25,6 +25,10 @@
             flex-direction: row;
         }
 
+        .tickets-content .ticket .ticket-details{
+            display: flex;
+            justify-content: space-around;
+        }
 
     </style>
 @endsection
@@ -64,33 +68,47 @@
                 <div class="tickets-content">
                     {{-- <div class="tickets-content-header"></div> --}}
 
-                    <!-- Ticket card -->
-                    <div class="card ticket">
+                    @if ($trains->count() > 0)
+                        @foreach ($trains as $train)
+                            <!-- Ticket card -->
+                            <div class="card ticket">
 
-                        <!-- Ticket name -->
-                        <div class="card-header ticket-name text-center">
-                            <div class="icon">
-                                <i class="fas fa-train"></i>
+                                <!-- Ticket name -->
+                                <div class="card-header ticket-name text-center">
+                                    <div class="icon">
+                                        <i class="fas fa-train"></i>
+                                    </div>
+                                    {{$train->name}}
+                                </div>
+                                <!-- End of Ticket name -->
+
+                                <!-- Ticket details -->
+                                <div class="card-body ticket-details">
+                                    <!-- Depature station info -->
+                                    <div class="depature-station">
+                                        {{$train->depature_station}}
+                                    </div>
+
+                                    <!-- Depature station info -->
+                                    <div class="arrival-station">
+                                        {{$train->arrival_station}}
+                                    </div>
+                                </div>
+                                <!-- End of Ticket details -->
+
+                                <!-- Ticket price -->
+                                <div class="card-footer ticket-price">
+                                    <p>25 {{ trans('site.currency') }} /</p>
+                                </div>
+                                <!-- End of Ticket price -->
                             </div>
-                            2354
-                        </div>
-                        <!-- End of Ticket name -->
+                            <!-- End of Ticket card -->
+                        @endforeach
+                    @else
 
-                        <!-- Ticket details -->
-                        <div class="card-body ticket-details">
-                            <div class="depature-station">
+                    @endif
 
-                            </div>
-                        </div>
-                        <!-- End of Ticket details -->
 
-                        <!-- Ticket price -->
-                        <div class="card-footer ticket-price">
-                            <p>25 {{ trans('site.currency') }}</p>
-                        </div>
-                        <!-- End of Ticket price -->
-                    </div>
-                    <!-- End of Ticket card -->
 
                 </div>
                 <!-- End of Ticktes content -->
