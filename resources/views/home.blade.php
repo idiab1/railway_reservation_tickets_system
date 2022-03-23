@@ -372,7 +372,7 @@
                         <!-- Advantage inforamtion -->
                         <div class="card-body advantage-info">
                             <p>There's no need to go to the ticket office additionally before your
-                                trip. Save your money and nerves.</p>
+                                trip.</p>
                         </div>
                     </div>
                 </div>
