@@ -8,13 +8,21 @@
     &:hover{
         background-color: $maroon-color;
         border-color: $maroon-color;
+        color: $offwhite-color;
     }
     &:focus{
         background-color: $maroon-color;
         border-color: $maroon-color;
+        color: $offwhite-color;
         @include prefixer(box-shadow, none, webkit moz ms o);
     }
 }
 
 /* End of Crayons Button */
 
+/* Search tickets button */
+.box-button .btn-search-tickets{
+    padding: 35px 20px;
+}
+
+/* End of Search tickets button */
