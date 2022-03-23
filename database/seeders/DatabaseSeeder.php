@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             SettingSeeder::class,
             StationSeader::class,
             TrainSeeder::class,
+            TypeSeeder::class,
         ]);
 
     }
