@@ -1,0 +1,20 @@
+/* Sidebar */
+aside.sidebar.min-sidebar{
+    .nav-item{
+        .nav-link{
+            color: $offwhite-color;
+            &:hover{
+                color: $offwhite-color;
+            }
+            /* Icon */
+            .icon{
+                margin-bottom: 5px;
+                i{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+/* End of Sidebar */
