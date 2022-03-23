@@ -1,3 +1,31 @@
+/* layout */
+.layout {
+    display: flex;
+    justify-content: flex-end;
+    /* Sidebar */
+    aside.sidebar.min-sidebar {
+        position: fixed;
+        top: 58.96px;
+        left: 0;
+        width: 100px;
+        height: 100vh;
+        background-color: #1c1f33;
+        z-index: 100;
+        padding: 20px 0;
+    }
+    /* End of Sidebar */
+
+    /* Main Container */
+    .main-container {
+        width: calc(100vw - 100px);
+        overflow: hidden;
+    }
+    /* End of Main Container */
+
+}
+
+/* End of layout */
+
 /* Page header */
 .page-header{
     padding-bottom: 35px;
