@@ -25,9 +25,65 @@
             flex-direction: row;
         }
 
-        .tickets-content .ticket .ticket-details{
+        .tickets-content .ticket .card-header{
+            border: none;
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: transparent;
+            border-right: 1px solid rgba(0, 0, 0, 0.125);
+            padding: 0.75rem 1rem;
+        }
+
+        .tickets-content .ticket .card-header .icon {
+            background-color: #98354e;
+            width: 40px;
+            height: 40px;
+            color: #eee6ce;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+        }
+
+        .tickets-content .ticket .card-header .icon i{
+            font-size: 20px;
+        }
+
+        .tickets-content .ticket .card-header p{
+            color: #98354e;
+            font-weight: bold;
+            padding-top: 5px;
+            text-transform: capitalize;
+        }
+
+        .tickets-content .ticket .card-body{
+            background-color: transparent;
+            padding: 0.75rem 1rem;
+        }
+
+        .tickets-content .ticket .card-body .ticket-details{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .tickets-content .ticket .ticket-price{
+            padding-top: 10px;
+        }
+        .tickets-content .ticket .card-body .ticket-details .icon{
+            display: flex;
+            align-items: center;
+        }
+
+        .tickets-content .ticket .card-footer{
+            border: none;
+            display: flex;
+            padding: 0.75rem 1rem;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+            border-left: 1px solid rgba(0, 0, 0, 0.125);
         }
 
     </style>
@@ -45,6 +101,7 @@
 @section('content')
 <!-- Tickets Section -->
 <section class="tickets-section section">
+
     <!-- Container fluid -->
     <div class="container">
         <div class="row">
@@ -76,31 +133,74 @@
                                 <!-- Ticket name -->
                                 <div class="card-header ticket-name text-center">
                                     <div class="icon">
-                                        <i class="fas fa-train"></i>
+                                        <i class="fas fa-train fa-2x"></i>
                                     </div>
-                                    {{$train->name}}
+                                    <p class="m-0">{{$train->name}}</p>
                                 </div>
                                 <!-- End of Ticket name -->
 
-                                <!-- Ticket details -->
-                                <div class="card-body ticket-details">
-                                    <!-- Depature station info -->
-                                    <div class="depature-station">
-                                        {{$train->depature_station}}
-                                    </div>
+                                <!-- card body -->
+                                <div class="card-body">
+                                    <!-- Ticket details -->
+                                    <div class="ticket-details">
+                                        <!-- Depature station info -->
+                                        <div class="depature-station">
+                                            <ul class="list-unstyled">
+                                                <li>
+                                                    {{$train->depature_at}}
+                                                </li>
+                                                <li>
+                                                    {{$train->depature_station}}
+                                                </li>
+                                            </ul>
+                                        </div>
 
-                                    <!-- Depature station info -->
-                                    <div class="arrival-station">
-                                        {{$train->arrival_station}}
-                                    </div>
-                                </div>
-                                <!-- End of Ticket details -->
+                                        <!-- Icon -->
+                                        <div class="icon">
+                                            <i class="fas fa-angle-double-right"></i>
+                                        </div>
 
-                                <!-- Ticket price -->
-                                <div class="card-footer ticket-price">
-                                    <p>25 {{ trans('site.currency') }} /</p>
+                                        <!-- Depature station info -->
+                                        <div class="arrival-station">
+                                            <ul class="list-unstyled">
+                                                <li>
+                                                    {{$train->arrival_at}}
+                                                </li>
+                                                <li>
+                                                    {{$train->arrival_station}}
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- End of Ticket details -->
+
+                                    <!-- Ticket details -->
+                                    <div class="ticket-details">
+                                        <!-- Ticket price -->
+                                        <div class="ticket-price text-center">
+                                            <p class="m-0">25 {{ trans('site.currency') }} / Person</p>
+                                        </div>
+                                        <!-- End of Ticket price -->
+
+                                        <!-- Ticket price -->
+                                        <div class="ticket-price text-center">
+                                            <p class="m-0">{{$train->train_type}}</p>
+                                        </div>
+                                        <!-- End of Ticket price -->
+                                    </div>
+                                    <!-- End of Ticket details -->
+
                                 </div>
-                                <!-- End of Ticket price -->
+                                <!-- End of card body -->
+
+                                <!-- card footer -->
+                                <div class="card-footer">
+                                    <a class="btn btn-primary crayons-btn btn-buy-ticket"
+                                        href="#">
+                                        Buy Ticket
+                                    </a>
+                                </div>
+                                <!-- End of card footer -->
                             </div>
                             <!-- End of Ticket card -->
                         @endforeach
@@ -123,5 +223,7 @@
 @section('other-scripts')
 <!-- main script -->
 <script src="{{asset('js/main.js')}}"></script>
+<!--Custom script -->
+<script src="{{asset('js/custom.js')}}"></script>
 
 @endsection
