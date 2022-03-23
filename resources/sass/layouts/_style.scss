@@ -176,7 +176,6 @@
     }
     /* Advantage card */
     .advantage-card{
-            /* border-color: #eee6ce; */
         padding-top: 1.5rem;
         padding-bottom: 1.5rem;
         background: transparent;
@@ -184,6 +183,7 @@
         margin-top: 10px;
         margin-bottom: 10px;
         box-shadow: 0px 0px 1px 1px $offwhite-color;
+        @include prefixer(transition, all .27s ease-in-out);
         &:hover {
             background: $dark-color;
             box-shadow: 0px 0px 1px 1px $dark-color;
@@ -194,11 +194,11 @@
             border: none;
             background-color: transparent;
             /* Advantage icon */
-            .advantage-icon{
-                i{
+            // .advantage-icon{
+            //     i{
 
-                }
-            }
+            //     }
+            // }
         }
         /* End of Advantage Header */
         /* Advantage information */
@@ -208,6 +208,7 @@
                 margin-bottom: 0;
                 line-height: 1.5;
                 color: $offwhite-color;
+                padding-top: 8px;
             }
         }
         /* End of Advantage information */
