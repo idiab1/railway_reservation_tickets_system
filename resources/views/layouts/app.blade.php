@@ -42,30 +42,48 @@
 
 </head>
 <body>
+
+
+
     <div id="app">
-        {{-- Navbar --}}
-        @section('navbar')
-            @include('include.navbar', [
-                'setting' => \App\Models\Setting::first()
-            ])
-        @show
+        <!-- layout -->
+        <div class="layout">
+            {{-- Sidebar --}}
+            @section('sidebar')
+                @include('include.sidebar')
+            @show
+            <!-- End of Sidebar -->
 
-        {{-- Header --}}
-        @section('header')
-            @include('include.header')
-        @show
+            <!-- Main Container -->
+            <div class="main-container">
+                {{-- Navbar --}}
+                @section('navbar')
+                    @include('include.navbar', [
+                        'setting' => \App\Models\Setting::first()
+                    ])
+                @show
 
-        {{-- Main Content --}}
-        <main class="main-content">
-            @yield('content')
-        </main>
+                {{-- Header --}}
+                @section('header')
+                    @include('include.header')
+                @show
 
-        {{-- Footer --}}
-        @section('footer')
-            @include('include.footer', [
-                'setting' => \App\Models\Setting::first()
-            ])
-        @show
+                {{-- Main Content --}}
+                <main class="main-content">
+                    @yield('content')
+                </main>
+
+                {{-- Footer --}}
+                @section('footer')
+                    @include('include.footer', [
+                        'setting' => \App\Models\Setting::first()
+                    ])
+                @show
+            </div>
+            <!-- End of Main Container -->
+
+        </div>
+        <!-- end of layout -->
 
     </div>
 
