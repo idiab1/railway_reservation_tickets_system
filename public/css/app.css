@@ -10034,24 +10034,32 @@ h3 {
 /* Crayons Button */
 .crayons-btn {
   letter-spacing: 0.05rem;
-  border-color: #98354e;
-  background-color: #98354e;
+  border-color: #832c42;
+  background-color: #832c42;
   color: #EEE6CE;
   border-radius: 0;
 }
 .crayons-btn:hover {
-  background-color: #98354e;
-  border-color: #98354e;
+  background-color: #832c42;
+  border-color: #832c42;
+  color: #EEE6CE;
 }
 .crayons-btn:focus {
-  background-color: #98354e;
-  border-color: #98354e;
+  background-color: #832c42;
+  border-color: #832c42;
+  color: #EEE6CE;
   -ms-box-shadow: none;
   -o-box-shadow: none;
   box-shadow: none;
 }
 
 /* End of Crayons Button */
+/* Search tickets button */
+.box-button .btn-search-tickets {
+  padding: 35px 20px;
+}
+
+/* End of Search tickets button */
 /* Global Rule */
 body {
   font-family: "Open Sans", sans-serif;
@@ -10075,12 +10083,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #98354e;
+  background-color: #832c42;
   transition-delay: 0.25s;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #98354e;
+  background-color: #832c42;
 }
 
 /* End of scrolling */
@@ -10122,23 +10130,39 @@ body {
 }
 .navbar .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item:hover {
   color: #EEE6CE;
-  background-color: #98354e;
+  background-color: #832c42;
 }
 .navbar .navbar-nav p {
   margin-bottom: 0;
 }
 
 /* End of Navbar */
+/* Sidebar */
+aside.sidebar.min-sidebar .nav-item .nav-link {
+  color: #EEE6CE;
+  /* Icon */
+}
+aside.sidebar.min-sidebar .nav-item .nav-link:hover {
+  color: #EEE6CE;
+}
+aside.sidebar.min-sidebar .nav-item .nav-link .icon {
+  margin-bottom: 5px;
+}
+aside.sidebar.min-sidebar .nav-item .nav-link .icon i {
+  font-size: 20px;
+}
+
+/* End of Sidebar */
 /* Main Header */
 .main-header {
-  height: 500px;
+  height: 555px;
   overflow: hidden;
   position: relative;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   border-bottom: 6px solid #1c1f33;
-  background-image: linear-gradient(45deg, #98354e, rgba(152, 53, 78, 0.56)), url(/images/bg-header.jpg?ce2b13feeffae3cd8f00afa7d5348830);
+  background-image: linear-gradient(45deg, #EEE6CE, rgba(28, 31, 51, 0.65)), url(/images/bg-header.jpg?ce2b13feeffae3cd8f00afa7d5348830);
   /* Header Box */
   /* End of Header Box */
 }
@@ -10156,7 +10180,7 @@ body {
   margin-bottom: 0.7rem;
   font-weight: bold;
   font-size: 2.7rem;
-  color: #EEE6CE;
+  color: #832c42;
   text-transform: uppercase;
 }
 .main-header .header-box .header-info p {
@@ -10213,6 +10237,31 @@ body {
 }
 
 /* End of main footer */
+/* layout */
+.layout {
+  display: flex;
+  justify-content: flex-end;
+  /* Sidebar */
+  /* End of Sidebar */
+  /* Main Container */
+  /* End of Main Container */
+}
+.layout aside.sidebar.min-sidebar {
+  position: fixed;
+  top: 58.96px;
+  left: 0;
+  width: 100px;
+  height: 100vh;
+  background-color: #1c1f33;
+  z-index: 100;
+  padding: 20px 0;
+}
+.layout .main-container {
+  width: calc(100vw - 100px);
+  overflow: hidden;
+}
+
+/* End of layout */
 /* Page header */
 .page-header {
   padding-bottom: 35px;
@@ -10244,13 +10293,13 @@ body {
 }
 .search-reservation .reservation-box {
   position: absolute;
-  top: -85px;
-  width: 96%;
+  top: -55px;
+  padding: 0;
   right: 0;
   left: 0;
   margin: auto;
   z-index: 2;
-  padding: 15px 20px;
+  width: 100%;
   background-color: #1c1f33;
   /* Reservation Form */
   /* End of Reservation Form */
@@ -10258,21 +10307,80 @@ body {
 .search-reservation .reservation-box .reservation-form {
   /* Form */
 }
-.search-reservation .reservation-box .reservation-form form label {
-  font-weight: 600;
+.search-reservation .reservation-box .reservation-form form {
+  /* Box */
+  /* End of box */
+}
+.search-reservation .reservation-box .reservation-form form .box {
+  display: flex;
+  color: #fff;
+  border: 0;
+  align-items: center;
+  justify-content: space-around;
+  background-color: transparent;
+  flex-direction: row;
+  /* Box Content */
+  /* End of Box Content */
+  /* Box Button */
+  /* End of Box Button */
+}
+.search-reservation .reservation-box .reservation-form form .box .box-header {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #832c42;
+  padding: 32px 25px;
+  color: #EEE6CE;
+  border-radius: 0;
+}
+.search-reservation .reservation-box .reservation-form form .box .box-header p {
+  margin: 0;
+}
+.search-reservation .reservation-box .reservation-form form .box .box-content {
+  padding: 0 1.25rem;
+}
+.search-reservation .reservation-box .reservation-form form .box .box-content .box-routes {
+  height: 100%;
+}
+.search-reservation .reservation-box .reservation-form form .box .box-content .box-dates {
+  height: 100%;
+}
+.search-reservation .reservation-box .reservation-form form .box .box-content .form-group {
+  padding: 17px 15px;
+  border-right: 1px solid #111;
+}
+.search-reservation .reservation-box .reservation-form form .box .box-content .form-group:nth-of-type(3) {
+  border-right: none;
+}
+.search-reservation .reservation-box .reservation-form form .box .box-content label {
   font-size: 15px;
   letter-spacing: 0.04rem;
   color: #EEE6CE;
+  font-weight: bold;
+  margin: 0;
 }
-.search-reservation .reservation-box .reservation-form form input {
-  border-color: #1c1f33;
-  background-color: #EEE6CE;
+.search-reservation .reservation-box .reservation-form form .box .box-content input {
+  border: none;
+  background-color: transparent;
+  padding-left: 0;
+  color: #ababab;
 }
-.search-reservation .reservation-box .reservation-form form input:focus {
-  background-color: #EEE6CE;
+.search-reservation .reservation-box .reservation-form form .box .box-content input:focus {
+  background-color: transparent;
+  border: none;
   -ms-box-shadow: none;
   -o-box-shadow: none;
   box-shadow: none;
+}
+.search-reservation .reservation-box .reservation-form form .box .box-button {
+  height: 100%;
+  display: FLEX;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0;
+  border: 0;
 }
 
 /* End of Search Reservation */
@@ -10302,6 +10410,10 @@ body {
   /* End of Advantage Header */
   /* Advantage information */
   /* End of Advantage information */
+}
+.e-ticket-advantages .advantage-card:hover {
+  background: #1c1f33;
+  box-shadow: 0px 0px 1px 1px #1c1f33;
 }
 .e-ticket-advantages .advantage-card .advantage-header {
   padding: 0;
@@ -10368,7 +10480,7 @@ body {
   background-position: bottom center;
   background-size: contain;
   background-repeat: no-repeat;
-  background-color: #98354e;
+  background-color: #832c42;
   position: relative;
   border-right: 4px solid #1c1f33;
   background-image: url(/images/travelers.svg?0d268ce4f97f24d2e1f7704375b08d92);
@@ -10382,7 +10494,7 @@ body {
   right: -15px;
   width: 25px;
   height: 25px;
-  background-color: #98354e;
+  background-color: #832c42;
   border: 5px double #1c1f33;
   z-index: 1;
   border-radius: 50%;
@@ -10394,7 +10506,7 @@ body {
   right: -15px;
   width: 25px;
   height: 25px;
-  background-color: #98354e;
+  background-color: #832c42;
   border: 5px double #1c1f33;
   z-index: 1;
   border-radius: 50%;
@@ -10418,7 +10530,7 @@ body {
   border: 1px solid #ced4da;
 }
 .sign-page .sign-container .sign-form .sign-card-form form .input-group:focus {
-  border: 1px solid #98354e;
+  border: 1px solid #832c42;
 }
 .sign-page .sign-container .sign-form .sign-card-form form .input-group-prepend span {
   line-height: 1.5;
@@ -10449,7 +10561,7 @@ body {
 }
 .sign-page .sign-container .sign-form .sign-card-form form .create-account a {
   font-weight: 600;
-  color: #98354e;
+  color: #832c42;
 }
 
 /* End of sign page */
@@ -10473,10 +10585,10 @@ body {
   /* End of Form */
 }
 .contact-page .contact-box .contact-form .header-title h5 {
-  color: #98354e;
+  color: #832c42;
 }
 .contact-page .contact-box .contact-form .header-icon i {
-  color: #98354e;
+  color: #832c42;
 }
 .contact-page .contact-box .contact-form form {
   /* Label */
@@ -10521,7 +10633,7 @@ body {
   background-position: bottom center;
   background-size: contain;
   background-repeat: no-repeat;
-  background-color: #98354e;
+  background-color: #832c42;
 }
 .contact-page .contact-box .contact-info ul {
   margin-bottom: 0;
