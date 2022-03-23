@@ -10,28 +10,40 @@
     <!-- Select2 -->
     <link rel="stylesheet" href="{{asset('plugins/select2/css/select2.min.css')}}">
     <link rel="stylesheet" href="{{asset('plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css')}}">
-
-
-
     <style>
         .select2-container .select2-selection--single {
             height: auto;
         }
 
+        span.select2.select2-container.select2-container--bootstrap4{
+            width: auto !important;
+        }
+
+        .select2-container .select2-selection--single .select2-selection__rendered {
+            padding-left: 0px;
+        }
+
+        .select2-container--bootstrap4 .select2-selection {
+            border: none;
+            color: #ababab;
+            text-transform: capitalize;
+            background-color: transparent;
+        }
+        .select2-container--bootstrap4 .select2-selection:focus {
+            border:none;
+            box-shadow: none;
+        }
+
+        .select2-container--bootstrap4 .select2-results__option--highlighted,
+        .select2-container--bootstrap4 .select2-results__option--highlighted.select2-results__option[aria-selected=true] {
+            background-color: #1c1f33;
+            color: #EEE6CE;
+            text-transform: capitalize;
+
+        }
+
     </style>
 
-    <style>
-
-        .search-reservation .reservation-box {
-            top: -65px;
-        }
-        .btn-search-tickets{
-            display: FLEX;
-            align-items: center;
-            justify-content: right;
-            margin-top: 30px;
-        }
-    </style>
 @endsection
 
 {{-- Header --}}
@@ -48,7 +60,7 @@
 @section('content')
     <!-- reservation search section -->
     <section class="search-reservation section">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col-12">
                     <!-- Reservation Box -->
@@ -57,57 +69,121 @@
                         <div class="reservation-form">
                             <!-- Form -->
                             <form action="" method="POST">
-                                <div class="row">
-                                    <div class="col-5">
-                                        <!-- Travelling Routing -->
-                                        <div class="form-group">
-                                            <label for="travelling_routing" class="form-label">
-                                                Travelling Routing
-                                            </label>
-                                            <div class="input-group row m-0">
-                                                <div class="col pl-0">
-                                                    <select class="form-control select2bs4 depature-stations">
-                                                        <option selected="selected" >{{trans('site.from')}}</option>
-                                                        @foreach ($stations as $station)
-                                                            <option value="{{$station->id}}" >{{$station->name}}</option>
-                                                        @endforeach
-                                                    </select>
+
+                                <div class="card box">
+                                    <!-- Box Header -->
+                                    <div class="card-header box-header">
+                                        <div class="icon">
+                                            <i class="fas fa-train fa-2x"></i>
+                                        </div>
+                                    </div>
+                                    <!-- End of Box Header -->
+
+                                    <!-- Card Body -->
+                                    <div class="card-body box-content py-0">
+                                        <div class="row">
+                                            {{-- <div class="col">
+                                                <!-- Box Routes -->
+                                                <div class="box-routes">
+                                                    <!-- Travelling Routing -->
+                                                    <div class="form-group m-0">
+                                                        <label for="travelling_routing" class="form-label">
+                                                            Travelling Routing
+                                                        </label>
+                                                        <div class="input-group m-0">
+                                                            <select class="form-control select2bs4 depature-stations">
+                                                                <option>{{trans('site.from')}}</option>
+                                                                @foreach ($stations as $station)
+                                                                    <option value="{{$station->id}}" >{{$station->name}}</option>
+                                                                @endforeach
+                                                            </select>
+                                                            <select class="form-control select2bs4 arrival-stations">
+                                                                <option>{{trans('site.to')}}</option>
+                                                                @foreach ($stations as $station)
+                                                                    <option value="{{$station->id}}" >{{$station->name}}</option>
+                                                                @endforeach
+                                                            </select>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="col pr-0">
-                                                    <select class="form-control select2bs4 arrival-stations">
-                                                        <option selected="selected" >{{trans('site.to')}}</option>
+                                                <!-- End of Box Routes -->
+                                            </div>
+                                            <div class="col pl-0">
+                                                <!-- Box Dates -->
+                                                <div class="box-dates">
+                                                    <!-- Travelling date -->
+                                                    <div class="form-group m-0">
+                                                        <label for="travelling_routing" class="form-label">
+                                                            Travelling Date
+                                                        </label>
+                                                        <div class="input-group m-0">
+                                                            <input type="date" class="form-control" id="travelling_routing" aria-label="From">
+                                                            <input type="date" class="form-control" id="travelling_routing" aria-label="To">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- End of Box Dates -->
+                                            </div> --}}
+
+                                            <div class="col-3 px-0">
+                                                <div class="form-group m-0">
+                                                    <label for="from" class="form-label">
+                                                        From
+                                                    </label>
+                                                    <select class="form-control select2bs4 depature-stations" id="from">
+                                                        <option>{{trans('site.all')}}</option>
                                                         @foreach ($stations as $station)
                                                             <option value="{{$station->id}}" >{{$station->name}}</option>
                                                         @endforeach
                                                     </select>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-5">
-                                        <!-- Travelling date -->
-                                        <div class="form-group">
-                                            <label for="travelling_routing" class="form-label">
-                                                Travelling Date
-                                            </label>
-                                            <div class="input-group row m-0">
-                                                <div class="col pl-0">
-                                                    <input type="date" class="form-control" id="travelling_routing" aria-label="From">
-                                                </div>
-                                                <div class="col pr-0">
-                                                    <input type="date" class="form-control" id="travelling_routing" aria-label="To">
+                                            <div class="col-3 px-0">
+                                                <div class="form-group m-0">
+                                                    <label for="to" class="form-label">
+                                                        To
+                                                    </label>
+                                                    <select class="form-control select2bs4 arrival-stations" id="to">
+                                                        <option>{{trans('site.all')}}</option>
+                                                        @foreach ($stations as $station)
+                                                            <option value="{{$station->id}}" >{{$station->name}}</option>
+                                                        @endforeach
+                                                    </select>
                                                 </div>
                                             </div>
+                                            <div class="col-3 px-0">
+                                                <div class="form-group m-0">
+                                                    <label for="depature_date" class="form-label">
+                                                        Depature Date
+                                                    </label>
+                                                    <input type="date" class="form-control" id="depature_date" aria-label="from">
+                                                </div>
+                                            </div>
+                                            <div class="col-3 px-0">
+                                                <div class="form-group m-0 border-right-0">
+                                                    <label for="depature_date" class="form-label">
+                                                        Arrival Date
+                                                    </label>
+                                                    <input type="date" class="form-control" id="arrival_date" aria-label="to">
+                                                </div>
+                                            </div>
+
                                         </div>
+
+
                                     </div>
-                                    <div class="col-2 btn-search-tickets">
+                                    <!-- End of Card Body -->
+
+                                    <!-- Card Footer -->
+                                    <div class="card-footer box-button p-0">
                                         <!-- Button search tickets -->
-                                        <div class="form-group text-right">
-                                            <button type="submit" class="btn btn-primary crayons-btn">
-                                                Search Tickets
+                                        <div class="form-group m-0 text-right">
+                                            <button type="submit" class="btn btn-primary btn-search-tickets crayons-btn">
+                                                Search
                                             </button>
                                         </div>
                                     </div>
+                                    <!-- End of Card Footer -->
                                 </div>
                             </form>
                             <!-- ./end of form -->
@@ -123,7 +199,7 @@
 
     <!-- Recent Posts -->
     <section class="recent-posts section">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col-12">
                     <!-- Section Header -->
@@ -258,7 +334,7 @@
 
     <!-- Ticket Advantages -->
     <section class="e-ticket-advantages section">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col-12">
                     <!-- Header of section -->
@@ -266,7 +342,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-3 col-sm-6 col-12">
                     <!-- Advantage card -->
                     <div class="card advantage-card text-center">
                         <!-- Advantage Header -->
@@ -275,8 +351,6 @@
                             <div class="advantage-icon">
                                 <i class="fas fa-ticket-alt fa-3x"></i>
                             </div>
-                            <!-- Name of advantage -->
-                            <h2></h2>
                         </div>
                         <!-- Advantage inforamtion -->
                         <div class="card-body advantage-info">
@@ -285,7 +359,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 col-sm-6 col-12">
                     <!-- Advantage card -->
                     <div class="card advantage-card text-center">
                         <!-- Advantage Header -->
@@ -294,8 +368,6 @@
                             <div class="advantage-icon">
                                 <i class="fas fa-building fa-3x"></i>
                             </div>
-                            <!-- Name of advantage -->
-                            <h2></h2>
                         </div>
                         <!-- Advantage inforamtion -->
                         <div class="card-body advantage-info">
@@ -304,7 +376,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 col-sm-6 col-12">
                     <!-- Advantage card -->
                     <div class="card advantage-card text-center">
                         <!-- Advantage Header -->
@@ -314,7 +386,6 @@
                                 <i class="fas fa-globe fa-3x"></i>
                             </div>
                             <!-- Name of advantage -->
-                            <h2></h2>
                         </div>
                         <!-- Advantage inforamtion -->
                         <div class="card-body advantage-info">
@@ -323,7 +394,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 col-sm-6 col-12">
                     <!-- Advantage card -->
                     <div class="card advantage-card text-center">
                         <!-- Advantage Header -->
@@ -333,7 +404,6 @@
                                 <i class="fas fa-credit-card fa-3x"></i>
                             </div>
                             <!-- Name of advantage -->
-                            <h2></h2>
                         </div>
                         <!-- Advantage inforamtion -->
                         <div class="card-body advantage-info">
