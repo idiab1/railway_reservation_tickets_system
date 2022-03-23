@@ -92,6 +92,7 @@ return [
     "setting_info" => "Setting Info",
     "to" => "To",
     "from" => "From",
+    "all" => "all",
 
     // Buttons
     'send' => 'Send',
