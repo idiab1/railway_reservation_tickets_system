@@ -86,6 +86,10 @@
         margin-top: 10px;
         margin-bottom: 10px;
         box-shadow: 0px 0px 1px 1px $offwhite-color;
+        &:hover {
+            background: $dark-color;
+            box-shadow: 0px 0px 1px 1px $dark-color;
+        }
         /* Advantage Header */
         .advantage-header{
             padding: 0;
