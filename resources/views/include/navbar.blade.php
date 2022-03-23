@@ -9,38 +9,6 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- Left Side Of Navbar -->
-            <ul class="navbar-nav ml-auto">
-                <!-- Home -->
-                <li class="nav-item">
-                    <a class="nav-link" href="{{route('home')}}">
-                        {{ trans('site.home') }}
-                    </a>
-                </li>
-
-                <!-- Tickets -->
-                <li class="nav-item">
-                    <a class="nav-link" href="{{route("user.tickets.index")}}">
-                        {{ trans('site.tickets') }}
-                    </a>
-                </li>
-
-                <!-- News -->
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        {{ trans('site.news') }}
-                    </a>
-                </li>
-
-
-                <!-- Contact us -->
-                <li class="nav-item">
-                    <a class="nav-link" href="{{route('contact.page')}}">
-                        {{ trans('site.contact_us') }}
-                    </a>
-                </li>
-            </ul>
-
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
                 <!-- Languages -->
