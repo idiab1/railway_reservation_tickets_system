@@ -10,5 +10,4 @@ section.style.minHeight = ((window.innerHeight) - ( footerH +  navbarH)) + "px";
 
 if(headerH){
     section.style.minHeight = ((window.innerHeight) - ( navbarH + headerH + footerH )) + "px";
-    console.log(headerH)
 }
