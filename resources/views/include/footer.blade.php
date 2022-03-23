@@ -1,6 +1,6 @@
 <!-- Footer -->
 <footer class="main-footer">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class="col-12">
                 <!-- Copyright -->
@@ -13,13 +13,6 @@
                             </div>
                             <!-- ./end of logo Brand -->
                         </div>
-                        {{-- <div class="col-md-2 col-sm-12 d-none d-md-block">
-                            <!-- Footer Icon -->
-                            <div class="footer-icon">
-                                <i class="fas fa-arrow-circle-up"></i>
-                            </div>
-                            <!-- End of Footer Icon -->
-                        </div> --}}
                         <div class="col-md-6 col-sm-12">
                             <div class="copyright-info text-right">
                                 <p>&copy; 2022 {{ trans('site.copyright') }}</p>
