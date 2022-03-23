@@ -58,33 +58,103 @@
     /* Reservation Box */
     .reservation-box{
         position: absolute;
-        top: -85px;
-        width: 96%;
+        top: -55px;
+        padding: 0;
         right: 0;
         left: 0;
         margin: auto;
         z-index: 2;
-        padding: 15px 20px;
+        width: 100%;
         background-color: $dark-color;
         /* Reservation Form */
         .reservation-form{
             /* Form */
             form{
-                label{
-                    font-weight: 600;
-                    font-size: 15px;
-                    letter-spacing: .04rem;
-                    color: $offwhite-color;
-                }
-                input{
-                    border-color: $dark-color;
-                    background-color: $offwhite-color;
-                    &:focus{
-                        background-color: $offwhite-color;
-                        @include prefixer(box-shadow, none, webkit moz ms o);
+                /* Box */
+                .box{
+                    display: flex;
+                    color: #fff;
+                    border: 0;
+                    align-items: center;
+                    justify-content: space-around;
+                    background-color: transparent;
+                    flex-direction: row;
+
+                    .box-header{
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                        align-items: center;
+                        background-color: $maroon-color;
+                        padding: 32px 25px;
+                        color: $offwhite-color;
+                        @include prefixer(border-radius, 0, webkit moz ms o);
+                        p{
+                            margin: 0;
+                        }
                     }
 
+                    /* Box Content */
+                    .box-content{
+                        padding: 0 1.25rem;
+                        .box-routes{
+                            height: 100%;
+                        }
+
+                        .box-dates{
+                            height: 100%;
+                        }
+
+                        .form-group{
+                            padding: 17px 15px;
+                            border-right: 1px solid #111;
+                            &:nth-of-type(3) {
+                                border-right: none;
+                            }
+                        }
+
+                        label{
+                            font-size: 15px;
+                            letter-spacing: .04rem;
+                            color: $offwhite-color;
+                            font-weight: bold;
+                            margin: 0;
+
+                        }
+                        input{
+                            border: none;
+                            background-color: transparent;
+                            padding-left: 0;
+                            color: #ababab;
+
+                            &:focus{
+                                background-color: transparent;
+                                border: none;
+                                @include prefixer(box-shadow, none, webkit moz ms o);
+                            }
+
+                        }
+
+                    }
+
+                    /* End of Box Content */
+
+                    /* Box Button */
+                    .box-button{
+                        height: 100%;
+                        display: FLEX;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 0;
+                        border: 0;
+                    }
+                    /* End of Box Button */
+
                 }
+                /* End of box */
+
+
             }
         }
         /* End of Reservation Form */
