@@ -16,7 +16,7 @@ class TicketController extends Controller
     {
         // Get all data of trains
         $trains = Train::all();
-        return view("pages.tickets", compact("trains"));
+        return view("tickets.index", compact("trains"));
     }
 
     /**
@@ -27,6 +27,7 @@ class TicketController extends Controller
     public function create()
     {
         //
+        return view("tickets.create");
     }
 
     /**
