@@ -47,6 +47,8 @@ Route::group(
             "destroy" => "user.tickets.destroy",
         ]);
 
+        Route::get('tickets/reserve', [TicketController::class, 'create'])->name('tickets.reserve');
+
         // Profile user routes
         Route::resource('profile', ProfileController::class)->only([
             'index', 'update'
