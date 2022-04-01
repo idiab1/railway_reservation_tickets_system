@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\TicketController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -34,20 +35,17 @@ Route::group(
         Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
         // Tickets Route
-        Route::resource('tickets', TicketController::class)->except([
-            'show'
+        Route::resource('tickets', TicketController::class)->only([
+            'index'
         ])->parameters([
             'tickets' => "id"
         ])->names([
             "index" => "user.tickets.index",
-            "create" => "user.tickets.create",
-            "store" => "user.tickets.store",
-            "edit" => "user.tickets.edit",
-            "update" => "user.tickets.update",
-            "destroy" => "user.tickets.destroy",
         ]);
 
         Route::get('tickets/reserve', [TicketController::class, 'create'])->name('tickets.reserve');
+
+
 
         // Profile user routes
         Route::resource('profile', ProfileController::class)->only([
