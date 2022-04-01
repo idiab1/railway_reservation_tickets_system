@@ -46,6 +46,7 @@ Route::group(
         Route::get('tickets/reserve', [TicketController::class, 'create'])->name('tickets.reserve');
 
 
+        Route::resource('reserve', ReservationController::class);
 
         // Profile user routes
         Route::resource('profile', ProfileController::class)->only([
