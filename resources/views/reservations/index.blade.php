@@ -9,6 +9,38 @@
 @section('other-styles')
     <link rel="stylesheet" href="{{asset("plugins/stepper/css/bs-stepper.min.css")}}">
     <style>
+        .active .bs-stepper-circle {
+            background-color: #832c42;
+            color: #eee6ce;
+        }
+        .active .bs-stepper-label{
+            color: #832c42;
+        }
+
+        .train-card .train-header{
+            color: #eee6ce;
+            background-color: #832c42;
+        }
+        .train-card .train-header .icon{
+            margin-bottom: 5px;
+        }
+        .train-card .train-header h4{
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+
+        .train-card .card-body .ticket-details{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        label{
+            display: block;
+        }
+        select{
+            width: 100%;
+        }
 
     </style>
 @endsection
@@ -30,105 +62,177 @@
     <!-- Container fluid -->
     <div class="container">
 
-        <div class="`p-4 bg-white shadow-sm">
-            <!-- Stepper -->
-            <div id="stepper1" class="bs-stepper">
-                <!-- Stepper Header -->
-                <div class="bs-stepper-header" role="tablist">
-                    <!-- Step Item -->
-                    <div class="step" data-target="#test-l-1">
-                        <button type="button" class="step-trigger" role="tab"
-                            id="stepper1trigger1" aria-controls="test-l-1">
-                            <span class="bs-stepper-circle">1</span>
-                            <span class="bs-stepper-label">Email</span>
-                        </button>
-                    </div>
-                    <!-- End of Step Item -->
-
-                    <div class="bs-stepper-line"></div>
-
-                    <!-- Step Item -->
-                    <div class="step" data-target="#test-l-2">
-                        <button type="button" class="step-trigger" role="tab"
-                            id="stepper1trigger3" aria-controls="test-l-2">
-                            <span class="bs-stepper-circle">2</span>
-                            <span class="bs-stepper-label">Validate</span>
-                        </button>
-                    </div>
-                    <!-- End of Step Item -->
-                </div>
-                <!-- End of Stepper Header -->
-
-                <!-- Stepper Content -->
-                <div class="bs-stepper-content">
-                    <form onSubmit="return false" method="POST" action="{{route("reserve.store", ["train" => $train->id])}}">
-                        @csrf
-                        <!-- Stepper one -->
-                        <div id="test-l-1" role="tabpanel" class="bs-stepper-pane"
-                            aria-labelledby="stepper1trigger1">
-
-                            <!-- Form Row -->
-                            <div class="form-row">
-                                <div class="col">
-                                    <!-- Username -->
-                                    <div class="form-group">
-                                        <label for="username">Username</label>
-                                        <input type="text" class="form-control" id="username"
-                                            placeholder="Type username" name="name" required>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <!-- Email Address -->
-                                    <div class="form-group">
-                                        <label for="email">Email address</label>
-                                        <input type="email" class="form-control" id="email"
-                                            placeholder="Enter email" name="email" required>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <!-- Gender -->
-                                    <div class="form-group">
-                                        <label for="gender">Gender</label>
-                                        @php
-                                            $gender = ["male", "female"]
-                                        @endphp
-                                        <select name="gender" id="gender">
-                                            @foreach ($gender as $item)
-                                                <option value=""></option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                </div>
+        <div class="row">
+            <div class="col-md-7">
+                <div class="p-2 bg-white shadow-sm">
+                    <!-- Stepper -->
+                    <div id="stepper1" class="bs-stepper">
+                        <!-- Stepper Header -->
+                        <div class="bs-stepper-header" role="tablist">
+                            <!-- reservation -->
+                            <div class="step" data-target="#test-l-1">
+                                <button type="button" class="step-trigger" role="tab"
+                                    id="stepper1trigger1" aria-controls="test-l-1">
+                                    <span class="bs-stepper-circle">1</span>
+                                    <span class="bs-stepper-label">Reservation</span>
+                                </button>
                             </div>
-                            <!-- End of Form Row -->
+                            <!-- End of reservation -->
 
+                            <div class="bs-stepper-line"></div>
 
-
-
-
-
-
-
-
-
-                            <button class="btn btn-primary crayons-btn crayons-btn" onclick="stepper.next()">Next</button>
+                            <!-- Step Item -->
+                            <div class="step" data-target="#test-l-2">
+                                <button type="button" class="step-trigger" role="tab"
+                                    id="stepper1trigger3" aria-controls="test-l-2">
+                                    <span class="bs-stepper-circle">2</span>
+                                    <span class="bs-stepper-label">Validate</span>
+                                </button>
+                            </div>
+                            <!-- End of Step Item -->
                         </div>
-                        <!-- End of Stepper one -->
+                        <!-- End of Stepper Header -->
 
-                        <!-- Stepper three -->
-                        <div id="test-l-2" role="tabpanel" class="bs-stepper-pane text-center"
-                            aria-labelledby="stepper1trigger3">
-                            <button class="btn btn-primary crayons-btn mt-5" onclick="stepper.previous()">Previous</button>
-                            <button type="submit" class="btn btn-primary crayons-btn mt-5">Submit</button>
+                        <!-- Stepper Content -->
+                        <div class="bs-stepper-content">
+                            <form onSubmit="return false" method="POST" action="{{route("reserve.store", ["train" => $train->id])}}">
+                                @csrf
+                                <!-- Stepper one -->
+                                <div id="test-l-1" role="tabpanel" class="bs-stepper-pane"
+                                    aria-labelledby="stepper1trigger1">
+
+                                    <!-- Form Row -->
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <!-- Username -->
+                                            <div class="form-group">
+                                                <label for="username">Username</label>
+                                                <input type="text" class="form-control" id="username"
+                                                    placeholder="Type username" name="name" required>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <!-- Email Address -->
+                                            <div class="form-group">
+                                                <label for="email">Email address</label>
+                                                <input type="email" class="form-control" id="email"
+                                                    placeholder="Enter email" name="email" required>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <!-- Gender -->
+                                            <div class="form-group">
+                                                <label for="gender">Gender</label>
+                                                @php
+                                                    $gender = ["male", "female"]
+                                                @endphp
+                                                <select name="gender" id="gender">
+                                                    @foreach ($gender as $item)
+                                                        <option value=""></option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End of Form Row -->
+
+
+
+
+
+
+
+
+
+
+                                    <button class="btn btn-primary crayons-btn crayons-btn" onclick="stepper.next()">Next</button>
+                                </div>
+                                <!-- End of Stepper one -->
+
+                                <!-- Stepper three -->
+                                <div id="test-l-2" role="tabpanel" class="bs-stepper-pane text-center"
+                                    aria-labelledby="stepper1trigger3">
+                                    <button class="btn btn-primary crayons-btn mt-5" onclick="stepper.previous()">Previous</button>
+                                    <button type="submit" class="btn btn-primary crayons-btn mt-5">Submit</button>
+                                </div>
+                                <!-- Stepper three -->
+
+                            </form>
                         </div>
-                        <!-- Stepper three -->
+                        <!-- End of Stepper Content -->
 
-                    </form>
+                    </div>
+                    <!-- End of stepper -->
                 </div>
-                <!-- End of Stepper Content -->
-
             </div>
-            <!-- End of stepper -->
+            <div class="col-md-5">
+                <!-- Train Card -->
+                <div class="card train-card">
+                    <!-- Train header -->
+                    <div class="card-header train-header text-center">
+                        <!-- Icon -->
+                        <div class="icon">
+                            <i class="fas fa-train fa-2x"></i>
+                        </div>
+                        <h4 class="m-0">{{$train->name}}</h4>
+                    </div>
+                    <!-- End of Train header -->
+
+                    <!-- Train body -->
+                    <div class="card-body train-body">
+                        <!-- Ticket details -->
+                        <div class="ticket-details">
+                            <!-- Depature station info -->
+                            <div class="depature-station">
+                                <ul class="list-unstyled">
+                                    <li>
+                                        {{$train->depature_at}}
+                                    </li>
+                                    <li>
+                                        {{$train->depature_station}}
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Icon -->
+                            <div class="icon">
+                                <i class="fas fa-angle-double-right"></i>
+                            </div>
+
+                            <!-- Depature station info -->
+                            <div class="arrival-station">
+                                <ul class="list-unstyled">
+                                    <li>
+                                        {{$train->arrival_at}}
+                                    </li>
+                                    <li>
+                                        {{$train->arrival_station}}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- End of Ticket details -->
+
+                        <!-- Ticket details -->
+                        <div class="ticket-details">
+                            <!-- Ticket price -->
+                            <div class="ticket-price text-center">
+                                <p class="m-0">{{$train->train_type}}</p>
+                            </div>
+                            <!-- End of Ticket price -->
+                            <!-- Ticket price -->
+                            <div class="ticket-price text-center">
+                                <p class="m-0">25 {{ trans('site.currency') }} / Person</p>
+                            </div>
+                            <!-- End of Ticket price -->
+
+                        </div>
+                        <!-- End of Ticket details -->
+                    </div>
+                    <!-- End of Train body -->
+                </div>
+                <!-- End of Train Card -->
+            </div>
         </div>
     </div>
     <!-- End of Container fluid -->
