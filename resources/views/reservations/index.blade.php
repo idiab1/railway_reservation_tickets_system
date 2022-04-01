@@ -34,7 +34,10 @@
             display: flex;
             justify-content: space-between;
         }
-
+        .ticket-price span{
+            color: #832c42;
+            font-weight: 600;
+        }
         label{
             display: block;
         }
@@ -222,7 +225,7 @@
                             <!-- End of Ticket price -->
                             <!-- Ticket price -->
                             <div class="ticket-price text-center">
-                                <p class="m-0">25 {{ trans('site.currency') }} / Person</p>
+                                <p class="m-0"><span>25 {{ trans('site.currency') }}</span> / Person</p>
                             </div>
                             <!-- End of Ticket price -->
 
