@@ -178,7 +178,7 @@
                                     <div class="ticket-details">
                                         <!-- Ticket price -->
                                         <div class="ticket-price text-center">
-                                            <p class="m-0">25 {{ trans('site.currency') }} / Person</p>
+                                            <p class="m-0">{{$train->price}} {{ trans('site.currency') }} / Person</p>
                                         </div>
                                         <!-- End of Ticket price -->
 
