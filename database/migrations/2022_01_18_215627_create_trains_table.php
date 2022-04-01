@@ -23,6 +23,7 @@ class CreateTrainsTable extends Migration
             $table->tinyInteger('status')->default(0);
             $table->integer('seats_count')->default(1);
             $table->string('train_type');
+            $table->integer('price');
             $table->timestamps();
         });
     }
