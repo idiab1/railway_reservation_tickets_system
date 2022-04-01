@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Train;
 use Illuminate\Http\Request;
 
 class ReservationController extends Controller
@@ -11,9 +12,10 @@ class ReservationController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($train)
     {
-        //
+        $train = Train::find($train);
+        return view("reservations.index", compact("train"));
     }
 
     /**
@@ -23,7 +25,6 @@ class ReservationController extends Controller
      */
     public function create()
     {
-        //
     }
 
     /**
