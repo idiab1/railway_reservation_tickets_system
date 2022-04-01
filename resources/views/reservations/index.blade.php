@@ -111,7 +111,8 @@
                                             <div class="form-group">
                                                 <label for="username">Username</label>
                                                 <input type="text" class="form-control" id="username"
-                                                    placeholder="Type username" name="name" required>
+                                                    placeholder="Type username" name="name" required
+                                                    value="{{Auth::user()->name}}">
                                             </div>
                                         </div>
                                         <div class="col">
@@ -119,10 +120,11 @@
                                             <div class="form-group">
                                                 <label for="email">Email address</label>
                                                 <input type="email" class="form-control" id="email"
-                                                    placeholder="Enter email" name="email" required>
+                                                    placeholder="Enter email" name="email" required
+                                                    value="{{Auth::user()->email}}">
                                             </div>
                                         </div>
-                                        <div class="col">
+                                        {{-- <div class="col">
                                             <!-- Gender -->
                                             <div class="form-group">
                                                 <label for="gender">Gender</label>
@@ -135,9 +137,42 @@
                                                     @endforeach
                                                 </select>
                                             </div>
-                                        </div>
+                                        </div> --}}
                                     </div>
                                     <!-- End of Form Row -->
+
+                                    <!-- Form Row -->
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <!-- Depature Station -->
+                                            <div class="form-group">
+                                                <label for="depature_station">Depature Station</label>
+                                                <input type="text" class="form-control disabled" id="depature_station"
+                                                    name="depature_station" required disabled
+                                                    value="{{$train->depature_station}}">
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <!-- Arrival Station -->
+                                            <div class="form-group">
+                                                <label for="arrival_station">Arrival Station</label>
+                                                <input type="text" class="form-control disabled" id="arrival_station"
+                                                    name="arrival_station" required disabled
+                                                    value="{{$train->arrival_station}}">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- End of Form Row -->
+
+                                    <!-- Price -->
+                                    <div class="form-group">
+                                        <label for="price">Price</label>
+                                        <input type="text" class="form-control disabled" id="price"
+                                            name="price" required disabled
+                                            value="{{$train->price}}">
+                                    </div>
+
 
 
 
@@ -220,7 +255,7 @@
                         <div class="ticket-details">
                             <!-- Ticket price -->
                             <div class="ticket-price text-center">
-                                <p class="m-0">{{$train->train_type}}</p>
+                                <span class="m-0">{{$train->train_type}}</span>
                             </div>
                             <!-- End of Ticket price -->
                             <!-- Ticket price -->
