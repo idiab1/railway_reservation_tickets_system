@@ -43,10 +43,12 @@ Route::group(
             "index" => "user.tickets.index",
         ]);
 
-        Route::get('tickets/reserve', [TicketController::class, 'create'])->name('tickets.reserve');
+        // Route::get('tickets/reserve', [TicketController::class, 'create'])->name('tickets.reserve');
 
 
-        Route::resource('reserve', ReservationController::class);
+        Route::resource('tickets/reserve', ReservationController::class)->parameters([
+            "reserve" => "id"
+        ]);
 
         // Profile user routes
         Route::resource('profile', ProfileController::class)->only([
