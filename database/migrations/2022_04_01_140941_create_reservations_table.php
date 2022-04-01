@@ -17,7 +17,7 @@ class CreateReservationsTable extends Migration
             $table->increments('id');
             $table->integer('user_id')->unsigned();
             $table->integer('train_id')->unsigned();
-            $table->dateTime('date_reserve')->default(new DateTime());
+            $table->dateTime('date_reserve');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
