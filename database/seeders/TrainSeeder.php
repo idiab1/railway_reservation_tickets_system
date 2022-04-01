@@ -23,6 +23,7 @@ class TrainSeeder extends Seeder
             'status' => 0,
             'seats_count' => 100,
             'train_type' => "General class",
+            "price" => 25,
         ]);
 
         $train->stations()->attach([1, 2]);
