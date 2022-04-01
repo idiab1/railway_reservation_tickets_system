@@ -11,7 +11,7 @@ class Train extends Model
 
     protected $fillable = [
         'name', 'depature_at', 'arrival_at', 'status', 'train_type',
-        'seats_count', 'depature_station', 'arrival_station',
+        'seats_count', 'depature_station', 'arrival_station', "price",
     ];
 
     protected $dates = ['depature_at', 'arrival_at'];
