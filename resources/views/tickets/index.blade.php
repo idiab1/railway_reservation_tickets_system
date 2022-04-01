@@ -196,7 +196,7 @@
                                 <!-- card footer -->
                                 <div class="card-footer">
                                     <a class="btn btn-primary crayons-btn btn-buy-ticket"
-                                        href="{{route("tickets.reserve")}}">
+                                        href="{{route("reserve.index", ["train" => $train->id])}}">
                                         Buy Ticket
                                     </a>
                                 </div>
