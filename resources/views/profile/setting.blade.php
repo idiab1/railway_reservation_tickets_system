@@ -5,6 +5,35 @@
     Edit {{$user->name . "'s"}}
 @endsection
 
+{{-- Styles --}}
+@section('other-styles')
+    <style>
+        .profile-setting-page {
+            background-image: linear-gradient(180deg, rgba(152, 53, 78, 0.8) -2.1%, #1c1f33 90%);
+        }
+        .profile-setting-page .setting-info nav .nav-tabs {
+            padding: 0.5rem;
+            justify-content: space-around;
+        }
+        .profile-setting-page .setting-info nav .nav-tabs .nav-item {
+            padding: 0.35rem 0.7rem;
+        }
+
+        .profile-setting-page .setting-info .tab-content .tab-pane .setting-form .card form .card-body {
+            padding: 1rem;
+        }
+        .profile-setting-page .setting-info .tab-content .tab-pane .setting-form .card form .avatar-upload {
+            max-width: 165px;
+            margin: 15px auto;
+        }
+        .profile-setting-page .setting-info .tab-content .tab-pane .setting-form .card form .avatar-preview {
+            width: 150px;
+            height: 150px;
+        }
+
+    </style>
+@endsection
+
 
 {{-- Header --}}
 @section('header')
@@ -37,20 +66,8 @@
                     <!-- Navbar tabs -->
                     <nav>
                         <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                            <!-- Change your avatar -->
-                            <a class="nav-item nav-link active" id="nav-avatar-tab"
-                                data-toggle="tab" href="#nav-avatar" role="tab"
-                                aria-controls="nav-avatar" aria-selected="true">
-                                <!-- Icon -->
-                                <div class="icon mr-1 d-inline-block">
-                                    <i class="mdi mdi-image-edit-outline"></i>
-                                </div>
-                                <span>Change your Avatar</span>
-                            </a>
-                            <!-- Change your avatar -->
-
                             <!-- Change Account info  -->
-                            <a class="nav-item nav-link" id="nav-account-tab"
+                            <a class="nav-item nav-link active" id="nav-account-tab"
                                 data-toggle="tab" href="#nav-account" role="tab"
                                 aria-controls="nav-account" aria-selected="false">
                                 <!-- Icon -->
@@ -108,56 +125,10 @@
                     <!-- Tab content -->
                     <div class="tab-content" id="nav-tabContent">
 
-                        <!-- Avatar content -->
-                        <div class="tab-pane fade show active" id="nav-avatar" role="tabpanel"
-                            aria-labelledby="nav-avatar-tab">
-                            <div class="setting-form section-form">
-                                <div class="card card-primary">
-                                    <!-- Card header -->
-                                    {{-- <div class="card-header">
-                                        <h5 class="title">
-                                            Change your Avatar
-                                        </h5>
-                                    </div> --}}
-                                    <!-- End of card header -->
-                                    <!-- form -->
-                                    <form action="{{route('profile.update', ['id' => $user->id])}}" method="POST" enctype="multipart/form-data">
-                                        @csrf
-                                        @method('PUT')
-                                        <div class="card-body p-0">
-                                            <!-- image -->
-                                            <div class="form-group">
-                                                <div class="avatar-upload">
-                                                    <div class="avatar-edit">
-                                                        <input type='file' id="imageUpload" name="image" accept=".png, .jpg, .jpeg" />
-                                                        <label for="imageUpload">
-                                                            <i class="mdi mdi-pencil"></i>
-                                                        </label>
-                                                    </div>
-                                                    <div class="avatar-preview">
-                                                        <div id="imagePreview" style="background-image: url({{asset('uploads/users/' . Auth::user()->profile->image)}});">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- /.card-body -->
 
-                                        <div class="card-footer {{app()->getLocale() == "ar" ? "text-left" : "text-right" }}">
-                                            <button type="submit" class="btn btn-primary update-btn crayons-btn">
-                                                Update
-                                            </button>
-                                        </div>
-                                    </form>
-                                    <!-- End of form -->
-                                </div>
-                            <!-- /.card -->
-                            </div>
-                        </div>
-                        <!-- End of Avatar content -->
 
                         <!-- Change Account information -->
-                        <div class="tab-pane fade" id="nav-account" role="tabpanel"
+                        <div class="tab-pane fade show active" id="nav-account" role="tabpanel"
                             aria-labelledby="nav-account-tab">
 
                             <div class="setting-form section-form">
@@ -174,6 +145,22 @@
                                         @csrf
                                         @method('PUT')
                                         <div class="card-body">
+
+                                            <!-- image -->
+                                            <div class="form-group">
+                                                <div class="avatar-upload">
+                                                    <div class="avatar-edit">
+                                                        <input type='file' id="imageUpload" name="image" accept=".png, .jpg, .jpeg" />
+                                                        <label for="imageUpload">
+                                                            <i class="mdi mdi-pencil"></i>
+                                                        </label>
+                                                    </div>
+                                                    <div class="avatar-preview">
+                                                        <div id="imagePreview" style="background-image: url({{asset('uploads/users/' . Auth::user()->profile->image)}});">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
 
                                             <!-- Name -->
                                             <div class="form-group">
@@ -194,10 +181,10 @@
                                             </div>
 
                                             <!-- Email -->
-                                            <div class="form-group">
+                                            <div class="form-group m-0">
                                                 <label for="email">Email</label>
                                                 <!-- Input group -->
-                                                <div class="input-group mb-3">
+                                                <div class="input-group mb-0">
                                                     <div class="input-group-prepend">
                                                         <!-- Input Icon -->
                                                         <span class="input-group-text" id="email">
@@ -266,11 +253,11 @@
                                             </div>
 
                                             <!-- Confirm Password -->
-                                            <div class="form-group">
+                                            <div class="form-group m-0">
                                                 <label for="confirmPassword">Confirm Password</label>
 
                                                 <!-- Input Group -->
-                                                <div class="input-group mb-3">
+                                                <div class="input-group mb-0">
                                                     <div class="input-group-prepend">
                                                         <!-- Input icon -->
                                                         <span class="input-group-text" id="facebook">
@@ -354,7 +341,7 @@
 
                                             </div>
                                             <!-- linkedin -->
-                                            <div class="form-group">
+                                            <div class="form-group  m-0">
                                                 <label for="linkedin">Linkedin URL</label>
                                                 <!-- Input Group -->
                                                 <div class="input-group">
@@ -405,7 +392,7 @@
                                         @method('PUT')
                                         <div class="card-body">
                                             <!-- about -->
-                                            <div class="form-group">
+                                            <div class="form-group m-0">
                                                 <label for="about">About</label>
                                                 <textarea class="form-control" name="about" id="about" cols="30"
                                                 rows="10" placeholder="About Here">{{$user->profile->about}}</textarea>
@@ -437,38 +424,6 @@
 
     </div>
 </section>
-@endsection
-
-{{-- Footer --}}
-@section('footer')
-<!-- Footer -->
-<footer class="main-footer">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
-                <!-- Copyright -->
-                <div class="copyright">
-                    <div class="row">
-                        <div class="col-md-6 col-sm-12">
-                            <!-- Logo Brand -->
-                            <div class="logo-brand">
-                                <h6 class="brand-name">{{\App\Models\Setting::first()->web_name}}</h6>
-                            </div>
-                            <!-- ./end of logo Brand -->
-                        </div>
-                        <div class="col-md-6 col-sm-12">
-                            <div class="copyright-info text-right">
-                                <p>&copy; 2022 {{ trans('site.copyright') }}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- ./end of copyright -->
-            </div>
-        </div> <!-- ./End of row -->
-    </div>
-</footer>
-<!-- End Of Footer -->
 @endsection
 
 @section('other-scripts')
