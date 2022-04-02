@@ -98,7 +98,7 @@
 
                         <!-- Stepper Content -->
                         <div class="bs-stepper-content">
-                            <form onSubmit="return false" method="POST" action="{{route("reserve.store", ["train" => $train->id])}}">
+                            <form method="POST" action="{{route("reserve.store", ["train" => $train->id])}}">
                                 @csrf
                                 <!-- Stepper one -->
                                 <div id="test-l-1" role="tabpanel" class="bs-stepper-pane"
