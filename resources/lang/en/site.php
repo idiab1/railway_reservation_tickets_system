@@ -17,6 +17,7 @@ return [
     'seats' => 'Seats',
     'tickets' => 'Tickets',
     'posts' => 'Posts',
+    "profile" => "Profile",
 
     // Users Page
     'list_users' => 'All users',
