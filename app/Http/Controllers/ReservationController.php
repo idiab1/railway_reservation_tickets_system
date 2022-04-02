@@ -47,7 +47,7 @@ class ReservationController extends Controller
             "date_reserve" => Carbon::now()
         ]);
 
-        return redirect()->back();
+        return redirect()->route("profile.index");
 
     }
 
