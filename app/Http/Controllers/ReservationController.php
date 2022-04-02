@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Reservation;
 use App\Models\Train;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ReservationController extends Controller
 {
@@ -33,9 +36,19 @@ class ReservationController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $train)
     {
-        //
+        // Get data of train
+        $train = Train::find($train);
+
+        Reservation::create([
+            "user_id" => Auth::user()->id,
+            "train_id" => $train->id,
+            "date_reserve" => Carbon::now()
+        ]);
+
+        return redirect()->back();
+
     }
 
     /**
