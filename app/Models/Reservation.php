@@ -9,8 +9,10 @@ class Reservation extends Model
 {
     use HasFactory;
 
-    protected $fillable = [ "user_id", "train_id" ];
+    protected $fillable = [ "user_id", "train_id", "date_reserve"];
 
-    protected $cats = [ "date_reserve" ];
+    protected $cats = [
+        "date_reserve" => 'datetime:Y-m-d H:00',
+    ];
 
 }
