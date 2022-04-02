@@ -27,7 +27,15 @@ class Train extends Model
     }
 
 
-
+    /**
+     * Get all of the reservations for the Train
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function reservations()
+    {
+        return $this->hasMany(Reservation::class);
+    }
 
     /**
      * Get the type associated with the Train
