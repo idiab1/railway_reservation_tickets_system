@@ -25,4 +25,14 @@ class Reservation extends Model
         return $this->belongsTo(User::class);
     }
 
+    /**
+     * Get the train that owns the Reservation
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function train()
+    {
+        return $this->belongsTo(Train::class);
+    }
+
 }
