@@ -72,6 +72,14 @@
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
 
+                            <!-- Profile link -->
+                            <a class="dropdown-item d-inline-block" href="{{route('profile.index')}}">
+                                <div class="icon mr-1 d-inline-block">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                {{ trans('site.profile') }}
+                            </a>
+
                             <!-- Setting link -->
                             <a class="dropdown-item d-inline-block" href="{{route('profile.setting')}}">
                                 <div class="icon mr-1 d-inline-block">
