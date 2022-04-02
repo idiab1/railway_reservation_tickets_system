@@ -15,4 +15,14 @@ class Reservation extends Model
         "date_reserve" => 'datetime:Y-m-d H:00',
     ];
 
+    /**
+     * Get the user that owns the Reservation
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
 }
