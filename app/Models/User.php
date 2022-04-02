@@ -75,5 +75,15 @@ class User extends Authenticatable
         return $this->belongsToMany(Role::class, 'role_user');
     }
 
+    /**
+     * Get all of the reservations for the User
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function reservations()
+    {
+        return $this->hasMany(Reservation::class);
+    }
+
 
 }
