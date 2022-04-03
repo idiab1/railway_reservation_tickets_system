@@ -28,7 +28,7 @@ Route::group(
         'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
     ], function(){
 
-        Route::prefix('admin')->middleware(['auth', 'is_admin'])->group( function(){
+        Route::prefix('dashboard')->middleware(['auth', 'is_admin'])->group( function(){
 
             // Home Route
             Route::get('/home', [AdminHomeController::class, 'admin_home'])->name('admin.home');
