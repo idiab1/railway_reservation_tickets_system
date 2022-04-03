@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Train;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class AdminHomeController extends Controller
@@ -20,7 +22,10 @@ class AdminHomeController extends Controller
 
     public function admin_home()
     {
-        return view('admin.adminHome');
+        $userCount = User::all()->count();
+        $trainsCount = Train::all()->count();
+        $servationsCount = User::all()->count();
+        return view('admin.adminHome', compact("userCount", "trainsCount", "servationsCount"));
     }
 
 }
