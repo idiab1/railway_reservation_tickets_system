@@ -41,6 +41,21 @@
             <div class="row">
                 <div class="col-8 m-auto">
                     <div class="row">
+                        <div class="col-md-6 d-none p-0 d-md-block">
+                            <!-- sign info -->
+                            <div class="sign-info sign-box">
+                                <!-- Card -->
+                                <div class="card card-sign-info">
+                                    <!-- Card Body -->
+                                    <div class="card-body">
+
+                                    </div>
+                                    <!-- End of Card Body -->
+                                </div>
+                                <!-- End of card -->
+                            </div>
+                            <!-- End of sign info -->
+                        </div>
                         <div class="col-md-6 p-0">
                             <!-- Sing Form -->
                             <div class="sign-form sign-box">
@@ -205,21 +220,7 @@
                             </div>
                             <!-- End of Sing Form -->
                         </div>
-                        <div class="col-md-6 d-none p-0 d-md-block">
-                            <!-- sign info -->
-                            <div class="sign-info sign-box">
-                                <!-- Card -->
-                                <div class="card card-sign-info">
-                                    <!-- Card Body -->
-                                    <div class="card-body">
-
-                                    </div>
-                                    <!-- End of Card Body -->
-                                </div>
-                                <!-- End of card -->
-                            </div>
-                            <!-- End of sign info -->
-                        </div>
+                        
                     </div>
                 </div>
             </div>
