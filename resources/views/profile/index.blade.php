@@ -5,48 +5,6 @@
     {{$user->name}}
 @endsection
 
-{{-- Styles --}}
-@section('other-styles')
-    <style>
-        .profile-page .user-card{
-        }
-        .profile-page .user-card .user-details h3{
-            color: #1c1f33;
-            font-size: 1.35rem;
-            font-weight: bold;
-        }
-        .profile-page .user-card .user-details p{
-            color: #575757;
-        }
-
-        .profile-page .user-card .card-body .user-image{
-            padding-bottom: 10px;
-        }
-        .profile-page .user-card .card-body .user-image img{
-            border: 4px solid #832c42;
-        }
-        .profile-page .user-card .card-footer{
-            display: flex;
-            justify-content: space-between;
-            background-color: #832c42;
-            padding: 1rem;
-        }
-        .profile-page .user-card .card-footer a{
-            border: none;
-            color: #eee6ce;
-            text-decoration: none;
-            text-transform: capitalize;
-        }
-        .profile-page .user-card .card-footer a .icon i{
-
-        }
-        .profile-page .user-card .card-footer a span{
-
-        }
-    </style>
-@endsection
-
-
 {{-- Header --}}
 @section('header')
 
@@ -120,13 +78,112 @@
                 <!-- End of user card -->
             </div>
             <div class="col-md-8">
-                <!-- Card -->
-                <div class="card">
-                    <!-- card header -->
-                    <div class="card-header"></div>
-                    <!-- End of card header -->
-                </div>
-                <!-- End of Card -->
+                <!-- User Tickets section -->
+                <section class="tickets-section">
+                    <div class="row">
+                        <div class="col-12 pb-3">
+                            <!-- User Ticket -->
+                            <div class="user-ticket">
+                                <h3>Your Tickets</h3>
+                            </div>
+                            <!-- End of User Ticket -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        @foreach ($user->reservations as $reservation)
+                        <div class="col-12">
+
+                            <!-- Card -->
+                            <div class="card ticket mb-2">
+                                <!-- card header -->
+                                <div class="card-header ">
+                                    <div class="ticket-header">
+
+                                        <span class="d-block">
+                                            {{date('h:m A', strtotime($reservation->date_reserve))}}
+                                        </span>
+                                        <span class="d-block">
+                                            {{date('d M, Y', strtotime($reservation->date_reserve))}}
+                                        </span>
+
+                                    </div>
+                                </div>
+                                <!-- End of card header -->
+                                <!-- card body -->
+                                <div class="card-body ticket-body">
+
+                                    <!-- Ticket user info -->
+                                    <div class="ticket-details">
+                                        <h5>{{$reservation->user->name}}</h5>
+                                        <span class="d-block">{{$reservation->user->email}}</span>
+                                    </div>
+                                    <!-- End of Ticket user info -->
+
+                                    <!-- Ticket details -->
+                                    <div class="ticket-details">
+                                        <!-- Depature station info -->
+                                        <div class="depature-station">
+                                            <ul class="list-unstyled">
+                                                <li>
+                                                    {{$reservation->train->depature_at}}
+                                                </li>
+                                                <li>
+                                                    {{$reservation->train->depature_station}}
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- Icon -->
+                                        <div class="icon">
+                                            <i class="fas fa-angle-double-right"></i>
+                                        </div>
+
+                                        <!-- Depature station info -->
+                                        <div class="arrival-station">
+                                            <ul class="list-unstyled">
+                                                <li>
+                                                    {{$reservation->train->arrival_at}}
+                                                </li>
+                                                <li>
+                                                    {{$reservation->train->arrival_station}}
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- End of Ticket details -->
+
+                                    <!-- Ticket details -->
+                                    <div class="ticket-details m-0">
+                                        <!-- Ticket price -->
+                                        <div class="ticket-price text-center">
+                                            <span class="m-0">{{$reservation->train->train_type}}</span>
+                                        </div>
+                                        <!-- End of Ticket price -->
+                                        <!-- Ticket price -->
+                                        <div class="ticket-price text-center">
+                                            <span class="m-0">{{$reservation->train->name}}</span>
+                                        </div>
+                                        <!-- End of Ticket price -->
+
+                                        <!-- Ticket price -->
+                                        <div class="ticket-price text-center">
+                                            <p class="m-0"><span>{{$reservation->train->price}} {{ trans('site.currency') }}</span> / Person</p>
+                                        </div>
+                                        <!-- End of Ticket price -->
+
+                                    </div>
+                                    <!-- End of Ticket details -->
+                                </div>
+                                <!-- End of card body -->
+                            </div>
+                            <!-- End of Card -->
+
+                        </div>
+                        @endforeach
+                    </div>
+                </section>
+                <!-- End of User Tickets section -->
+
             </div>
         </div>
         <div class="row"></div>
