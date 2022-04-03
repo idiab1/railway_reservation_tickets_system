@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\TrainController;
 use App\Http\Controllers\Admin\TypeController;
 use App\Http\Controllers\Admin\Train\TypeController as TrainTypesController;
 use App\Http\Controllers\Admin\PostController;
+use App\Http\Controllers\Admin\ReservationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,6 +53,12 @@ Route::group(
                 'show'
             ])->parameters([
                 'trains' => 'id',
+            ]);
+
+            Route::resource("reservations", ReservationController::class)->except([
+                "show"
+            ])->parameters([
+                "reservations" => "id"
             ]);
 
             // Route::resource('trains/{id}/types', TrainTypesController::class)->only([
