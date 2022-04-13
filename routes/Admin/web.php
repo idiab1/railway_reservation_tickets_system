@@ -1,16 +1,7 @@
 <?php
 
-use App\Http\Controllers\Admin\ContactController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminHomeController;
-use App\Http\Controllers\Admin\SettingController;
-use App\Http\Controllers\Admin\StationController;
-use App\Http\Controllers\Admin\UserController;
-use App\Http\Controllers\Admin\TrainController;
-use App\Http\Controllers\Admin\TypeController;
-use App\Http\Controllers\Admin\Train\TypeController as TrainTypesController;
-use App\Http\Controllers\Admin\PostController;
-use App\Http\Controllers\Admin\ReservationController;
 
 /*
 |--------------------------------------------------------------------------
