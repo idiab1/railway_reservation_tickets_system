@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
             UsersTableSeeder::class,
             SettingSeeder::class,
             StationSeader::class,
+            TypeSeeder::class,
             TrainSeeder::class,
         ]);
 
