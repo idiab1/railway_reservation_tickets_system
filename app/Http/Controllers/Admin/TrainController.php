@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Station;
 use App\Models\Train;
+use App\Models\Type;
 use Illuminate\Http\Request;
 
 class TrainController extends Controller
@@ -32,7 +33,9 @@ class TrainController extends Controller
     {
         // Get all data of stations
         $stations = Station::all();
-        return view('admin.trains.create', compact('stations'));
+        // Get all data of types
+        $types = Type::all();
+        return view('admin.trains.create', compact('stations', 'types'));
     }
 
     /**
