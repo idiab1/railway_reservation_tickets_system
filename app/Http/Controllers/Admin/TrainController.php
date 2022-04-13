@@ -21,7 +21,8 @@ class TrainController extends Controller
         $trains = Train::all();
         // Get all data of stations
         $stations = Station::all();
-        return view('admin.trains.index', compact('trains', 'stations'));
+        $types = Type::all();
+        return view('admin.trains.index', compact('trains', 'stations', "types"));
     }
 
     /**
