@@ -59,6 +59,38 @@
             </div>
         </li> --}}
 
+        <!-- Add new button -->
+        <li class="nav-item dropdown add-new">
+            <a class="nav-link btn btn-secondaryy btn-add-new dropdown-toggle"
+                id="navbarDropdown" href="#" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" v-pre>
+                <!-- Icon -->
+                <i class="fas fa-plus"></i>
+                {{-- {{ trans('site.add_new') }} --}}
+            </a>
+
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <!-- Dropdown menu links -->
+                <a class="dropdown-item" href="{{route('users.create')}}">
+                    {{ trans('site.user') }}
+                </a>
+                <a class="dropdown-item" href="{{route('stations.create')}}">
+                    {{ trans('site.station') }}
+                </a>
+                <a class="dropdown-item" href="{{route('trains.create')}}">
+                    {{ trans('site.train') }}
+                </a>
+                <a class="dropdown-item" href="">
+                    {{ trans('site.ticket') }}
+                </a>
+                <a class="dropdown-item" href="{{route('posts.create')}}">
+                    {{ trans('site.post') }}
+                </a>
+
+            </div>
+        </li>
+        <!-- End of add new button -->
+
         <!-- Languages -->
         <li class="nav-item nav-language dropdown d-none d-md-block">
             <a class="nav-link pr-0 dropdown-toggle" id="languageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
@@ -119,37 +151,7 @@
         </li>
         <!-- End of user dropdown -->
 
-        <!-- Add new button -->
-        <li class="nav-item dropdown add-new">
-            <a class="nav-link btn btn-secondaryy btn-add-new dropdown-toggle"
-                id="navbarDropdown" href="#" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false" v-pre>
-                <!-- Icon -->
-                <i class="fas fa-plus"></i>
-                {{-- {{ trans('site.add_new') }} --}}
-            </a>
 
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <!-- Dropdown menu links -->
-                <a class="dropdown-item" href="{{route('users.create')}}">
-                    {{ trans('site.user') }}
-                </a>
-                <a class="dropdown-item" href="{{route('stations.create')}}">
-                    {{ trans('site.station') }}
-                </a>
-                <a class="dropdown-item" href="{{route('trains.create')}}">
-                    {{ trans('site.train') }}
-                </a>
-                <a class="dropdown-item" href="">
-                    {{ trans('site.ticket') }}
-                </a>
-                <a class="dropdown-item" href="{{route('posts.create')}}">
-                    {{ trans('site.post') }}
-                </a>
-
-            </div>
-        </li>
-        <!-- End of add new button -->
 
     </ul>
 </nav>
