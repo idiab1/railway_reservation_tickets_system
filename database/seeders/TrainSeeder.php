@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Train;
+use App\Models\Type;
 use Illuminate\Database\Seeder;
 
 class TrainSeeder extends Seeder
@@ -22,7 +23,8 @@ class TrainSeeder extends Seeder
             'arrival_station' => 'Alexandria Station',
             'status' => 0,
             'seats_count' => 100,
-            'train_type' => "General class",
+            // 'train_type' => "General class",
+            'type_id' => Type::first()->id,
             "price" => 25,
         ]);
 
