@@ -5,6 +5,19 @@
     {{ trans('site.edit') }} {{$user->name . "'s"}}
 @endsection
 
+{{-- Styles --}}
+@section('styles')
+    {{-- <style>
+        .content-wrapper {
+            background-color: #b8405e;
+            background-image: url("../../../images/add-user.svg");
+            background-position: bottom;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    </style> --}}
+@endsection
+
 {{-- Page name --}}
 @section('page_name')
     {{ trans('site.edit') }} {{$user->name . "'s"}}

@@ -41,7 +41,6 @@ class PostController extends Controller
     public function store(Request $request)
     {
         // dd(Auth::user()->id);
-        // dd($request);
 
         // Validate on all data coming from request
         $this->validate($request, [
