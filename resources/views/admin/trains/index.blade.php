@@ -87,7 +87,7 @@
                                                 </ul>
                                             </td>
                                             <td>
-                                                {{$train->train_type}}
+                                                {{$train->type->name}}
                                             </td>
                                             <td>
                                                 {{$train->seats_count}}
