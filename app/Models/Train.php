@@ -10,7 +10,7 @@ class Train extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name', 'depature_at', 'arrival_at', 'status', 'train_type',
+        'name', 'depature_at', 'arrival_at', 'status', 'type_id',
         'seats_count', 'depature_station', 'arrival_station', "price",
     ];
 
@@ -42,9 +42,9 @@ class Train extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
-    // public function type()
-    // {
-    //     return $this->hasOne(Type::class);
-    // }
+    public function type()
+    {
+        return $this->belongsTo(Type::class);
+    }
 
 }
