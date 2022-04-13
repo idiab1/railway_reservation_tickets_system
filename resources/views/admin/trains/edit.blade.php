@@ -5,6 +5,19 @@
     {{ trans('site.edit') }} {{$train->name . "'s"}}
 @endsection
 
+{{-- Styles --}}
+@section('styles')
+
+    <!-- Select2 -->
+    <link rel="stylesheet" href="{{asset('plugins/select2/css/select2.min.css')}}">
+    <style>
+        .select2-container .select2-selection--single {
+            height: auto;
+        }
+
+    </style>
+@endsection
+
 {{-- Page name --}}
 @section('page_name')
     {{ trans('site.edit') }} {{$train->name . "'s"}}
@@ -45,18 +58,25 @@
                                                 value="{{$train->name}}" placeholder="{{trans('site.admin_enter_name')}}">
                                             </div>
 
+                                            <!-- Train Type -->
+                                            <div class="form-group">
+                                                <label for="type_id">{{ trans('site.train_type') }}</label>
+                                                <!-- All types -->
+                                                <select class="form-control select2 searchable" name="type_id"
+                                                    id="type_id" required>
+                                                    <option value="0" >{{trans('site.all_types')}}</option>
+                                                    @foreach ($types as $type)
+                                                        <option value="{{$type->id}}"
+                                                            {{$train->type->id == $type->id ? "selected" : " "}}>
+                                                            {{$type->name}}
+                                                        </option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+
                                             <!-- Train Type / Seats Count -->
                                             <div class="form-group">
                                                 <div class="row">
-
-                                                    <!-- Train Type -->
-                                                    <div class="col">
-                                                        <label for="train_type">{{ trans('site.train_type') }}</label>
-                                                        <input class="form-control" type="text" id="train_type" name="train_type"
-                                                            value="{{$train->train_type}}" placeholder="{{trans('site.enter_name_type')}}"
-                                                            required>
-                                                    </div>
-                                                    <!-- End of Train Type -->
 
                                                     <!-- Seats available -->
                                                     <div class="col">
@@ -66,6 +86,16 @@
                                                             required>
                                                     </div>
                                                     <!-- End of Seats available -->
+
+                                                    <!-- Train price -->
+                                                    <div class="col">
+                                                        <label for="price">{{ trans('site.train_price') }}</label>
+                                                        <input type="number" class="form-control" id="price"
+                                                            name="price" placeholder="{{trans('site.enter_train_price')}}"
+                                                            value="{{$train->price}}" required>
+                                                    </div>
+                                                    <!-- End of Train price -->
+
                                                 </div>
                                             </div>
 
@@ -154,25 +184,11 @@
 @endsection
 
 @section('scripts')
+<!-- Select 2 -->
+<script src="{{asset('plugins/select2/js/select2.min.js')}}"></script>
 <script>
     $(document).ready(function(){
-
-        // Image Preview
-        $('.avatar').change(function(){
-            if(this.files && this.files[0]){
-
-                let reader = new FileReader();
-
-                reader.onload = function(e){
-
-                    $('.preview').attr('src', e.target.result);
-
-                }
-                reader.readAsDataURL(this.files[0]);
-
-            }
-        })
-
+        $('.select2').select2();
     });
 </script>
 @endsection
