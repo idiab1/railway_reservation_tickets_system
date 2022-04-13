@@ -1,5 +1,5 @@
 <!-- Main Sidebar Container -->
-<aside class="main-sidebar sidebar-dark-primary mini-sidebar elevation-4">
+<aside class="main-sidebar sidebar-dark-primary mini-sidebar elevation-4" style="height: 100%">
     <!-- Brand Logo -->
     {{-- <a href="{{route('admin.home')}}" class="brands-link"> --}}
         {{-- <img src="../../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8"> --}}
