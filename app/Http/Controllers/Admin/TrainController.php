@@ -89,7 +89,9 @@ class TrainController extends Controller
         // Get the data of train by id
         $train = Train::find($id);
         $stations = Station::all();
-        return view("admin.trains.edit", compact('train', 'stations'));
+        // Get all data of types
+        $types = Type::all();
+        return view("admin.trains.edit", compact('train', 'stations', "types"));
     }
 
     /**
