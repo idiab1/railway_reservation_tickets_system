@@ -58,18 +58,22 @@
                                                     required>
                                             </div>
 
+                                            <!-- Train Type -->
+                                            <div class="form-group">
+                                                <label for="type_id">{{ trans('site.train_type') }}</label>
+                                                <!-- All types -->
+                                                <select class="form-control select2 searchable" name="type_id"
+                                                    id="type_id" required>
+                                                    <option value="0" >{{trans('site.all_types')}}</option>
+                                                    @foreach ($types as $type)
+                                                        <option value="{{$type->id}}">{{$type->name}}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+
                                             <!-- Train Type / Seats Count -->
                                             <div class="form-group">
                                                 <div class="row">
-
-                                                    <!-- Train Type -->
-                                                    <div class="col">
-                                                        <label for="train_type">{{ trans('site.train_type') }}</label>
-                                                        <input type="text" class="form-control" id="train_type"
-                                                            name="train_type" placeholder="{{trans('site.enter_name_type')}}"
-                                                            required>
-                                                    </div>
-                                                    <!-- End of Train Type -->
 
                                                     <!-- Seats available -->
                                                     <div class="col">
@@ -79,6 +83,16 @@
                                                             required>
                                                     </div>
                                                     <!-- End of Seats available -->
+
+                                                    <!-- Train price -->
+                                                    <div class="col">
+                                                        <label for="price">{{ trans('site.train_price') }}</label>
+                                                        <input type="number" class="form-control" id="price"
+                                                            name="price" placeholder="{{trans('site.enter_train_price')}}"
+                                                            required>
+                                                    </div>
+                                                    <!-- End of Train price -->
+
                                                 </div>
                                             </div>
 
