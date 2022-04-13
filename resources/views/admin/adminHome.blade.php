@@ -30,9 +30,11 @@
 @section('content')
     <!-- Homepage -->
     <section class="homepage">
-        <div class="container">
+
+        <!-- Status Content -->
+        <div class="status-content">
             <div class="row">
-                <div class="col-lg-4 col-6">
+                <div class="col-12 col-sm-6 col-md-4">
                     <!-- Project box -->
                     <div class="small-box bg-info">
                         <div class="inner">
@@ -49,7 +51,7 @@
                     <!-- End of Project box -->
                 </div>
                 <!-- ./col -->
-                <div class="col-lg-4 col-6">
+                <div class="col-12 col-sm-6 col-md-4">
                     <!-- Tasks box -->
                     <div class="small-box bg-success">
                         <div class="inner">
@@ -66,7 +68,7 @@
                     <!-- End of Tasks box -->
                 </div>
                 <!-- ./col -->
-                <div class="col-lg-4 col-6">
+                <div class="col-12 col-sm-6 col-md-4">
                     <!-- Users box -->
                     <div class="small-box bg-warning">
                         <div class="inner">
@@ -84,6 +86,8 @@
                 <!-- ./col -->
             </div>
         </div>
+        <!-- End of Status Content -->
+
     </section>
     <!-- End of Homepage -->
 @endsection
