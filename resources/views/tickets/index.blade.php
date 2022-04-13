@@ -184,7 +184,7 @@
 
                                         <!-- Ticket price -->
                                         <div class="ticket-price text-center">
-                                            <p class="m-0">{{$train->train_type}}</p>
+                                            <p class="m-0">{{$train->type->name}}</p>
                                         </div>
                                         <!-- End of Ticket price -->
                                     </div>
