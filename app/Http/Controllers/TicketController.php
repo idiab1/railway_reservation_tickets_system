@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Train;
+use App\Models\Type;
 use Illuminate\Http\Request;
 
 class TicketController extends Controller
@@ -16,7 +17,9 @@ class TicketController extends Controller
     {
         // Get all data of trains
         $trains = Train::all();
-        return view("tickets.index", compact("trains"));
+        // Get all data of types of trains
+        $types = Type::all();
+        return view("tickets.index", compact("trains", "types"));
     }
 
     /**
