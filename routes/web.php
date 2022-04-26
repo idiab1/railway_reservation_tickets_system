@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TypeController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -40,7 +41,7 @@ Route::group(
         ]);
 
         // Route::get('tickets/reserve', [TicketController::class, 'create'])->name('tickets.reserve');
-
+        Route::get('tickets/{id}/types', [TypeController::class, "ticketTypes"])->name("type.ticket");
 
         Route::resource('tickets/{train}/reserve', ReservationController::class)->parameters([
             "reserve" => "id"
