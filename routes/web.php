@@ -41,7 +41,7 @@ Route::group(
         ]);
 
         // Route::get('tickets/reserve', [TicketController::class, 'create'])->name('tickets.reserve');
-        Route::get('tickets/{id}/types', [TypeController::class, "ticketTypes"])->name("type.ticket");
+        Route::get('tickets/{type}/types', [TypeController::class, "ticketTypes"])->name("type.ticket");
 
         Route::resource('tickets/{train}/reserve', ReservationController::class)->parameters([
             "reserve" => "id"
