@@ -71,6 +71,13 @@ class TypeController extends Controller
         return view("tickets._tickets", compact("type", "trains"));
     }
 
+    public function allTypes(){
+
+        $trains = Train::all();
+
+        return view("tickets._tickets", compact("trains"));
+
+    }
 
     /**
      * Update the specified resource in storage.
