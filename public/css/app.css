@@ -10575,8 +10575,9 @@ aside.sidebar.min-sidebar .nav-item .nav-link .icon i {
 .tickets-section .filter-box .filter-box-header h4 {
   margin-bottom: 0;
 }
-.tickets-section .filter-box .filter-box .filter-box-body {
+.tickets-section .filter-box .filter-box-body {
   padding: 1rem;
+  background-color: #eee6ce;
 }
 .tickets-section .tickets-content .ticket {
   flex-direction: row;
