@@ -21,6 +21,12 @@
             text-align: center;
         }
 
+        .filter-box .filter-box-header{
+            color: #eee6ce;
+            background: #98354e;
+            text-align: center;
+        }
+
         .tickets-content .ticket{
             flex-direction: row;
         }
@@ -115,7 +121,9 @@
                     <!-- End of Filter Box Header -->
 
                     <!-- Filter Box Body -->
-                    <div class="filter-box-body"></div>
+                    <div class="card-body filter-box-body">
+
+                    </div>
                     <!-- End of Filter Box Body -->
                 </div>
                 <!-- End of Filter Box -->
