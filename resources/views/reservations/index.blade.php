@@ -87,7 +87,7 @@
                             <!-- Step Item -->
                             <div class="step" data-target="#test-l-2">
                                 <button type="button" class="step-trigger" role="tab"
-                                    id="stepper1trigger3" aria-controls="test-l-2">
+                                    id="stepper1trigger2" aria-controls="test-l-2">
                                     <span class="bs-stepper-circle">2</span>
                                     <span class="bs-stepper-label">Validate</span>
                                 </button>
@@ -174,23 +174,14 @@
                                     </div>
 
 
-
-
-
-
-
-
-
-
-
-                                    <button class="btn btn-primary crayons-btn crayons-btn" onclick="stepper.next()">Next</button>
+                                    <button class="btn btn-primary crayons-btn crayons-btn" type="button" onclick="stepper.next()">Next</button>
                                 </div>
                                 <!-- End of Stepper one -->
 
                                 <!-- Stepper three -->
-                                <div id="test-l-2" role="tabpanel" class="bs-stepper-pane text-center"
-                                    aria-labelledby="stepper1trigger3">
-                                    <button class="btn btn-primary crayons-btn mt-5" onclick="stepper.previous()">Previous</button>
+                                <div id="test-l-2" role="tabpane2" class="bs-stepper-pane text-center"
+                                    aria-labelledby="stepper1trigger2">
+                                    <button class="btn btn-primary crayons-btn mt-5">Previous</button>
                                     <button type="submit" class="btn btn-primary crayons-btn mt-5">Submit</button>
                                 </div>
                                 <!-- Stepper three -->
@@ -289,7 +280,9 @@
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         let stepper1 = document.querySelector('.bs-stepper');
-        window.stepper = new Stepper(document.querySelector('.bs-stepper'))
+        window.stepper = new Stepper(document.querySelector('.bs-stepper'), {
+            linear: true
+        })
     });
 
 //   myStepper = new Stepper(document.querySelector('#stepper1'),{
