@@ -61,12 +61,12 @@ Route::group(
             //     'update' => 'trains.types.update',
             // ]);
 
-            // // Types  Routes
-            // Route::resource('types', TypeController::class)->only([
-            //     'index', 'destroy'
-            // ])->parameters([
-            //     'types' => 'id',
-            // ]);
+            // Types  Routes
+            Route::resource('types', TypeController::class)->except([
+                'show'
+            ])->parameters([
+                'types' => 'id',
+            ]);
 
             // Posts Route
             Route::resource('posts', PostController::class)->except([
