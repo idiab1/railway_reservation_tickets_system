@@ -6,7 +6,7 @@ use App\Models\Train;
 use App\Models\Type;
 use Illuminate\Http\Request;
 
-class TicketController extends Controller
+class TypeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,11 +15,7 @@ class TicketController extends Controller
      */
     public function index()
     {
-        // Get all data of trains
-        $trains = Train::all();
-        // Get all data of types of trains
-        $types = Type::all();
-        return view("tickets.index", compact("trains", "types"));
+        //
     }
 
     /**
@@ -30,7 +26,6 @@ class TicketController extends Controller
     public function create()
     {
         //
-        // return view("tickets.create");
     }
 
     /**
@@ -64,6 +59,24 @@ class TicketController extends Controller
     public function edit($id)
     {
         //
+    }
+
+    public function ticketTypes(Type $type)
+    {
+        //
+        // $types = Type::find($id);
+
+        $trains = Train::where("type_id", $type->id)->get();
+
+        return view("tickets._tickets", compact("type", "trains"));
+    }
+
+    public function allTypes(){
+
+        $trains = Train::all();
+
+        return view("tickets._tickets", compact("trains"));
+
     }
 
     /**

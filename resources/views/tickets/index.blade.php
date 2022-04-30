@@ -8,6 +8,7 @@
 {{-- Styles --}}
 @section('other-styles')
     <style>
+        /* Sub Header */
         .sub-header {
             height: 270px;
             display: flex;
@@ -20,6 +21,7 @@
             margin-top: 0;
             text-align: center;
         }
+<<<<<<< HEAD
 
         .filter-box .filter-box-header{
             color: #eee6ce;
@@ -91,6 +93,9 @@
             background-color: transparent;
             border-left: 1px solid rgba(0, 0, 0, 0.125);
         }
+=======
+        /* End of Sub Header */
+>>>>>>> 56f52ad072d75c54527db97dccd6bc74cb4201b0
 
     </style>
 @endsection
@@ -111,7 +116,7 @@
     <!-- Container fluid -->
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <!-- Filter Box -->
                 <div class="card filter-box">
                     <!-- Filter Box Header -->
@@ -122,102 +127,64 @@
 
                     <!-- Filter Box Body -->
                     <div class="card-body filter-box-body">
+<<<<<<< HEAD
 
+=======
+                        <button class="btn btn-link all-types"
+                            data-url="{{route("all.types")}}" data-method="get">
+                            All
+                        </button>
+                        @if ($types->count() > 0)
+                            @foreach ($types as $type)
+                                {{-- <a href="">{{$type->name}}</a> --}}
+                                <button class="btn btn-link d-block type-item"
+                                data-url="{{route("type.ticket", ["type" => $type->id])}}"
+                                data-method="get">{{$type->name}}</button>
+                            @endforeach
+                        @endif
+                    </div>
+                    <!-- End of Filter Box Body -->
+                </div>
+                <!-- End of Filter Box -->
+
+                <!-- Filter Box -->
+                <div class="card filte-box my-4">
+                    <!-- Filter Box Header -->
+                    <div class="card-header filter-box-header">
+                        <h4>Filter By</h4>
+                    </div>
+                    <!-- End of Filter Box Header -->
+
+                    <!-- Filter Box Body -->
+                    <div class="card-body filter-box-body">
+                        <button class="btn btn-link all-types"
+                            data-url="{{route("all.types")}}" data-method="get">
+                            All
+                        </button>
+                        @if ($types->count() > 0)
+                            @foreach ($types as $type)
+                                {{-- <a href="">{{$type->name}}</a> --}}
+                                <button class="btn btn-link d-block type-item"
+                                data-url="{{route("type.ticket", ["type" => $type->id])}}"
+                                data-method="get">{{$type->name}}</button>
+                            @endforeach
+                        @endif
+>>>>>>> 56f52ad072d75c54527db97dccd6bc74cb4201b0
                     </div>
                     <!-- End of Filter Box Body -->
                 </div>
                 <!-- End of Filter Box -->
             </div>
-            <div class="col-md-8">
+            <div class="col-md-9">
                 <!-- Ticktes content -->
                 <div class="tickets-content">
-                    {{-- <div class="tickets-content-header"></div> --}}
+                    <div class="loading text-center">
+                        <div class="loader"></div>
+                        <p class="p-2">Waiting</p>
+                    </div>
+                    <div class="tickets-content-list">
 
-                    @if ($trains->count() > 0)
-                        @foreach ($trains as $train)
-                            <!-- Ticket card -->
-                            <div class="card ticket">
-
-                                <!-- Ticket name -->
-                                <div class="card-header ticket-name text-center">
-                                    <div class="icon">
-                                        <i class="fas fa-train fa-2x"></i>
-                                    </div>
-                                    <p class="m-0">{{$train->name}}</p>
-                                </div>
-                                <!-- End of Ticket name -->
-
-                                <!-- card body -->
-                                <div class="card-body">
-                                    <!-- Ticket details -->
-                                    <div class="ticket-details">
-                                        <!-- Depature station info -->
-                                        <div class="depature-station">
-                                            <ul class="list-unstyled">
-                                                <li>
-                                                    {{$train->depature_at}}
-                                                </li>
-                                                <li>
-                                                    {{$train->depature_station}}
-                                                </li>
-                                            </ul>
-                                        </div>
-
-                                        <!-- Icon -->
-                                        <div class="icon">
-                                            <i class="fas fa-angle-double-right"></i>
-                                        </div>
-
-                                        <!-- Depature station info -->
-                                        <div class="arrival-station">
-                                            <ul class="list-unstyled">
-                                                <li>
-                                                    {{$train->arrival_at}}
-                                                </li>
-                                                <li>
-                                                    {{$train->arrival_station}}
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- End of Ticket details -->
-
-                                    <!-- Ticket details -->
-                                    <div class="ticket-details">
-                                        <!-- Ticket price -->
-                                        <div class="ticket-price text-center">
-                                            <p class="m-0">{{$train->price}} {{ trans('site.currency') }} / Person</p>
-                                        </div>
-                                        <!-- End of Ticket price -->
-
-                                        <!-- Ticket price -->
-                                        <div class="ticket-price text-center">
-                                            <p class="m-0">{{$train->type->name}}</p>
-                                        </div>
-                                        <!-- End of Ticket price -->
-                                    </div>
-                                    <!-- End of Ticket details -->
-
-                                </div>
-                                <!-- End of card body -->
-
-                                <!-- card footer -->
-                                <div class="card-footer">
-                                    <a class="btn btn-primary crayons-btn btn-buy-ticket"
-                                        href="{{route("reserve.index", ["train" => $train->id])}}">
-                                        Buy Ticket
-                                    </a>
-                                </div>
-                                <!-- End of card footer -->
-                            </div>
-                            <!-- End of Ticket card -->
-                        @endforeach
-                    @else
-
-                    @endif
-
-
-
+                    </div>
                 </div>
                 <!-- End of Ticktes content -->
             </div>
@@ -233,5 +200,72 @@
 <script src="{{asset('js/main.js')}}"></script>
 <!--Custom script -->
 <script src="{{asset('js/custom.js')}}"></script>
+
+<script>
+
+    window.addEventListener("load", () => {
+        document.querySelector(".all-types").click();
+    })
+
+    let typeItems = document.querySelectorAll(".type-item");
+    typeItems.forEach(typeItem => {
+        typeItem.addEventListener("click", (e) => {
+        e.preventDefault();
+
+            // Get data-url
+            let url = typeItem.getAttribute("data-url");
+            let method = typeItem.getAttribute("data-method");
+
+            // Change loading spinner to flex
+            document.querySelector(".loading").style.display = "flex";
+
+            $.ajax({
+                url: url,
+                method: method,
+                success: function(data){
+                    // console.log(data)
+
+                    // Display none on loading element
+                    document.querySelector(".loading").style.display = "none";
+                    // Clear data of all elements
+                    document.querySelector(".tickets-content-list").innerHTML = "";
+
+                    document.querySelector(".tickets-content-list").insertAdjacentHTML("beforeend", data)
+
+                }
+            })
+
+        })
+    });
+
+    document.querySelector(".all-types").addEventListener("click", (e) => {
+        e.preventDefault();
+
+            // Get data-url
+            let url = document.querySelector(".all-types").getAttribute("data-url");
+            let method = document.querySelector(".all-types").getAttribute("data-method");
+
+            // Change loading spinner to flex
+            document.querySelector(".loading").style.display = "flex";
+
+
+            $.ajax({
+                url: url,
+                method: method,
+                success: function(data){
+                    // console.log(data)
+
+                    // Display none on loading element
+                    document.querySelector(".loading").style.display = "none";
+                    // Clear data of all elements
+                    document.querySelector(".tickets-content-list").innerHTML = "";
+
+                    document.querySelector(".tickets-content-list").insertAdjacentHTML("beforeend", data)
+
+                }
+            })
+
+        })
+</script>
 
 @endsection

@@ -62,7 +62,7 @@ body {
   line-height: 1.6;
   color: #212529;
   text-align: left;
-  background-color: #f8fafc;
+  background-color: #fefefe;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -475,7 +475,7 @@ mark,
 
 .img-thumbnail {
   padding: 0.25rem;
-  background-color: #f8fafc;
+  background-color: #fefefe;
   border: 1px solid #dee2e6;
   border-radius: 0.25rem;
   max-width: 100%;
@@ -3751,13 +3751,13 @@ input[type=button].btn-block {
   outline: 0;
 }
 .custom-range:focus::-webkit-slider-thumb {
-  box-shadow: 0 0 0 1px #f8fafc, 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
+  box-shadow: 0 0 0 1px #fefefe, 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
 }
 .custom-range:focus::-moz-range-thumb {
-  box-shadow: 0 0 0 1px #f8fafc, 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
+  box-shadow: 0 0 0 1px #fefefe, 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
 }
 .custom-range:focus::-ms-thumb {
-  box-shadow: 0 0 0 1px #f8fafc, 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
+  box-shadow: 0 0 0 1px #fefefe, 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
 }
 .custom-range::-moz-focus-outer {
   border: 0;
@@ -3931,8 +3931,8 @@ input[type=button].btn-block {
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
   color: #495057;
-  background-color: #f8fafc;
-  border-color: #dee2e6 #dee2e6 #f8fafc;
+  background-color: #fefefe;
+  border-color: #dee2e6 #dee2e6 #fefefe;
 }
 .nav-tabs .dropdown-menu {
   margin-top: -1px;
@@ -10566,6 +10566,112 @@ aside.sidebar.min-sidebar .nav-item .nav-link .icon i {
 }
 
 /* End of sign page */
+/* */
+.tickets-section .filter-box .filter-box-header {
+  text-align: center;
+  color: #EEE6CE;
+  background-color: #832c42;
+}
+.tickets-section .filter-box .filter-box-header h4 {
+  margin-bottom: 0;
+}
+.tickets-section .filter-box .filter-box-body {
+  padding: 1rem;
+  background-color: #EEE6CE;
+}
+.tickets-section .tickets-content .ticket {
+  flex-direction: row;
+  margin-bottom: 1.5rem;
+}
+.tickets-section .tickets-content .ticket:last-of-type {
+  margin-bottom: 0;
+}
+.tickets-section .tickets-content .ticket .card-header {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: transparent;
+  border-right: 1px solid rgba(0, 0, 0, 0.125);
+  padding: 0.75rem 1rem;
+  width: 120px;
+}
+.tickets-section .tickets-content .ticket .card-header .icon {
+  background-color: #832c42;
+  width: 40px;
+  height: 40px;
+  color: #EEE6CE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.tickets-section .tickets-content .ticket .card-header .icon i {
+  font-size: 20px;
+}
+.tickets-section .tickets-content .ticket .card-header p {
+  color: #832c42;
+  font-weight: bold;
+  padding-top: 5px;
+  text-transform: capitalize;
+}
+.tickets-section .tickets-content .ticket .card-body {
+  background-color: transparent;
+  padding: 0.75rem 1rem;
+}
+.tickets-section .tickets-content .ticket .card-body .ticket-details {
+  display: flex;
+  justify-content: space-between;
+}
+.tickets-section .tickets-content .ticket .card-body .ticket-details .ticket-price {
+  padding-top: 10px;
+}
+.tickets-section .tickets-content .ticket .card-body .ticket-details .icon {
+  display: flex;
+  align-items: center;
+}
+.tickets-section .tickets-content .ticket .card-footer {
+  border: none;
+  display: flex;
+  padding: 0.75rem 1rem;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border-left: 1px solid rgba(0, 0, 0, 0.125);
+}
+.tickets-section .loading {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.tickets-section .loading .loader {
+  width: 100px;
+  height: 100px;
+  border: 5px solid #EEE6CE;
+  border-top-color: #832c42;
+  border-radius: 50%;
+  -webkit-animation: spinner 2s linear infinite;
+          animation: spinner 2s linear infinite;
+}
+@-webkit-keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /* Contact us page */
 .contact-page {
   background-image: linear-gradient(220deg, rgba(184, 64, 94, 0.54), rgba(184, 64, 94, 0.54)), url(/images/map-bg.jpg?6dfddcd48667757608786a07c71c40f2);
