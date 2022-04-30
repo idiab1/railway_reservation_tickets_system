@@ -3,15 +3,15 @@
     .filter-box{
         .filter-box-header{
             text-align: center;
-            color: #eee6ce;
-            background-color: #98354e;
+            color: $offwhite-color;
+            background-color: $maroon-color;
             h4{
                 margin-bottom: 0;
             }
         }
         .filter-box-body{
             padding: 1rem;
-            background-color: #eee6ce;
+            background-color: $offwhite-color;
         }
     }
 
@@ -33,10 +33,10 @@
                 padding: 0.75rem 1rem;
                 width: 120px;
                 .icon {
-                    background-color: #98354e;
+                    background-color: $maroon-color;
                     width: 40px;
                     height: 40px;
-                    color: #eee6ce;
+                    color: $offwhite-color;
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -46,7 +46,7 @@
                     }
                 }
                 p{
-                    color: #98354e;
+                    color: $maroon-color;
                     font-weight: bold;
                     padding-top: 5px;
                     text-transform: capitalize;
@@ -88,8 +88,8 @@
     .loading .loader{
         width: 100px;
         height: 100px;
-        border: 5px solid #eee6ce;
-        border-top-color: #832c42;
+        border: 5px solid $offwhite-color;
+        border-top-color: $maroon-color;
         border-radius: 50%;
         animation: spinner 2s linear infinite;
     }
@@ -136,8 +136,8 @@
 
     //     .filter-box .filter-box-header{
     //         text-align: center;
-    //         color: #eee6ce;
-    //         background-color: #98354e;
+    //         color: $offwhite-color;
+    //         background-color: $maroon-color;
     //     }
     //     .filter-box .filter-box-body{}
 
@@ -162,10 +162,10 @@
     //     }
 
     //     .tickets-content .ticket .card-header .icon {
-    //         background-color: #98354e;
+    //         background-color: $maroon-color;
     //         width: 40px;
     //         height: 40px;
-    //         color: #eee6ce;
+    //         color: $offwhite-color;
     //         display: flex;
     //         justify-content: center;
     //         align-items: center;
@@ -177,7 +177,7 @@
     //     }
 
     //     .tickets-content .ticket .card-header p{
-    //         color: #98354e;
+    //         color: $maroon-color;
     //         font-weight: bold;
     //         padding-top: 5px;
     //         text-transform: capitalize;
@@ -220,8 +220,8 @@
     // .loading .loader{
     //     width: 100px;
     //     height: 100px;
-    //     border: 5px solid #eee6ce;
-    //     border-top-color: #832c42;
+    //     border: 5px solid $offwhite-color;
+    //     border-top-color: $maroon-color;
     //     border-radius: 50%;
     //     animation: spinner 2s linear infinite;
     // }
