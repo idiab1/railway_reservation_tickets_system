@@ -69,6 +69,33 @@
                     <!-- End of Filter Box Body -->
                 </div>
                 <!-- End of Filter Box -->
+
+                <!-- Filter Box -->
+                <div class="card filte-box my-4">
+                    <!-- Filter Box Header -->
+                    <div class="card-header filter-box-header">
+                        <h4>Filter By</h4>
+                    </div>
+                    <!-- End of Filter Box Header -->
+
+                    <!-- Filter Box Body -->
+                    <div class="card-body filter-box-body">
+                        <button class="btn btn-link all-types"
+                            data-url="{{route("all.types")}}" data-method="get">
+                            All
+                        </button>
+                        @if ($types->count() > 0)
+                            @foreach ($types as $type)
+                                {{-- <a href="">{{$type->name}}</a> --}}
+                                <button class="btn btn-link d-block type-item"
+                                data-url="{{route("type.ticket", ["type" => $type->id])}}"
+                                data-method="get">{{$type->name}}</button>
+                            @endforeach
+                        @endif
+                    </div>
+                    <!-- End of Filter Box Body -->
+                </div>
+                <!-- End of Filter Box -->
             </div>
             <div class="col-md-9">
                 <!-- Ticktes content -->
