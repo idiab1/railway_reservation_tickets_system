@@ -38,6 +38,7 @@ class ReservationController extends Controller
      */
     public function store(Request $request, $train)
     {
+        dd($request);
         // Get data of train
         $train = Train::find($train);
 
