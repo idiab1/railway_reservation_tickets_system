@@ -67,6 +67,9 @@
 
         <div class="row">
             <div class="col-md-7">
+
+                {{-- <iframe width="100%" height="800" src="https://accept.paymob.com/api/acceptance/iframes/{{env('PAYMOB_IFRAME_ID')}}?payment_token={{env('PAYMOB_API_KEY')}}"> --}}
+
                 <div class="p-2 bg-white shadow-sm">
                     <!-- Stepper -->
                     <div id="stepper1" class="bs-stepper">
@@ -182,23 +185,9 @@
                                 <div id="test-l-2" role="tabpane2" class="bs-stepper-pane text-center"
                                     aria-labelledby="stepper1trigger2">
 
-                                    <form method="post" action="{{url('payment')}}">
-                                        <input type="hidden" name="_token" value="{{ csrf_token() }}" />
-                                        <script
-                                src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                                data-key="pk_test_lwVKeaf8FRSWCseAkSQo4q1L00ydSoPvPM"
-                                data-amount="100",
-                                data-name="Example 1"
-                                data-description="Example 1 Description"
-                                data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
-                                data-locale="auto"
-                                data-currency="usd"
-                                data-label="Pay Now"
-                            >
-                            </script>
-                                    </form>
+                                    {{-- <iframe width="100%" height="800" src="https://accept.paymob.com/api/acceptance/iframes/377110?payment_token={{$token}}">  --}}
 
-                                    <button class="btn btn-primary crayons-btn mt-5">Previous</button>
+                                    <button class="btn btn-primary crayons-btn mt-5" type="button" onclick="stepper.previous()">Previous</button>
                                     <button type="submit" class="btn btn-primary crayons-btn mt-5">Submit</button>
                                 </div>
                                 <!-- Stepper three -->
