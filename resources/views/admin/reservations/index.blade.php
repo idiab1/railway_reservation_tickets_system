@@ -44,7 +44,7 @@
 
 {{-- Content --}}
 @section('content')
-    <section class="train-section section">
+    <section class="reservations-section section">
         <div class="row">
             <div class="col-12">
                 <div class="card">
