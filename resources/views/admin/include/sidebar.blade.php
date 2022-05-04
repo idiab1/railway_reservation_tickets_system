@@ -101,9 +101,9 @@
 
                 <!-- Tickets -->
                 <li class="nav-item">
-                    <a class="nav-link" href="">
+                    <a class="nav-link" href="{{route("reservations.index")}}">
                         <i class="mdi mdi-ticket nav-icon" aria-hidden="true"></i>
-                        <p>{{ trans('site.tickets') }}</p>
+                        <p>{{ trans('site.tickets_reservations') }}</p>
                     </a>
                 </li>
 
