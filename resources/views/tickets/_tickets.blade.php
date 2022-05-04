@@ -68,10 +68,14 @@
 
             <!-- card footer -->
             <div class="card-footer">
-                <a class="btn btn-primary crayons-btn btn-buy-ticket"
+                {{-- <a class="btn btn-primary crayons-btn btn-buy-ticket"
                     href="{{route("reserve.index", ["train" => $train->id])}}">
                     Buy Ticket
-                </a>
+                </a> --}}
+                <form action="{{route('credit', ["train" => $train->id])}}" method="POST">
+                    @csrf
+                    <input style="width: fit-content" type="submit" value="Buy Ticket" class="btn btn-primary crayons-btn btn-buy-ticket">
+                </form>
             </div>
             <!-- End of card footer -->
         </div>

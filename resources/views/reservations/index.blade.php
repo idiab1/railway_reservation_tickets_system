@@ -67,6 +67,9 @@
 
         <div class="row">
             <div class="col-md-7">
+
+                {{-- <iframe width="100%" height="800" src="https://accept.paymob.com/api/acceptance/iframes/{{env('PAYMOB_IFRAME_ID')}}?payment_token={{env('PAYMOB_API_KEY')}}"> --}}
+
                 <div class="p-2 bg-white shadow-sm">
                     <!-- Stepper -->
                     <div id="stepper1" class="bs-stepper">
@@ -181,7 +184,10 @@
                                 <!-- Stepper three -->
                                 <div id="test-l-2" role="tabpane2" class="bs-stepper-pane text-center"
                                     aria-labelledby="stepper1trigger2">
-                                    <button class="btn btn-primary crayons-btn mt-5">Previous</button>
+
+                                    {{-- <iframe width="100%" height="800" src="https://accept.paymob.com/api/acceptance/iframes/377110?payment_token={{$token}}">  --}}
+
+                                    <button class="btn btn-primary crayons-btn mt-5" type="button" onclick="stepper.previous()">Previous</button>
                                     <button type="submit" class="btn btn-primary crayons-btn mt-5">Submit</button>
                                 </div>
                                 <!-- Stepper three -->

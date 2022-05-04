@@ -52,9 +52,7 @@
 
                     <!-- Filter Box Body -->
                     <div class="card-body filter-box-body">
-<<<<<<< HEAD
 
-=======
                         <button class="btn btn-link all-types"
                             data-url="{{route("all.types")}}" data-method="get">
                             All
@@ -94,7 +92,6 @@
                                 data-method="get">{{$type->name}}</button>
                             @endforeach
                         @endif
->>>>>>> 56f52ad072d75c54527db97dccd6bc74cb4201b0
                     </div>
                     <!-- End of Filter Box Body -->
                 </div>
