@@ -11,6 +11,15 @@ use Illuminate\Support\Facades\Auth;
 class ReservationController extends Controller
 {
     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -38,7 +47,7 @@ class ReservationController extends Controller
      */
     public function store(Request $request, $train)
     {
-        dd($request);
+        // dd($request);
         // Get data of train
         $train = Train::find($train);
 
