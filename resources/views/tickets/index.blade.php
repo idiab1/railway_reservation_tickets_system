@@ -53,7 +53,7 @@
                     <!-- Filter Box Body -->
                     <div class="card-body filter-box-body">
 
-                        <button class="btn btn-link all-types"
+                        <button class="btn btn-link all-types active"
                             data-url="{{route("all.types")}}" data-method="get">
                             All
                         </button>
