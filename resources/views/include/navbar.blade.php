@@ -79,7 +79,7 @@
                                 </div>
                                 {{ trans('site.profile') }}
                             </a>
-
+                            <div class="dropdown-divider"></div>
                             <!-- Setting link -->
                             <a class="dropdown-item d-inline-block" href="{{route('profile.setting')}}">
                                 <div class="icon mr-1 d-inline-block">
@@ -87,7 +87,7 @@
                                 </div>
                                 {{ trans('site.setting') }}
                             </a>
-
+                            <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">
