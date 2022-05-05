@@ -11,30 +11,12 @@
 <link rel="stylesheet" href="{{asset('plugins/datatables-bs4/css/dataTables.bootstrap4.min.css')}}">
 <link rel="stylesheet" href="{{asset('plugins/datatables-responsive/css/responsive.bootstrap4.min.css')}}">
 <link rel="stylesheet" href="{{asset('plugins/datatables-buttons/css/buttons.bootstrap4.min.css')}}">
-<!-- Select2 -->
-<link rel="stylesheet" href="{{asset('plugins/select2/css/select2.min.css')}}">
-<style>
-    .select2-container .select2-selection--single {
-        height: auto;
-    }
-    .content-header{
-        height: 100px;
-    }
-    .content-header .content-header-info {
-        text-align: center;
-        display: flex;
-        justify-content: space-between;
-    }
-</style>
+
 @endsection
 
 {{-- Page name --}}
 @section('page_name')
     {{ trans('site.list_reservations') }}
-    <button type="button" class="btn btn-create btn-sm btn-primary btn-crayons"
-        data-toggle="modal" data-target="#createNewItem">
-        <i class="fas fa-plus"></i>
-    </button>
 @endsection
 
 {{-- Breadcrumb --}}
@@ -46,11 +28,79 @@
 @section('content')
     <section class="reservations-section section">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 col-md-5">
                 <div class="card">
                     <!-- Card body -->
                     <div class="card-body">
+                        <div class="">
+                            <div class="row buttons">
+                                <div class="col-sm-12 col-md-5">
+
+                                </div>
+                                <div class="col-sm-12 col-md-7 ">
+
+                                </div>
+                            </div>
+                        </div>
                         <table id="example1" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>{{ trans('site.name') }}</th>
+                                    <th>{{ trans('site.date') }}</th>
+                                    <th>{{ trans('site.action') }}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @php
+                                    $id = 1;
+                                @endphp
+                                @if ($reservations->count() > 0)
+                                    @foreach ($reservations as $train)
+                                        <tr>
+                                            <td>{{$id++}}</td>
+                                            <!-- Name of train -->
+                                            <td>{{$train->name}}</td>
+
+                                            <td>
+                                                <button class="btn btn-danger btn-sm btn-show" type="button">
+                                                    <i class="fas fa-list"></i>
+                                                    {{ trans('site.show') }}
+                                                </button>
+
+                                                <!-- Delete button -->
+                                                <form class="d-inline-block" action="{{route('reservations.destroy', ['id' => $train->id])}}" method="POST">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button class="btn btn-danger btn-sm btn-delete" type="submit">
+                                                        <i class="fas fa-trash"></i>
+                                                        {{ trans('site.delete') }}
+                                                    </button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                @endif
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>#</th>
+                                    <th>{{ trans('site.name') }}</th>
+                                    <th>{{ trans('site.date') }}</th>
+                                    <th>{{ trans('site.action') }}</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <!-- /end of card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <div class="col-12 col-md-7">
+                {{-- <div class="card">
+                    <!-- Card body -->
+                    <div class="card-body">
+                        <table id="example2" class="table table-bordered table-striped">
                             <thead>
                                 <tr>
                                     <th>#</th>
@@ -126,9 +176,18 @@
                     </div>
                     <!-- /end of card-body -->
                 </div>
-            <!-- /.card -->
+                <!-- /.card --> --}}
+                <div class="content">
+                    <div class="loading text-center">
+                        <div class="loader"></div>
+                        <p class="p-2">Waiting</p>
+                    </div>
+                    <div class="tickets-content-list">
+
+                    </div>
+                </div>
             </div>
-            <!--/.col-12 -->
+
         </div>
         <!--/.row -->
 
@@ -156,17 +215,16 @@
             "responsive": true,
             "lengthChange": false,
             "autoWidth": false,
-            "buttons": ["csv", "excel", "pdf", "print"]
-        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+            "buttons": ["excel", "print"]
+        }).buttons().container().appendTo('.buttons .col-md-5');
+        $('div.dataTables_filter').appendTo(".buttons .col-md-7");
 
-    });
-</script>
-
-<!-- Select 2 -->
-<script src="{{asset('plugins/select2/js/select2.min.js')}}"></script>
-<script>
-    $(document).ready(function(){
-        $('.select2').select2();
+        $("#example2").DataTable({
+            "responsive": true,
+            "lengthChange": false,
+            "autoWidth": false,
+            "buttons": ["excel", "print"]
+        }).buttons().container().appendTo('#example2_wrapper .col-md-6:eq(0)');
     });
 </script>
 
