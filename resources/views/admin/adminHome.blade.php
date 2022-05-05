@@ -26,7 +26,7 @@
         float: right;
         margin-bottom: 12px;
     }
-    .card h2.header{
+    .card h4.header{
         color: #b8405e;
         font-weight: 600;
         font-size: 1.35rem;
