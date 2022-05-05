@@ -50,6 +50,12 @@ return [
     "tickets" => "Tickets",
     "ticket" => 'Ticket',
 
+    // Reservations
+    "reservations" => "Reservations",
+    "list_reservations" => "All Reservations",
+
+
+
     // Messages Page
     'message' => 'Message',
     'list_all_messages' => 'All messages',
@@ -60,6 +66,7 @@ return [
     // Facades
     'name' => 'Name',
     'action' => 'Action',
+    "date" => "Date",
     'logout' => 'Logout',
     'login' => 'Login',
     'register' => 'Register',
