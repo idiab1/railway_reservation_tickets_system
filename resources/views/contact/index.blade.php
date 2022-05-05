@@ -32,7 +32,7 @@
             <div class="col-9 m-auto">
                 <div class="contact-box">
                     <div class="row">
-                        <div class="col-md-8 p-0">
+                        <div class="col-12 col-md-7 p-0">
                             <!-- Contact form -->
                             <div class="card contact-form section-form">
                                 <!-- Card Header -->
@@ -127,7 +127,7 @@
                             <!-- End of Contact form -->
 
                         </div>
-                        <div class="col-md-4 p-0">
+                        <div class="col-12 col-md-5 p-0 d-none d-md-block">
                             <!-- Contact Info -->
                             <div class="card contact-info">
                                 <!-- Card Header -->
