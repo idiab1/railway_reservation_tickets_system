@@ -17,7 +17,10 @@
                 <!-- Ticket details -->
                 <div class="ticket-details">
                     <!-- Depature station info -->
-                    <div class="depature-station">
+                    <div class="depature-station text-center">
+                        <div class="from">
+                            <span class="font-weight-bold">From</span>
+                        </div>
                         <ul class="list-unstyled">
                             <li>
                                 {{$train->depature_at}}
@@ -34,7 +37,10 @@
                     </div>
 
                     <!-- Depature station info -->
-                    <div class="arrival-station">
+                    <div class="arrival-station text-center">
+                        <div class="to">
+                            <span class="font-weight-bold">To</span>
+                        </div>
                         <ul class="list-unstyled">
                             <li>
                                 {{$train->arrival_at}}
