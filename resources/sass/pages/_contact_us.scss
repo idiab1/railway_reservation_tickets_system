@@ -1,11 +1,12 @@
 /* Contact us page */
 .contact-page{
-    background-image: linear-gradient(220deg, rgb(184 64 94 / 54%), rgb(184 64 94 / 54%)),
-        url('../../../public/images/contact_us/map-bg.jpg');
+    background-image: linear-gradient(220deg, rgb(238 230 206 / 50%), rgb(238 230 206 / 50%)),
+        url('../../images/map.jpg');
         background-size: cover;
 
     /* Contact box */
     .contact-box{
+        padding-bottom: 20px;
         /* Contact form */
         .contact-form{
             .header-title{
