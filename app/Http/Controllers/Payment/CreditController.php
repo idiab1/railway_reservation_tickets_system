@@ -12,6 +12,16 @@ use Illuminate\Support\Facades\Http;
 
 class CreditController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth')->except("callback");
+    }
+
     public function credit(Request $request, $train) {
         // dd(Auth::user()->id);
         $token = $this->getToken();
