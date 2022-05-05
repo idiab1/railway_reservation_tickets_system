@@ -19,7 +19,7 @@
                 .card-header{
                     background-color: transparent;
                     h3{
-                        color: $dark-color;
+                        color: $maroon-color;
                         margin-bottom: 0;
                         font-weight: 600;
                         font-size: 1.45rem;
@@ -76,6 +76,10 @@
             .card{
                 height: 100%;
                 background-color: transparent;
+                @include prefixer(border-bottom-right-radius, 0, webkit moz ms o);
+                @include prefixer(border-top-right-radius, 0, webkit moz ms o);
+                @include prefixer(border-bottom-left-radius, .25rem, webkit moz ms o);
+                @include prefixer(border-top-left-radius, .25rem, webkit moz ms o);
             }
             /* End of card */
         }
@@ -85,6 +89,8 @@
         .sign-form{
             /* Sign form card */
             .sign-card-form{
+                @include prefixer(border-bottom-left-radius, 0, webkit moz ms o);
+                @include prefixer(border-top-left-radius, 0, webkit moz ms o);
                 /* form */
                 form{
                     label{
