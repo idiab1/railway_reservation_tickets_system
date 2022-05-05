@@ -10464,7 +10464,7 @@ aside.sidebar.min-sidebar .nav-item .nav-link .icon i {
   background-color: transparent;
 }
 .sign-page .sign-container .sign-box .card .card-header h3 {
-  color: #1c1f33;
+  color: #832c42;
   margin-bottom: 0;
   font-weight: 600;
   font-size: 1.45rem;
@@ -10515,12 +10515,24 @@ aside.sidebar.min-sidebar .nav-item .nav-link .icon i {
 .sign-page .sign-container .sign-info .card {
   height: 100%;
   background-color: transparent;
+  -moz-border-bottom-right-radius: 0;
+  border-bottom-right-radius: 0;
+  -moz-border-top-right-radius: 0;
+  border-top-right-radius: 0;
+  -moz-border-bottom-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  -moz-border-top-left-radius: 0.25rem;
+  border-top-left-radius: 0.25rem;
 }
 .sign-page .sign-container .sign-form {
   /* Sign form card */
   /* End of sign form card */
 }
 .sign-page .sign-container .sign-form .sign-card-form {
+  -moz-border-bottom-left-radius: 0;
+  border-bottom-left-radius: 0;
+  -moz-border-top-left-radius: 0;
+  border-top-left-radius: 0;
   /* form */
   /* End of form */
 }
@@ -10674,12 +10686,13 @@ aside.sidebar.min-sidebar .nav-item .nav-link .icon i {
 
 /* Contact us page */
 .contact-page {
-  background-image: linear-gradient(220deg, rgba(184, 64, 94, 0.54), rgba(184, 64, 94, 0.54)), url(/images/map-bg.jpg?6dfddcd48667757608786a07c71c40f2);
+  background-image: linear-gradient(220deg, rgba(238, 230, 206, 0.5), rgba(238, 230, 206, 0.5)), url(/images/map.jpg?74d6081fe343381a5d515c8e2e2fbfa8);
   background-size: cover;
   /* Contact box */
   /* End of contact box */
 }
 .contact-page .contact-box {
+  padding-bottom: 20px;
   /* Contact form */
   /* End of Contact form */
   /* Contact Info */
