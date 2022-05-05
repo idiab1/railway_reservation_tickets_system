@@ -10578,7 +10578,21 @@ aside.sidebar.min-sidebar .nav-item .nav-link .icon i {
 }
 
 /* End of sign page */
-/* */
+/* Tickets Section */
+.tickets-section {
+  /* Filter Box */
+  /* End of Filter Box */
+  /* Recent Posts */
+  /* Recent Posts */
+  /* Tickets Content */
+  /* End of Tickets Content */
+}
+.tickets-section .filter-box {
+  /* Filter Header */
+  /* End of Filter Header */
+  /* Filter Body */
+  /* End of Filter Body */
+}
 .tickets-section .filter-box .filter-box-header {
   text-align: center;
   color: #EEE6CE;
@@ -10603,6 +10617,58 @@ aside.sidebar.min-sidebar .nav-item .nav-link .icon i {
 .tickets-section .filter-box .filter-box-body button.active, .tickets-section .filter-box .filter-box-body button:hover {
   color: #EEE6CE;
   background-color: #1c1f33;
+}
+.tickets-section .recent-box {
+  border: none;
+  /* recent Header */
+  /* End of recent Header */
+  /* recent Body */
+  /* End of recent Body */
+}
+.tickets-section .recent-box .recent-box-header {
+  background-color: transparent;
+  border-bottom: 1px dashed rgba(28, 31, 51, 0.38);
+}
+.tickets-section .recent-box .recent-box-header h4 {
+  margin-bottom: 0;
+  color: #832c42;
+}
+.tickets-section .recent-box .recent-box-body {
+  padding: 0;
+  /* Post Card */
+  /* End of Post Card */
+}
+.tickets-section .recent-box .recent-box-body .card-post {
+  margin: 15px 0;
+  flex-direction: row;
+  border: none;
+  border-bottom: 1px dashed rgba(28, 31, 51, 0.38);
+  border-radius: 0;
+  /* Post header */
+  /* End of Post header */
+  /* Post body */
+  /* End of Post body */
+}
+.tickets-section .recent-box .recent-box-body .card-post .post-header {
+  padding: 0;
+  border: none;
+  width: 100px;
+  background-color: transparent;
+}
+.tickets-section .recent-box .recent-box-body .card-post .post-header img {
+  width: 100%;
+}
+.tickets-section .recent-box .recent-box-body .card-post .post-body h5 {
+  color: #1c1f33;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.tickets-section .recent-box .recent-box-body .card-post .post-body span {
+  color: #4e4e4e;
+}
+.tickets-section .tickets-content {
+  /* Tickets */
+  /* End of Tickets */
 }
 .tickets-section .tickets-content .ticket {
   flex-direction: row;
@@ -10697,6 +10763,7 @@ aside.sidebar.min-sidebar .nav-item .nav-link .icon i {
   }
 }
 
+/* End of Tickets Section */
 /* Contact us page */
 .contact-page {
   background-image: linear-gradient(220deg, rgba(238, 230, 206, 0.5), rgba(238, 230, 206, 0.5)), url(/images/map.jpg?74d6081fe343381a5d515c8e2e2fbfa8);
