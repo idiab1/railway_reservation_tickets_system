@@ -10,8 +10,22 @@
             }
         }
         .filter-box-body{
-            padding: 1rem;
+            padding: 0rem;
             background-color: $offwhite-color;
+            button{
+                width: 100%;
+                color: $dark-color;
+                font-weight: 600;
+                text-transform: uppercase;
+                background-color: $offwhite-color;
+                @include prefixer(border-radius, 0, webkit moz ms o);
+                @include prefixer(transition, .26s, webkit moz ms o);
+                &.active,
+                &:hover{
+                    color: $offwhite-color;
+                    background-color: $dark-color;
+                }
+            }
         }
     }
 

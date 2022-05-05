@@ -10588,8 +10588,21 @@ aside.sidebar.min-sidebar .nav-item .nav-link .icon i {
   margin-bottom: 0;
 }
 .tickets-section .filter-box .filter-box-body {
-  padding: 1rem;
+  padding: 0rem;
   background-color: #EEE6CE;
+}
+.tickets-section .filter-box .filter-box-body button {
+  width: 100%;
+  color: #1c1f33;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: #EEE6CE;
+  border-radius: 0;
+  transition: 0.26s;
+}
+.tickets-section .filter-box .filter-box-body button.active, .tickets-section .filter-box .filter-box-body button:hover {
+  color: #EEE6CE;
+  background-color: #1c1f33;
 }
 .tickets-section .tickets-content .ticket {
   flex-direction: row;
