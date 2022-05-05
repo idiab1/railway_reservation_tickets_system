@@ -41,7 +41,7 @@
     <!-- Container fluid -->
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <!-- Filter Box -->
                 <div class="card filter-box">
                     <!-- Filter Box Header -->
@@ -70,34 +70,72 @@
                 </div>
                 <!-- End of Filter Box -->
 
-                <!-- Filter Box -->
-                <div class="card filte-box my-4">
-                    <!-- Filter Box Header -->
-                    <div class="card-header filter-box-header">
-                        <h4>Filter By</h4>
+                <!-- Recent Posts -->
+                <div class="card recent-box my-4">
+                    <!-- recent Box Header -->
+                    <div class="card-header recent-box-header px-0">
+                        <h4>Recent Posts</h4>
                     </div>
                     <!-- End of Filter Box Header -->
 
-                    <!-- Filter Box Body -->
-                    <div class="card-body filter-box-body">
-                        <button class="btn btn-link all-types"
-                            data-url="{{route("all.types")}}" data-method="get">
-                            All
-                        </button>
-                        @if ($types->count() > 0)
-                            @foreach ($types as $type)
-                                {{-- <a href="">{{$type->name}}</a> --}}
-                                <button class="btn btn-link d-block type-item"
-                                data-url="{{route("type.ticket", ["type" => $type->id])}}"
-                                data-method="get">{{$type->name}}</button>
-                            @endforeach
-                        @endif
+                    <!-- recent Box Body -->
+                    <div class="card-body recent-box-body ">
+                        <!-- Post -->
+                        <div class="card card-post">
+                            <!-- Post Header -->
+                            <div class="card-header post-header">
+                                <img class="img-fluid" src="{{asset('images/post.jpg')}}" alt="">
+                            </div>
+                            <!-- End of Post Header -->
+
+                            <!-- Post body -->
+                            <div class="card-body post-body">
+                                <h5 class="m-0">Lorem, ipsum dolor sit.</h5>
+                                <span class="date">1 day ago</span>
+                            </div>
+                            
+                        </div>
+                        <!-- End of Post -->
+
+                        <!-- Post -->
+                        <div class="card card-post">
+                            <!-- Post Header -->
+                            <div class="card-header post-header">
+                                <img class="img-fluid" src="{{asset('images/post.jpg')}}" alt="">
+                            </div>
+                            <!-- End of Post Header -->
+
+                            <!-- Post body -->
+                            <div class="card-body post-body">
+                                <h5 class="m-0">Lorem, ipsum dolor sit.</h5>
+                                <span class="date">1 day ago</span>
+                            </div>
+                            
+                        </div>
+                        <!-- End of Post -->
+
+                        <!-- Post -->
+                        <div class="card card-post">
+                            <!-- Post Header -->
+                            <div class="card-header post-header">
+                                <img class="img-fluid" src="{{asset('images/post.jpg')}}" alt="">
+                            </div>
+                            <!-- End of Post Header -->
+
+                            <!-- Post body -->
+                            <div class="card-body post-body">
+                                <h5 class="m-0">Lorem, ipsum dolor sit.</h5>
+                                <span class="date">1 day ago</span>
+                            </div>
+                            
+                        </div>
+                        <!-- End of Post -->
                     </div>
-                    <!-- End of Filter Box Body -->
+                    <!-- End of recent Box Body -->
                 </div>
-                <!-- End of Filter Box -->
+                <!-- End of Recent Posts -->
             </div>
-            <div class="col-md-9">
+            <div class="col-md-8">
                 <!-- Ticktes content -->
                 <div class="tickets-content">
                     <div class="loading text-center">
