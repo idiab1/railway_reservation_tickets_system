@@ -10588,6 +10588,7 @@ aside.sidebar.min-sidebar .nav-item .nav-link .icon i {
   /* End of Tickets Content */
 }
 .tickets-section .filter-box {
+  background-color: #1c1f33;
   /* Filter Header */
   /* End of Filter Header */
   /* Filter Body */
@@ -10595,28 +10596,56 @@ aside.sidebar.min-sidebar .nav-item .nav-link .icon i {
 }
 .tickets-section .filter-box .filter-box-header {
   text-align: center;
-  color: #EEE6CE;
-  background-color: #832c42;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(131, 44, 66, 0.33);
 }
 .tickets-section .filter-box .filter-box-header h4 {
   margin-bottom: 0;
+  color: #EEE6CE;
+  text-transform: uppercase;
 }
 .tickets-section .filter-box .filter-box-body {
-  padding: 0rem;
-  background-color: #EEE6CE;
+  padding: 1rem;
+  background-color: transparent;
+  color: #EEE6CE;
+}
+.tickets-section .filter-box .filter-box-body h5 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+}
+.tickets-section .filter-box .filter-box-body .custom-switch {
+  padding-left: 3.25rem;
+}
+.tickets-section .filter-box .filter-box-body .custom-control {
+  min-height: 2rem;
+}
+.tickets-section .filter-box .filter-box-body .custom-control .custom-control-label {
+  font-weight: 500;
+}
+.tickets-section .filter-box .filter-box-body ~ .custom-control-label::before,
+.tickets-section .filter-box .filter-box-body .custom-control-input:disabled ~ .custom-control-label::before {
+  background-color: #e3342f;
+  border-color: #e3342f;
 }
 .tickets-section .filter-box .filter-box-body button {
   width: 100%;
-  color: #1c1f33;
+  text-align: left;
   font-weight: 600;
   text-transform: uppercase;
+  color: #1c1f33;
   background-color: #EEE6CE;
   border-radius: 0;
   transition: 0.26s;
+  text-indent: 10%;
+  text-decoration: none;
 }
 .tickets-section .filter-box .filter-box-body button.active, .tickets-section .filter-box .filter-box-body button:hover {
   color: #EEE6CE;
   background-color: #1c1f33;
+}
+.tickets-section .filter-box .filter-box-body button:focus {
+  box-shadow: none;
 }
 .tickets-section .recent-box {
   border: none;
@@ -10669,13 +10698,12 @@ aside.sidebar.min-sidebar .nav-item .nav-link .icon i {
 .tickets-section .tickets-content {
   /* Tickets */
   /* End of Tickets */
+  /* Empty */
+  /* End of Empty */
 }
 .tickets-section .tickets-content .ticket {
   flex-direction: row;
   margin-bottom: 1.5rem;
-}
-.tickets-section .tickets-content .ticket:last-of-type {
-  margin-bottom: 0;
 }
 .tickets-section .tickets-content .ticket .card-header {
   border: none;
@@ -10717,10 +10745,27 @@ aside.sidebar.min-sidebar .nav-item .nav-link .icon i {
 }
 .tickets-section .tickets-content .ticket .card-body .ticket-details .ticket-price {
   padding-top: 10px;
+  color: #832c42;
+}
+.tickets-section .tickets-content .ticket .card-body .ticket-details .ticket-price p {
+  font-weight: bold;
 }
 .tickets-section .tickets-content .ticket .card-body .ticket-details .icon {
   display: flex;
   align-items: center;
+  width: 40px;
+  background-color: #832c42;
+  height: 40px;
+  border-radius: 50%;
+  position: relative;
+  top: 30px;
+  justify-content: center;
+  color: #EEE6CE;
+  border-radius: 50%;
+}
+.tickets-section .tickets-content .ticket .card-body .ticket-details .facades {
+  color: #1c1f33;
+  padding-bottom: 10px;
 }
 .tickets-section .tickets-content .ticket .card-footer {
   border: none;
@@ -10730,6 +10775,18 @@ aside.sidebar.min-sidebar .nav-item .nav-link .icon i {
   align-items: center;
   background-color: transparent;
   border-left: 1px solid rgba(0, 0, 0, 0.125);
+}
+.tickets-section .tickets-content .empty {
+  width: 50%;
+  margin: auto;
+}
+.tickets-section .tickets-content .empty img {
+  width: 100%;
+}
+.tickets-section .tickets-content .empty .info p {
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
 }
 .tickets-section .loading {
   display: none;
