@@ -10201,6 +10201,38 @@ aside.sidebar.min-sidebar .nav-item .nav-link .icon i {
 }
 
 /* End of Main Header */
+@media (max-width: 767.98px) {
+  /* Main Header */
+  .main-header {
+    height: 350px;
+    /* Header Box */
+    /* End of Header Box */
+  }
+  .main-header .header-box {
+    /* Header Info */
+    /* End of Header Info */
+  }
+  .main-header .header-box .header-info {
+    margin-top: 4%;
+    width: 87%;
+    padding: 10px 25px;
+  }
+  .main-header .header-box .header-info h1 {
+    margin-bottom: 0.7rem;
+    font-weight: bold;
+    font-size: 2.7rem;
+    color: #832c42;
+    text-transform: uppercase;
+  }
+  .main-header .header-box .header-info p {
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: 18px;
+    color: #1c1f33;
+  }
+
+  /* End of Main Header */
+}
 /* Main footer */
 .main-footer {
   padding-top: 20px;
@@ -10272,32 +10304,6 @@ aside.sidebar.min-sidebar .nav-item .nav-link .icon i {
 }
 
 /* End of layout */
-@media (max-width: 767.98px) {
-  /* layout */
-  .layout {
-    /* Sidebar */
-    /* End of Sidebar */
-    /* Main Container */
-    /* End of Main Container */
-  }
-  .layout aside.sidebar.side-bottom {
-    top: unset;
-    width: 100%;
-    height: unset !important;
-    padding: 8px 0;
-    bottom: 0;
-    z-index: 4;
-  }
-  .layout aside.sidebar.side-bottom ul {
-    flex-direction: row;
-    justify-content: space-around;
-  }
-  .layout .main-container {
-    width: 100%;
-  }
-
-  /* End of layout */
-}
 /* Page header */
 .page-header {
   padding-bottom: 35px;
@@ -10326,6 +10332,8 @@ aside.sidebar.min-sidebar .nav-item .nav-link .icon i {
   position: relative;
   /* Reservation Box */
   /* End of Reservation Box */
+  /* Card  Reservation form */
+  /* End of Card Reservation form */
 }
 .search-reservation .reservation-box {
   position: absolute;
@@ -10418,6 +10426,66 @@ aside.sidebar.min-sidebar .nav-item .nav-link .icon i {
   border-radius: 0;
   border: 0;
 }
+.search-reservation .card-reservation-form {
+  background-color: #1c1f33;
+}
+.search-reservation .card-reservation-form .card {
+  background-color: transparent;
+  /* Box Content */
+  /* End of Box Content */
+}
+.search-reservation .card-reservation-form .card .card-header {
+  background-color: transparent;
+}
+.search-reservation .card-reservation-form .card .card-header h4 {
+  font-weight: bold;
+  color: #EEE6CE;
+  margin: 0;
+}
+.search-reservation .card-reservation-form .card .box-content {
+  padding: 1rem;
+}
+.search-reservation .card-reservation-form .card .box-content .box-routes {
+  height: 100%;
+}
+.search-reservation .card-reservation-form .card .box-content .box-dates {
+  height: 100%;
+}
+.search-reservation .card-reservation-form .card .box-content .form-group {
+  padding: 17px 15px;
+  border-right: 1px solid #111;
+}
+.search-reservation .card-reservation-form .card .box-content .form-group:nth-of-type(3) {
+  border-right: none;
+}
+.search-reservation .card-reservation-form .card .box-content label {
+  font-size: 15px;
+  letter-spacing: 0.04rem;
+  color: #EEE6CE;
+  font-weight: bold;
+  margin: 0;
+}
+.search-reservation .card-reservation-form .card .box-content input {
+  border: none;
+  background-color: transparent;
+  padding-left: 0;
+  color: #ababab;
+}
+.search-reservation .card-reservation-form .card .box-content input:focus {
+  background-color: transparent;
+  border: none;
+  -ms-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+}
+.search-reservation .card-reservation-form .card .box-button {
+  background-color: transparent;
+}
+.search-reservation .card-reservation-form .card .box-button button {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 100%;
+}
 
 /* End of Search Reservation */
 /* E-tickets advantages */
@@ -10468,6 +10536,41 @@ aside.sidebar.min-sidebar .nav-item .nav-link .icon i {
 }
 
 /* End of E-tickets advantages */
+@media (max-width: 767.98px) {
+  /* layout */
+  .layout {
+    /* Sidebar */
+    /* End of Sidebar */
+    /* Main Container */
+    /* End of Main Container */
+  }
+  .layout aside.sidebar.side-bottom {
+    top: unset;
+    width: 100%;
+    height: unset !important;
+    padding: 8px 0;
+    bottom: 0;
+    z-index: 4;
+  }
+  .layout aside.sidebar.side-bottom ul {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .layout .main-container {
+    width: 100%;
+  }
+
+  /* End of layout */
+  /* Search Reservation */
+  .search-reservation {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    /* card Reservation form */
+    /* End of card Reservation form */
+  }
+
+  /* End of Search Reservation */
+}
 /* sign page */
 .sign-page {
   padding: 0;
