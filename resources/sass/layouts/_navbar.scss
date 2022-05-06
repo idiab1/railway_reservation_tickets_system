@@ -6,6 +6,9 @@
     .navbar-brand{
         color: $offwhite-color;
         font-weight: bold;
+        &:hover{
+            color: $offwhite-color;
+        }
     }
     /* End of Navbar Brand */
     /* Navbar Content */
@@ -52,56 +55,11 @@
 /* End of Navbar */
 
 
-// Small devices (landscape phones, less than 768px)
+// Small devices (landscape phones, less than 992px)
 @media (max-width: 991.98px) { 
     /* Navbar */
     .navbar{
         padding: 0.5rem 1rem;
-        /* Navbar Brand */
-        .navbar-brand{
-            color: $offwhite-color;
-            font-weight: bold;
-        }
-        /* End of Navbar Brand */
-        /* Navbar Content */
-        .navbar-nav{
-            /* navbar item */
-            .nav-item{
-                /* Navbar link */
-                .nav-link{
-                    font-weight: 600;
-                    color: $offwhite-color;
-                }
-                /* End of Navbar link */
-
-                /* Dropdown */
-                &.dropdown{
-                    /* Dropdown toggle */
-                    .dropdown-toggle{
-
-                    }
-                    /* Dropdown Menu */
-                    .dropdown-menu{
-                        padding: 0;
-                        /* Dropdown item */
-                        .dropdown-item{
-
-                            &:hover{
-                                color: $offwhite-color;
-                                background-color: $maroon-color;
-                            }
-                        }
-                    }
-                    /* End of Dropdown Menu */
-                }
-                /* End of ropdown */
-            }
-
-            p{
-                margin-bottom: 0;
-            }
-        }
-        /* End of Navbar Content */
     }
     /* End of Navbar */
 }
