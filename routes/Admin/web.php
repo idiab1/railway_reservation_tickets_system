@@ -32,6 +32,13 @@ Route::group(
                 'users' => 'id',
             ]);
 
+            // Passengers Route
+            Route::resource('passengers', PassengerController::class)->except([
+                'show'
+            ])->parameters([
+                'passengers' => 'id',
+            ]);
+
             // Stations Route
             Route::resource('stations', StationController::class)->except([
                 'show'
