@@ -1,5 +1,5 @@
 <!-- Sidebar -->
-<aside class="sidebar min-sidebar" style="height: 100%">
+<aside class="sidebar min-sidebar side-bottom" style="height: 100%">
     <ul class="navbar-nav ml-auto">
         <!-- Home -->
         <li class="nav-item">
