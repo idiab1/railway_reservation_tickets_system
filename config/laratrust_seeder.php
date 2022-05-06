@@ -18,6 +18,8 @@ return [
             'trains' => 'c,r,u,d',
             'tickets' => 'c,r,u,d',
             'posts' => 'c,r,u,d',
+            'reservations' => 'c,r,u,d',
+
         ],
         'moderator' => [
             'users' => 'r',
@@ -25,7 +27,18 @@ return [
             'trains' => 'c,r,u,d',
             'tickets' => 'c,r,u,d',
             'posts' => 'c,r,u,d',
+            'reservations' => 'c,r,u,d',
+
         ],
+        "passenger" => [
+            'users' => 'r',
+            'profiles' => "r",
+            'posts' => "r",
+            'stations' => 'cr',
+            'trains' => 'r',
+            'tickets' => 'c,r,u,d',
+            'reservations' => 'c,r,u,d',
+            ]
     ],
 
     'permissions_map' => [
