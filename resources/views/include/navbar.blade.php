@@ -12,7 +12,7 @@
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
                 <!-- Languages -->
-                <li class="nav-item nav-language dropdown d-none d-md-block dropdown-globe globe-icon">
+                <li class="nav-item nav-language dropdown dropdown-globe globe-icon">
                     <a class="nav-link dropdown-toggle" id="languageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
                         <div class="nav-language-icon d-inline-block">
                             @if (app()->getLocale() == 'en')
