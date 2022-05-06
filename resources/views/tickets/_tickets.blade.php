@@ -18,15 +18,23 @@
                 <div class="ticket-details">
                     <!-- Depature station info -->
                     <div class="depature-station text-center">
-                        <div class="from">
+                        <div class="from facades">
                             <span class="font-weight-bold">From</span>
                         </div>
                         <ul class="list-unstyled">
                             <li>
-                                {{$train->depature_at}}
+                                <span class="d-block">
+                                    {{date('h:m A', strtotime($train->depature_at))}}
+                                </span>
+                                <span class="d-block">
+                                    {{date('d M, Y', strtotime($train->depature_at))}}
+                                </span>
+                                {{-- {{}} --}}
                             </li>
                             <li>
-                                {{$train->depature_station}}
+                                <span class="d-block font-weight-bold">
+                                    {{$train->depature_station}}
+                                </span>
                             </li>
                         </ul>
                     </div>
@@ -38,16 +46,25 @@
 
                     <!-- Depature station info -->
                     <div class="arrival-station text-center">
-                        <div class="to">
+                        <div class="to distination">
                             <span class="font-weight-bold">To</span>
                         </div>
                         <ul class="list-unstyled">
                             <li>
-                                {{$train->arrival_at}}
+                                <span class="d-block">
+                                    {{date('h:m A', strtotime($train->arrival_at))}}
+                                </span>
+                                <span class="d-block">
+                                    {{date('d M, Y', strtotime($train->arrival_at))}}
+                                </span>
+                                {{-- {{}} --}}
                             </li>
                             <li>
-                                {{$train->arrival_station}}
+                                <span class="d-block font-weight-bold">
+                                    {{$train->arrival_station}}
+                                </span>
                             </li>
+
                         </ul>
                     </div>
                 </div>
@@ -88,5 +105,16 @@
         <!-- End of Ticket card -->
     @endforeach
 @else
+
+    <div class="row">
+        <div class="col-12">
+            <div class="empty">
+                <img src="{{asset("images/empty.svg")}}" alt="">
+                <div class="info py-4">
+                    <p>No data recorded</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
 @endif
