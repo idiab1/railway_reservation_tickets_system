@@ -20,7 +20,13 @@ class UserController extends Controller
     public function index()
     {
         // Get all users from users table
-        $users = User::all();
+        // $users = User::all();
+        $users = User::with('roles')->whereHas('roles', function($q)
+        {
+            $q->whereIn('name', ['super_admin', 'moderator']);
+        })->get();
+        
+
         return view('admin.users.index', compact('users'));
     }
 
