@@ -43,7 +43,7 @@
                 @foreach ($users as $user)
                     <div class="col-md-3">
                         <!-- card -->
-                        <div class="card user-card text-center">
+                        <div class="card user-card text-center mb-3">
                             <!-- Card Header -->
 
                             @if ($user->profile->image)
@@ -143,62 +143,21 @@
                                     required>
                             </div>
 
-                            <!-- Privileges -->
-                            {{-- <div class="form-group">
-                                <label for="supervisors">{{ trans('site.privileges') }}</label>
-
-                                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                                    @php
-                                        $models = ['users', 'stations', 'trains', 'posts'];
-                                        $maps = ['create', 'read', 'update', 'delete']
-                                    @endphp
-
-                                    @foreach ($models as $index => $model)
-                                        <li class="nav-item">
-                                            <a class="nav-link btn btn-sm {{$index == 0 ? "active" : ""}}"
-                                                id="pills-{{$model}}-tab" data-toggle="pill" href="#pills-{{$model}}"
-                                                role="tab" aria-controls="pills-{{$model}}">
-                                                {{ trans('site.' . $model) }}
-                                            </a>
-                                        </li>
-
-                                    @endforeach
-
-                                </ul>
-                                <div class="tab-content" id="pills-tabContent">
-
-                                    @foreach ($models as $index => $model)
-
-                                        <div class="tab-pane fade show {{$index == 0 ? "active" : ""}}"
-                                            id="pills-{{$model}}" role="tabpanel"
-                                            aria-labelledby="pills-{{$model}}-tab">
-
-                                            @foreach ($maps as $map)
-                                                <label>
-                                                    <input type="checkbox" name="permissions[]" value="{{$model . '-' . $map}}">
-                                                    {{ trans('site.' . $map) }}
-                                                </label>
-                                            @endforeach
-
-                                        </div>
-                                    @endforeach
-                                </div>
-                            </div> --}}
-
                             <!-- User Type -->
                             <div class="form-group m-0">
+                                <label for="privileges" class="d-block">{{ trans('site.user_type') }}</label>
                                 <div class="form-check my-0 form-check-inline">
                                     <input class="form-check-input" type="checkbox"
                                         id="inlineCheckbox1" name="admin">
                                     <label class="form-check-label" for="inlineCheckbox1">
-                                        Admin
+                                        {{ trans('site.admin') }}
                                     </label>
                                 </div>
                                 <div class="form-check my-0 form-check-inline">
                                     <input class="form-check-input" type="checkbox"
                                         id="inlineCheckbox2" name="moderator">
                                     <label class="form-check-label" for="inlineCheckbox2">
-                                        Moderator
+                                        {{ trans('site.moderator') }}
                                     </label>
                                 </div>
                             </div>
