@@ -151,6 +151,12 @@
                         <div class="loader"></div>
                         <p class="p-2">Waiting</p>
                     </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <!-- Heading -->
+                            <h2 class="heading"></h2>
+                        </div>
+                    </div>
                     <div class="tickets-content-list">
                         
                     </div>
