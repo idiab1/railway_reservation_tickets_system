@@ -60,8 +60,8 @@
 @section('content')
     <!-- reservation search section -->
     <section class="search-reservation section">
-        <div class="container">
-            <div class="row">
+        <div class="container-fluid">
+            <div class="row d-none d-md-block">
                 <div class="col-12">
                     <!-- Reservation Box -->
                     <div class="reservation-box">
@@ -193,13 +193,150 @@
                     <!-- End of Reservation Box -->
                 </div>
             </div>
+            <div class="row d-block d-md-none">
+                <div class="col-12">
+                    <!-- Card Reservation Form -->
+                    <div class="card card-reservation-form">
+                        <!-- Form -->
+                        <form action="" method="POST">
+
+                            <div class="card">
+                                <!-- Card header -->
+                                <div class="card-header">
+                                    <h4>Search</h4>
+                                </div>
+                                <!-- End of Card header -->
+
+                                <!-- Card Body -->
+                                <div class="card-body box-content">
+                                    <div class="row">
+                                        {{-- <div class="col">
+                                            <!-- Box Routes -->
+                                            <div class="box-routes">
+                                                <!-- Travelling Routing -->
+                                                <div class="form-group m-0">
+                                                    <label for="travelling_routing" class="form-label">
+                                                        Travelling Routing
+                                                    </label>
+                                                    <div class="input-group m-0">
+                                                        <select class="form-control select2bs4 depature-stations">
+                                                            <option>{{trans('site.from')}}</option>
+                                                            @foreach ($stations as $station)
+                                                                <option value="{{$station->id}}" >{{$station->name}}</option>
+                                                            @endforeach
+                                                        </select>
+                                                        <select class="form-control select2bs4 arrival-stations">
+                                                            <option>{{trans('site.to')}}</option>
+                                                            @foreach ($stations as $station)
+                                                                <option value="{{$station->id}}" >{{$station->name}}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- End of Box Routes -->
+                                        </div>
+                                        <div class="col pl-0">
+                                            <!-- Box Dates -->
+                                            <div class="box-dates">
+                                                <!-- Travelling date -->
+                                                <div class="form-group m-0">
+                                                    <label for="travelling_routing" class="form-label">
+                                                        Travelling Date
+                                                    </label>
+                                                    <div class="input-group m-0">
+                                                        <input type="date" class="form-control" id="travelling_routing" aria-label="From">
+                                                        <input type="date" class="form-control" id="travelling_routing" aria-label="To">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- End of Box Dates -->
+                                        </div> --}}
+
+                                        <div class="col">
+                                            <div class="form-group ">
+                                                <label for="from" class="form-label">
+                                                    From
+                                                </label>
+                                                <select class="form-control select2bs4 depature-stations" id="from">
+                                                    <option>{{trans('site.all')}}</option>
+                                                    @foreach ($stations as $station)
+                                                        <option value="{{$station->id}}" >{{$station->name}}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+                                            <div class="form-group ">
+                                                <label for="depature_date" class="form-label">
+                                                    Depature Date
+                                                </label>
+                                                <input type="date" class="form-control" id="depature_date" aria-label="from">
+                                            </div>
+                                        </div>
+                                        <div class="">
+
+                                        </div>
+
+                                        <div class="col">
+                                            <div class="form-group border-right-0">
+                                                <label for="to" class="form-label">
+                                                    To
+                                                </label>
+                                                <select class="form-control select2bs4 arrival-stations" id="to">
+                                                    <option>{{trans('site.all')}}</option>
+                                                    @foreach ($stations as $station)
+                                                        <option value="{{$station->id}}" >{{$station->name}}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+                                            <div class="form-group  border-right-0">
+                                                <label for="depature_date" class="form-label">
+                                                    Arrival Date
+                                                </label>
+                                                <input type="date" class="form-control" id="arrival_date" aria-label="to">
+                                            </div>
+
+                                        </div>
+                                        {{-- <div class="col-3 px-0">
+                                            
+                                        </div>
+                                        <div class="col-3 px-0">
+                                            
+                                        </div>
+                                        <div class="col-3 px-0">
+                                            
+                                        </div> --}}
+
+                                    </div>
+
+
+                                </div>
+                                <!-- End of Card Body -->
+
+                                <!-- Card Footer -->
+                                <div class="card-footer box-button p-0">
+                                    <!-- Button search tickets -->
+                                    <div class="form-group m-0 text-right">
+                                        <button type="submit" class="btn btn-primary d-block btn-search-tickets crayons-btn">
+                                            Search
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- End of Card Footer -->
+                            </div>
+                        </form>
+                        <!-- ./end of form -->
+                    </div>
+                    <!-- End of Card Reservation Form -->
+                </div>
+                
+            </div>
         </div>
     </section>
     <!-- End of reservation search section -->
 
     <!-- Recent Posts -->
     <section class="recent-posts section">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
                     <!-- Section Header -->
@@ -334,7 +471,7 @@
 
     <!-- Ticket Advantages -->
     <section class="e-ticket-advantages section">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
                     <!-- Header of section -->
