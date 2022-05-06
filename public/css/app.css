@@ -10262,6 +10262,32 @@ aside.sidebar.min-sidebar .nav-item .nav-link .icon i {
 }
 
 /* End of layout */
+@media (max-width: 767.98px) {
+  /* layout */
+  .layout {
+    /* Sidebar */
+    /* End of Sidebar */
+    /* Main Container */
+    /* End of Main Container */
+  }
+  .layout aside.sidebar.side-bottom {
+    top: unset;
+    width: 100%;
+    height: unset !important;
+    padding: 8px 0;
+    bottom: 0;
+    z-index: 4;
+  }
+  .layout aside.sidebar.side-bottom ul {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .layout .main-container {
+    width: 100%;
+  }
+
+  /* End of layout */
+}
 /* Page header */
 .page-header {
   padding-bottom: 35px;

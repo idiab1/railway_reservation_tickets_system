@@ -9,7 +9,7 @@
         left: 0;
         width: 100px;
         height: 100vh;
-        background-color: #1c1f33;
+        background-color: $dark-color;
         z-index: 100;
         padding: 20px 0;
     }
@@ -21,10 +21,39 @@
         overflow: hidden;
     }
     /* End of Main Container */
+}
+/* End of layout */
 
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) { 
+    /* layout */
+    .layout {
+        /* Sidebar */
+        aside.sidebar.side-bottom {
+            top: unset;
+            width: 100%;
+            height: unset !important;
+            padding: 8px 0;
+            bottom: 0;
+            z-index: 4;
+            ul{
+                flex-direction: row;
+                justify-content: space-around;
+            }
+        }
+        /* End of Sidebar */
+
+        /* Main Container */
+        .main-container {
+            width: 100%;
+        }
+        /* End of Main Container */
+    }
+    /* End of layout */
 }
 
-/* End of layout */
+
+
 
 /* Page header */
 .page-header{
