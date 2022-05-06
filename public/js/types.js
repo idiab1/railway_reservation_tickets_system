@@ -27,23 +27,6 @@ typeItems.forEach(typeItem => {
             }
         })
 
-        
-
-        // var elems = document.querySelectorAll(".active");
-        // [].forEach.call(elems, function(el) {
-        //     el.classList.remove("active");
-        // });
-        // e.target.className = "active";
-
-        // let elChecked = document.querySelector("input[type='checkbox']:checked");
-        // console.log(elChecked)
-        // if(elChecked){
-        //     elChecked.removeAttribute("checked");
-        //     elChecked.removeAttribute("disabled");
-        // }
-        // e.target.setAttribute("checked", " ")
-        // e.target.setAttribute("disabled", " ")
-
         let elmsChecked = document.querySelectorAll("input[type='checkbox']");
         
         elmsChecked.forEach(el => {
@@ -54,6 +37,10 @@ typeItems.forEach(typeItem => {
         // e.target.classList.add("active")
         e.target.setAttribute("disabled", "")
         e.target.setAttribute("checked", "")
+
+        // Change name of heading page
+        let pageHeading = document.querySelector(".heading");
+        pageHeading.textContent = e.target.parentElement.children[1].textContent + " Tickets"
 
         console.log(e.target);
 
@@ -104,5 +91,12 @@ document.querySelector(".all-types").addEventListener("click", (e) => {
     // e.target.classList.add("active")
     e.target.setAttribute("disabled", "")
     e.target.setAttribute("checked", "")
-    
-})
+
+    // Change name of heading page
+    let pageHeading = document.querySelector(".heading");
+
+    pageHeading.textContent = e.target.parentElement.children[1].textContent + " Tickets"
+});
+
+
+
