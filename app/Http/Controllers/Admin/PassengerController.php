@@ -19,13 +19,13 @@ class PassengerController extends Controller
     {
         // Get all users from users table
         // $users = User::all();
-        $users = User::with('roles')->whereHas('roles', function($q)
+        $passengers = User::with('roles')->whereHas('roles', function($q)
         {
             $q->whereIn('name', ['passenger']);
         })->get();
         
 
-        return view('admin.passengers.index', compact('users'));
+        return view('admin.passengers.index', compact('passengers'));
     }
 
     /**
