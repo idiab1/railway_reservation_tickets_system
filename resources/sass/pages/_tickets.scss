@@ -2,33 +2,74 @@
 .tickets-section{
     /* Filter Box */
     .filter-box{
+        background-color: $dark-color;
         /* Filter Header */
         .filter-box-header{
             text-align: center;
-            color: $offwhite-color;
-            background-color: $maroon-color;
+            background-color: transparent;
+            border-bottom: 1px solid rgb(131 44 66 / 33%);
+
             h4{
                 margin-bottom: 0;
+                color: $offwhite-color;
+                text-transform: uppercase;
             }
         }
         /* End of Filter Header */
 
         /* Filter Body */
         .filter-box-body{
-            padding: 0rem;
-            background-color: $offwhite-color;
+            padding: 1rem;
+            background-color: transparent;
+            color: $offwhite-color;
+            h5{
+                font-weight: 700;
+                margin-bottom: 1rem;
+                text-transform: capitalize;
+            }
+
+            .custom-switch {
+                padding-left: 3.25rem;
+            }
+
+            .custom-control{
+                min-height: 2rem;
+                .custom-control-label{
+                    font-weight: 500;
+                }
+            }
+
+            ~ .custom-control-label::before, 
+            .custom-control-input:disabled ~ .custom-control-label::before {
+                background-color: #e3342f;
+                border-color: #e3342f;
+            }
+            
+            .custom-control-input:disabled ~ .custom-control-label::after {
+                // right: calc(-2.25rem + 2px);
+                // left: -23px;
+                // left: calc(-2.25rem + 0px);
+
+            }
+            
             button{
                 width: 100%;
-                color: $dark-color;
+                text-align: left;
                 font-weight: 600;
                 text-transform: uppercase;
+                color: $dark-color;
                 background-color: $offwhite-color;
                 @include prefixer(border-radius, 0, webkit moz ms o);
                 @include prefixer(transition, .26s, webkit moz ms o);
+                text-indent: 10%;
+                text-decoration: none;
                 &.active,
                 &:hover{
                     color: $offwhite-color;
                     background-color: $dark-color;
+                }
+                &:focus{
+                    box-shadow: none;
                 }
             }
         }
@@ -98,9 +139,9 @@
         .ticket{
             flex-direction: row;
             margin-bottom: 1.5rem;
-            &:last-of-type{
-                margin-bottom: 0;
-            }
+            // &:last-of-type{
+            //     margin-bottom: 0;
+            // }
             .card-header{
                 border: none;
                 display: flex;
@@ -119,7 +160,9 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    border-radius: 50%;
+                    @include prefixer(border-radius, 50%, webkit moz ms o);
+
+                    
                     i{
                         font-size: 20px;
                     }
@@ -139,10 +182,28 @@
                     justify-content: space-between;
                     .ticket-price{
                         padding-top: 10px;
+                        color: $maroon-color;
+                        p{
+                            font-weight: bold;
+                        }
                     }
                     .icon{
                         display: flex;
                         align-items: center;
+                        width: 40px;
+                        background-color: $maroon-color;
+                        height: 40px;
+                        border-radius: 50%;
+                        position: relative;
+                        top: 30px;
+                        justify-content: center;
+                        color: $offwhite-color;
+                        @include prefixer(border-radius, 50%, webkit moz ms o);
+                        
+                    }
+                    .facades{
+                        color: $dark-color;
+                        padding-bottom: 10px;
                     }
                 }
             }
@@ -157,6 +218,23 @@
             }
         }
         /* End of Tickets */
+
+        /* Empty */
+        .empty{
+            width: 50%;
+            margin: auto;
+            img{
+                width: 100%;
+            }
+            .info{
+                p{
+                    font-size: 1rem;
+                    font-weight: 700;
+                    text-align: center;
+                }
+            }
+        }
+        /* End of Empty */
     }
     /* End of Tickets Content */
 
