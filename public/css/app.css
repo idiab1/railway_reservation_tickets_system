@@ -10095,8 +10095,7 @@ body {
 /* Navbar */
 .navbar {
   background-color: #1c1f33;
-  padding-left: 0;
-  padding-right: 0;
+  padding: 0.5rem 1rem;
   /* Navbar Brand */
   /* End of Navbar Brand */
   /* Navbar Content */
@@ -10137,6 +10136,51 @@ body {
 }
 
 /* End of Navbar */
+@media (max-width: 991.98px) {
+  /* Navbar */
+  .navbar {
+    padding: 0.5rem 1rem;
+    /* Navbar Brand */
+    /* End of Navbar Brand */
+    /* Navbar Content */
+    /* End of Navbar Content */
+  }
+  .navbar .navbar-brand {
+    color: #EEE6CE;
+    font-weight: bold;
+  }
+  .navbar .navbar-nav {
+    /* navbar item */
+  }
+  .navbar .navbar-nav .nav-item {
+    /* Navbar link */
+    /* End of Navbar link */
+    /* Dropdown */
+    /* End of ropdown */
+  }
+  .navbar .navbar-nav .nav-item .nav-link {
+    font-weight: 600;
+    color: #EEE6CE;
+  }
+  .navbar .navbar-nav .nav-item.dropdown {
+    /* Dropdown toggle */
+    /* Dropdown Menu */
+    /* End of Dropdown Menu */
+  }
+  .navbar .navbar-nav .nav-item.dropdown .dropdown-menu {
+    padding: 0;
+    /* Dropdown item */
+  }
+  .navbar .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item:hover {
+    color: #EEE6CE;
+    background-color: #832c42;
+  }
+  .navbar .navbar-nav p {
+    margin-bottom: 0;
+  }
+
+  /* End of Navbar */
+}
 /* Sidebar */
 aside.sidebar.min-sidebar .nav-item .nav-link {
   color: #EEE6CE;
