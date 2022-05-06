@@ -1,5 +1,5 @@
 <!-- Navbar -->
-<nav class="navbar navbar-expand-md fixed-top navbar-dark shadow-sm">
+<nav class="navbar navbar-expand fixed-top navbar-dark shadow-sm">
     <div class="container-fluid">
         <a class="navbar-brand" href="{{route('home')}}">
             {{$setting->web_name}}
