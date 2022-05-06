@@ -83,6 +83,14 @@
                     </a>
                 </li>
 
+                <!-- passengers -->
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('passengers.index')}}">
+                        <i class="mdi mdi-elevator-passenger nav-icon" aria-hidden="true"></i>
+                        <p>{{ trans('site.passengers') }}</p>
+                    </a>
+                </li>
+
                 <!-- Stations -->
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('stations.index')}}">
