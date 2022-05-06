@@ -24,33 +24,7 @@
 }
 /* End of layout */
 
-// Small devices (landscape phones, less than 768px)
-@media (max-width: 767.98px) { 
-    /* layout */
-    .layout {
-        /* Sidebar */
-        aside.sidebar.side-bottom {
-            top: unset;
-            width: 100%;
-            height: unset !important;
-            padding: 8px 0;
-            bottom: 0;
-            z-index: 4;
-            ul{
-                flex-direction: row;
-                justify-content: space-around;
-            }
-        }
-        /* End of Sidebar */
 
-        /* Main Container */
-        .main-container {
-            width: 100%;
-        }
-        /* End of Main Container */
-    }
-    /* End of layout */
-}
 
 
 
@@ -189,6 +163,72 @@
         /* End of Reservation Form */
     }
     /* End of Reservation Box */
+
+    /* Card  Reservation form */
+    .card-reservation-form{
+        background-color: $dark-color;
+        .card{
+            background-color: transparent;
+            .card-header{
+                background-color: transparent;
+                h4{
+                    font-weight: bold;
+                    color: $offwhite-color;
+                    margin: 0;
+                }
+            }
+            /* Box Content */
+            .box-content{
+                padding: 1rem;
+                .box-routes{
+                    height: 100%;
+                }
+
+                .box-dates{
+                    height: 100%;
+                }
+
+                .form-group{
+                    padding: 17px 15px;
+                    border-right: 1px solid #111;
+                    &:nth-of-type(3) {
+                        border-right: none;
+                    }
+                }
+
+                label{
+                    font-size: 15px;
+                    letter-spacing: .04rem;
+                    color: $offwhite-color;
+                    font-weight: bold;
+                    margin: 0;
+                }
+                input{
+                    border: none;
+                    background-color: transparent;
+                    padding-left: 0;
+                    color: #ababab;
+                    &:focus{
+                        background-color: transparent;
+                        border: none;
+                        @include prefixer(box-shadow, none, webkit moz ms o);
+                    }
+                }
+            }
+
+            /* End of Box Content */
+            .box-button{
+                background-color: transparent;
+                button{
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    /* End of Card Reservation form */
+
 }
 /* End of Search Reservation */
 
@@ -247,3 +287,41 @@
 }
 
 /* End of E-tickets advantages */
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) { 
+    /* layout */
+    .layout {
+        /* Sidebar */
+        aside.sidebar.side-bottom {
+            top: unset;
+            width: 100%;
+            height: unset !important;
+            padding: 8px 0;
+            bottom: 0;
+            z-index: 4;
+            ul{
+                flex-direction: row;
+                justify-content: space-around;
+            }
+        }
+        /* End of Sidebar */
+
+        /* Main Container */
+        .main-container {
+            width: 100%;
+        }
+        /* End of Main Container */
+    }
+    /* End of layout */
+
+    /* Search Reservation */
+    .search-reservation{
+        padding-top: 40px;
+        padding-bottom: 40px;
+        /* card Reservation form */
+        
+        /* End of card Reservation form */
+    }
+    /* End of Search Reservation */
+
+}
