@@ -71,6 +71,7 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
 
+
         // create profile user
         if($user->profile == null){
             Profile::create([
@@ -84,6 +85,8 @@ class RegisterController extends Controller
                 "gender"        => "male"
             ]);
         }
+        $user->attachRole("passenger");
+
 
         return $user;
 
