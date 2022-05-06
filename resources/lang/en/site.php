@@ -5,6 +5,7 @@ return [
     // Links
     'home' => 'Home',
     'users' => 'Users',
+    "passengers" => "Passengers",
     'messages' => 'Messages',
     'setting' => 'Setting',
     'contact_us' => 'Contact Us',
@@ -24,6 +25,11 @@ return [
     'list_users' => 'All users',
     'add_user' => 'Add a new user',
     "user" => "User",
+
+    // Passengers Page
+    'list_passengers' => 'All passengers',
+    'add_passenger' => 'Add a new passenger',
+    "passenger" => "Passenger",
 
     // Stations Page
     'list_stations' => 'All stations',
