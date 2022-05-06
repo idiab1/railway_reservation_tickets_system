@@ -52,17 +52,26 @@
 
                     <!-- Filter Box Body -->
                     <div class="card-body filter-box-body">
-
-                        <button class="btn btn-link all-types active"
-                            data-url="{{route("all.types")}}" data-method="get">
-                            All
-                        </button>
+                        <h5>Couch type</h5>
+                        <!-- All Types -->
+                        <div class="custom-control custom-switch">
+                            <input class="custom-control-input all-types" type="checkbox" data-url="{{route("all.types")}}" 
+                                data-method="get" id="all">
+                            <label class="custom-control-label" for="all">All</label>
+                        </div>
+                        <!-- End of All Types -->
                         @if ($types->count() > 0)
-                            @foreach ($types as $type)
+                            @foreach ($types as $key => $type)
                                 {{-- <a href="">{{$type->name}}</a> --}}
-                                <button class="btn btn-link d-block type-item"
+                                {{-- <button class="btn btn-link d-block type-item"
                                 data-url="{{route("type.ticket", ["type" => $type->id])}}"
-                                data-method="get">{{$type->name}}</button>
+                                data-method="get">{{$type->name}}</button> --}}
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input type-item"
+                                        data-url="{{route("type.ticket", ["type" => $type->id])}}"
+                                        data-method="get" type="checkbox" id="check{{$key}}">
+                                    <label class="custom-control-label" for="check{{$key}}">{{$type->name}}</label>
+                                </div>
                             @endforeach
                         @endif
                     </div>
@@ -143,7 +152,7 @@
                         <p class="p-2">Waiting</p>
                     </div>
                     <div class="tickets-content-list">
-
+                        
                     </div>
                 </div>
                 <!-- End of Ticktes content -->
@@ -160,72 +169,7 @@
 <script src="{{asset('js/main.js')}}"></script>
 <!--Custom script -->
 <script src="{{asset('js/custom.js')}}"></script>
+<script src="{{asset('js/types.js')}}"></script>
 
-<script>
-
-    window.addEventListener("load", () => {
-        document.querySelector(".all-types").click();
-    })
-
-    let typeItems = document.querySelectorAll(".type-item");
-    typeItems.forEach(typeItem => {
-        typeItem.addEventListener("click", (e) => {
-        e.preventDefault();
-
-            // Get data-url
-            let url = typeItem.getAttribute("data-url");
-            let method = typeItem.getAttribute("data-method");
-
-            // Change loading spinner to flex
-            document.querySelector(".loading").style.display = "flex";
-
-            $.ajax({
-                url: url,
-                method: method,
-                success: function(data){
-                    // console.log(data)
-
-                    // Display none on loading element
-                    document.querySelector(".loading").style.display = "none";
-                    // Clear data of all elements
-                    document.querySelector(".tickets-content-list").innerHTML = "";
-
-                    document.querySelector(".tickets-content-list").insertAdjacentHTML("beforeend", data)
-
-                }
-            })
-
-        })
-    });
-
-    document.querySelector(".all-types").addEventListener("click", (e) => {
-        e.preventDefault();
-
-            // Get data-url
-            let url = document.querySelector(".all-types").getAttribute("data-url");
-            let method = document.querySelector(".all-types").getAttribute("data-method");
-
-            // Change loading spinner to flex
-            document.querySelector(".loading").style.display = "flex";
-
-
-            $.ajax({
-                url: url,
-                method: method,
-                success: function(data){
-                    // console.log(data)
-
-                    // Display none on loading element
-                    document.querySelector(".loading").style.display = "none";
-                    // Clear data of all elements
-                    document.querySelector(".tickets-content-list").innerHTML = "";
-
-                    document.querySelector(".tickets-content-list").insertAdjacentHTML("beforeend", data)
-
-                }
-            })
-
-        })
-</script>
 
 @endsection
