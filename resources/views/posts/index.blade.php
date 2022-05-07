@@ -43,7 +43,7 @@
         <div class="row">
             <div class="col-md-4">
                 <!-- Recent Posts -->
-                <div class="card recent-box my-4">
+                <div class="card recent-box mb-4">
                     <!-- recent Box Header -->
                     <div class="card-header recent-box-header px-0">
                         <h4>Recent Posts</h4>
@@ -117,6 +117,9 @@
                                 <!-- Post header for add images -->
                                 <div class="card-header post-header p-0">
                                     <img class="img-fluid" src="{{asset('images/post.jpg')}}" alt="">
+                                    <div class="overlay">
+                                        <i class="fas fa-eye fa-3x"></i>
+                                    </div>
                                 </div>
                                 <!-- Post Content/body -->
                                 <div class="card-body post-body">
@@ -146,6 +149,9 @@
                                 <!-- Post header for add images -->
                                 <div class="card-header post-header p-0">
                                     <img class="img-fluid" src="{{asset('images/post.jpg')}}" alt="">
+                                    <div class="overlay">
+                                        <i class="fas fa-eye fa-3x"></i>
+                                    </div>
                                 </div>
                                 <!-- Post Content/body -->
                                 <div class="card-body post-body">
@@ -161,6 +167,9 @@
                                 <!-- Post header for add images -->
                                 <div class="card-header post-header p-0">
                                     <img class="img-fluid" src="{{asset('images/post.jpg')}}" alt="">
+                                    <div class="overlay">
+                                        <i class="fas fa-eye fa-3x"></i>
+                                    </div>
                                 </div>
                                 <!-- Post Content/body -->
                                 <div class="card-body post-body">
@@ -176,35 +185,9 @@
                                 <!-- Post header for add images -->
                                 <div class="card-header post-header p-0">
                                     <img class="img-fluid" src="{{asset('images/post.jpg')}}" alt="">
-                                </div>
-                                <!-- Post Content/body -->
-                                <div class="card-body post-body">
-                                    <span class="date">21 August, 2019</span>
-                                    <h3 class="post-title">Why Lead Generation is Key for Business Growth</h3>
-                                </div>
-                            </div>
-                            {{-- <div class="card card-post">
-                                <!-- Post header for add images -->
-                                <div class="card-header post-header p-0">
-                                    <img class="img-fluid" src="{{asset('images/post.jpg')}}" alt="">
-                                </div>
-                                <!-- Post Content/body -->
-                                <div class="card-body post-body">
-                                    <span class="date">21 August, 2019</span>
-                                    <h3 class="post-title">Why Lead Generation is Key for Business Growth</h3>
-                                    <p class="post-description">
-                                        A small river named Duden flows by their place and supplies it with the necessary regelialia.
-                                    </p>
-                                </div>
-                            </div> --}}
-                            <!-- ./end of post -->
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <!-- Card post -->
-                            <div class="card card-post mb-4">
-                                <!-- Post header for add images -->
-                                <div class="card-header post-header p-0">
-                                    <img class="img-fluid" src="{{asset('images/post.jpg')}}" alt="">
+                                    <div class="overlay">
+                                        <i class="fas fa-eye fa-3x"></i>
+                                    </div>
                                 </div>
                                 <!-- Post Content/body -->
                                 <div class="card-body post-body">
@@ -220,6 +203,9 @@
                                 <!-- Post header for add images -->
                                 <div class="card-header post-header p-0">
                                     <img class="img-fluid" src="{{asset('images/post.jpg')}}" alt="">
+                                    <div class="overlay">
+                                        <i class="fas fa-eye fa-3x"></i>
+                                    </div>
                                 </div>
                                 <!-- Post Content/body -->
                                 <div class="card-body post-body">
@@ -229,6 +215,25 @@
                             </div>
                             <!-- ./end of post -->
                         </div>
+                        <div class="col-12 col-md-6">
+                            <!-- Card post -->
+                            <div class="card card-post mb-4">
+                                <!-- Post header for add images -->
+                                <div class="card-header post-header p-0">
+                                    <img class="img-fluid" src="{{asset('images/post.jpg')}}" alt="">
+                                    <div class="overlay">
+                                        <i class="fas fa-eye fa-3x"></i>
+                                    </div>
+                                </div>
+                                <!-- Post Content/body -->
+                                <div class="card-body post-body">
+                                    <span class="date">21 August, 2019</span>
+                                    <h3 class="post-title">Why Lead Generation is Key for Business Growth</h3>
+                                </div>
+                            </div>
+                            <!-- ./end of post -->
+                        </div>
+                        
                     </div>
         
                 </div>

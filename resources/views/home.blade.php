@@ -351,7 +351,7 @@
     <!-- End of reservation search section -->
 
     <!-- Recent Posts recent-posts-section -->
-    <section class="recent-posts-section section">
+    <section class="posts-section section">
         <div class="container-fluid container-md">
             <div class="row">
                 <div class="col-12 p-0">
@@ -501,6 +501,9 @@
                                     <!-- Post header for add images -->
                                     <div class="card-header post-header p-0">
                                         <img class="img-fluid" src="{{asset('images/post.jpg')}}" alt="">
+                                        <div class="overlay">
+                                            <i class="fas fa-eye fa-3x"></i>
+                                        </div>
                                     </div>
                                     <!-- Post Content/body -->
                                     <div class="card-body post-body">
@@ -530,6 +533,9 @@
                                     <!-- Post header for add images -->
                                     <div class="card-header post-header p-0">
                                         <img class="img-fluid" src="{{asset('images/post.jpg')}}" alt="">
+                                        <div class="overlay">
+                                            <i class="fas fa-eye fa-3x"></i>
+                                        </div>
                                     </div>
                                     <!-- Post Content/body -->
                                     <div class="card-body post-body">
@@ -545,6 +551,9 @@
                                     <!-- Post header for add images -->
                                     <div class="card-header post-header p-0">
                                         <img class="img-fluid" src="{{asset('images/post.jpg')}}" alt="">
+                                        <div class="overlay">
+                                            <i class="fas fa-eye fa-3x"></i>
+                                        </div>
                                     </div>
                                     <!-- Post Content/body -->
                                     <div class="card-body post-body">
@@ -562,6 +571,9 @@
                                     <!-- Post header for add images -->
                                     <div class="card-header post-header p-0">
                                         <img class="img-fluid" src="{{asset('images/post.jpg')}}" alt="">
+                                        <div class="overlay">
+                                            <i class="fas fa-eye fa-3x"></i>
+                                        </div>
                                     </div>
                                     <!-- Post Content/body -->
                                     <div class="card-body post-body">
@@ -577,6 +589,9 @@
                                     <!-- Post header for add images -->
                                     <div class="card-header post-header p-0">
                                         <img class="img-fluid" src="{{asset('images/post.jpg')}}" alt="">
+                                        <div class="overlay">
+                                            <i class="fas fa-eye fa-3x"></i>
+                                        </div>
                                     </div>
                                     <!-- Post Content/body -->
                                     <div class="card-body post-body">
@@ -592,6 +607,9 @@
                                     <!-- Post header for add images -->
                                     <div class="card-header post-header p-0">
                                         <img class="img-fluid" src="{{asset('images/post.jpg')}}" alt="">
+                                        <div class="overlay">
+                                            <i class="fas fa-eye fa-3x"></i>
+                                        </div>
                                     </div>
                                     <!-- Post Content/body -->
                                     <div class="card-body post-body">
