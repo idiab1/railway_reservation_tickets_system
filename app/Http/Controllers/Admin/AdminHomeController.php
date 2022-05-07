@@ -25,7 +25,7 @@ class AdminHomeController extends Controller
     {
         $userCount = User::all()->count();
         $trainsCount = Train::all()->count();
-        $servationsCount = User::all()->count();
+        $servationsCount = Reservation::all()->count();
         $reservations = Reservation::all();
         return view('admin.adminHome', compact("userCount", "trainsCount", "servationsCount", "reservations"));
     }
