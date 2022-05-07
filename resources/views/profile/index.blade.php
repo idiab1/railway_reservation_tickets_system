@@ -162,7 +162,7 @@
                                 <div class="col-12">
 
                                     <!-- Card -->
-                                    <div class="card ticket mb-2">
+                                    <div class="card ticket mb-4">
                                         <!-- card header -->
                                         <div class="card-header ">
                                             <div class="ticket-header">
