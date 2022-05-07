@@ -70,7 +70,7 @@ Route::group(
         ])->parameters([
             'profile' => 'id'
         ]);
-        Route::get('profile/setting', [ProfileController::class, 'setting'])->name('profile.setting');
+        Route::get('profile/setting', [App\Http\Controllers\ProfileController::class, 'setting'])->name('user.profile.setting');
 
         // Contact Route
         Route::resource('contact', ContactController::class)->only([
