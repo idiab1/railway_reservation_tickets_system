@@ -10092,6 +10092,21 @@ body {
 }
 
 /* End of scrolling */
+/* Empty */
+.empty {
+  width: 50%;
+  margin: auto;
+}
+.empty img {
+  width: 100%;
+}
+.empty .info p {
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* End of Empty */
 /* Navbar */
 .navbar {
   background-color: #1c1f33;
@@ -10721,8 +10736,6 @@ aside.sidebar.min-sidebar .nav-item .nav-link .icon i {
 .tickets-section {
   /* Filter Box */
   /* End of Filter Box */
-  /* Recent Posts */
-  /* Recent Posts */
   /* Tickets Content */
   /* End of Tickets Content */
 }
@@ -10786,59 +10799,9 @@ aside.sidebar.min-sidebar .nav-item .nav-link .icon i {
 .tickets-section .filter-box .filter-box-body button:focus {
   box-shadow: none;
 }
-.tickets-section .recent-box {
-  border: none;
-  /* recent Header */
-  /* End of recent Header */
-  /* recent Body */
-  /* End of recent Body */
-}
-.tickets-section .recent-box .recent-box-header {
-  background-color: transparent;
-  border-bottom: 1px dashed rgba(28, 31, 51, 0.38);
-}
-.tickets-section .recent-box .recent-box-header h4 {
-  margin-bottom: 0;
-  color: #832c42;
-}
-.tickets-section .recent-box .recent-box-body {
-  padding: 0;
-  /* Post Card */
-  /* End of Post Card */
-}
-.tickets-section .recent-box .recent-box-body .card-post {
-  margin: 15px 0;
-  flex-direction: row;
-  border: none;
-  border-bottom: 1px dashed rgba(28, 31, 51, 0.38);
-  border-radius: 0;
-  /* Post header */
-  /* End of Post header */
-  /* Post body */
-  /* End of Post body */
-}
-.tickets-section .recent-box .recent-box-body .card-post .post-header {
-  padding: 0;
-  border: none;
-  width: 100px;
-  background-color: transparent;
-}
-.tickets-section .recent-box .recent-box-body .card-post .post-header img {
-  width: 100%;
-}
-.tickets-section .recent-box .recent-box-body .card-post .post-body h5 {
-  color: #1c1f33;
-  font-weight: 600;
-  font-size: 1rem;
-}
-.tickets-section .recent-box .recent-box-body .card-post .post-body span {
-  color: #4e4e4e;
-}
 .tickets-section .tickets-content {
   /* Tickets */
   /* End of Tickets */
-  /* Empty */
-  /* End of Empty */
 }
 .tickets-section .tickets-content .ticket {
   flex-direction: row;
@@ -10915,18 +10878,6 @@ aside.sidebar.min-sidebar .nav-item .nav-link .icon i {
   background-color: transparent;
   border-left: 1px solid rgba(0, 0, 0, 0.125);
 }
-.tickets-section .tickets-content .empty {
-  width: 50%;
-  margin: auto;
-}
-.tickets-section .tickets-content .empty img {
-  width: 100%;
-}
-.tickets-section .tickets-content .empty .info p {
-  font-size: 1rem;
-  font-weight: 700;
-  text-align: center;
-}
 .tickets-section .loading {
   display: none;
   align-items: center;
@@ -10960,6 +10911,58 @@ aside.sidebar.min-sidebar .nav-item .nav-link .icon i {
 }
 
 /* End of Tickets Section */
+/* Recent Posts */
+.recent-box {
+  border: none;
+  /* recent Header */
+  /* End of recent Header */
+  /* recent Body */
+  /* End of recent Body */
+}
+.recent-box .recent-box-header {
+  background-color: transparent;
+  border-bottom: 1px dashed rgba(28, 31, 51, 0.38);
+}
+.recent-box .recent-box-header h4 {
+  margin-bottom: 0;
+  font-weight: 700;
+  color: #832c42;
+}
+.recent-box .recent-box-body {
+  padding: 0;
+  /* Post Card */
+  /* End of Post Card */
+}
+.recent-box .recent-box-body .card-post {
+  margin: 15px 0;
+  flex-direction: row;
+  border: none;
+  border-bottom: 1px dashed rgba(28, 31, 51, 0.38);
+  border-radius: 0;
+  /* Post header */
+  /* End of Post header */
+  /* Post body */
+  /* End of Post body */
+}
+.recent-box .recent-box-body .card-post .post-header {
+  padding: 0;
+  border: none;
+  width: 100px;
+  background-color: transparent;
+}
+.recent-box .recent-box-body .card-post .post-header img {
+  width: 100%;
+}
+.recent-box .recent-box-body .card-post .post-body h5 {
+  color: #1c1f33;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.recent-box .recent-box-body .card-post .post-body span {
+  color: #4e4e4e;
+}
+
+/* Recent Posts */
 /* Contact us page */
 .contact-page {
   background-image: linear-gradient(220deg, rgba(238, 230, 206, 0.5), rgba(238, 230, 206, 0.5)), url(/images/map.jpg?74d6081fe343381a5d515c8e2e2fbfa8);
