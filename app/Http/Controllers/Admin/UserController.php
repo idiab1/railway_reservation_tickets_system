@@ -38,7 +38,9 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('admin.users.create');
+        // get all roles without passenger role
+        $roles = Role::whereIn("name", ["super_admin", "moderator"])->get();
+        return view('admin.users.create', compact("roles"));
     }
 
     /**
@@ -105,11 +107,8 @@ class UserController extends Controller
     public function edit($id)
     {
         $user = User::find($id);
-        // $roles = Role::all();
+        // get all roles without passenger role
         $roles = Role::whereIn("name", ["super_admin", "moderator"])->get();
-        // $roles = Role::whereHas("roles", function ($q){
-        //     $q->whereIn("name", ["super_admin", "moderator"]);
-        // })->get();
         return view('admin.users.edit', compact('user', "roles"));
     }
 
