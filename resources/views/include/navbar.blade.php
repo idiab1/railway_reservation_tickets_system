@@ -81,7 +81,7 @@
                             </a>
                             <div class="dropdown-divider"></div>
                             <!-- Setting link -->
-                            <a class="dropdown-item d-inline-block" href="{{route('profile.setting')}}">
+                            <a class="dropdown-item d-inline-block" href="{{route('user.profile.setting')}}">
                                 <div class="icon mr-1 d-inline-block">
                                     <i class="fas fa-cogs"></i>
                                 </div>

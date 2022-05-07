@@ -134,7 +134,7 @@
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
 
                 <!-- Setting -->
-                <a class="dropdown-item" href="{{route('profile.setting')}}" target="_blank">
+                <a class="dropdown-item" href="{{route('user.profile.setting')}}" target="_blank">
                     <i class="mdi mdi-account-cog" aria-hidden="true"></i>
                     {{ trans('site.setting') }}
                 </a>
