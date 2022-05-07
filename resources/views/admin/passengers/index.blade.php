@@ -159,7 +159,7 @@
                        </div>
 
                        <!-- Confirm password -->
-                       <div class="form-group">
+                       <div class="form-group mb-0">
                            <label for="confirmPassword">{{ trans('site.confirm_password') }}</label>
                            <input class="form-control" type="password" id="confirmPassword"
                                name="password_confirmation" placeholder="{{trans('site.admin_confirm_password')}}"
