@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Payment\CreditController;
+// use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TypeController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -53,6 +54,15 @@ Route::group(
         // paymob
         Route::post('/credit/{train}', [CreditController::class, 'credit'])->name('credit');
         Route::get('/callback', [CreditController::class, 'callback'])->name('callback');
+
+        // Posts Routes
+        Route::resource('posts', PostController::class)->only([
+            'index'
+        ])->parameters([
+            'posts' => "id"
+        ])->names([
+            "index" => "user.posts.index",
+        ]);
 
         // Profile user routes
         Route::resource('profile', ProfileController::class)->only([
