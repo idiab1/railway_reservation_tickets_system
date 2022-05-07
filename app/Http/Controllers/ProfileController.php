@@ -63,7 +63,7 @@ class ProfileController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // dd($request->image);
+        // dd($request);
         //
         $user = User::find($id);
         $request_data = $request->all();
@@ -80,10 +80,7 @@ class ProfileController extends Controller
             })->save(public_path('uploads/users/' . $request->image->hashName()));
             $request_data['image'] = $request->image->hashName();
 
-            $user->update([
-                'name'      => $request->name,
-                'email'     => $request->email,
-            ]);
+            
 
             if($request->has('password') && $request->password != null ){
                 // Update password
@@ -104,11 +101,6 @@ class ProfileController extends Controller
 
 
         }else{
-            $user->update([
-                'name'      => $request->name,
-                'email'     => $request->email,
-            ]);
-
             if($request->has('password') && $request->password != null ){
                 // Update password
                 $user->update([
@@ -123,6 +115,15 @@ class ProfileController extends Controller
                 'about' => $request->about,
                 "age"       => $request->age,
                 "gender"    => $request->gender
+            ]);
+        }
+
+
+        if($request->name  != null || $request->email != null ){
+
+            $user->update([
+                'name'      => $request->name,
+                'email'     => $request->email,
             ]);
         }
 
