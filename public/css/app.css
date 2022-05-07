@@ -10962,7 +10962,53 @@ aside.sidebar.min-sidebar .nav-item .nav-link .icon i {
   color: #4e4e4e;
 }
 
-/* Recent Posts */
+/* End of Recent Posts */
+/* Posts section */
+.posts-section {
+  /* card post */
+  /* End of card post */
+}
+.posts-section .card-post {
+  /* post header*/
+  /* post body*/
+}
+.posts-section .card-post .post-header {
+  position: relative;
+}
+.posts-section .card-post .post-header img {
+  width: 100%;
+}
+.posts-section .card-post .post-header .overlay {
+  background-color: #832c42;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  color: #EEE6CE;
+  transition: all 0.3s ease-in-out;
+}
+.posts-section .card-post .post-body .date {
+  padding-bottom: 5px;
+  display: block;
+}
+.posts-section .card-post .post-body h3 {
+  margin-bottom: 0;
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.1;
+  color: #832c42;
+}
+.posts-section .card-post:hover .overlay {
+  opacity: 1;
+}
+
+/* End of Posts section */
 /* Contact us page */
 .contact-page {
   background-image: linear-gradient(220deg, rgba(238, 230, 206, 0.5), rgba(238, 230, 206, 0.5)), url(/images/map.jpg?74d6081fe343381a5d515c8e2e2fbfa8);
