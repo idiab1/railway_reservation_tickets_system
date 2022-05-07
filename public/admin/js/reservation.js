@@ -46,3 +46,8 @@ showBtns.forEach(showBtn => {
 
     })
 });
+
+// Show the first reservations
+window.addEventListener("load", () => {
+    document.querySelector(".btn-show").click();
+})
