@@ -27,3 +27,23 @@ body{
 }
 
 /* End of scrolling */
+
+
+/* Empty */
+.empty{
+    width: 50%;
+    margin: auto;
+    img{
+        width: 100%;
+    }
+    .info{
+        p{
+            font-size: 1rem;
+            font-weight: 700;
+            text-align: center;
+        }
+    }
+}
+/* End of Empty */
+
+
