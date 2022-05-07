@@ -29,6 +29,7 @@ class UserController extends Controller
         
         // get all roles without passenger role
         $roles = Role::whereIn("name", ["super_admin", "moderator"])->get();
+        // $roles = Role::all();
 
         return view('admin.users.index', compact('users', "roles"));
     }
@@ -42,6 +43,7 @@ class UserController extends Controller
     {
         // get all roles without passenger role
         $roles = Role::whereIn("name", ["super_admin", "moderator"])->get();
+        // $roles = Role::all();
         return view('admin.users.create', compact("roles"));
     }
 
@@ -111,6 +113,7 @@ class UserController extends Controller
         $user = User::find($id);
         // get all roles without passenger role
         $roles = Role::whereIn("name", ["super_admin", "moderator"])->get();
+        // $roles = Role::all();
         return view('admin.users.edit', compact('user', "roles"));
     }
 
