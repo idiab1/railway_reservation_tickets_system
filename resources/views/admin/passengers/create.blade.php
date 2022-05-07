@@ -20,7 +20,7 @@
 @section('content')
 <section class="passengers-section section">
     <div class="row">
-        <div class="col-md-12 m-auto">
+        <div class="col-md-10 m-auto">
 
             <!-- form container -->
             <div class="form-container">
@@ -30,11 +30,11 @@
                         <div class="users-form section-form">
                             <!-- Card -->
                             <div class="card">
-                                <!-- Card header -->
+                                {{-- <!-- Card header -->
                                 <div class="card-header">
                                     <h3 class="card-title">{{ trans('site.add_passenger') }}</h3>
                                 </div>
-                                <!-- End of card header -->
+                                <!-- End of card header --> --}}
                                 <!-- form -->
                                 <form action="{{route('passengers.store')}}" method="POST">
                                     @csrf
