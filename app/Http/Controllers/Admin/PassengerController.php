@@ -113,7 +113,22 @@ class PassengerController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = User::find($id);
+        // dd($user->roles);
+        $user->detachRoles($user->roles); 
+
+        // Update data of user
+        $user->update([
+            "name" => $request->name,
+            "email" => $request->email,
+            "password" => Hash::make($request->password),
+        ]);
+
+        // Attach role
+        $user->attachRole('passenger');
+
+        // Redirect to home of users
+        return redirect()->route('passengers.index');
     }
 
     /**
