@@ -60,6 +60,8 @@ Route::group(
                 "reservations" => "id"
             ]);
 
+            Route::get("reservations/{id}", [App\Http\Controllers\Admin\ReservationController::class, "reserveDetails"])->name("reserve.details");
+
             // Route::resource('trains/{id}/types', TrainTypesController::class)->only([
             //     'create', 'store', 'edit', 'update'
             // ])->names([
