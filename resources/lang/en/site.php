@@ -41,8 +41,10 @@ return [
     'list_trains' => 'All trains',
     'add_train' => 'Add a new train',
     'train' => "Train",
+    'train_price' => "Price",
 
     // Types Page
+    'all_types' => 'All types',
     'list_types' => 'All types',
     'add_type' => 'Add a type train',
 
@@ -151,6 +153,8 @@ return [
     'enter_name_post' => 'Enter name of post',
     'enter_content_post' => 'Enter Content of post',
     'enter_seats_available_train' => "Enter count of seats available",
+    'enter_train_price' => "Enter price of ticket train",
+    'enter_train_type' => "Enter type of train",
 
     // Footer
     'copyright' => 'Copyright all rights reserved.',
