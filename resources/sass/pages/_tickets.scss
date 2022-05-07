@@ -71,61 +71,7 @@
     }
     /* End of Filter Box */
 
-    /* Recent Posts */
-    .recent-box{
-        border: none;
-        /* recent Header */
-        .recent-box-header{
-            background-color: transparent;
-            border-bottom: 1px dashed rgb(28 31 51 / 38%);
-            h4{
-                margin-bottom: 0;
-                color: $maroon-color;
-            }
-        }
-        /* End of recent Header */
-
-        /* recent Body */
-        .recent-box-body{
-            padding: 0;
-
-            /* Post Card */
-            .card-post{
-                margin: 15px 0;
-                flex-direction: row;
-                border: none;
-                border-bottom: 1px dashed rgb(28 31 51 / 38%);
-                @include prefixer(border-radius, 0, webkit moz ms o);
-            
-                /* Post header */
-                .post-header{
-                    padding: 0;
-                    border: none;
-                    width: 100px;
-                    background-color: transparent;
-                    img{
-                        width: 100%;
-                    }
-                }
-                /* End of Post header */
-                /* Post body */
-                .post-body{
-                    h5{
-                        color: $dark-color;
-                        font-weight: 600;
-                        font-size: 1rem;
-                    }
-                    span{
-                        color: #4e4e4e;
-                    }
-                }
-                /* End of Post body */
-            }
-            /* End of Post Card */
-        }
-        /* End of recent Body */
-    }
-    /* Recent Posts */
+    
 
     /* Tickets Content */
     .tickets-content {
@@ -213,22 +159,6 @@
         }
         /* End of Tickets */
 
-        /* Empty */
-        .empty{
-            width: 50%;
-            margin: auto;
-            img{
-                width: 100%;
-            }
-            .info{
-                p{
-                    font-size: 1rem;
-                    font-weight: 700;
-                    text-align: center;
-                }
-            }
-        }
-        /* End of Empty */
     }
     /* End of Tickets Content */
 
