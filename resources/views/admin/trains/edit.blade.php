@@ -33,7 +33,7 @@
 @section('content')
 <section class="trains-section section">
     <div class="row">
-        <div class="col-md-12 m-auto">
+        <div class="col-md-10 m-auto">
 
             <!-- form container -->
             <div class="form-container">
@@ -125,7 +125,7 @@
                                             </div>
 
                                             <!-- Arrival Station / Time -->
-                                            <div class="form-group">
+                                            <div class="form-group mb-0">
                                                 <div class="row">
                                                     <div class="col">
                                                         <label for="arrival_station">{{ trans('site.arrival_station') }}</label>
