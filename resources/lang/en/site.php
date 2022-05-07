@@ -108,6 +108,10 @@ return [
     "to" => "To",
     "from" => "From",
     "all" => "all",
+    "user_type" => "User Type",
+    "admin" => "Admin",
+    "super_admin" => "Super Admin",
+    "moderator" => "Moderator",
 
     // Buttons
     'send' => 'Send',
