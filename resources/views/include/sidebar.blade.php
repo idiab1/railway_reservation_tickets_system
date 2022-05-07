@@ -23,7 +23,7 @@
 
         <!-- News -->
         <li class="nav-item">
-            <a class="nav-link text-center" href="">
+            <a class="nav-link text-center" href="{{route("user.posts.index")}}">
                 <div class="icon d-block">
                     <i class="fas fa-rss"></i>
                 </div>
