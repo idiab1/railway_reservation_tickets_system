@@ -350,7 +350,7 @@
     </section>
     <!-- End of reservation search section -->
 
-    <!-- Recent Posts -->
+    <!-- Recent Posts recent-posts-section -->
     <section class="recent-posts-section section">
         <div class="container-fluid container-md">
             <div class="row">
@@ -360,7 +360,7 @@
                 </div>
             </div>
             <div class="posts-lists">
-                <div class="row d-none d-md-block">
+                {{-- <div class="row d-none d-md-block">
                     <div class="col-12 p-0">
                         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner">
@@ -371,11 +371,11 @@
                                             <div class="card card-post">
                                                 <!-- Post header for add images -->
                                                 <div class="card-header post-header">
-            
-                                                    <span class="date">21 August, 2019</span>
+                                                    <img class="img-fluid" src="{{asset('images/post.jpg')}}" alt="">
                                                 </div>
                                                 <!-- Post Content/body -->
                                                 <div class="card-body post-body">
+                                                    <span class="date">21 August, 2019</span>
                                                     <h3 class="post-title">Why Lead Generation is Key for Business Growth</h3>
                                                     <p class="post-description">
                                                         A small river named Duden flows by their place and supplies it with the necessary regelialia.
@@ -389,11 +389,11 @@
                                             <div class="card card-post">
                                                 <!-- Post header for add images -->
                                                 <div class="card-header post-header">
-            
-                                                    <span class="date">21 August, 2019</span>
+                                                    <img class="img-fluid" src="{{asset('images/post.jpg')}}" alt="">
                                                 </div>
                                                 <!-- Post Content/body -->
                                                 <div class="card-body post-body">
+                                                    <span class="date">21 August, 2019</span>
                                                     <h3 class="post-title">Why Lead Generation is Key for Business Growth</h3>
                                                     <p class="post-description">
                                                         A small river named Duden flows by their place and supplies it with the necessary regelialia.
@@ -407,11 +407,11 @@
                                             <div class="card card-post">
                                                 <!-- Post header for add images -->
                                                 <div class="card-header post-header">
-            
-                                                    <span class="date">21 August, 2019</span>
+                                                    <img class="img-fluid" src="{{asset('images/post.jpg')}}" alt="">
                                                 </div>
                                                 <!-- Post Content/body -->
                                                 <div class="card-body post-body">
+                                                    <span class="date">21 August, 2019</span>
                                                     <h3 class="post-title">Why Lead Generation is Key for Business Growth</h3>
                                                     <p class="post-description">
                                                         A small river named Duden flows by their place and supplies it with the necessary regelialia.
@@ -429,11 +429,11 @@
                                             <div class="card card-post">
                                                 <!-- Post header for add images -->
                                                 <div class="card-header post-header">
-            
-                                                    <span class="date">21 August, 2019</span>
+                                                    <img class="img-fluid" src="{{asset('images/post.jpg')}}" alt="">
                                                 </div>
                                                 <!-- Post Content/body -->
                                                 <div class="card-body post-body">
+                                                    <span class="date">21 August, 2019</span>
                                                     <h3 class="post-title">Why Lead Generation is Key for Business Growth</h3>
                                                     <p class="post-description">
                                                         A small river named Duden flows by their place and supplies it with the necessary regelialia.
@@ -447,11 +447,11 @@
                                             <div class="card card-post">
                                                 <!-- Post header for add images -->
                                                 <div class="card-header post-header">
-            
-                                                    <span class="date">21 August, 2019</span>
+                                                    <img class="img-fluid" src="{{asset('images/post.jpg')}}" alt="">
                                                 </div>
                                                 <!-- Post Content/body -->
                                                 <div class="card-body post-body">
+                                                    <span class="date">21 August, 2019</span>
                                                     <h3 class="post-title">Why Lead Generation is Key for Business Growth</h3>
                                                     <p class="post-description">
                                                         A small river named Duden flows by their place and supplies it with the necessary regelialia.
@@ -462,11 +462,18 @@
                                         </div>
                                         <div class="col-md-4">
                                             <!-- Card post -->
-                                            <div class="card card-post" style="height:100%">
+                                            <div class="card card-post">
+                                                <!-- Post header for add images -->
+                                                <div class="card-header post-header">
+                                                    <img class="img-fluid" src="{{asset('images/post.jpg')}}" alt="">
+                                                </div>
+                                                <!-- Post Content/body -->
                                                 <div class="card-body post-body">
-                                                    <a href="" class="btn-btn-primary crayons-btn">
-                                                        show More
-                                                    </a>
+                                                    <span class="date">21 August, 2019</span>
+                                                    <h3 class="post-title">Why Lead Generation is Key for Business Growth</h3>
+                                                    <p class="post-description">
+                                                        A small river named Duden flows by their place and supplies it with the necessary regelialia.
+                                                    </p>
                                                 </div>
                                             </div>
                                             <!-- ./end of post -->
@@ -482,6 +489,118 @@
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="sr-only">Next</span>
                             </a>
+                        </div>
+                    </div>
+                </div> --}}
+                <div class="row d-none d-md-block">
+                    <div class="col-12 p-0">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <!-- Card post -->
+                                <div class="card card-post mb-4">
+                                    <!-- Post header for add images -->
+                                    <div class="card-header post-header p-0">
+                                        <img class="img-fluid" src="{{asset('images/post.jpg')}}" alt="">
+                                    </div>
+                                    <!-- Post Content/body -->
+                                    <div class="card-body post-body">
+                                        <span class="date">21 August, 2019</span>
+                                        <h3 class="post-title">Why Lead Generation is Key for Business Growth</h3>
+                                    </div>
+                                </div>
+                                {{-- <div class="card card-post">
+                                    <!-- Post header for add images -->
+                                    <div class="card-header post-header p-0">
+                                        <img class="img-fluid" src="{{asset('images/post.jpg')}}" alt="">
+                                    </div>
+                                    <!-- Post Content/body -->
+                                    <div class="card-body post-body">
+                                        <span class="date">21 August, 2019</span>
+                                        <h3 class="post-title">Why Lead Generation is Key for Business Growth</h3>
+                                        <p class="post-description">
+                                            A small river named Duden flows by their place and supplies it with the necessary regelialia.
+                                        </p>
+                                    </div>
+                                </div> --}}
+                                <!-- ./end of post -->
+                            </div>
+                            <div class="col-md-4">
+                                <!-- Card post -->
+                                <div class="card card-post mb-4">
+                                    <!-- Post header for add images -->
+                                    <div class="card-header post-header p-0">
+                                        <img class="img-fluid" src="{{asset('images/post.jpg')}}" alt="">
+                                    </div>
+                                    <!-- Post Content/body -->
+                                    <div class="card-body post-body">
+                                        <span class="date">21 August, 2019</span>
+                                        <h3 class="post-title">Why Lead Generation is Key for Business Growth</h3>
+                                    </div>
+                                </div>
+                                <!-- ./end of post -->
+                            </div>
+                            <div class="col-md-4">
+                                <!-- Card post -->
+                                <div class="card card-post mb-4">
+                                    <!-- Post header for add images -->
+                                    <div class="card-header post-header p-0">
+                                        <img class="img-fluid" src="{{asset('images/post.jpg')}}" alt="">
+                                    </div>
+                                    <!-- Post Content/body -->
+                                    <div class="card-body post-body">
+                                        <span class="date">21 August, 2019</span>
+                                        <h3 class="post-title">Why Lead Generation is Key for Business Growth</h3>
+                                    </div>
+                                </div>
+                                <!-- ./end of post -->
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <!-- Card post -->
+                                <div class="card card-post mb-4">
+                                    <!-- Post header for add images -->
+                                    <div class="card-header post-header p-0">
+                                        <img class="img-fluid" src="{{asset('images/post.jpg')}}" alt="">
+                                    </div>
+                                    <!-- Post Content/body -->
+                                    <div class="card-body post-body">
+                                        <span class="date">21 August, 2019</span>
+                                        <h3 class="post-title">Why Lead Generation is Key for Business Growth</h3>
+                                    </div>
+                                </div>
+                                <!-- ./end of post -->
+                            </div>
+                            <div class="col-md-4">
+                                <!-- Card post -->
+                                <div class="card card-post mb-4">
+                                    <!-- Post header for add images -->
+                                    <div class="card-header post-header p-0">
+                                        <img class="img-fluid" src="{{asset('images/post.jpg')}}" alt="">
+                                    </div>
+                                    <!-- Post Content/body -->
+                                    <div class="card-body post-body">
+                                        <span class="date">21 August, 2019</span>
+                                        <h3 class="post-title">Why Lead Generation is Key for Business Growth</h3>
+                                    </div>
+                                </div>
+                                <!-- ./end of post -->
+                            </div>
+                            <div class="col-md-4">
+                                <!-- Card post -->
+                                <div class="card card-post mb-4">
+                                    <!-- Post header for add images -->
+                                    <div class="card-header post-header p-0">
+                                        <img class="img-fluid" src="{{asset('images/post.jpg')}}" alt="">
+                                    </div>
+                                    <!-- Post Content/body -->
+                                    <div class="card-body post-body">
+                                        <span class="date">21 August, 2019</span>
+                                        <h3 class="post-title">Why Lead Generation is Key for Business Growth</h3>
+                                    </div>
+                                </div>
+                                <!-- ./end of post -->
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -505,6 +624,13 @@
                         <!-- ./end of post -->
                     </div>
                 </div>
+
+                <div class="row">
+                    <div class="col-12 text-center my-4">
+                        <a class="btn crayons-btn" href="{{route("user.posts.index")}}">Show More</a>
+                    </div>
+                </div>
+
             </div>
             
 
