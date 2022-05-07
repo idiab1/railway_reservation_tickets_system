@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Profile;
+use App\Models\Role;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -58,11 +59,22 @@ class UserController extends Controller
         ]);
 
         // Except password, permissions, password_confirmation
-        $request_data = $request->except(['password', 'password_confirmation']);
-        $request_data['password'] = Hash::make($request->password);
+        // $request_data = $request->except(['password', 'password_confirmation']);
+        // $request_data['password'] = Hash::make($request->password);
 
         // Save new user
-        $user = User::create($request_data);
+        $user = User::create([
+            "name" => $request->name,
+            "email" => $request->email,
+            "password" => Hash::make($request->password),
+        ]);
+
+        if($request->has("admin") == "on"){
+            // Attach role
+            $user->attachRole('super_admin');
+        }else{
+            $user->attachRole('moderator');
+        }
 
         // create profile user
         if($user->profile == null){
@@ -73,16 +85,9 @@ class UserController extends Controller
                 'twitter'   => 'https://www.twitter.com',
                 'linkedin'  => 'https://www.linkedin.com',
                 'about'     => 'About here',
-                "age"       => 23,
+                "age"       => 13,
                 "gender"    => "male"
             ]);
-        }
-
-        if($request->has("admin")){
-            // Attach role
-            $user->attachRole('super_admin');
-        }else{
-            $user->attachRole('moderator');
         }
 
         // Redirect to home of users
@@ -100,7 +105,12 @@ class UserController extends Controller
     public function edit($id)
     {
         $user = User::find($id);
-        return view('admin.users.edit', compact('user'));
+        // $roles = Role::all();
+        $roles = Role::whereIn("name", ["super_admin", "moderator"])->get();
+        // $roles = Role::whereHas("roles", function ($q){
+        //     $q->whereIn("name", ["super_admin", "moderator"]);
+        // })->get();
+        return view('admin.users.edit', compact('user', "roles"));
     }
 
     /**
@@ -112,81 +122,91 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // Validate on all data coming from request
-        $this->validate($request, [
-            "name"  => ['required', 'string'],
-            "email" => ['required', 'email'],
-            "facebook" => ['nullable'],
-            "twitter" => ['nullable'],
-            "linkedin" => ['nullable'],
-            "about" => ['nullable']
-        ]);
+        $user = User::find($id);
+        // dd($request);
 
         // Except password, permissions, password_confirmation
-        $request_data = $request->except(['password', 'password_confirmation', 'permissions']);
-
-        $user = User::find($id);
+        $request_data = $request->except(['password', 'password_confirmation']);
+        
 
         // // Update data of user
-        // $user->update($request_data);
+        $user->update($request_data);
+
+        $user->update([
+            "name" => $request->name,
+            "email" => $request->email,
+            "password" => Hash::make($request->password),
+        ]);
+
+
+        // if($user->hasRole('owner'))
+
+        if($request->has("admin") == "on"){
+            // Attach role
+            $user->attachRole('super_admin');
+        }else{
+            $user->attachRole('moderator');
+        }
+
+                
 
         // $user->syncPermissions($request->permissions);
 
-        if($request->image && $request->image != null){
+        // if($request->image && $request->image != null){
 
-            // Delete image from uploads folder
-            if($user->profile->image && $user->profile->image != 'default.png'){
-                Storage::disk('public_uploads')->delete('/users/' . $user->profile->image);
-            }
-            // resize the image to a width of 300 and constrain aspect ratio (auto height)
-            Image::make($request->image)->resize(300, null, function ($constraint) {
-                $constraint->aspectRatio();
-            })->save(public_path('uploads/users/' . $request->image->hashName()));
-            $request_data['image'] = $request->image->hashName();
+        //     // Delete image from uploads folder
+        //     if($user->profile->image && $user->profile->image != 'default.png'){
+        //         Storage::disk('public_uploads')->delete('/users/' . $user->profile->image);
+        //     }
+        //     // resize the image to a width of 300 and constrain aspect ratio (auto height)
+        //     Image::make($request->image)->resize(300, null, function ($constraint) {
+        //         $constraint->aspectRatio();
+        //     })->save(public_path('uploads/users/' . $request->image->hashName()));
+        //     $request_data['image'] = $request->image->hashName();
 
-            $user->update([
-                'name'      => $request->name,
-                'email'     => $request->email,
-            ]);
+        //     $user->update([
+        //         'name'      => $request->name,
+        //         'email'     => $request->email,
+        //     ]);
 
-            if($request->has('password') && $request->password != null ){
-                // Update password
-                $user->update([
-                    'password' => Hash::make($request->password)
-                ]);
-            }
+        //     if($request->has('password') && $request->password != null ){
+        //         // Update password
+        //         $user->update([
+        //             'password' => Hash::make($request->password)
+        //         ]);
+        //     }
 
-            $user->syncPermissions($request->permissions);
+        //     $user->syncPermissions($request->permissions);
 
-            $user->profile->update([
-                'image' => $request->image->hashName(),
-                'facebook' => $request->facebook,
-                'twitter' => $request->twitter,
-                'linkedin' => $request->linkedin,
-                'about' => $request->about,
-            ]);
+        //     $user->profile->update([
+        //         'image' => $request->image->hashName(),
+        //         'facebook' => $request->facebook,
+        //         'twitter' => $request->twitter,
+        //         'linkedin' => $request->linkedin,
+        //         'about' => $request->about,
+        //     ]);
 
 
-        }else{
-            $user->update([
-                'name'      => $request->name,
-                'email'     => $request->email,
-            ]);
+        // }else{
+        //     $user->update([
+        //         'name'      => $request->name,
+        //         'email'     => $request->email,
+        //     ]);
 
-            if($request->has('password') && $request->password != null ){
-                // Update password
-                $user->update([
-                    'password' => Hash::make($request->password)
-                ]);
-            }
+        //     if($request->has('password') && $request->password != null ){
+        //         // Update password
+        //         $user->update([
+        //             'password' => Hash::make($request->password)
+        //         ]);
+        //     }
 
-            $user->profile->update([
-                'facebook' => $request->facebook,
-                'twitter' => $request->twitter,
-                'linkedin' => $request->linkedin,
-                'about' => $request->about,
-            ]);
-        }
+        //     $user->profile->update([
+        //         'facebook' => $request->facebook,
+        //         'twitter' => $request->twitter,
+        //         'linkedin' => $request->linkedin,
+        //         'about' => $request->about,
+        //     ]);
+        // }
 
 
         return redirect()->route('users.index');
