@@ -122,14 +122,14 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
         $user = User::find($id);
-        // dd($request);
-
+        // dd($user->roles);
+        $user->detachRoles($user->roles); 
         // Except password, permissions, password_confirmation
         $request_data = $request->except(['password', 'password_confirmation']);
         
 
         // // Update data of user
-        $user->update($request_data);
+        // $user->update($request_data);
 
         $user->update([
             "name" => $request->name,
@@ -140,7 +140,7 @@ class UserController extends Controller
 
         // if($user->hasRole('owner'))
 
-        if($request->has("admin") == "on"){
+        if($request->has("super_admin") == "on"){
             // Attach role
             $user->attachRole('super_admin');
         }else{
