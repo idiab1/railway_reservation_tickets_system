@@ -20,6 +20,12 @@ class ReservationController extends Controller
         return view("admin.reservations.index", compact("reservations"));
     }
 
+    public function reserveDetails($id){
+
+        $reservation = Reservation::find($id);
+        return view("admin.reservations._reserve", compact("reservation"));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
