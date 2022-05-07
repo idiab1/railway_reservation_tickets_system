@@ -76,14 +76,14 @@
                                                 <!-- Depature -->
                                                 <ul class="list-unstyled">
                                                     <li>{{$train->depature_station}}</li>
-                                                    <li>{{$train->depature_at}}</li>
+                                                    <li>{{date('d M, Y', strtotime($train->depature_at))}} &dash; {{date('h:m A', strtotime($train->depature_at))}}</li>
                                                 </ul>
                                             </td>
                                             <td>
                                                 <!-- Arrival -->
                                                 <ul class="list-unstyled">
                                                     <li>{{$train->arrival_station}}</li>
-                                                    <li>{{$train->arrival_at}}</li>
+                                                    <li>{{date('d M, Y', strtotime($train->arrival_at))}} &dash; {{date('h:m A', strtotime($train->arrival_at))}}</li>
                                                 </ul>
                                             </td>
                                             <td>
