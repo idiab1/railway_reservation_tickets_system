@@ -48,7 +48,7 @@
         <!-- Status Content -->
         <div class="status-content pb-4">
             <div class="row">
-                <div class="col-12 col-sm-6 col-md-4">
+                <div class="col-12 col-sm-6 col-md-3">
                     <!-- Project box -->
                     <div class="small-box bg-info">
                         <div class="inner">
@@ -65,9 +65,25 @@
                     <!-- End of Project box -->
                 </div>
                 <!-- ./col -->
-                <div class="col-12 col-sm-6 col-md-4">
+                <div class="col-12 col-sm-6 col-md-3">
                     <!-- Tasks box -->
                     <div class="small-box bg-success">
+                        <div class="inner">
+                            <h3>{{$passengersCount}}</h3>
+                            <p>Passengers</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <a href="{{route('passengers.index')}}" class="small-box-footer">
+                            More info <i class="fas fa-arrow-circle-right"></i>
+                        </a>
+                    </div>
+                    <!-- End of Tasks box -->
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <!-- Tasks box -->
+                    <div class="small-box bg-primary">
                         <div class="inner">
                             <h3>{{$servationsCount}}</h3>
                             <p>Reservations</p>
@@ -82,7 +98,7 @@
                     <!-- End of Tasks box -->
                 </div>
                 <!-- ./col -->
-                <div class="col-12 col-sm-6 col-md-4">
+                <div class="col-12 col-sm-6 col-md-3">
                     <!-- Users box -->
                     <div class="small-box bg-warning">
                         <div class="inner">
