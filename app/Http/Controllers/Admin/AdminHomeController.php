@@ -26,8 +26,13 @@ class AdminHomeController extends Controller
         $userCount = User::all()->count();
         $trainsCount = Train::all()->count();
         $servationsCount = Reservation::all()->count();
+        $passengersCount = User::with("roles")->whereHas("roles", function($q){
+            $q->whereIn("name", ["passenger"]);
+        })->count();
+
+        // Get all reservations
         $reservations = Reservation::all();
-        return view('admin.adminHome', compact("userCount", "trainsCount", "servationsCount", "reservations"));
+        return view('admin.adminHome', compact("userCount", "trainsCount", "servationsCount", "passengersCount" , "reservations"));
     }
 
 }
