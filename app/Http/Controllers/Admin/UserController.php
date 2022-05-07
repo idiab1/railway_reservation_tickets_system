@@ -27,8 +27,10 @@ class UserController extends Controller
             $q->whereIn('name', ['super_admin', 'moderator']);
         })->get();
         
+        // get all roles without passenger role
+        $roles = Role::whereIn("name", ["super_admin", "moderator"])->get();
 
-        return view('admin.users.index', compact('users'));
+        return view('admin.users.index', compact('users', "roles"));
     }
 
     /**
