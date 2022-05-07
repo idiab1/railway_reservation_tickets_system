@@ -71,20 +71,18 @@
                                         <!-- User Type -->
                                         <div class="form-group m-0">
                                             <label for="privileges" class="d-block">{{ trans('site.user_type') }}</label>
-                                            <div class="form-check my-0 form-check-inline">
-                                                <input class="form-check-input" type="checkbox"
-                                                    id="inlineCheckbox1" name="admin">
-                                                <label class="form-check-label" for="inlineCheckbox1">
-                                                    {{ trans('site.admin') }}
-                                                </label>
-                                            </div>
-                                            <div class="form-check my-0 form-check-inline">
-                                                <input class="form-check-input" type="checkbox"
-                                                    id="inlineCheckbox2" name="moderator">
-                                                <label class="form-check-label" for="inlineCheckbox2">
-                                                    {{ trans('site.moderator') }}
-                                                </label>
-                                            </div>
+                                            @if ($roles->count() > 0)
+                                                @foreach ($roles as $role)
+                                                    <div class="form-check my-0 form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="{{$role->name}}" 
+                                                            name="{{$role->name}}">
+                                                        <label class="form-check-label" for="{{$role->name}}">
+                                                            {{ trans('site.'.$role->name) }}
+                                                        </label>
+                                                    </div>
+                                                @endforeach 
+                                                
+                                            @endif
                                         </div>
 
                                     </div>
