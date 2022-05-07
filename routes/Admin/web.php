@@ -39,6 +39,7 @@ Route::group(
                 'passengers' => 'id',
             ]);
 
+            
             // Stations Route
             Route::resource('stations', StationController::class)->except([
                 'show'
