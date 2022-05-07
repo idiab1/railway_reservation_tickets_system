@@ -33,7 +33,7 @@
 @section('content')
 <section class="users-section section">
     <div class="row">
-        <div class="col-md-12 m-auto">
+        <div class="col-md-10 m-auto">
             <!-- form container -->
             <div class="form-container">
                 <div class="row">
@@ -41,16 +41,16 @@
                         <!-- users form -->
                         <div class="users-form section-form">
                             <div class="card">
-                                <div class="card-header">
+                                {{-- <div class="card-header">
                                     <h3 class="card-title">{{ trans('site.edit') }} {{$user->name . "'s"}}</h3>
                                 </div>
-                                <!-- /.card-header -->
+                                <!-- /.card-header --> --}}
                                     <!-- form start -->
                                     <form action="{{route('users.update', ['id' => $user->id])}}" method="POST"  enctype="multipart/form-data">
                                         @csrf
                                         @method('PUT')
                                         <div class="card-body">
-                                            <!-- image -->
+                                            {{-- <!-- image -->
                                             <div class="form-group">
                                                 <div class="image-preview text-center">
                                                     <img class="preview rounded-circle border border-dark"
@@ -59,7 +59,7 @@
                                                 </div>
                                                 <label for="image">{{ trans('site.image') }}</label>
                                                 <input class="form-control image" type="file" id="image" name="image">
-                                            </div>
+                                            </div> --}}
 
                                             <!-- Name -->
                                             <div class="form-group">
@@ -79,17 +79,17 @@
                                             <div class="form-group">
                                                 <label for="password">{{ trans('site.password') }}</label>
                                                 <input class="form-control" type="password" id="password"
-                                                name="password" placeholder="{{trans('site.admin_enter_password')}}">
+                                                name="password" placeholder="{{trans('site.admin_enter_password')}}" required>
                                             </div>
 
                                             <!-- Confrim Password -->
                                             <div class="form-group">
                                                 <label for="confirmPassword">{{ trans('site.confirm_password') }}</label>
                                                 <input class="form-control" type="password" id="confirmPassword"
-                                                name="password_confirmation" placeholder="{{trans('site.admin_confirm_password')}}">
+                                                name="password_confirmation" placeholder="{{trans('site.admin_confirm_password')}}" required>
                                             </div>
 
-                                            <!-- Facebook -->
+                                            {{-- <!-- Facebook -->
                                             <div class="form-group">
                                                 <label for="facebook">Facebook URL</label>
                                                 <input class="form-control" type="text" id="facebook"
@@ -155,16 +155,33 @@
                                                     @endforeach
                                                 </div>
 
-                                            </div>
+                                            </div> --}}
 
+                                            <!-- User Type -->
+                                            <div class="form-group m-0">
+                                                <label for="privileges" class="d-block">{{ trans('site.user_type') }}</label>
+                                                @if ($roles->count() > 0)
+                                                   @foreach ($roles as $role)
+                                                    <div class="form-check my-0 form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="{{$role->name}}" 
+                                                            name="{{$role->name}}" 
+                                                            @foreach ($user->roles as $uRole)
+                                                                {{$uRole->id == $role->id ? "checked" : ""}}
+                                                            @endforeach>
+                                                        <label class="form-check-label" for="{{$role->name}}">
+                                                            {{ trans('site.'.$role->name) }}
+                                                        </label>
+                                                    </div>
+                                                   @endforeach 
+                                                   
+                                                @endif
+                                            </div>
                                         </div>
                                         <!-- /.card-body -->
-
                                         <div class="card-footer">
                                             <button type="submit" class="btn btn-primary btn-crayons btn-update">{{ trans('site.update') }}</button>
                                         </div>
                                     </form>
-
                                 </div>
                         <!-- /.card -->
                         </div>
