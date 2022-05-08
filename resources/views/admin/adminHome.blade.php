@@ -127,6 +127,7 @@
                         <div class="">
                             <div class="row buttons">
                                 <div class="col-sm-12 col-md-5">
+
                                 </div>
                                 <div class="col-sm-12 col-md-7 ">
 
@@ -137,8 +138,8 @@
                             <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>{{ trans('site.name') }}</th>
                                     <th>{{ trans('site.date') }}</th>
+                                    <th>{{ trans('site.action') }}</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -146,20 +147,23 @@
                                     $id = 1;
                                 @endphp
                                 @if ($reservations->count() > 0)
-                                    @foreach ($reservations as $train)
+                                    @foreach ($reservations as $reservation)
                                         <tr>
                                             <td>{{$id++}}</td>
-                                            <!-- Name of train -->
-                                            <td>{{$train->name}}</td>
+                                            <td>
+                                                {{date('d M, Y', strtotime($reservation->created_at))}} &dash; {{date('h:m A', strtotime($reservation->created_at))}}
+                                            </td>
 
                                             <td>
-                                                <button class="btn btn-danger btn-sm btn-show" type="button">
+                                                <button class="btn btn-danger btn-sm btn-show" type="button" 
+                                                    data-url="{{route("reserve.details", ["id" => $reservation->id])}}"
+                                                    data-method="get" >
                                                     <i class="fas fa-list"></i>
                                                     {{ trans('site.show') }}
                                                 </button>
 
                                                 <!-- Delete button -->
-                                                <form class="d-inline-block" action="{{route('reservations.destroy', ['id' => $train->id])}}" method="POST">
+                                                <form class="d-inline-block" action="{{route('reservations.destroy', ['id' => $reservation->id])}}" method="POST">
                                                     @csrf
                                                     @method('DELETE')
                                                     <button class="btn btn-danger btn-sm btn-delete" type="submit">
@@ -176,7 +180,7 @@
                                 <tr>
                                     <th>#</th>
                                     <th>{{ trans('site.name') }}</th>
-                                    <th>{{ trans('site.date') }}</th>
+                                    <th>{{ trans('site.action') }}</th>
                                 </tr>
                             </tfoot>
                         </table>
@@ -185,7 +189,22 @@
                 </div>
                 <!-- /.card -->
             </div>
+            <div class="col-12 col-md-7">
+                
+                
+                <div class="content">
+                    <div class="loading text-center">
+                        <div class="loader"></div>
+                        <p class="p-2">Waiting</p>
+                    </div>
+                    <div class="reserve-content-list">
+
+                    </div>
+                </div>
+            </div>
+
         </div>
+
 
 
 
@@ -207,6 +226,7 @@
 <script src="{{asset('plugins/pdfmake/vfs_fonts.js')}}"></script>
 <script src="{{asset('plugins/datatables-buttons/js/buttons.html5.min.js')}}"></script>
 <script src="{{asset('plugins/datatables-buttons/js/buttons.print.min.js')}}"></script>
+<script src="{{asset('admin/js/reservation.js')}}"></script>
 
 <script>
     $(function () {
