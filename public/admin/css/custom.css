@@ -232,6 +232,83 @@
 /* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
 /* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
 
+
+/* Tickets */
+.ticket{
+    flex-direction: row;
+    margin-bottom: 1.5rem;
+}
+
+.ticket .card-header{
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--offwhite-color);
+    border-right: 1px solid rgba(0, 0, 0, 0.125);
+    padding: 0.75rem 1rem;
+    width: 120px;
+}
+
+.ticket .card-header .icon {
+    background-color: var(--red-color);
+    width: 40px;
+    height: 40px;
+    color: var(--offwhite-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.ticket .card-header .icon i{
+    font-size: 20px;
+}
+.ticket .card-header .icon p{
+    color: var(--red-color);
+    font-weight: bold;
+    padding-top: 5px;
+    text-transform: capitalize;
+}
+
+.ticket .card-body{
+    background-color: transparent;
+    padding: 0.75rem 1rem;
+}
+
+.ticket .card-body .ticket-details{
+    display: flex;
+    justify-content: space-between;
+}
+
+.ticket .card-body .ticket-details .ticket-price{
+    padding-top: 10px;
+    color: var(--red-color);
+}
+.ticket .card-body .ticket-details .ticket-price p{
+    font-weight: bold;
+}
+.ticket .card-body .ticket-details .icon{
+    display: flex;
+    align-items: center;
+    width: 40px;
+    background-color: var(--red-color);
+    height: 40px;
+    position: relative;
+    top: 30px;
+    justify-content: center;
+    color: var(--offwhite-color);
+    border-radius: 50%;    
+}
+.ticket .card-body .ticket-details .facades{
+    color: var(--main-color);
+    padding-bottom: 10px;
+}
+
+
+/* End of Tickets */
+
 .user-section .user-card .card-header {
     width: 100%;
     height: 230px;
