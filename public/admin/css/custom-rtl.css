@@ -150,6 +150,10 @@
 .dataTables_length {
     float: left;
 }
+
+div.dataTables_wrapper div.dataTables_filter {
+    text-align: left;
+}
 /* End of Tables */
 
 
