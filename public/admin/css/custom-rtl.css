@@ -144,6 +144,17 @@
 /*/*//*/ Components /*//*/*/
 
 /* Tables */
+.page-link {
+    color: #98354e;
+    transition: all 26s ease-in-out;
+}
+.page-link:hover{
+    background-color: #313552;
+    color: #eee;
+}
+.page-link:focus{
+    box-shadow: none;
+}
 .page-item.active .page-link {
     color: #eee;
 }
