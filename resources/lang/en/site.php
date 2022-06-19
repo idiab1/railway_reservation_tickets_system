@@ -23,35 +23,35 @@ return [
     "control_panel" => "Control Panel",
 
     // Users Page
-    'list_users' => 'All users',
+    'list_users' => 'users',
     'add_user' => 'Add a new user',
     "user" => "User",
     "users_registrations" => "User Registrations",
 
     // Passengers Page
-    'list_passengers' => 'All passengers',
+    'list_passengers' => 'passengers',
     'add_passenger' => 'Add a new passenger',
     "passenger" => "Passenger",
 
     // Stations Page
-    'list_stations' => 'All stations',
+    'list_stations' => 'stations',
     'add_station' => 'Add a new station',
-    'all_stations' => 'All Stations',
+    'all_stations' => 'Stations',
     'station' => "Station",
 
     // Trains Page
-    'list_trains' => 'All trains',
+    'list_trains' => 'trains',
     'add_train' => 'Add a new train',
     'train' => "Train",
     'train_price' => "Price",
 
     // Types Page
-    'all_types' => 'All types',
-    'list_types' => 'All types',
+    'all_types' => 'types',
+    'list_types' => 'types',
     'add_type' => 'Add a type train',
 
     // Posts Page
-    'list_posts' => 'All posts',
+    'list_posts' => 'posts',
     'add_post' => 'Add a new post',
     'post' => "Post",
 
@@ -62,13 +62,13 @@ return [
 
     // Reservations
     "reservations" => "Reservations",
-    "list_reservations" => "All Reservations",
+    "list_reservations" => "Reservations",
 
 
 
     // Messages Page
     'message' => 'Message',
-    'list_all_messages' => 'All messages',
+    'list_all_messages' => 'messages',
 
 
 

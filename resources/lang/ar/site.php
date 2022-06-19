@@ -25,35 +25,35 @@ return [
     "control_panel" => "لوحة التحكم",
 
     // Users Page
-    'list_users' => 'كل المستخدمين',
+    'list_users' => 'المستخدمين',
     'add_user' => 'اضافة مستخدم جديد',
     "user" => "المستخدم",
     "users_registrations" => "المستخدمين",
 
     // Passengers Page
-    'list_passengers' => 'كل المسافرين',
+    'list_passengers' => 'المسافرين',
     'add_passenger' => 'اضافة مسافر جديد',
     "passenger" => "المسافر",
 
     // Stations Page
-    'list_stations' => 'كل المحطات',
+    'list_stations' => 'المحطات',
     'add_station' => 'اضافة محطة جديدة',
-    'all_stations' => 'كل المحطات',
+    'all_stations' => 'المحطات',
     'station' => "المحطة",
 
     // Trains Page
-    'list_trains' => 'كل القطارات',
+    'list_trains' => 'القطارات',
     'add_train' => 'اضافة قطار جديد',
     'train' => "القطار",
     'train_price' => "سعر التذكرة",
 
     // Types Page
-    'all_types' => 'كل الأنواع',
-    'list_types' => 'كل الأنواع',
+    'all_types' => 'الأنواع',
+    'list_types' => 'الأنواع',
     'add_type' => 'اضافة نوع قطار جديد',
 
     // Posts Page
-    'list_posts' => 'كل المقالات',
+    'list_posts' => 'المقالات',
     'add_post' => 'اضافة مقال جديد',
     'post' => "المقال",
 
@@ -64,13 +64,13 @@ return [
 
     // Reservations
     "reservations" => "الحجوزات",
-    "list_reservations" => "كل الحجوزات",
+    "list_reservations" => "الحجوزات",
 
 
 
     // Messages Page
     'message' => 'الرسالة',
-    'list_all_messages' => 'كل الرسايل',
+    'list_all_messages' => 'الرسايل',
 
 
 
