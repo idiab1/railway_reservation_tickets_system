@@ -1,0 +1,667 @@
+/* Colors */
+:root{
+    --main-color: #313552;
+    --red-color: #B8405E;
+    --green-color: #2EB086;
+    --yellow-color: #FFC900;
+    --offwhite-color: #EEE6CE;
+    --main2-color: #0c2545;
+}
+/* Scrolling */
+::-webkit-scrollbar {
+    width: 15px;
+}
+::-webkit-scrollbar-track {
+    background-color: #e4e4e4;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--red-color);
+    transition-delay: .25s;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--red-color);
+}
+
+
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* *-*-*-*-*-*-*-*-*-*-* Sidebar *-*-*-*-*-*-*-*-*-*-* */
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+
+.main-sidebar .user-panel {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+.main-sidebar .user-panel .image {
+    padding: 0;
+}
+.main-sidebar .user-panel .image img {
+    width: 2.4rem;
+    border-radius: 50%;
+    border: 4px solid var(--offwhite-color) !important;
+}
+.main-sidebar .user-panel .info a{
+    font-size: 23px;
+    line-height: 1.2;
+    color: var(--offwhite-color);
+}
+.main-sidebar .user-panel .info span{
+    font-size: 15px;
+    color: #c8c8c6;
+    line-height: 1;
+    letter-spacing: .04rem;
+}
+.main-sidebar .nav-sidebar>.nav-item .nav-icon {
+    margin-left: 0.05rem;
+    font-size: 1.28rem;
+    margin-right: 0.2rem;
+    text-align: center;
+    width: 1.7rem;
+    color: var(--offwhite-color);
+}
+.mini-sidebar .user-panel .info{
+    display: none;
+    transition: .35s;
+    -webkit-transition: .35s;
+    -moz-transition: .35s;
+    -ms-transition: .35s;
+    -o-transition: .35s;
+}
+
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* *-*-*-*-*-*-*-*-* End of sidebar -*-*-*-*-*-*-*-*-* */
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* *-*-*-*-*-*-*-*-*-*-*- Navbar *-*-*-*-*-*-*-*-*-*-* */
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+
+.navbar{
+    background-color: var(--main-color);
+}
+
+.navbar .nav-item .nav-link{
+    color: var(--offwhite-color);
+}
+
+.navbar .navbar-nav .dropdown-menu {
+    padding: 0;
+}
+/* .navbar .navbar-nav .dropdown.add-new {
+
+} */
+.navbar .navbar-nav .dropdown.user-dropdown .nav-link{
+    padding-top: 0.35rem;
+}
+
+.navbar .navbar-nav .dropdown .dropdown-toggle::after{
+    display: none;
+}
+.navbar .navbar-nav .dropdown .dropdown-item{
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    transition: .2s ease-in-out;
+    -webkit-transition: .2s ease-in-out;
+    -moz-transition: .2s ease-in-out;
+    -ms-transition: .2s ease-in-out;
+    -o-transition: .2s ease-in-out;
+}
+.navbar .navbar-nav .dropdown .dropdown-item:hover{
+    background-color: var(--red-color);
+    color: var(--offwhite-color);
+}
+
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* *-*-*-*-*-*-*-*-*- End of Navbar *-*-*-*-*-*-*-*-* */
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+
+
+
+
+/* Header */
+/* End of header */
+
+/* Footer */
+.main-footer p{
+    font-weight: 600;
+    color: var(--main-color);
+}
+.main-footer p a{
+    color: var(--red-color);
+}
+/* End of Footer */
+
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/*/*//*/ Components /*//*/*/
+
+/* Tables */
+.page-item.active .page-link {
+    color: #eee;
+}
+
+/* End of Tables */
+
+
+/* Forms */
+.card form input{
+    font-size: 0.9rem;
+}
+.card form textarea{
+    max-height: 120px;
+}
+.card form nav-pills {
+    margin: 0;
+}
+.card form .nav-pills .nav-link.active,
+.nav-pills .show>.nav-link{
+    background-color: rgb(49 53 82 / 60%);
+}
+.card form .nav-pills .nav-link,
+.card form .nav-pills .nav-link:hover {
+    color: #eee;
+}
+.card form .nav-pills li a{
+    font-size: 16px;
+    padding: 5px 7px;
+    font-weight: 600;
+    letter-spacing: .03rem;
+}
+.card form .tab-content .tab-pane label{
+    margin: 0;
+}
+.card form .tab-content .tab-pane:not(first-of-type) label{
+    margin: 0 5px;
+}
+.card form .tab-content .tab-pane label input{
+    margin-right: 5px;
+}
+/* End of Forms */
+
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* *-*-*-*-*-*-*- Content Header *-*-*-*-*-*-*-*-*-*-* */
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+
+.content-header{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content-header .content-header-info{
+    text-align: center;
+}
+.content-header .page-name h1{
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-transform: uppercase !important;
+}
+.content-header .breadcrumb{
+    justify-content: center;
+}
+.content-header .breadcrumb .breadcrumb-item:last-of-type{
+    color: #535353;
+    font-weight: 400;
+}
+.content-header .breadcrumb .breadcrumb-item a{
+    font-weight: 500;
+}
+
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* *-*-*-*-*-*-*- End of Content Header *-*-*-*-*-*-*- */
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+
+
+
+
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* *-*-*-*-*-*-*-*-* Sections -*-*-*-*-*-*-*-*-*-*-*-* */
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+
+/* Status content */
+.status-content .small-box .icon>i{
+    left: 15px;
+    right: unset;
+
+}
+
+/* End of Status content */
+
+/* Tickets */
+.ticket{
+    flex-direction: row;
+    margin-bottom: 1.5rem;
+}
+
+.ticket .card-header{
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--offwhite-color);
+    border-right: 1px solid rgba(0, 0, 0, 0.125);
+    padding: 0.75rem 1rem;
+    width: 120px;
+}
+
+.ticket .card-header .icon {
+    background-color: var(--red-color);
+    width: 40px;
+    height: 40px;
+    color: var(--offwhite-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.ticket .card-header .icon i{
+    font-size: 20px;
+}
+.ticket .card-header .icon p{
+    color: var(--red-color);
+    font-weight: bold;
+    padding-top: 5px;
+    text-transform: capitalize;
+}
+
+.ticket .card-body{
+    background-color: transparent;
+    padding: 0.75rem 1rem;
+}
+
+.ticket .card-body .ticket-details{
+    display: flex;
+    justify-content: space-between;
+}
+
+.ticket .card-body .ticket-details .ticket-price{
+    padding-top: 10px;
+    color: var(--red-color);
+}
+.ticket .card-body .ticket-details .ticket-price p{
+    font-weight: bold;
+}
+.ticket .card-body .ticket-details .icon{
+    display: flex;
+    align-items: center;
+    width: 40px;
+    background-color: var(--red-color);
+    height: 40px;
+    position: relative;
+    top: 30px;
+    justify-content: center;
+    color: var(--offwhite-color);
+    border-radius: 50%;    
+}
+.ticket .card-body .ticket-details .facades{
+    color: var(--main-color);
+    padding-bottom: 10px;
+}
+
+
+/* End of Tickets */
+
+.user-section .user-card .card-header {
+    width: 100%;
+    height: 230px;
+}
+.user-section .user-card .card-header img{
+    width: 100%;
+    height: 100%;
+}
+.user-section .user-card .card-body{
+    padding: 0.7rem;
+}
+.user-section .user-card .card-body h4{
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.15rem;
+    color: #313552;
+    text-transform: capitalize;
+}
+.user-section .user-card .card-body p{
+    font-size: .9rem;
+}
+.user-section .user-card .card-footer{
+    padding-top: 0;
+}
+.user-section .user-card .card-header,
+.user-section .user-card .card-footer{
+    background-color: transparent;
+}
+
+
+
+
+.section {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+.section .card{
+    margin-bottom: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.section .form-container {
+    padding-bottom: 1.5rem;
+}
+.setting-section .form-container{
+    margin-right: 7px;
+    margin-left: 7px;
+}
+.setting-section .card{
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+/* Section form */
+.section .section-form .card .card-header{
+    border-top-right-radius: 0;
+}
+.section .section-form .card .card-header h3{
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--red-color);
+}
+.section .section-form .card .card-footer{
+    border-bottom-right-radius: 0;
+    background-color: transparent;
+}
+
+/* End of section form */
+
+/* Section info */
+.section .section-info{
+    height: 100%;
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    background-image: url("../../images/stations.svg");
+}
+.section .section-info.setting-info{
+    background-image: url("../../images/setting-system.svg");
+}
+
+.section .section-info.user-info{
+    background-image: url("../../images/add-user.svg");
+}
+
+.section .section-info .card{
+    height: 100%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: transparent;
+    border-left: 5px solid var(--main-color);
+}
+
+/* End of Section info */
+
+
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* *-*-*-*-*-*- End of  Sections *-*-*-*-*-*-*-*-*-*-* */
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* -*-*-*-*-*-*-*-*-*-* Tab -*-*-*-*-*-*-*-*-*-*-*-*-* */
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+
+.setting-section .nav-pills{
+    justify-content: center;
+    border-radius: 6px;
+    padding: 0.5rem;
+    background-color: var(--main-color);
+}
+.setting-section .nav-pills .nav-link{
+    padding: 0.4rem 2rem;
+    color: var(--offwhite-color);
+}
+.setting-section .nav-pills .nav-link:hover{
+    color: var(--offwhite-color);
+}
+.setting-section .nav-pills .nav-link.active,
+.setting-section .nav-pills .show>.nav-link {
+    color: var(--offwhite-color);
+    background-color: var(--red-color);
+}
+
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* -*-*-*-*-*-*-*-*- End of Tab *-*-*-*-*-*-*-*-*-*-*- */
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* -*-*-*-*-*-*-*-*-*-* Modal *-*-*-*-*-*-*-*-*-*-*-*- */
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+
+.modal {
+    top: 45px;
+}
+.modal .modal-header{
+    color: var(--offwhite-color);
+    background-color: var(--red-color);
+}
+.train-section .modal .modal-dialog {
+    max-width: 560px;
+}
+
+.modal .modal-header .close{
+    opacity: 1;
+    text-shadow: none;
+    color: var(--offwhite-color);
+}
+.modal .modal-header .close:focus{
+    border: none;
+    box-shadow: none;
+}
+
+.modal .modal-dialog form input:focus{
+    box-shadow: none;
+    border-color: var(--main-color);
+}
+
+.train-section .modal .modal-dialog form .select2-container{
+    width: 100% !important;
+}
+
+.train-section .modal form .select2-container .select2-selection--single {
+    height: 39px;
+}
+.modal .select2-container--default.select2-container--open .select2-selection--single{
+    border-color: var(--main-color);
+}
+
+.modal .select2-container--default.select2-container--focus .select2-selection--multiple,
+.modal .select2-container--default.select2-container--focus .select2-selection--single{
+    border-color: var(--main-color);
+}
+.select2-container--default .select2-search--dropdown .select2-search__field:focus{
+    border-color: var(--main-color) !important;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    color: var(--offwhite-color);
+    background-color: var(--main-color);
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected],
+.select2-container--default .select2-results__option--highlighted[aria-selected]:hover{
+    color: var(--offwhite-color) !important;
+    background-color: var(--main-color) !important;
+}
+
+.modal .form-check label{
+    font-weight: 700;
+}
+
+.modal .card-footer{
+    background-color: transparent;
+}
+.modal .modal-footer{
+    border-color: transparent;
+}
+
+/* .modal .modal-header  */
+
+
+
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* -*-*-*-*-*-*-*-*- End of Modal *-*-*-*-*-*-*-*-*-* */
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+
+
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* *-*-*-*-*-*-*-*-* Buttons -*-*-*-*-*-*-*-*-*-*-*-* */
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+.btn-create{
+    padding: 0.2rem 0.5rem;
+    font-size: .75rem;
+    font-weight: bold;
+}
+
+.card .btn-secondary{
+    background-color: rgb(49 53 82 / 70%);
+}
+section table .btn{
+    color: #000;
+}
+.btn-delete,
+.btn-delete:focus{
+    color: #fff !important;
+    margin-left: 5px;
+}
+
+.btn-edit{
+    margin-right: 5px;
+    color: #000 !important;
+}
+
+.btn-add-new{
+    margin-left: 1rem;
+    height: 2rem !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    text-transform: capitalize;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* *-*-*-*-*-*-*-* End of Buttons -*-*-*-*-*-*-*-*-*-* */
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+
+
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* *-*-*-*-*-*-*-*-* Grouping -*-*-*-*-*-*-*-*-*-*-*-* */
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+
+.main-sidebar,
+.page-item.active .page-link,
+.btn-crayons,
+.btn-crayons:focus,
+.btn-crayons:hover,
+.card form .nav-pills .nav-link,
+.card form .nav-pills .nav-link:hover{
+    background-color: var(--main-color);
+}
+.card form label{
+    color: var(--main-color);
+}
+.page-item.active .page-link,
+.btn-crayons,
+.btn-crayons:focus,
+.btn-crayons:hover,
+.card .btn-secondary,
+.card form input:focus {
+    border-color: var(--main-color);
+}
+
+.content-header .page-name h1,
+.content-header .breadcrumb .breadcrumb-item a{
+    color: var(--red-color);
+}
+
+.btn-delete,
+.btn-delete:focus,
+.btn-delete:hover,
+.btn-add,
+.btn-add:focus,
+.btn-add:hover,
+.btn-add-new,
+.btn-add-new:focus,
+.btn-add-new:hover,
+.section .section-info{
+    background-color: var(--red-color);
+}
+.btn-delete,
+.btn-delete:focus,
+.btn-delete:hover,
+.btn-add,
+.btn-add:focus,
+.btn-add:hover,
+.btn-add-new,
+.btn-add-new:focus,
+.btn-add-new:hover{
+    border-color: var(--red-color);
+}
+
+.btn-edit,
+.btn-edit:hover,
+.btn-edit:focus{
+    background-color: var(--yellow-color);
+}
+.btn-edit,
+.btn-edit:hover,
+.btn-edit:focus{
+    border-color: var(--yellow-color);
+}
+
+.btn-crayons,
+.btn-crayons:focus,
+.card .card-header h3{
+    text-transform: capitalize;
+}
+
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* *-*-*-*-*-*-* End of Grouping *-*-*-*-*-*-*-*-*-*-* */
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **/
