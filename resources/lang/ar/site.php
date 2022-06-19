@@ -161,7 +161,7 @@ return [
     'enter_train_type' => "Enter type of train",
 
     // Footer
-    'copyright' => 'Copyright all rights reserved.',
+    'copyright' => 'حقوق الطبع والنشر محفوظة.',
 
 
 ];
