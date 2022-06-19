@@ -147,7 +147,9 @@
 .page-item.active .page-link {
     color: #eee;
 }
-
+.dataTables_length {
+    float: left;
+}
 /* End of Tables */
 
 
