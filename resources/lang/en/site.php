@@ -20,11 +20,13 @@ return [
     'posts' => 'Posts',
     "profile" => "Profile",
     "tickets_reservations" => "Tickets / Reservations",
+    "control_panel" => "Control Panel",
 
     // Users Page
     'list_users' => 'All users',
     'add_user' => 'Add a new user',
     "user" => "User",
+    "users_registrations" => "User Registrations",
 
     // Passengers Page
     'list_passengers' => 'All passengers',
@@ -114,6 +116,8 @@ return [
     "admin" => "Admin",
     "super_admin" => "Super Admin",
     "moderator" => "Moderator",
+    "waiting" => "Waiting",
+    "more_info" => "More Info",
 
     // Buttons
     'send' => 'Send',
