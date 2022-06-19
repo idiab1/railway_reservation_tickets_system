@@ -17,7 +17,7 @@
             <!-- Depature station info -->
             <div class="depature-station text-center">
                 <div class="from facades">
-                    <span class="font-weight-bold">From</span>
+                    <span class="font-weight-bold">{{ trans('site.from') }}</span>
                 </div>
                 <ul class="list-unstyled">
                     <li>
@@ -45,7 +45,7 @@
             <!-- Depature station info -->
             <div class="arrival-station text-center">
                 <div class="to distination">
-                    <span class="font-weight-bold">To</span>
+                    <span class="font-weight-bold">{{ trans('site.to') }}</span>
                 </div>
                 <ul class="list-unstyled">
                     <li>

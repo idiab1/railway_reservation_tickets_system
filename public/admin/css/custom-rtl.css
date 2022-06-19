@@ -300,16 +300,7 @@
     font-weight: bold;
 }
 .ticket .card-body .ticket-details .icon{
-    display: flex;
-    align-items: center;
-    width: 40px;
-    background-color: var(--red-color);
-    height: 40px;
-    position: relative;
-    top: 30px;
-    justify-content: center;
-    color: var(--offwhite-color);
-    border-radius: 50%;    
+    transform: rotate(180deg);  
 }
 .ticket .card-body .ticket-details .facades{
     color: var(--main-color);
