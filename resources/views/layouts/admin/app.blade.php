@@ -24,12 +24,13 @@
     @yield('styles')
 
     @if (app()->getLocale() == 'ar')
-    <!-- RTL: style -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cairo:400,700" >
+        <!-- RTL: style -->
         <link rel="stylesheet" href="{{asset('admin/css/bootstrap-rtl.min.css')}}">
         <link rel="stylesheet" href="{{asset('admin/css/adminlte-rtl.css')}}">
         <link rel="stylesheet" href="{{asset('admin/css/media-query-rtl.css')}}">
-
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cairo:400,700" >
+        <!-- Custom Style -->
+        <link rel="stylesheet" href="{{asset('admin/css/custom-rtl.css')}}">
 
         <style>
             body, h1, h2, h3, h4, h5, h6 {
