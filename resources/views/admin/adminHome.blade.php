@@ -37,7 +37,7 @@
 
 {{-- Page name --}}
 @section('page_name')
-    Control Panel
+    {{ trans('site.control_panel') }}
 @endsection
 
 {{-- Content --}}
@@ -53,13 +53,13 @@
                     <div class="small-box bg-info">
                         <div class="inner">
                             <h3>{{$trainsCount}}</h3>
-                            <p>Trains</p>
+                            <p>{{ trans('site.trains') }}</p>
                         </div>
                         <div class="icon">
                             <i class="fas fa-train"></i>
                         </div>
                         <a href="{{route("trains.index")}}" class="small-box-footer">
-                            More info <i class="fas fa-arrow-circle-right"></i>
+                            {{ trans('site.more_info') }} <i class="fas fa-arrow-circle-right"></i>
                         </a>
                     </div>
                     <!-- End of Project box -->
@@ -70,13 +70,13 @@
                     <div class="small-box bg-success">
                         <div class="inner">
                             <h3>{{$passengersCount}}</h3>
-                            <p>Passengers</p>
+                            <p>{{ trans('site.passengers') }}</p>
                         </div>
                         <div class="icon">
                             <i class="fas fa-users"></i>
                         </div>
                         <a href="{{route('passengers.index')}}" class="small-box-footer">
-                            More info <i class="fas fa-arrow-circle-right"></i>
+                            {{ trans('site.more_info') }} <i class="fas fa-arrow-circle-right"></i>
                         </a>
                     </div>
                     <!-- End of Tasks box -->
@@ -86,13 +86,13 @@
                     <div class="small-box bg-primary">
                         <div class="inner">
                             <h3>{{$servationsCount}}</h3>
-                            <p>Reservations</p>
+                            <p>{{ trans('site.reservations') }}</p>
                         </div>
                         <div class="icon">
                             <i class="fas fa-ticket-alt"></i>
                         </div>
                         <a href="{{route('reservations.index')}}" class="small-box-footer">
-                            More info <i class="fas fa-arrow-circle-right"></i>
+                            {{ trans('site.more_info') }} <i class="fas fa-arrow-circle-right"></i>
                         </a>
                     </div>
                     <!-- End of Tasks box -->
@@ -103,13 +103,13 @@
                     <div class="small-box bg-warning">
                         <div class="inner">
                             <h3>{{$userCount}}</h3>
-                            <p>User Registrations</p>
+                            <p>{{ trans('site.users_registrations') }}</p>
                         </div>
                         <div class="icon">
                             <i class="fas fa-users"></i>
                         </div>
                         <a href="{{route("users.index")}}" class="small-box-footer">
-                            More info <i class="fas fa-arrow-circle-right"></i>
+                            {{ trans('site.more_info') }} <i class="fas fa-arrow-circle-right"></i>
                         </a>
                     </div>
                 </div>
@@ -195,7 +195,7 @@
                 <div class="content">
                     <div class="loading text-center">
                         <div class="loader"></div>
-                        <p class="p-2">Waiting</p>
+                        <p class="p-2">{{ trans('site.waiting') }}</p>
                     </div>
                     <div class="reserve-content-list">
 
