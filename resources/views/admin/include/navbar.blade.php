@@ -97,6 +97,14 @@
         <!-- Languages -->
         <li class="nav-item nav-language dropdown d-none d-md-block">
             <a class="nav-link pr-0 dropdown-toggle" id="languageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                <!-- Text -->
+                <div class="nav-language-text d-inline-block">
+                    <p class="mb-1 text-black">
+                        {{app()->getLocale() == 'en' ? trans('site.english') : trans('site.arabic')}}
+                    </p>
+                </div>
+
+                <!-- Icon -->
                 <div class="nav-language-icon d-inline-block">
                     @if (app()->getLocale() == 'en')
                         <i class="flag-icon flag-icon-us" title="us" id="us"></i>
@@ -104,11 +112,7 @@
                         <i class="flag-icon flag-icon-eg" title="eg" id="eg"></i>
                     @endif
                 </div>
-                <div class="nav-language-text d-inline-block">
-                    <p class="mb-1 text-black">
-                        {{app()->getLocale() == 'en' ? trans('site.english') : trans('site.arabic')}}
-                    </p>
-                </div>
+                
             </a>
             <div class="dropdown-menu navbar-dropdown" aria-labelledby="languageDropdown">
                 @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
