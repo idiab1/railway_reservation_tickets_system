@@ -28,7 +28,7 @@ return [
     'list_users' => 'كل المستخدمين',
     'add_user' => 'اضافة مستخدم جديد',
     "user" => "المستخدم",
-    "users_registrations" => "",
+    "users_registrations" => "المستخدمين",
 
     // Passengers Page
     'list_passengers' => 'كل المسافرين',
@@ -89,7 +89,7 @@ return [
     'forgot_password' => 'هل نسيت كلمة السر',
     'reset_password' => 'Reset Password',
     'send_password_link' => 'Send Password Reset Link',
-    'menu' => 'Menu',
+    'menu' => 'القائمة',
     'about' => 'About',
     'depature_at' => 'وقت المغادرة',
     'arrival_at' => 'وقت الوصول',
