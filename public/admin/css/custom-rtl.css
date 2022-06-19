@@ -560,11 +560,13 @@ section table .btn{
 .btn-delete,
 .btn-delete:focus{
     color: #fff !important;
-    margin-left: 5px;
+    margin-right: 5px;
+    margin-left: 0px;
 }
 
 .btn-edit{
-    margin-right: 5px;
+    margin-left: 5px;
+    margin-right: 0px;
     color: #000 !important;
 }
 
