@@ -144,7 +144,7 @@
                                             <div class="col-3 px-0">
                                                 <div class="form-group m-0">
                                                     <label for="from" class="form-label">
-                                                        From
+                                                        {{ trans('site.from') }}
                                                     </label>
                                                     <select class="form-control select2bs4 select2 depature-stations" id="from" name="depature_station_id">
                                                         <option>{{trans('site.all')}}</option>
@@ -157,7 +157,7 @@
                                             <div class="col-3 px-0">
                                                 <div class="form-group m-0">
                                                     <label for="to" class="form-label">
-                                                        To
+                                                        {{ trans('site.to') }}
                                                     </label>
                                                     <select class="form-control select2bs4 select2 arrival-stations" id="to" name="arrival_station_id">
                                                         <option>{{trans('site.all')}}</option>
@@ -170,7 +170,7 @@
                                             <div class="col-3 px-0">
                                                 <div class="form-group m-0">
                                                     <label for="depature_date" class="form-label">
-                                                        Depature Date
+                                                        {{ trans('site.depature_date') }}
                                                     </label>
                                                     <input type="datetime-local" class="form-control" id="depature_date" aria-label="from" name="depature_at">
                                                 </div>
@@ -178,7 +178,7 @@
                                             <div class="col-3 px-0">
                                                 <div class="form-group m-0 border-right-0">
                                                     <label for="depature_date" class="form-label">
-                                                        Arrival Date
+                                                        {{ trans('site.arrival_date') }}
                                                     </label>
                                                     <input type="datetime-local" class="form-control" id="arrival_date" aria-label="to" name="arrival_at">
                                                 </div>
@@ -195,7 +195,7 @@
                                         <!-- Button search tickets -->
                                         <div class="form-group m-0 text-right">
                                             <button type="submit" class="btn btn-primary btn-search-tickets crayons-btn">
-                                                Search
+                                            {{ trans('site.search') }}
                                             </button>
                                         </div>
                                     </div>
@@ -219,7 +219,7 @@
                             <div class="card">
                                 <!-- Card header -->
                                 <div class="card-header">
-                                    <h4>Search</h4>
+                                    <h4>{{ trans('site.search') }}</h4>
                                 </div>
                                 <!-- End of Card header -->
 
@@ -283,7 +283,7 @@
                                             </div>
                                             <div class="form-group ">
                                                 <label for="depature_date" class="form-label">
-                                                    Depature Date
+                                                    {{ trans('site.depature_date') }}
                                                 </label>
                                                 <input type="date" class="form-control" id="depature_date" aria-label="from">
                                             </div>
@@ -306,7 +306,7 @@
                                             </div>
                                             <div class="form-group  border-right-0">
                                                 <label for="depature_date" class="form-label">
-                                                    Arrival Date
+                                                    {{ trans('site.arrival_date') }}
                                                 </label>
                                                 <input type="date" class="form-control" id="arrival_date" aria-label="to">
                                             </div>
@@ -333,7 +333,7 @@
                                     <!-- Button search tickets -->
                                     <div class="form-group m-0 text-right">
                                         <button type="submit" class="btn btn-primary d-block btn-search-tickets crayons-btn">
-                                            Search
+                                            {{ trans('site.search') }}
                                         </button>
                                     </div>
                                 </div>
@@ -356,7 +356,7 @@
             <div class="row">
                 <div class="col-12 p-0">
                     <!-- Section Header -->
-                    <h2 class="heading">Recent Posts</h2>
+                    <h2 class="heading">{{ trans('site.recent_posts') }}</h2>
                 </div>
             </div>
             <div class="posts-lists">
@@ -645,7 +645,7 @@
 
                 <div class="row">
                     <div class="col-12 text-center my-4">
-                        <a class="btn crayons-btn" href="{{route("user.posts.index")}}">Show More</a>
+                        <a class="btn crayons-btn" href="{{route("user.posts.index")}}">{{ trans('site.show_more') }}</a>
                     </div>
                 </div>
 
@@ -662,7 +662,7 @@
             <div class="row">
                 <div class="col-12">
                     <!-- Header of section -->
-                    <h2 class="heading">E-Tickets Advantages</h2>
+                    <h2 class="heading">{{ trans('site.ticket_advantages') }}</h2>
                 </div>
             </div>
             <div class="row">

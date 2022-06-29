@@ -56,11 +56,13 @@ return [
     'list_posts' => 'المقالات',
     'add_post' => 'اضافة مقال جديد',
     'post' => "المقال",
+    "recent_posts" => "المشاركات الأخيرة",
 
 
     // Ticket Page
     "tickets" => "التذاكر",
     "ticket" => 'التذكرة',
+    "ticket_advantages" => "مزايا التذاكر الإلكترونية",
 
     // Reservations
     "reservations" => "الحجوزات",
@@ -96,6 +98,8 @@ return [
     'about' => 'About',
     'depature_at' => 'وقت المغادرة',
     'arrival_at' => 'وقت الوصول',
+    "depature_date" => "وقت المغادرة",
+    "arrival_date" => "وقت الوصول",
     'depature_station' => 'محطة المغادرة',
     'arrival_station' => 'محطة الوصول',
     'seats_available' => 'المقاعد المتاحة',
@@ -132,6 +136,7 @@ return [
     'update' => 'تحديث',
     'add' => 'إضافة',
     'add_new' => "Add new",
+    "show_more" => "المزيد",
 
     // Languages
     'english' => 'انجليزي',

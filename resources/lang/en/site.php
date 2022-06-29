@@ -54,11 +54,12 @@ return [
     'list_posts' => 'posts',
     'add_post' => 'Add a new post',
     'post' => "Post",
-
+    "recent_posts" => "Recent Posts",
 
     // Ticket Page
     "tickets" => "Tickets",
     "ticket" => 'Ticket',
+    "ticket_advantages" => "E-Tickets Advantages",
 
     // Reservations
     "reservations" => "Reservations",
@@ -96,6 +97,8 @@ return [
     'about' => 'About',
     'depature_at' => 'Depature At',
     'arrival_at' => 'Arrival At',
+    "depature_date" => "Depature Date",
+    "arrival_date" => "Arrival Date",
     'depature_station' => 'Depature Station',
     'arrival_station' => 'Arrival Station',
     'seats_available' => 'Seats Available',
@@ -132,6 +135,7 @@ return [
     'update' => 'Update',
     'add' => 'Add',
     'add_new' => "Add new",
+    "show_more" => "Show More",
 
     // Languages
     'english' => 'English',
