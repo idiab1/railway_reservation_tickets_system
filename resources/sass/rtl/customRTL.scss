@@ -1,0 +1,54 @@
+// ==> Helpers
+// Mixins
+@import "./helpers/mixins";
+
+// Variables
+@import './helpers/variables';
+
+// ==> Components
+// Heading
+@import "./components/heading";
+
+// Buttons
+@import "./components/buttons";
+
+// ==> Layouts
+// Global
+@import "./layouts/global";
+
+// Navbar
+@import "./layouts/navbar";
+
+// Header
+@import "./layouts/sidebar";
+
+// Header
+@import "./layouts/header";
+
+
+// Footer
+@import "./layouts/footer";
+
+// Style
+@import "./layouts/style";
+
+
+// ==> Pages
+// sign
+@import "./pages/sign";
+
+// Tickets
+@import "./pages/tickets";
+
+// Posts
+@import "./pages/posts";
+
+
+// Contact us
+@import "./pages/contact_us";
+
+// Setting page
+@import './pages/setting';
+
+// Profile page
+@import './pages/profile';
