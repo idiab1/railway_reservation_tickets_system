@@ -14,7 +14,7 @@
                             <!-- ./end of logo Brand -->
                         </div>
                         <div class="col-md-6 col-sm-12">
-                            <div class="copyright-info text-right">
+                            <div class="copyright-info {{app()->getLocale() == "ar" ? "text-right" : "text-left" }}">
                                 <p>&copy; 2022 {{ trans('site.copyright') }}</p>
                             </div>
                         </div>
