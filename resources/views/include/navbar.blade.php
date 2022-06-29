@@ -10,7 +10,7 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Right Side Of Navbar -->
-            <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav {{app()->getLocale() == "ar" ? "mr-auto" : "ml-auto" }}">
                 <!-- Languages -->
                 <li class="nav-item nav-language dropdown dropdown-globe globe-icon">
                     <a class="nav-link dropdown-toggle" id="languageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
