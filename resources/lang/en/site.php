@@ -49,6 +49,7 @@ return [
     'all_types' => 'types',
     'list_types' => 'types',
     'add_type' => 'Add a type train',
+    "couch_type" => "Couch type",
 
     // Posts Page
     'list_posts' => 'posts',
@@ -78,6 +79,7 @@ return [
 
 
     // Facades
+    "filter_by" => "Filter By",
     'name' => 'Name',
     'action' => 'Action',
     "date" => "Date",

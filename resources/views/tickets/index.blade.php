@@ -46,18 +46,18 @@
                 <div class="card filter-box">
                     <!-- Filter Box Header -->
                     <div class="card-header filter-box-header">
-                        <h4>Filter By</h4>
+                        <h4>{{ trans('site.filter_by') }}</h4>
                     </div>
                     <!-- End of Filter Box Header -->
 
                     <!-- Filter Box Body -->
                     <div class="card-body filter-box-body">
-                        <h5>Couch type</h5>
+                        <h5>{{ trans('site.couch_type') }}</h5>
                         <!-- All Types -->
                         <div class="custom-control custom-switch">
                             <input class="custom-control-input all-types" type="checkbox" data-url="{{route("all.types")}}" 
                                 data-method="get" id="all">
-                            <label class="custom-control-label" for="all">All</label>
+                            <label class="custom-control-label" for="all">{{ trans('site.all') }}</label>
                         </div>
                         <!-- End of All Types -->
                         @if ($types->count() > 0)
@@ -83,7 +83,7 @@
                 <div class="card recent-box my-4">
                     <!-- recent Box Header -->
                     <div class="card-header recent-box-header px-0">
-                        <h4>Recent Posts</h4>
+                        <h4>{{ trans('site.recent_posts') }}</h4>
                     </div>
                     <!-- End of Filter Box Header -->
 

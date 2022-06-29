@@ -51,6 +51,7 @@ return [
     'all_types' => 'الأنواع',
     'list_types' => 'الأنواع',
     'add_type' => 'اضافة نوع قطار جديد',
+    "couch_type" => "نوع المقعد",
 
     // Posts Page
     'list_posts' => 'المقالات',
@@ -81,6 +82,7 @@ return [
 
 
     // Facades
+    "filter_by" => "تصفية حسب",
     'name' => 'اسم',
     'action' => 'حدث',
     "date" => "تاريخ",
