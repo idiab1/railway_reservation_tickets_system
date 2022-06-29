@@ -15,3 +15,10 @@ mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
     .sass('resources/sass/rtl/customRTL.scss', 'public/css/rtl')
     .sourceMaps();
+
+
+    mix.webpackConfig({
+        stats: {
+            children: true,
+        },
+    });
