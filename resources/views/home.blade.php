@@ -84,8 +84,8 @@
                         <!-- Reservation form -->
                         <div class="reservation-form">
                             <!-- Form -->
-                            <form action="" method="POST">
-
+                            <form action="{{route("ticketSearch")}}" method="GET" role="search">
+                                @csrf
                                 <div class="card box">
                                     <!-- Box Header -->
                                     <div class="card-header box-header">
@@ -146,7 +146,7 @@
                                                     <label for="from" class="form-label">
                                                         From
                                                     </label>
-                                                    <select class="form-control select2bs4 select2 depature-stations" id="from">
+                                                    <select class="form-control select2bs4 select2 depature-stations" id="from" name="depature_station_id">
                                                         <option>{{trans('site.all')}}</option>
                                                         @foreach ($stations as $station)
                                                             <option value="{{$station->id}}" >{{$station->name}}</option>
@@ -159,7 +159,7 @@
                                                     <label for="to" class="form-label">
                                                         To
                                                     </label>
-                                                    <select class="form-control select2bs4 select2 arrival-stations" id="to">
+                                                    <select class="form-control select2bs4 select2 arrival-stations" id="to" name="arrival_station_id">
                                                         <option>{{trans('site.all')}}</option>
                                                         @foreach ($stations as $station)
                                                             <option value="{{$station->id}}" >{{$station->name}}</option>
@@ -172,7 +172,7 @@
                                                     <label for="depature_date" class="form-label">
                                                         Depature Date
                                                     </label>
-                                                    <input type="date" class="form-control" id="depature_date" aria-label="from">
+                                                    <input type="datetime-local" class="form-control" id="depature_date" aria-label="from" name="depature_at">
                                                 </div>
                                             </div>
                                             <div class="col-3 px-0">
@@ -180,7 +180,7 @@
                                                     <label for="depature_date" class="form-label">
                                                         Arrival Date
                                                     </label>
-                                                    <input type="date" class="form-control" id="arrival_date" aria-label="to">
+                                                    <input type="datetime-local" class="form-control" id="arrival_date" aria-label="to" name="arrival_at">
                                                 </div>
                                             </div>
 
