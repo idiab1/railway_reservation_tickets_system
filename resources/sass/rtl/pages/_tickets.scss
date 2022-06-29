@@ -1,0 +1,344 @@
+/* Tickets Section */
+.tickets-section{
+    /* Filter Box */
+    .filter-box{
+        background-color: $dark-color;
+        /* Filter Header */
+        .filter-box-header{
+            text-align: center;
+            background-color: transparent;
+            border-bottom: 1px solid rgb(131 44 66 / 33%);
+
+            h4{
+                margin-bottom: 0;
+                color: $offwhite-color;
+                text-transform: uppercase;
+            }
+        }
+        /* End of Filter Header */
+
+        /* Filter Body */
+        .filter-box-body{
+            padding: 1rem;
+            background-color: transparent;
+            color: $offwhite-color;
+            h5{
+                font-weight: 700;
+                margin-bottom: 1rem;
+                text-transform: capitalize;
+            }
+
+            .custom-switch {
+                padding-left: 3.25rem;
+            }
+
+            .custom-control{
+                min-height: 2rem;
+                .custom-control-label{
+                    font-weight: 500;
+                }
+            }
+
+            ~ .custom-control-label::before, 
+            .custom-control-input:disabled ~ .custom-control-label::before {
+                background-color: #e3342f;
+                border-color: #e3342f;
+            }
+
+            
+            button{
+                width: 100%;
+                text-align: left;
+                font-weight: 600;
+                text-transform: uppercase;
+                color: $dark-color;
+                background-color: $offwhite-color;
+                @include prefixer(border-radius, 0, webkit moz ms o);
+                @include prefixer(transition, .26s, webkit moz ms o);
+                text-indent: 10%;
+                text-decoration: none;
+                &.active,
+                &:hover{
+                    color: $offwhite-color;
+                    background-color: $dark-color;
+                }
+                &:focus{
+                    box-shadow: none;
+                }
+            }
+        }
+        /* End of Filter Body */
+    }
+    /* End of Filter Box */
+
+    
+
+    /* Tickets Content */
+    .tickets-content {
+        /* Tickets */
+        .ticket{
+            flex-direction: row;
+            margin-bottom: 1.5rem;
+            // &:last-of-type{
+            //     margin-bottom: 0;
+            // }
+            .card-header{
+                border: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                background-color: $offwhite-color;
+                border-right: 1px solid rgba(0, 0, 0, 0.125);
+                padding: 0.75rem 1rem;
+                width: 120px;
+                .icon {
+                    background-color: $maroon-color;
+                    width: 40px;
+                    height: 40px;
+                    color: $offwhite-color;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    @include prefixer(border-radius, 50%, webkit moz ms o);
+
+                    
+                    i{
+                        font-size: 20px;
+                    }
+                }
+                p{
+                    color: $maroon-color;
+                    font-weight: bold;
+                    padding-top: 5px;
+                    text-transform: capitalize;
+                }
+            }
+            .card-body{
+                background-color: transparent;
+                padding: 0.75rem 1rem;
+                .ticket-details{
+                    display: flex;
+                    justify-content: space-between;
+                    .ticket-price{
+                        padding-top: 10px;
+                        color: $maroon-color;
+                        p{
+                            font-weight: bold;
+                        }
+                    }
+                    .icon{
+                        display: flex;
+                        align-items: center;
+                        width: 40px;
+                        background-color: $maroon-color;
+                        height: 40px;
+                        border-radius: 50%;
+                        position: relative;
+                        top: 30px;
+                        justify-content: center;
+                        color: $offwhite-color;
+                        @include prefixer(border-radius, 50%, webkit moz ms o);
+                        
+                    }
+                    .facades{
+                        color: $dark-color;
+                        padding-bottom: 10px;
+                    }
+                }
+            }
+            .card-footer{
+                border: none;
+                display: flex;
+                padding: 0.75rem 1rem;
+                justify-content: center;
+                align-items: center;
+                background-color: transparent;
+                border-left: 1px solid rgba(0, 0, 0, 0.125);
+            }
+        }
+        /* End of Tickets */
+
+    }
+    /* End of Tickets Content */
+
+    .loading{
+        display: none;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .loading .loader{
+        width: 100px;
+        height: 100px;
+        border: 5px solid $offwhite-color;
+        border-top-color: $maroon-color;
+        border-radius: 50%;
+        animation: spinner 2s linear infinite;
+    }
+
+    @-webkit-keyframes spinner{
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+    @-moz-keyframes spinner{
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+    @-o-keyframes spinner{
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+    @keyframes spinner{
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+
+}
+/* End of Tickets Section */
+
+
+
+
+
+
+    //     .filter-box .filter-box-header{
+    //         text-align: center;
+    //         color: $offwhite-color;
+    //         background-color: $maroon-color;
+    //     }
+    //     .filter-box .filter-box-body{}
+
+    //     .tickets-content .ticket{
+    //         flex-direction: row;
+    //         margin-bottom: 1.5rem;
+    //     }
+    //     .tickets-content .ticket:last-of-type{
+    //         margin-bottom: 0;
+    //     }
+
+    //     .tickets-content .ticket .card-header{
+    //         border: none;
+    //         display: flex;
+    //         justify-content: center;
+    //         align-items: center;
+    //         flex-direction: column;
+    //         background-color: transparent;
+    //         border-right: 1px solid rgba(0, 0, 0, 0.125);
+    //         padding: 0.75rem 1rem;
+    //         width: 120px;
+    //     }
+
+    //     .tickets-content .ticket .card-header .icon {
+    //         background-color: $maroon-color;
+    //         width: 40px;
+    //         height: 40px;
+    //         color: $offwhite-color;
+    //         display: flex;
+    //         justify-content: center;
+    //         align-items: center;
+    //         border-radius: 50%;
+    //     }
+
+    //     .tickets-content .ticket .card-header .icon i{
+    //         font-size: 20px;
+    //     }
+
+    //     .tickets-content .ticket .card-header p{
+    //         color: $maroon-color;
+    //         font-weight: bold;
+    //         padding-top: 5px;
+    //         text-transform: capitalize;
+    //     }
+
+    //     .tickets-content .ticket .card-body{
+    //         background-color: transparent;
+    //         padding: 0.75rem 1rem;
+    //     }
+
+    //     .tickets-content .ticket .card-body .ticket-details{
+    //         display: flex;
+    //         justify-content: space-between;
+    //     }
+
+    //     .tickets-content .ticket .ticket-price{
+    //         padding-top: 10px;
+    //     }
+    //     .tickets-content .ticket .card-body .ticket-details .icon{
+    //         display: flex;
+    //         align-items: center;
+    //     }
+
+    //     .tickets-content .ticket .card-footer{
+    //         border: none;
+    //         display: flex;
+    //         padding: 0.75rem 1rem;
+    //         justify-content: center;
+    //         align-items: center;
+    //         background-color: transparent;
+    //         border-left: 1px solid rgba(0, 0, 0, 0.125);
+    //     }
+
+    //     .loading{
+    //     display: none;
+    //     align-items: center;
+    //     justify-content: center;
+    //     flex-direction: column;
+    // }
+    // .loading .loader{
+    //     width: 100px;
+    //     height: 100px;
+    //     border: 5px solid $offwhite-color;
+    //     border-top-color: $maroon-color;
+    //     border-radius: 50%;
+    //     animation: spinner 2s linear infinite;
+    // }
+
+    // @-webkit-keyframes spinner{
+    //     0%{
+    //         transform: rotate(0deg);
+    //     }
+    //     100%{
+    //         transform: rotate(360deg);
+    //     }
+    // }
+    // @-moz-keyframes spinner{
+    //     0%{
+    //         transform: rotate(0deg);
+    //     }
+    //     100%{
+    //         transform: rotate(360deg);
+    //     }
+    // }
+    // @-o-keyframes spinner{
+    //     0%{
+    //         transform: rotate(0deg);
+    //     }
+    //     100%{
+    //         transform: rotate(360deg);
+    //     }
+    // }
+    // @keyframes spinner{
+    //     0%{
+    //         transform: rotate(0deg);
+    //     }
+    //     100%{
+    //         transform: rotate(360deg);
+    //     }
+    // }

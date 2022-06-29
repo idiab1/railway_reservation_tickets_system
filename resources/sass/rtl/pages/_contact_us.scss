@@ -1,0 +1,158 @@
+/* Contact us page */
+.contact-page{
+    background-image: linear-gradient(220deg, rgb(238 230 206 / 50%), rgb(238 230 206 / 50%)),
+        url('../../../images/map.jpg');
+        background-size: cover;
+
+    /* Contact box */
+    .contact-box{
+        padding-bottom: 20px;
+        /* Contact form */
+        .contact-form{
+            .header-title{
+                h5{
+                    color: $maroon-color;
+                }
+            }
+            .header-icon{
+                i{
+                    color: $maroon-color;
+                }
+            }
+
+            /* Form */
+            form{
+                /* Label */
+                label{
+                    font-weight: 600;
+
+                }
+                .input-group{
+                    border: 1px solid rgb(28 31 51 / 50%);
+                    .input-group-prepend{
+                        span{
+                            border: none;
+                            padding: 0.37rem 0.75rem;
+                            background-color: transparent;
+                            i{
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+                /* Input */
+                input{
+                    border: 0;
+                }
+                /* Textarea */
+                textarea{
+                    max-height: 100px;
+                    border: 1px solid rgb(28 31 51 / 50%);
+                    &:focus{
+                        border: 1px solid rgb(28 31 51 / 50%);
+                        @include prefixer(box-shadow, none, webkit moz ms o);
+                    }
+                }
+
+                input,
+                textarea{
+                    @include prefixer(border-radius, 0, webkit moz ms o);
+
+                }
+
+            }
+            /* End of Form */
+
+        }
+        /* End of Contact form */
+        /* Contact Info */
+        .contact-info{
+            height: 100%;
+            background-image: url('../../../../public/images/contact_us/contact_us.svg');
+            color: $offwhite-color;
+            background-position: bottom center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-color: $maroon-color;
+            ul{
+                margin-bottom: 0;
+                /* Item */
+                .item{
+                    font-size: 1.02rem;
+                    &:nth-of-type(2){
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                    }
+                    /* Icon */
+                    .icon{
+                        padding-right: 8px;
+                        .box{
+                            span{
+
+                                i{
+
+                                }
+
+                            }
+                        }
+                    }
+                    /* End of Icon */
+                    p{
+                        font-size: 15px;
+                    }
+                }
+                /* End of Item */
+            }
+        }
+        /* End of Contact Info */
+
+        /* Card */
+        .card{
+            padding: 0.7rem;
+            @include prefixer(border-radius, 0, webkit moz ms o);
+            /* Card Header */
+            .card-header{
+                border-bottom: none;
+                /* Header Title */
+                .header-title{
+                    h5{
+                        margin-bottom: 0;
+                        font-weight: 700;
+                    }
+                }
+                /* End of Header Title */
+                /* Header Icon */
+                .header-icon{
+
+                    i{
+
+                    }
+                }
+                /* End of Header Icon */
+            }
+            /* End of Card Header */
+
+            /* Card Body */
+            .card-body{
+
+            }
+            /* End of Card Body */
+
+            /* Card Footer */
+            .card-footer{
+                border-top: none;
+            }
+            /* End of Card Footer */
+
+            .card-header,
+            .card-footer{
+                background-color: transparent;
+            }
+
+        }
+        /* End of card*/
+    }
+    /* End of contact box */
+}
+
+/* End of contact us page */

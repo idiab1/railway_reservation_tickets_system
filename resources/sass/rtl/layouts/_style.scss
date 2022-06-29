@@ -1,0 +1,328 @@
+/* layout */
+.layout {
+    display: flex;
+    justify-content: flex-end;
+    /* Sidebar */
+    aside.sidebar.min-sidebar {
+        position: fixed;
+        top: 58.96px;
+        left: unset;
+        right: 0;    
+        width: 100px;
+        height: 100vh;
+        background-color: $dark-color;
+        z-index: 100;
+        padding: 20px 0;
+    }
+    /* End of Sidebar */
+
+    /* Main Container */
+    .main-container {
+        width: calc(100vw - 100px);
+        overflow: hidden;
+    }
+    /* End of Main Container */
+}
+/* End of layout */
+
+
+
+
+
+
+/* Page header */
+.page-header{
+    padding-bottom: 35px;
+    /* Header info */
+    .header-info{
+        h2{
+            color: $offwhite-color;
+            font-weight: 700;
+            padding-bottom: 5px;
+            text-transform: uppercase;
+        }
+        p{
+            color: $offwhite-color;
+            font-size: 14px;
+            line-height: 1.79;
+            letter-spacing: .04rem;
+            text-transform: capitalize;
+        }
+    }
+    /* End of header info */
+}
+
+/* End of page header */
+
+/* Search Reservation */
+.search-reservation{
+    padding-top: 0;
+    padding-bottom: 70px;
+    position: relative;
+    /* Reservation Box */
+    .reservation-box{
+        position: absolute;
+        top: -55px;
+        padding: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+        z-index: 2;
+        width: 100%;
+        background-color: $dark-color;
+        /* Reservation Form */
+        .reservation-form{
+            /* Form */
+            form{
+                /* Box */
+                .box{
+                    display: flex;
+                    color: #fff;
+                    border: 0;
+                    align-items: center;
+                    justify-content: space-around;
+                    background-color: transparent;
+                    flex-direction: row;
+
+                    .box-header{
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                        align-items: center;
+                        background-color: $maroon-color;
+                        padding: 32px 25px;
+                        color: $offwhite-color;
+                        @include prefixer(border-radius, 0, webkit moz ms o);
+                        p{
+                            margin: 0;
+                        }
+                    }
+
+                    /* Box Content */
+                    .box-content{
+                        padding: 0 1.25rem;
+                        .box-routes{
+                            height: 100%;
+                        }
+
+                        .box-dates{
+                            height: 100%;
+                        }
+
+                        .form-group{
+                            padding: 17px 15px;
+                            border-right: 1px solid #111;
+                            &:nth-of-type(3) {
+                                border-right: none;
+                            }
+                        }
+
+                        label{
+                            font-size: 15px;
+                            letter-spacing: .04rem;
+                            color: $offwhite-color;
+                            font-weight: bold;
+                            margin: 0;
+
+                        }
+                        input{
+                            border: none;
+                            background-color: transparent;
+                            padding-left: 0;
+                            color: #ababab;
+
+                            &:focus{
+                                background-color: transparent;
+                                border: none;
+                                @include prefixer(box-shadow, none, webkit moz ms o);
+                            }
+
+                        }
+
+                    }
+
+                    /* End of Box Content */
+
+                    /* Box Button */
+                    .box-button{
+                        height: 100%;
+                        display: FLEX;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 0;
+                        border: 0;
+                    }
+                    /* End of Box Button */
+
+                }
+                /* End of box */
+
+
+            }
+        }
+        /* End of Reservation Form */
+    }
+    /* End of Reservation Box */
+
+    /* Card  Reservation form */
+    .card-reservation-form{
+        background-color: $dark-color;
+        .card{
+            background-color: transparent;
+            .card-header{
+                background-color: transparent;
+                h4{
+                    font-weight: bold;
+                    color: $offwhite-color;
+                    margin: 0;
+                }
+            }
+            /* Box Content */
+            .box-content{
+                padding: 1rem;
+                .box-routes{
+                    height: 100%;
+                }
+
+                .box-dates{
+                    height: 100%;
+                }
+
+                .form-group{
+                    padding: 17px 15px;
+                    border-right: 1px solid #111;
+                    &:nth-of-type(3) {
+                        border-right: none;
+                    }
+                }
+
+                label{
+                    font-size: 15px;
+                    letter-spacing: .04rem;
+                    color: $offwhite-color;
+                    font-weight: bold;
+                    margin: 0;
+                }
+                input{
+                    border: none;
+                    background-color: transparent;
+                    padding-left: 0;
+                    color: #ababab;
+                    &:focus{
+                        background-color: transparent;
+                        border: none;
+                        @include prefixer(box-shadow, none, webkit moz ms o);
+                    }
+                }
+            }
+
+            /* End of Box Content */
+            .box-button{
+                background-color: transparent;
+                button{
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    /* End of Card Reservation form */
+
+}
+/* End of Search Reservation */
+
+/* E-tickets advantages */
+.e-ticket-advantages{
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 6px solid $dark-color;
+    background-image: linear-gradient(45deg, rgb(152 53 78), rgb(152 53 78 / 56%)),
+        url("../../../images/bg-tickets.jpg");
+    .heading{
+        color: $offwhite-color;
+    }
+    /* Advantage card */
+    .advantage-card{
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        background: transparent;
+        color: $offwhite-color;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        box-shadow: 0px 0px 1px 1px $offwhite-color;
+        @include prefixer(transition, all .27s ease-in-out);
+        &:hover {
+            background: $dark-color;
+            box-shadow: 0px 0px 1px 1px $dark-color;
+        }
+        /* Advantage Header */
+        .advantage-header{
+            padding: 0;
+            border: none;
+            background-color: transparent;
+            /* Advantage icon */
+            // .advantage-icon{
+            //     i{
+
+            //     }
+            // }
+        }
+        /* End of Advantage Header */
+        /* Advantage information */
+        .advantage-info{
+            padding: 0;
+            p{
+                margin-bottom: 0;
+                line-height: 1.5;
+                color: $offwhite-color;
+                padding-top: 8px;
+            }
+        }
+        /* End of Advantage information */
+    }
+    /* End of Advantage card */
+
+}
+
+/* End of E-tickets advantages */
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) { 
+    /* layout */
+    .layout {
+        /* Sidebar */
+        aside.sidebar.side-bottom {
+            top: unset;
+            width: 100%;
+            height: unset !important;
+            padding: 8px 0;
+            bottom: 0;
+            z-index: 4;
+            ul{
+                flex-direction: row;
+                justify-content: space-around;
+            }
+        }
+        /* End of Sidebar */
+
+        /* Main Container */
+        .main-container {
+            width: 100%;
+        }
+        /* End of Main Container */
+    }
+    /* End of layout */
+
+    /* Search Reservation */
+    .search-reservation{
+        padding-top: 40px;
+        padding-bottom: 40px;
+        /* card Reservation form */
+        
+        /* End of card Reservation form */
+    }
+    /* End of Search Reservation */
+
+}

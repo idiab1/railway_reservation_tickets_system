@@ -1,0 +1,149 @@
+/* Profile page */
+.profile-page{
+    /* User Card */
+    .user-card{
+
+        /* Card Body */
+        .card-body {
+            /* User Image */
+            .user-image{
+                padding-bottom: 10px;
+                img{
+                    border: 4px solid $maroon-color;
+                }
+            }
+            /* User Details */
+            .user-details {
+                h3{
+                    color: $dark-color;
+                    font-size: 1.35rem;
+                    font-weight: bold;
+                    text-transform: capitalize;
+                }
+                p{
+                    color: #575757;
+                }
+            }
+
+        }
+        /* End of Card Body */
+
+        /* Card Footer */
+        .card-footer{
+            display: flex;
+            justify-content: space-between;
+            background-color: $maroon-color;
+            padding: 1rem;
+            a{
+                border: none;
+                color: $offwhite-color;
+                text-decoration: none;
+                text-transform: capitalize;
+                .icon{
+                    i{
+
+                    }
+                }
+                span{
+
+                }
+            }
+        }
+        /* End of Card Footer */
+
+    }
+    /* End of User Card */
+
+    /* Tickets section */
+    .tickets-section {
+        /* User Ticket */
+        .user-ticket {
+            h3{
+                text-transform: capitalize;
+                color: $dark-color;
+                font-size: 1.35rem;
+                font-weight: bold;
+
+            }
+        }
+        /* End of User Ticket */
+
+        /* Ticket */
+        .ticket{
+            flex-direction: row;
+            /* Card Header */
+            .card-header{
+                display: FLEX;
+                border-right: 2px dashed $offwhite-color;
+                background-color: $maroon-color;
+                /* Ticket Header */
+                .ticket-header{
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: center;
+                    // @include prefixer(transform, rotate(-90deg), webkit moz ms o);
+                    span {
+                        color: #ebe8dc;
+                    }
+                    h5{
+                        color: $offwhite-color;
+                        margin-bottom: 0.2rem;
+                    }
+                }
+                /* End of Ticket Header */
+
+            }
+            /* Ticket Body */
+            .ticket-body {
+                border-left: 3px dashed $maroon-color;
+                background-image: url("../../../images/train2.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom center;
+                /* Ticekt Details */
+                .ticket-details{
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 10px;
+                    h5{
+                        color: $dark-color;
+                        font-weight: 700;
+                        text-transform: capitalize;
+                    }
+                    span{
+                        text-transform: capitalize;
+                    }
+                    &:first-of-type {
+                        span {
+                            font-size: 13px;
+                        }
+                    }
+
+                    .ticket-price{
+                        span{
+                            color: $maroon-color;
+                            font-weight: 600;
+
+                        }
+                    }
+                }
+
+                .ticket-user-info{
+                    span{
+
+                    }
+
+                }
+
+            }
+            /* End of Ticket Body */
+        }
+        /* End of Ticket */
+    }
+    /* End of Tickets section */
+
+
+}
+/* End of Profile page */
+

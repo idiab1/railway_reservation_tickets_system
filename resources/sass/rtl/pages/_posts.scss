@@ -1,0 +1,108 @@
+/* Recent Posts */
+.recent-box{
+    border: none;
+    /* recent Header */
+    .recent-box-header{
+        background-color: transparent;
+        border-bottom: 1px dashed rgb(28 31 51 / 38%);
+        h4{
+            margin-bottom: 0;
+            font-weight: 700;
+            color: $maroon-color;
+        }
+    }
+    /* End of recent Header */
+
+    /* recent Body */
+    .recent-box-body{
+        padding: 0;
+
+        /* Post Card */
+        .card-post{
+            margin: 15px 0;
+            flex-direction: row;
+            border: none;
+            border-bottom: 1px dashed rgb(28 31 51 / 38%);
+            @include prefixer(border-radius, 0, webkit moz ms o);
+        
+            /* Post header */
+            .post-header{
+                padding: 0;
+                border: none;
+                width: 100px;
+                background-color: transparent;
+                img{
+                    width: 100%;
+                }
+            }
+            /* End of Post header */
+            /* Post body */
+            .post-body{
+                h5{
+                    color: $dark-color;
+                    font-weight: 600;
+                    font-size: 1rem;
+                }
+                span{
+                    color: #4e4e4e;
+                }
+            }
+            /* End of Post body */
+        }
+        /* End of Post Card */
+    }
+    /* End of recent Body */
+}
+/* End of Recent Posts */
+
+/* Posts section */
+.posts-section{
+    /* card post */
+    .card-post{
+        /* post header*/
+        .post-header{
+            position: relative;
+            img{
+                width: 100%;
+            }
+            .overlay{
+                background-color: $maroon-color;
+                z-index: 1;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+                color: $offwhite-color;
+                @include prefixer(transition, all .3s ease-in-out, webkit moz ms o);
+            }
+            
+            
+        }
+        /* post body*/
+        .post-body{
+            .date{
+                padding-bottom: 5px;
+                display: block;
+            }
+            h3{
+                margin-bottom: 0;
+                font-size: 1.35rem;
+                font-weight: 600;
+                line-height: 1.1;
+                color: $maroon-color;            
+            }
+        }
+        &:hover .overlay{
+            opacity: 1;
+        
+        }
+    }
+    /* End of card post */
+
+}
+/* End of Posts section */
