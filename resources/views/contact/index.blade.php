@@ -20,8 +20,8 @@
             <div class="row">
                 <div class="col-12">
                     <div class="header-info">
-                        <h2 class="heading m-0">Contact Us</h2>
-                        <p class="m-0">Any Question or remarks? Just write us a message</p>
+                        <h2 class="heading m-0">{{ trans('site.contact_us') }}</h2>
+                        <p class="m-0">{{ trans('site.question_remarks') }}</p>
                     </div>
                 </div>
             </div>
@@ -41,13 +41,13 @@
                                         <div class="col-6">
                                             <!-- Header Title -->
                                             <div class="header-title">
-                                                <h5>Send us a message</h5>
+                                                <h5>{{ trans('site.send_us_message') }}</h5>
                                             </div>
                                             <!-- End of Header Title -->
                                         </div>
                                         <div class="col-6">
                                             <!-- Header icon -->
-                                            <div class="header-icon text-right">
+                                            <div class="header-icon {{app()->getLocale() == "ar" ? "text-left" : "text-right" }}">
                                                 <!-- Icon -->
                                                 <div class="icon">
                                                     <span>
@@ -136,7 +136,7 @@
                                         <div class="col-12">
                                             <!-- Header Title -->
                                             <div class="header-title">
-                                                <h5>Contact Information</h5>
+                                                <h5>{{ trans('site.contact_inforamtion') }}</h5>
                                             </div>
                                             <!-- End of Header Title -->
                                         </div>
