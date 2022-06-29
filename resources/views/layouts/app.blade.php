@@ -24,11 +24,13 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
     @if (app()->getLocale() == 'ar')
-    <!-- RTL: style -->
-        <link rel="stylesheet" href="{{asset('css/bootstrap-rtl.min.css')}}">
-        <link rel="stylesheet" href="{{asset('css/media-query-rtl.css')}}">
-
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cairo:400,700" >
+        <!-- RTL: style -->
+        <link rel="stylesheet" href="{{asset('css/rtl/bootstrap-rtl.min.css')}}">
+        <link rel="stylesheet" href="{{asset('css/rtl/media-query-rtl.css')}}">
+        <!-- Styles -->
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <link rel="stylesheet" href="{{asset('css/rtl/customRTL.css')}}">
 
         <style>
             body, h1, h2, h3, h4, h5, h6 {
