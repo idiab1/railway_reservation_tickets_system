@@ -28,8 +28,7 @@
         <!-- RTL: style -->
         <link rel="stylesheet" href="{{asset('css/rtl/bootstrap-rtl.min.css')}}">
         <link rel="stylesheet" href="{{asset('css/rtl/media-query-rtl.css')}}">
-        <!-- Styles -->
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <!-- Custom RTL file -->
         <link rel="stylesheet" href="{{asset('css/rtl/customRTL.css')}}">
 
         <style>
