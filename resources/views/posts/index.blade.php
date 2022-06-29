@@ -46,7 +46,7 @@
                 <div class="card recent-box mb-4">
                     <!-- recent Box Header -->
                     <div class="card-header recent-box-header px-0">
-                        <h4>Recent Posts</h4>
+                        <h4>{{ trans('site.recent_posts') }}</h4>
                     </div>
                     <!-- End of Filter Box Header -->
 
