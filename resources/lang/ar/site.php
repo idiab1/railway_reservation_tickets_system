@@ -8,7 +8,7 @@ return [
     "passengers" => "المسافرين",
     'messages' => 'الرسائل',
     'setting' => 'الإعدادات',
-    'contact_us' => 'Contact Us',
+    'contact_us' => 'اتصل بنا',
     'about_us' => 'About Us',
     'news' => 'الاخبار',
     'dashboard' => 'لوحة التحكم',
