@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Station;
 use App\Models\Train;
 use App\Models\Type;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class TicketController extends Controller
 {
@@ -88,4 +90,31 @@ class TicketController extends Controller
     {
         //
     }
+
+
+    public function ticketSearch(Request $request){
+        // dd($request);
+
+        $depature_station = Station::find($request->depature_station_id);
+        $arrival_station = Station::find($request->arrival_station_id);
+        // dd($depature_station->name);
+
+        $trains = Train::where("depature_station", 'like', '%' . $depature_station->name . '%')
+        ->orWhere("arrival_station", 'like', '%' . $arrival_station->name . '%')
+        ->orWhere("depature_at", 'like', '%' . $request->depature_at . '%')
+        ->orWhere("arrival_at", 'like', '%' . $request->arrival_at . '%')
+        ->get();
+
+        // $trains = DB::table('trains')
+        // ->where("depature_station", 'like', '%' . $depature_station->name . '%')
+        // ->where(function ($query, $arrival_station) {
+        //     $query->where("arrival_station", 'like', '%' . $arrival_station->name . '%');
+        // })
+        // ->get();
+        return view("tickets.search", compact("trains"));
+
+    }
+
+
+
 }
