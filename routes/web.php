@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Payment\CreditController;
+use App\Http\Controllers\TicketController;
 // use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TypeController;
 use Illuminate\Support\Facades\Route;
@@ -42,6 +43,9 @@ Route::group(
             "index" => "user.tickets.index",
         ]);
 
+        // Ticket Search
+        Route::get('/ticketSearch', [TicketController::class, "ticketSearch"])->name("ticketSearch");
+
         // Route::get('tickets/reserve', [TicketController::class, 'create'])->name('tickets.reserve');
         Route::get('tickets/{type}/types', [TypeController::class, "ticketTypes"])->name("type.ticket");
 
@@ -50,6 +54,7 @@ Route::group(
         Route::resource('tickets/{train}/reserve', ReservationController::class)->parameters([
             "reserve" => "id"
         ]);
+
 
         // paymob
         Route::post('/credit/{train}', [CreditController::class, 'credit'])->name('credit');
