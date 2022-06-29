@@ -64,7 +64,10 @@ return [
     "reservations" => "Reservations",
     "list_reservations" => "Reservations",
 
-
+    // Contact Page
+    "contact_inforamtion" => "Contact Information",
+    "send_us_message" => "Send us a message",
+    "question_remarks" => "Any Question or remarks? Just write us a message",
 
     // Messages Page
     'message' => 'Message',
@@ -138,7 +141,7 @@ return [
     'search' => 'Search',
     'enter_name' => 'Enter your Name',
     'enter_email' => 'Enter your email address',
-    'enter_your_message' => 'Type your message here',
+    'enter_your_message' => 'Type your message here...',
     'enter_password' => 'Enter Password',
     'admin_enter_name' => 'Enter name of user',
     'admin_enter_email' => 'Enter email of user',

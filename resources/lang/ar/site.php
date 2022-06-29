@@ -8,7 +8,7 @@ return [
     "passengers" => "المسافرين",
     'messages' => 'الرسائل',
     'setting' => 'الإعدادات',
-    'contact_us' => 'اتصل بنا',
+    'contact_us' => 'إتصل بنا',
     'about_us' => 'About Us',
     'news' => 'الاخبار',
     'dashboard' => 'لوحة التحكم',
@@ -66,7 +66,10 @@ return [
     "reservations" => "الحجوزات",
     "list_reservations" => "الحجوزات",
 
-
+    // Contact Page
+    "contact_inforamtion" => "معلومات الإتصال",
+    "send_us_message" => "أرسل لنا رسالة",
+    "question_remarks" => "أي سؤال أو ملاحظات؟ فقط اكتب لنا رسالة",
 
     // Messages Page
     'message' => 'الرسالة',
@@ -138,7 +141,7 @@ return [
     'search' => 'بحث',
     'enter_name' => 'Enter your Name',
     'enter_email' => 'Enter your email address',
-    'enter_your_message' => 'Type your message here',
+    'enter_your_message' => 'اكتب رسالتك هنا...',
     'enter_password' => 'Enter Password',
     'admin_enter_name' => 'Enter name of user',
     'admin_enter_email' => 'Enter email of user',
