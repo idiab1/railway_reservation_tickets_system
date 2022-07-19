@@ -135,7 +135,7 @@
                 @foreach ($posts as $post)
                     <div class="col-md-4">
                         <!-- Card -->
-                        <div class="card">
+                        <div class="card post-card mb-4">
                             @if ($post->image)
                                 <!-- Card Header -->
                                 <div class="card-header">
@@ -146,7 +146,7 @@
                                 <!-- Card Header -->
                                 <div class="card-header text-center">
                                     <div class="info">
-                                        {{App\Models\Setting::first()->web_name}}
+                                        <h3 class="m-0">{{App\Models\Setting::first()->web_name}}</h3>
                                     </div>
                                 </div>
                                 <!-- End of Card Header -->
@@ -163,7 +163,7 @@
 
                                 <!-- Post Content -->
                                 <div class="post-content">
-                                    <p>{!! $post->content !!}</p>
+                                    <p class="m-0">{!! $post->content !!}</p>
                                 </div>
                             </div>
                             <!-- End of Card Body -->
@@ -199,7 +199,7 @@
                             <!-- End of Card Footer -->
 
                             <!-- show modal -->
-                            <div class="modal fade" id="show-{{$post->id}}" data-backdrop="static" data-keyboard="false"
+                            <div class="modal show-post fade" id="show-{{$post->id}}" data-backdrop="static" data-keyboard="false"
                                 tabindex="-1" aria-labelledby="show-{{$post->id}}" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <!-- Modal Content -->
@@ -230,7 +230,7 @@
                                                 <!-- End of image -->
                                             @endif
                                             <div class="content mt-3">
-                                                <p>{{$post->content}}</p>
+                                                <p class="m-0">{{$post->content}}</p>
                                             </div>
                                         </div>
                                         <!-- Modal body -->
