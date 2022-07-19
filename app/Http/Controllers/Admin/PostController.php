@@ -94,7 +94,20 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // Get data of post by id
+        $post = Post::find($id);
+
+        // Save data to database
+        $post->update([
+            'name' => $request->name,
+            'content' => $request->content,
+            'slug' => Str::slug($request->name),
+            'user_id' => Auth::user()->id,
+        ]);
+
+        // Redirect to homepage of posts
+        return redirect()->route('posts.index');
+
     }
 
     /**
