@@ -100,7 +100,7 @@
                                 <h5 class="m-0">Lorem, ipsum dolor sit.</h5>
                                 <span class="date">1 day ago</span>
                             </div>
-                            
+
                         </div>
                         <!-- End of Post -->
 
@@ -117,7 +117,7 @@
                                 <h5 class="m-0">Lorem, ipsum dolor sit.</h5>
                                 <span class="date">1 day ago</span>
                             </div>
-                            
+
                         </div>
                         <!-- End of Post -->
 
@@ -134,7 +134,7 @@
                                 <h5 class="m-0">Lorem, ipsum dolor sit.</h5>
                                 <span class="date">1 day ago</span>
                             </div>
-                            
+
                         </div>
                         <!-- End of Post -->
                     </div>
@@ -143,7 +143,7 @@
                 <!-- End of Recent Posts -->
 
             </div>
-            
+
             <div class="col-md-8">
                 <!-- User Tickets section -->
                 <section class="tickets-section">
@@ -238,6 +238,22 @@
                                                     <p class="m-0"><span>{{$reservation->train->price}} {{ trans('site.currency') }}</span> / Person</p>
                                                 </div>
                                                 <!-- End of Ticket price -->
+                                                @php
+                                                    $trainData = [
+                                                        'Name'  => $train->name,
+                                                        'Price' => $train->price . " / Person",
+                                                        'From'  => $train->depature_station,
+                                                        'Depature At'  => date('h:m A', strtotime($train->depature_at)) . "-" . date('d M, Y', strtotime($train->depature_at)),
+                                                        'To'  => $train->arrival_station,
+                                                        'Arrival At'  => date('h:m A', strtotime($train->arrival_at)) . "-" . date('d M, Y', strtotime($train->arrival_at)),
+                                                        'Type' => $train->type->name,
+                                                        /* Add here all the data you need*/
+                                                    ];
+
+                                                    //Json encode your data
+                                                    $jsonData = json_encode($trainData);
+                                                @endphp
+                                                {!! QrCode::size(100)->generate( $jsonData) !!}
 
                                             </div>
                                             <!-- End of Ticket details -->
@@ -260,7 +276,7 @@
                                 </div>
                             </div>
                         @endif
-                        
+
                     </div>
                 </section>
                 <!-- End of User Tickets section -->

@@ -97,7 +97,9 @@
                 </a> --}}
                 <form action="{{route('credit', ["train" => $train->id])}}" method="POST">
                     @csrf
-                    <input style="width: fit-content" type="submit" value="Buy Ticket" class="btn btn-primary crayons-btn btn-buy-ticket">
+                    <input style="width: fit-content" type="submit" value="Buy Ticket"
+                    class="btn btn-primary crayons-btn btn-buy-ticket">
+
                 </form>
             </div>
             <!-- End of card footer -->
