@@ -39,7 +39,7 @@ Route::group(
                 'passengers' => 'id',
             ]);
 
-            
+
             // Stations Route
             Route::resource('stations', StationController::class)->except([
                 'show'
@@ -72,9 +72,7 @@ Route::group(
             // ]);
 
             // Types  Routes
-            Route::resource('types', TypeController::class)->except([
-                'show'
-            ])->parameters([
+            Route::resource('types', TypeController::class)->parameters([
                 'types' => 'id',
             ]);
 
