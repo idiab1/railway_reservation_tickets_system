@@ -16,6 +16,12 @@ class Post extends Model
         'name', 'slug', 'content', 'image', 'user_id'
     ];
 
+    protected $appends = ["image_path"];
+
+    // Get the path of image
+    public function getImagePathAttribute(){
+        return asset("uploads/posts/" . $this->image);
+    }
     protected $dates = ['deleted_at'];
 
     /**
