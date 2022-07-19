@@ -35,7 +35,7 @@
         {{ trans('site.add_post') }}
     </a> --}}
 
-    <button type="button" class="btn btn-create btn-sm btn-primary btn-crayons"
+    <button type="button" class="btn btn-create btn-sm btn-crayons"
         data-toggle="modal" data-target="#createNewItem">
         <i class="fas fa-plus"></i>
     </button>
@@ -156,7 +156,9 @@
                             <div class="card-body post-body">
                                 <!-- Post Title -->
                                 <div class="post-title">
-                                    <h4>{{$post->name}}</h4>
+                                    <a href="#" data-toggle="modal" data-target="#show-{{$post->id}}">
+                                        <h4>{{$post->name}}</h4>
+                                    </a>
                                 </div>
 
                                 <!-- Post Content -->
@@ -170,7 +172,7 @@
                             <div class="card-footer post-footer">
 
                                 <!-- show button -->
-                                <a class="btn btn-success d-inline-block btn-sm btn-show"
+                                <a class="btn d-inline-block btn-sm btn-show"
                                     href="{{route('posts.show', ['id' => $post->id])}}"
                                     data-toggle="modal" data-target="#show-{{$post->id}}">
                                     <i class="fas fa-list"></i>
@@ -196,7 +198,6 @@
                             </div>
                             <!-- End of Card Footer -->
 
-
                             <!-- show modal -->
                             <div class="modal fade" id="show-{{$post->id}}" data-backdrop="static" data-keyboard="false"
                                 tabindex="-1" aria-labelledby="show-{{$post->id}}" aria-hidden="true">
@@ -218,8 +219,19 @@
 
                                         <!-- Modal body -->
                                         <div class="modal-body">
-                                            <h2>{{$post->name}}</h2>
-                                            <p>{{$post->content}}</p>
+                                            <div class="heading mb-3">
+                                                <h2>{{$post->name}}</h2>
+                                            </div>
+                                            @if ($post->image)
+                                                <!-- image -->
+                                                <div class="image">
+                                                    <img src="{{asset("uploads/posts/" . $post->image)}}" alt="Post Image">
+                                                </div>
+                                                <!-- End of image -->
+                                            @endif
+                                            <div class="content mt-3">
+                                                <p>{{$post->content}}</p>
+                                            </div>
                                         </div>
                                         <!-- Modal body -->
 
@@ -236,7 +248,6 @@
                                 </div>
                             </div>
                             <!-- end of show modal -->
-
 
                         </div>
                         <!-- End of Card -->
@@ -265,7 +276,7 @@
                     <!-- End of Modal Header -->
 
                     <!-- Form -->
-                    <form action="{{route('posts.store')}}" method="POST">
+                    <form action="{{route('posts.store')}}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="modal-body">
                             <!-- Name -->
@@ -276,18 +287,40 @@
                             </div>
 
                             <!-- Content -->
-                            <div class="form-group m-0">
+                            <div class="form-group">
                                 <label for="content">{{ trans('site.content') }}</label>
                                 <textarea class="form-control ckeditor" name="content" id="content"
                                     placeholder="{{trans('site.enter_content_post')}}"></textarea>
                             </div>
+
+
+                            <!-- image -->
+                            <div class="form-group mb-0">
+                                <!-- post Upload -->
+                                <div class="post-upload">
+                                    <!-- post Edit -->
+                                    <div class="post-edit">
+                                        <input type='file' id="imageUpload" name="image" accept=".png, .jpg, .jpeg" />
+                                        <label for="imageUpload">
+                                            <i class="fas fa-pen"></i>
+                                        </label>
+                                    </div>
+                                    <!-- post Preview -->
+                                    <div class="post-preview">
+                                        <div id="imagePreview" style="background-color: #ececec;">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End of post Upload -->
+                            </div>
+
 
                         </div>
                         <!-- /.card-body -->
 
                         <!-- Modal Footer -->
                         <div class="modal-footer">
-                            <button type="submit" class="btn btn-primary btn-add btn-crayons">
+                            <button type="submit" class="btn btn-add btn-crayons">
                                 {{ trans('site.add') }}
                             </button>
 
@@ -328,6 +361,25 @@
             "buttons": ["csv", "excel", "pdf", "print"]
         }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
 
+    });
+</script>
+
+<script>
+    $(document).ready(function(){
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $('#imagePreview').css('background-image', 'url('+e.target.result +')');
+                    $('#imagePreview').hide();
+                    $('#imagePreview').fadeIn(650);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+        $("#imageUpload").change(function() {
+            readURL(this);
+        });
     });
 </script>
 
