@@ -8,6 +8,9 @@ use Illuminate\Auth\Events\Validated;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
+use Intervention\Image\ImageManagerStatic as Image;
+use Illuminate\Support\Facades\Storage;
+
 class PostController extends Controller
 {
     /**
@@ -40,24 +43,49 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        // dd(Auth::user()->id);
+        // dd($request->image);
 
         // Validate on all data coming from request
         $this->validate($request, [
             'name' => ['required'],
             'content' => ['required'],
+            'image' => ['image'],
         ]);
 
-        // Save data to database
-        Post::create([
-            'name' => $request->name,
-            'content' => $request->content,
-            'slug' => Str::slug($request->name),
-            'user_id' => Auth::user()->id,
-        ]);
+        $request_date = $request->all();
 
-        // Redirect to homepage of posts
-        return redirect()->route('posts.index');
+        if($request->image && $request->image != null){
+            Image::make($request->image)->resize(280, 280, function ($constraint) {
+                $constraint->aspectRatio();
+            })->save(public_path('uploads/posts/' . $request->image->hashName()));
+
+            $request_date["image"] = $request->image->hashName();
+
+            // Save data to database
+            Post::create([
+                'name' => $request->name,
+                'content' => $request->content,
+                'slug' => Str::slug($request->name),
+                'user_id' => Auth::user()->id,
+                "image"         => $request->image->hashName(),
+            ]);
+
+            // Redirect to homepage of posts
+            return redirect()->route('posts.index');
+
+        }else{
+            // Save data to database
+            Post::create([
+                'name' => $request->name,
+                'content' => $request->content,
+                'slug' => Str::slug($request->name),
+                'user_id' => Auth::user()->id,
+            ]);
+
+            // Redirect to homepage of posts
+            return redirect()->route('posts.index');
+
+        }
 
     }
 
