@@ -131,6 +131,7 @@ return [
     // Buttons
     'send' => 'ارسال',
     'show' => 'عرض',
+    "close" => "إغلاق",
     'delete' => 'حذف',
     'edit' => 'تعديل',
     'create' => 'إنشاء',

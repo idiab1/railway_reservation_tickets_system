@@ -130,6 +130,7 @@ return [
     // Buttons
     'send' => 'Send',
     'show' => 'Show',
+    "close" => "Close",
     'delete' => 'Delete',
     'edit' => 'Edit',
     'create' => 'Create',
