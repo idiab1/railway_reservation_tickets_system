@@ -606,6 +606,17 @@
     border-color: transparent;
 }
 
+.modal.show-post h2{
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--main-color);
+}
+
+.post-section .post-card p{
+    color: #5f5656;
+}
+
 /* .modal .modal-header  */
 
 
