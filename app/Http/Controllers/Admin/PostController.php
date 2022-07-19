@@ -148,6 +148,9 @@ class PostController extends Controller
     {
         // Get post by id
         $post = Post::find($id);
+        if($post->image){
+            Storage::disk("public_uploads")->delete('/posts/' . $post->image);
+        }
         $post->delete();
         return redirect()->back();
     }
