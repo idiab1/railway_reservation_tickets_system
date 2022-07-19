@@ -49,7 +49,7 @@
 
 {{-- Content --}}
 @section('content')
-    <section class="post-section">
+    <section class="post-section section">
         <div class="row">
             <div class="col-12">
                 <div class="card">
