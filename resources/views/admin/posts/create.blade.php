@@ -35,9 +35,10 @@
                                 </div>
                                 <!-- /.card-header -->
                                 <!-- form start -->
-                                <form action="{{route('posts.store')}}" method="POST">
+                                <form action="{{route('posts.store')}}" method="POST" enctype="multipart/form-data">
                                     @csrf
                                     <div class="card-body">
+
                                         <!-- Name -->
                                         <div class="form-group">
                                             <label for="name">{{ trans('site.name') }}</label>
@@ -46,10 +47,30 @@
                                         </div>
 
                                         <!-- Content -->
-                                        <div class="form-group mb-0">
+                                        <div class="form-group">
                                             <label for="content">{{ trans('site.content') }}</label>
                                             <textarea class="form-control" name="content" id="content"
                                                     placeholder="{{trans('site.enter_content_post')}}"></textarea>
+                                        </div>
+
+                                        <!-- image -->
+                                        <div class="form-group mb-0">
+                                            <!-- post Upload -->
+                                            <div class="post-upload">
+                                                <!-- post Edit -->
+                                                <div class="post-edit">
+                                                    <input type='file' id="imageUpload" name="image" accept=".png, .jpg, .jpeg" />
+                                                    <label for="imageUpload">
+                                                        <i class="fas fa-pen"></i>
+                                                    </label>
+                                                </div>
+                                                <!-- post Preview -->
+                                                <div class="post-preview">
+                                                    <div id="imagePreview" style="background-color: #ececec;">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- End of post Upload -->
                                         </div>
 
                                     </div>
@@ -82,4 +103,26 @@
         </div>
     </div>
 </section>
+@endsection
+
+{{-- Scripts --}}
+@section('scripts')
+<script>
+    $(document).ready(function(){
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $('#imagePreview').css('background-image', 'url('+e.target.result +')');
+                    $('#imagePreview').hide();
+                    $('#imagePreview').fadeIn(650);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+        $("#imageUpload").change(function() {
+            readURL(this);
+        });
+    });
+</script>
 @endsection
