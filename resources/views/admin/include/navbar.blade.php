@@ -83,9 +83,6 @@
                 <a class="dropdown-item" href="{{route('trains.create')}}">
                     {{ trans('site.train') }}
                 </a>
-                <a class="dropdown-item" href="">
-                    {{ trans('site.ticket') }}
-                </a>
                 <a class="dropdown-item" href="{{route('posts.create')}}">
                     {{ trans('site.post') }}
                 </a>
@@ -112,7 +109,7 @@
                         <i class="flag-icon flag-icon-eg" title="eg" id="eg"></i>
                     @endif
                 </div>
-                
+
             </a>
             <div class="dropdown-menu navbar-dropdown" aria-labelledby="languageDropdown">
                 @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
