@@ -72,14 +72,14 @@ Route::group(
             // ]);
 
             // Types  Routes
-            Route::resource('types', TypeController::class)->parameters([
+            Route::resource('types', TypeController::class)->except([
+                'show'
+            ])->parameters([
                 'types' => 'id',
             ]);
 
             // Posts Route
-            Route::resource('posts', PostController::class)->except([
-                'show'
-            ])->parameters([
+            Route::resource('posts', PostController::class)->parameters([
                 'posts' => 'id',
             ]);
 
