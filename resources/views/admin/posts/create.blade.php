@@ -46,7 +46,7 @@
                                         </div>
 
                                         <!-- Content -->
-                                        <div class="form-group">
+                                        <div class="form-group mb-0">
                                             <label for="content">{{ trans('site.content') }}</label>
                                             <textarea class="form-control" name="content" id="content"
                                                     placeholder="{{trans('site.enter_content_post')}}"></textarea>
