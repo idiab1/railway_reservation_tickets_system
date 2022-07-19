@@ -137,33 +137,106 @@
                         <!-- Card -->
                         <div class="card">
                             @if ($post->image)
+                                <!-- Card Header -->
                                 <div class="card-header">
-
+                                    <img src="{{asset("uploads/posts/" . $post->image)}}" alt="Post Image">
                                 </div>
+                                <!-- End of Card Header -->
+                            @else
+                                <!-- Card Header -->
+                                <div class="card-header text-center">
+                                    <div class="info">
+                                        {{App\Models\Setting::first()->web_name}}
+                                    </div>
+                                </div>
+                                <!-- End of Card Header -->
                             @endif
+
+                            <!-- Card Body -->
                             <div class="card-body post-body">
+                                <!-- Post Title -->
                                 <div class="post-title">
                                     <h4>{{$post->name}}</h4>
                                 </div>
+
+                                <!-- Post Content -->
                                 <div class="post-content">
                                     <p>{!! $post->content !!}</p>
                                 </div>
                             </div>
+                            <!-- End of Card Body -->
 
+                            <!-- Card Footer -->
                             <div class="card-footer post-footer">
-                                <a class="btn btn-success d-inline-block btn-sm btn-edit" href="{{route('posts.edit', ['id' => $post->id])}}">
+
+                                <!-- show button -->
+                                <a class="btn btn-success d-inline-block btn-sm btn-show"
+                                    href="{{route('posts.show', ['id' => $post->id])}}"
+                                    data-toggle="modal" data-target="#show-{{$post->id}}">
+                                    <i class="fas fa-list"></i>
+                                    {{ trans('site.show') }}
+                                </a>
+
+                                <!-- Edit button -->
+                                <a class="btn d-inline-block btn-sm btn-edit"
+                                    href="{{route('posts.edit', ['id' => $post->id])}}">
                                     <i class="fas fa-edit"></i>
                                     {{ trans('site.edit') }}
                                 </a>
+
+                                <!-- Delete button -->
                                 <form class="d-inline-block" action="{{route('posts.destroy', ['id' => $post->id])}}" method="POST">
                                     @csrf
                                     @method('DELETE')
-                                    <button class="btn btn-danger btn-sm btn-delete" type="submit">
+                                    <button class="btn btn-sm btn-delete" type="submit">
                                         <i class="fas fa-trash"></i>
                                         {{ trans('site.delete') }}
                                     </button>
                                 </form>
                             </div>
+                            <!-- End of Card Footer -->
+
+
+                            <!-- show modal -->
+                            <div class="modal fade" id="show-{{$post->id}}" data-backdrop="static" data-keyboard="false"
+                                tabindex="-1" aria-labelledby="show-{{$post->id}}" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <!-- Modal Content -->
+                                    <div class="modal-content">
+                                        <!-- Modal Header -->
+                                        <div class="modal-header">
+                                            <!-- Modal Title -->
+                                            <h5 class="modal-title" id="show-{{$post->id}}">
+                                                {{ trans('site.add_post') }}
+                                            </h5>
+
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <!-- End of Modal Header -->
+
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+                                            <h2>{{$post->name}}</h2>
+                                            <p>{{$post->content}}</p>
+                                        </div>
+                                        <!-- Modal body -->
+
+                                        <!-- Modal Footer -->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-add btn-crayons" data-dismiss="modal">
+                                                {{ trans('site.close') }}
+                                            </button>
+                                        </div>
+                                        <!-- End of Modal Footer -->
+
+                                    </div>
+                                    <!-- End of Modal Content -->
+                                </div>
+                            </div>
+                            <!-- end of show modal -->
+
 
                         </div>
                         <!-- End of Card -->
