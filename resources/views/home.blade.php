@@ -37,7 +37,7 @@
             width: auto !important;
         }
 
-        
+
 
         .select2-container--bootstrap4 .select2-selection {
             border: none;
@@ -313,13 +313,13 @@
 
                                         </div>
                                         {{-- <div class="col-3 px-0">
-                                            
+
                                         </div>
                                         <div class="col-3 px-0">
-                                            
+
                                         </div>
                                         <div class="col-3 px-0">
-                                            
+
                                         </div> --}}
 
                                     </div>
@@ -344,7 +344,7 @@
                     </div>
                     <!-- End of Card Reservation Form -->
                 </div>
-                
+
             </div>
         </div>
     </section>
@@ -650,7 +650,7 @@
                 </div>
 
             </div>
-            
+
 
         </div>
     </section>
@@ -739,7 +739,6 @@
         </div>
     </section>
     <!-- End of Ticket Advantages -->
-
 @endsection
 
 @section('other-scripts')
