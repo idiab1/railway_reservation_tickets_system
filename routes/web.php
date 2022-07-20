@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\Payment\CreditController;
+use App\Http\Controllers\Subscriptions\PaymentController;
+use App\Http\Controllers\Subscriptions\SubscriptionController;
 // use App\Http\Controllers\TicketController;
 // use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TypeController;
@@ -55,10 +57,16 @@ Route::group(
             "reserve" => "id"
         ]);
 
-
         // paymob
         Route::post('/credit/{train}', [CreditController::class, 'credit'])->name('credit');
         Route::get('/callback', [CreditController::class, 'callback'])->name('callback');
+
+        Route::group(['namespace' => 'Subscriptions'], function() {
+            Route::get('plans', [SubscriptionController::class, 'index'])->name('plans');
+            Route::get('/payments', [PaymentController::class, 'index'])->name('payments');
+            Route::post('/payments', [PaymentController::class, 'store'])->name('payments.store');
+        });
+
 
         // Posts Routes
         Route::resource('posts', PostController::class)->only([
